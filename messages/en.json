@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "title": "khaki shop | Creative Textiles for Inspired Living",
+    "description": "Discover premium textile solutions with khaki shop. Transform your space with our curtains, blinds, and motorized systems.",
+    "keywords": "khaki shop, curtains, blinds, motorized systems, textiles, interior design"
+  },
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "collection": "Collection",
+    "products": "Products",
+    "references": "References",
+    "blog": "Blog",
+    "contact": "Contact",
+    "viewMore": "View More",
+    "viewAll": "View All",
+    "backToHome": "Back to Home",
+    "tryAgain": "Try Again",
+    "support": "Customer Support",
+    "techSupport": "Technical Support"
+  },
+  "navigation": {
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "hero": {
+    "title": "A New Dimension in Textiles",
+    "subtitle": "Premium Collections That Complete Your Space"
+  },
+  "collection": {
+    "title": "Collection",
+    "subtitle": "Elevate your space with carefully curated textile collections. Each collection carries a unique story and emotion.",
+    "categories": {
+      "curtain": "Curtains",
+      "blind": "Blinds",
+      "motorized": "Motorized",
+      "accessory": "Accessories"
+    },
+    "customCollection": {
+      "title": "Need a Custom Collection?",
+      "description": "We curate special collections optimized for your taste and space. Consult with our experts to find the perfect combination.",
+      "cta": "Request Custom Consultation"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Page Not Found",
+      "description": "Sorry, the page you requested does not exist or may have been moved. Please check the URL again or return to the homepage.",
+      "helpText": "If the problem persists, please contact"
+    },
+    "500": {
+      "title": "Server Error Occurred",
+      "description": "Sorry, the page cannot be loaded due to a temporary server issue. Please try again later or return to the homepage.",
+      "helpText": "If the problem persists, please contact"
+    }
+  },
+  "accessibility": {
+    "collectionImage": "{category} Collection - {title}",
+    "productImage": "Product Image - {title}",
+    "projectImage": "Project Image - {title}, {location}",
+    "viewDetails": "View {title} Details",
+    "viewCollection": "View {title} Collection Details",
+    "viewProduct": "View {title} Product Details",
+    "viewProject": "View {title} ({location}) Project Details",
+    "goToPage": "Go to {title} Detail Page"
+  }
+} 

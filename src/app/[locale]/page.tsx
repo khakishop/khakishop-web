@@ -1,26 +1,28 @@
 import { Metadata } from 'next';
 import Script from 'next/script';
-import HomeClient from './HomeClient';
+import HomeClient from '../HomeClient';
 
-export const metadata: Metadata = {
-  title: "khaki shop | 감성과 기능을 담은 텍스타일 전문점",
-  description: "공간을 아름답게 만드는 텍스타일 브랜드 카키샵. 커튼, 블라인드, 전동 시스템으로 당신의 공간을 특별하게 완성해보세요. 일산 호수로 위치, 맞춤 상담 가능.",
-  keywords: "카키샵, khaki shop, 커튼, 블라인드, 전동시스템, 텍스타일, 인테리어, 일산, 호수로, 맞춤제작",
-  openGraph: {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
     title: "khaki shop | 감성과 기능을 담은 텍스타일 전문점",
-    description: "공간을 아름답게 만드는 텍스타일 브랜드 카키샵. 커튼, 블라인드, 전동 시스템으로 당신의 공간을 특별하게 완성해보세요.",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "khaki shop 대표 이미지"
-      }
-    ],
-    type: "website",
-    locale: "ko_KR",
-  }
-};
+    description: "공간을 아름답게 만드는 텍스타일 브랜드 카키샵. 커튼, 블라인드, 전동 시스템으로 당신의 공간을 특별하게 완성해보세요. 일산 호수로 위치, 맞춤 상담 가능.",
+    keywords: "카키샵, khaki shop, 커튼, 블라인드, 전동시스템, 텍스타일, 인테리어, 일산, 호수로, 맞춤제작",
+    openGraph: {
+      title: "khaki shop | 감성과 기능을 담은 텍스타일 전문점",
+      description: "공간을 아름답게 만드는 텍스타일 브랜드 카키샵. 커튼, 블라인드, 전동 시스템으로 당신의 공간을 특별하게 완성해보세요.",
+      images: [
+        {
+          url: "/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "khaki shop 대표 이미지"
+        }
+      ],
+      type: "website",
+      locale: "ko_KR",
+    }
+  };
+}
 
 export default function Home() {
   // JSON-LD 구조화된 데이터

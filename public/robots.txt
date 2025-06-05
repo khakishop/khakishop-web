@@ -1,0 +1,22 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://khakishop.kr
+
+# Sitemaps
+Sitemap: https://khakishop.kr/sitemap.xml
+
+# PWA Files
+Allow: /manifest.json
+Allow: /sw.js
+Allow: /workbox-*.js
+Allow: /browserconfig.xml
+
+# Icon directory
+Allow: /icons/
+
+# Disallow admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/

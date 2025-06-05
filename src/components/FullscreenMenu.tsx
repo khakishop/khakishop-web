@@ -10,29 +10,44 @@ const menuItems = [
     path: '/about'
   },
   {
-    english: 'PROJECT',
-    korean: '시공 사례',
-    path: '/projects'
-  },
-  {
     english: 'COLLECTION',
-    korean: '제품 모음',
+    korean: '컬렉션',
     path: '/collection'
   },
   {
-    english: 'BLOG',
-    korean: '정보 포스팅',
-    path: '/blog'
+    english: 'PRODUCTS',
+    korean: '전체 제품',
+    path: '/products'
+  },
+  {
+    english: 'PROJECT',
+    korean: '시공 사례',
+    path: '/project'
+  },
+  {
+    english: 'REFERENCES',
+    korean: '레퍼런스',
+    path: '/references'
+  },
+  {
+    english: 'CURTAIN',
+    korean: '커튼',
+    path: '/curtain'
+  },
+  {
+    english: 'BLIND',
+    korean: '블라인드',
+    path: '/blind'
+  },
+  {
+    english: 'MOTORIZED',
+    korean: '모터 제품',
+    path: '/motorized'
   },
   {
     english: 'CONTACT',
     korean: '상담/후기/지도',
     path: '/contact'
-  },
-  {
-    english: 'SHOP',
-    korean: '제품 상세 및 결제',
-    path: '/shop'
   }
 ];
 
