@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getAllPosts, getPostBySlug, getCategoryName } from '../../../data/posts';
+import { getAllPosts, getPostBySlug, getCategoryName } from '../../../../data/posts';
 
 // 타입 정의
 interface PostPageProps {

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getProjectBySlug } from '../../../data/projects';
+import { getProjectBySlug, getAllProjects } from '../../../../data/projects';
 
 interface ProjectDetailPageProps {
   params: { slug: string };

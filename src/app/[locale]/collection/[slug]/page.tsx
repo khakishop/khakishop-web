@@ -6,7 +6,7 @@ import {
   getAllCollections, 
   getCollectionBySlug, 
   getCollectionCategoryName 
-} from '../../../data/collections';
+} from '../../../../data/collections';
 
 // 타입 정의
 interface CollectionPageProps {

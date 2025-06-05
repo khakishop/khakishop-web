@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import CategoryPage from '../../components/layouts/CategoryPage';
-import ReferenceCard, { ReferenceCardProps } from '../../components/ReferenceCard';
+import CategoryPage from '../../../components/layouts/CategoryPage';
+import ReferenceCard, { ReferenceCardProps } from '../../../components/ReferenceCard';
 
 export default function ProjectPage() {
   // 프로젝트 레퍼런스 데이터 (기존 references 데이터 활용)

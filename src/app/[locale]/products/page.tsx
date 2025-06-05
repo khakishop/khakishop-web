@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { getAllProducts } from '../../data/products';
+import { getAllProducts } from '../../../data/products';
 import Link from 'next/link';
 import Image from 'next/image';
 
