@@ -75,22 +75,22 @@ export default function FullscreenMenu() {
     animate: { 
       opacity: 1,
       transition: { 
-        duration: 0.6, 
+        duration: 0.5, 
         ease: "easeOut" 
       }
     },
     exit: { 
       opacity: 0,
       transition: { 
-        duration: 0.4, 
+        duration: 0.3, 
         ease: "easeIn",
-        delay: 0.6
+        delay: 0.4
       }
     }
   };
 
-  // Animation variants for logo section
-  const logoVariants = {
+  // DESKTOP Animation variants
+  const desktopLogoVariants = {
     initial: { 
       opacity: 0,
       x: -50 
@@ -114,8 +114,7 @@ export default function FullscreenMenu() {
     }
   };
 
-  // Animation variants for contact section
-  const contactVariants = {
+  const desktopContactVariants = {
     initial: { 
       opacity: 0,
       x: 50 
@@ -139,51 +138,122 @@ export default function FullscreenMenu() {
     }
   };
 
+  // MOBILE Animation variants
+  const mobileLogoVariants = {
+    initial: { 
+      opacity: 0,
+      y: -30,
+      scale: 0.9
+    },
+    animate: { 
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { 
+        duration: 0.6, 
+        ease: "easeOut",
+        delay: 0.2
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: -20,
+      scale: 0.95,
+      transition: {
+        duration: 0.25,
+        ease: "easeIn"
+      }
+    }
+  };
+
+  const mobileContactVariants = {
+    initial: { 
+      opacity: 0,
+      y: 30
+    },
+    animate: { 
+      opacity: 1,
+      y: 0,
+      transition: { 
+        duration: 0.5, 
+        ease: "easeOut",
+        delay: 0.6
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: 20,
+      transition: {
+        duration: 0.2,
+        ease: "easeIn"
+      }
+    }
+  };
+
   // Animation variants for close button
   const closeButtonVariants = {
     initial: { 
       opacity: 0,
-      scale: 0.8
+      scale: 0.8,
+      rotate: -90
     },
     animate: { 
       opacity: 1,
       scale: 1,
+      rotate: 0,
       transition: {
         duration: 0.4,
-        delay: 0.5,
+        delay: 0.3,
         ease: "easeOut"
       }
     },
     exit: {
       opacity: 0,
       scale: 0.8,
+      rotate: 90,
       transition: {
         duration: 0.2,
-        ease: "easeIn",
-        delay: 0.2
+        ease: "easeIn"
       }
     }
   };
 
-  // Animation variants for menu container
-  const menuContainerVariants = {
+  // DESKTOP Menu container variants
+  const desktopMenuContainerVariants = {
     initial: {},
     animate: {
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.08,
         delayChildren: 0.4
       }
     },
     exit: {
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.04,
         staggerDirection: -1
       }
     }
   };
 
-  // Animation variants for individual menu items
-  const menuItemVariants = {
+  // MOBILE Menu container variants
+  const mobileMenuContainerVariants = {
+    initial: {},
+    animate: {
+      transition: {
+        staggerChildren: 0.06,
+        delayChildren: 0.35
+      }
+    },
+    exit: {
+      transition: {
+        staggerChildren: 0.03,
+        staggerDirection: -1
+      }
+    }
+  };
+
+  // DESKTOP Menu item variants
+  const desktopMenuItemVariants = {
     initial: { 
       opacity: 0,
       y: 30
@@ -201,6 +271,33 @@ export default function FullscreenMenu() {
       y: -20,
       transition: {
         duration: 0.3,
+        ease: "easeIn"
+      }
+    }
+  };
+
+  // MOBILE Menu item variants
+  const mobileMenuItemVariants = {
+    initial: { 
+      opacity: 0,
+      y: 20,
+      x: -10
+    },
+    animate: { 
+      opacity: 1,
+      y: 0,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: -15,
+      x: 5,
+      transition: {
+        duration: 0.2,
         ease: "easeIn"
       }
     }
@@ -264,18 +361,111 @@ export default function FullscreenMenu() {
               animate="animate"
               exit="exit"
               onClick={closeMenu}
-              className="absolute top-8 right-8 w-12 h-12 flex items-center justify-center text-3xl text-white font-light hover:opacity-60 transition-opacity z-10"
+              className="absolute top-6 right-6 sm:top-8 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-2xl sm:text-3xl text-white font-light hover:opacity-60 transition-opacity z-10"
               aria-label="메뉴 닫기"
             >
               ×
             </motion.button>
 
-            {/* 3-Column Grid Layout */}
-            <div className="grid grid-cols-3 h-full">
+            {/* Mobile Layout */}
+            <div className="block lg:hidden h-full">
+              <div className="flex flex-col h-full">
+                
+                {/* Mobile Logo Section - 상단 */}
+                <motion.div
+                  variants={mobileLogoVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  className="flex items-center justify-center pt-20 pb-8"
+                >
+                  <div className="text-center">
+                    <div className="text-white text-4xl sm:text-5xl flex flex-col items-center">
+                      <span className="font-serif font-bold tracking-tight">khaki</span>
+                      <span className="font-serif italic opacity-90">shop</span>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Mobile Menu Items - 중앙 */}
+                <div className="flex-1 flex items-center justify-center px-6">
+                  <motion.nav
+                    variants={mobileMenuContainerVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                    className="w-full text-center"
+                  >
+                    <ul className="space-y-6 sm:space-y-8">
+                      {menuItems.map((item, index) => (
+                        <motion.li key={index} variants={mobileMenuItemVariants}>
+                          <Link
+                            href={item.path}
+                            onClick={closeMenu}
+                            className="block group"
+                          >
+                            <div className="text-white text-2xl sm:text-3xl font-serif font-medium uppercase tracking-wider mb-1 group-hover:opacity-70 transition-opacity duration-300 leading-tight">
+                              {item.english}
+                            </div>
+                            <div className="text-xs sm:text-sm text-white/60 font-light tracking-wide leading-relaxed">
+                              {item.korean}
+                            </div>
+                          </Link>
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </motion.nav>
+                </div>
+
+                {/* Mobile Contact Info - 하단 */}
+                <motion.div
+                  variants={mobileContactVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  className="pb-8 px-6"
+                >
+                  <div className="text-center space-y-6">
+                    {/* Contact */}
+                    <div>
+                      <div className="text-white text-sm font-medium mb-2 tracking-widest uppercase">
+                        CONTACT
+                      </div>
+                      <div className="text-white/60 text-xs leading-relaxed space-y-1">
+                        <div>T: 0507-1372-0358</div>
+                        <div>
+                          <a 
+                            href="https://naver.me/F0wo4Ive" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-white/60 hover:text-white transition-colors underline underline-offset-2"
+                          >
+                            네이버 플레이스
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Address */}
+                    <div>
+                      <div className="text-white text-sm font-medium mb-2 tracking-widest uppercase">
+                        ADDRESS
+                      </div>
+                      <div className="text-white/60 text-xs leading-relaxed">
+                        <div>경기도 고양시 일산동구 호수로 430번길 24</div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Desktop Layout - 기존 3-column 유지 */}
+            <div className="hidden lg:grid grid-cols-3 h-full">
               
               {/* 1. 좌측 영역 - Logo */}
               <motion.div
-                variants={logoVariants}
+                variants={desktopLogoVariants}
                 initial="initial"
                 animate="animate"
                 exit="exit"
@@ -283,33 +473,33 @@ export default function FullscreenMenu() {
               >
                 <div className="text-center">
                   <div className="text-white text-6xl md:text-7xl lg:text-8xl flex flex-col items-center">
-                    <span className="font-montserrat font-bold">khaki</span>
-                    <span className="font-dm-serif italic">shop</span>
+                    <span className="font-serif font-bold tracking-tight">khaki</span>
+                    <span className="font-serif italic opacity-90">shop</span>
                   </div>
                 </div>
               </motion.div>
 
               {/* 2. 중앙 영역 - Menu Items */}
-              <div className="flex items-end justify-center pb-[100px]">
+              <div className="flex items-center justify-center">
                 <motion.nav
-                  variants={menuContainerVariants}
+                  variants={desktopMenuContainerVariants}
                   initial="initial"
                   animate="animate"
                   exit="exit"
                   className="text-center"
                 >
-                  <ul className="space-y-8">
+                  <ul className="space-y-8 lg:space-y-10">
                     {menuItems.map((item, index) => (
-                      <motion.li key={index} variants={menuItemVariants}>
+                      <motion.li key={index} variants={desktopMenuItemVariants}>
                         <Link
                           href={item.path}
                           onClick={closeMenu}
                           className="block group"
                         >
-                          <div className="text-white text-5xl font-bold uppercase tracking-wide mb-2 group-hover:opacity-70 transition-opacity duration-300">
+                          <div className="text-white text-4xl lg:text-5xl font-serif font-medium uppercase tracking-wider mb-2 group-hover:opacity-70 transition-opacity duration-300 leading-tight">
                             {item.english}
                           </div>
-                          <div className="text-sm text-white/70 font-noto-kr font-light tracking-wider">
+                          <div className="text-sm text-white/60 font-light tracking-wider">
                             {item.korean}
                           </div>
                         </Link>
@@ -321,7 +511,7 @@ export default function FullscreenMenu() {
 
               {/* 3. 우측 영역 - Contact Info */}
               <motion.div
-                variants={contactVariants}
+                variants={desktopContactVariants}
                 initial="initial"
                 animate="animate"
                 exit="exit"
