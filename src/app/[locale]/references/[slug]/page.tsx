@@ -2,7 +2,11 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getProjectBySlug, getAllProjects, type Project } from '../../../../data/projects';
+import {
+  getProjectBySlug,
+  getAllProjects,
+  type Project,
+} from '../../../../data/projects';
 import { ImageGallery } from './ImageGallery';
 
 // 타입 정의
@@ -14,13 +18,15 @@ interface ReferencePageProps {
 }
 
 // 메타데이터 생성
-export async function generateMetadata({ params }: ReferencePageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: ReferencePageProps): Promise<Metadata> {
   const project = getProjectBySlug(params.slug);
 
   if (!project) {
     return {
       title: '프로젝트를 찾을 수 없습니다 | khaki shop',
-      description: '요청하신 프로젝트를 찾을 수 없습니다.'
+      description: '요청하신 프로젝트를 찾을 수 없습니다.',
     };
   }
 
@@ -36,19 +42,19 @@ export async function generateMetadata({ params }: ReferencePageProps): Promise<
           url: project.mainImage || '/placeholder-project.jpg',
           width: 1200,
           height: 630,
-          alt: project.title
-        }
+          alt: project.title,
+        },
       ],
       type: 'website',
       locale: 'ko_KR',
-    }
+    },
   };
 }
 
 // 정적 경로 생성
 export async function generateStaticParams() {
   const projects = getAllProjects();
-  
+
   return projects.map((project) => ({
     slug: project.slug,
   }));
@@ -68,12 +74,18 @@ export default function ReferenceDetailPage({ params }: ReferencePageProps) {
   // 카테고리 한글 변환
   const getCategoryName = (category: string) => {
     switch (category) {
-      case 'Residential': return '주거';
-      case 'Commercial': return '상업';
-      case 'F&B': return '카페/레스토랑';
-      case 'Healthcare': return '의료';
-      case 'Cultural': return '문화';
-      default: return category;
+      case 'Residential':
+        return '주거';
+      case 'Commercial':
+        return '상업';
+      case 'F&B':
+        return '카페/레스토랑';
+      case 'Healthcare':
+        return '의료';
+      case 'Cultural':
+        return '문화';
+      default:
+        return category;
     }
   };
 
@@ -84,33 +96,41 @@ export default function ReferenceDetailPage({ params }: ReferencePageProps) {
         <div className="max-w-screen-xl mx-auto px-6 py-8">
           <div className="flex items-center justify-between">
             {/* 뒤로가기 버튼 */}
-            <Link 
+            <Link
               href="/ko/references"
               className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
             >
-              <svg 
-                className="w-5 h-5 mr-3 group-hover:-translate-x-1 transition-transform duration-300" 
-                fill="none" 
-                stroke="currentColor" 
+              <svg
+                className="w-5 h-5 mr-3 group-hover:-translate-x-1 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M7 16l-4-4m0 0l4-4m-4 4h18" 
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M7 16l-4-4m0 0l4-4m-4 4h18"
                 />
               </svg>
-              <span className="text-sm uppercase tracking-wider font-medium">Back to References</span>
+              <span className="text-sm uppercase tracking-wider font-medium">
+                Back to References
+              </span>
             </Link>
 
             {/* 브레드크럼 */}
             <nav className="flex items-center space-x-2 text-sm text-gray-600">
-              <Link href="/ko" className="hover:text-gray-900 transition-colors">
+              <Link
+                href="/ko"
+                className="hover:text-gray-900 transition-colors"
+              >
                 Home
               </Link>
               <span>/</span>
-              <Link href="/ko/references" className="hover:text-gray-900 transition-colors">
+              <Link
+                href="/ko/references"
+                className="hover:text-gray-900 transition-colors"
+              >
                 References
               </Link>
               <span>/</span>
@@ -122,7 +142,6 @@ export default function ReferenceDetailPage({ params }: ReferencePageProps) {
 
       {/* 메인 콘텐츠 */}
       <div className="max-w-screen-xl mx-auto px-6 py-16 lg:py-24">
-        
         {/* 프로젝트 헤더 */}
         <div className="mb-16 lg:mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-end">
@@ -136,25 +155,41 @@ export default function ReferenceDetailPage({ params }: ReferencePageProps) {
                 </h1>
               </div>
             </div>
-            
+
             {/* 프로젝트 정보 */}
             <div className="space-y-6">
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <dt className="text-sm uppercase tracking-wider text-gray-500 font-medium mb-2">Location</dt>
-                  <dd className="text-lg font-light text-gray-900">{project.location}</dd>
+                  <dt className="text-sm uppercase tracking-wider text-gray-500 font-medium mb-2">
+                    Location
+                  </dt>
+                  <dd className="text-lg font-light text-gray-900">
+                    {project.location}
+                  </dd>
                 </div>
                 <div>
-                  <dt className="text-sm uppercase tracking-wider text-gray-500 font-medium mb-2">Year</dt>
-                  <dd className="text-lg font-light text-gray-900">{project.year}</dd>
+                  <dt className="text-sm uppercase tracking-wider text-gray-500 font-medium mb-2">
+                    Year
+                  </dt>
+                  <dd className="text-lg font-light text-gray-900">
+                    {project.year}
+                  </dd>
                 </div>
                 <div>
-                  <dt className="text-sm uppercase tracking-wider text-gray-500 font-medium mb-2">Size</dt>
-                  <dd className="text-lg font-light text-gray-900">{project.area || 'N/A'}</dd>
+                  <dt className="text-sm uppercase tracking-wider text-gray-500 font-medium mb-2">
+                    Size
+                  </dt>
+                  <dd className="text-lg font-light text-gray-900">
+                    {project.area || 'N/A'}
+                  </dd>
                 </div>
                 <div>
-                  <dt className="text-sm uppercase tracking-wider text-gray-500 font-medium mb-2">Category</dt>
-                  <dd className="text-lg font-light text-gray-900">{getCategoryName(project.category)}</dd>
+                  <dt className="text-sm uppercase tracking-wider text-gray-500 font-medium mb-2">
+                    Category
+                  </dt>
+                  <dd className="text-lg font-light text-gray-900">
+                    {getCategoryName(project.category)}
+                  </dd>
                 </div>
               </div>
             </div>
@@ -212,29 +247,29 @@ export default function ReferenceDetailPage({ params }: ReferencePageProps) {
 
         {/* 네비게이션 */}
         <div className="flex items-center justify-between pt-16 border-t border-gray-100">
-          <Link 
+          <Link
             href="/ko/references"
             className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
           >
-            <svg 
-              className="w-5 h-5 mr-3 group-hover:-translate-x-1 transition-transform duration-300" 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              className="w-5 h-5 mr-3 group-hover:-translate-x-1 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M7 16l-4-4m0 0l4-4m-4 4h18" 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M7 16l-4-4m0 0l4-4m-4 4h18"
               />
             </svg>
             <span className="text-sm uppercase tracking-wider font-medium">
               모든 프로젝트 보기
             </span>
           </Link>
-          
-          <Link 
+
+          <Link
             href="/ko/contact"
             className="inline-flex items-center px-6 py-3 bg-gray-900 text-white text-sm uppercase tracking-wider font-medium rounded-full hover:bg-gray-800 transition-colors duration-300"
           >
@@ -244,4 +279,4 @@ export default function ReferenceDetailPage({ params }: ReferencePageProps) {
       </div>
     </div>
   );
-} 
+}

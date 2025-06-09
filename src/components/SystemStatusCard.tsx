@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '../lib/motion';
+import { LocalTimeDisplay } from './LocalTimeDisplay';
 
 // ================================================================================
 // 🏥 KHAKISHOP 시스템 상태 카드 (홈페이지 스타일)
@@ -21,7 +22,7 @@ export default function SystemStatusCard({
   systemHealth,
   storeStats,
   onRefresh,
-  loading = false
+  loading = false,
 }: SystemStatusCardProps) {
   const [lastRefresh, setLastRefresh] = useState<Date | null>(null);
 
@@ -33,7 +34,7 @@ export default function SystemStatusCard({
     textPrimary: '#2D2823',
     textSecondary: '#4A453E',
     accent: '#E8E5E1',
-    khakiBeige: '#D4C4A8'
+    khakiBeige: '#D4C4A8',
   };
 
   // 시스템 상태 결정
@@ -51,7 +52,11 @@ export default function SystemStatusCard({
     }
 
     if (systemHealth?.missing?.length > 0) {
-      return { status: 'warning', icon: '⚠️', message: `${systemHealth.missing.length}개 파일 누락` };
+      return {
+        status: 'warning',
+        icon: '⚠️',
+        message: `${systemHealth.missing.length}개 파일 누락`,
+      };
     }
 
     return { status: 'healthy', icon: '✅', message: '모든 시스템 정상' };
@@ -95,7 +100,7 @@ export default function SystemStatusCard({
               <p className="text-blue-100 text-sm">실시간 모니터링</p>
             </div>
           </div>
-          
+
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -103,7 +108,9 @@ export default function SystemStatusCard({
             disabled={loading}
             className="p-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition-colors disabled:opacity-50"
           >
-            <div className={`text-white text-lg ${loading ? 'animate-spin' : ''}`}>
+            <div
+              className={`text-white text-lg ${loading ? 'animate-spin' : ''}`}
+            >
               🔄
             </div>
           </motion.button>
@@ -113,14 +120,16 @@ export default function SystemStatusCard({
       {/* 콘텐츠 */}
       <div className="p-4 space-y-4">
         {/* 시스템 상태 표시 */}
-        <div className={`p-3 rounded-xl border ${getStatusColor(status.status)}`}>
+        <div
+          className={`p-3 rounded-xl border ${getStatusColor(status.status)}`}
+        >
           <div className="flex items-center gap-3">
             <div className="text-xl">{status.icon}</div>
             <div>
               <div className="font-medium">{status.message}</div>
               {lastRefresh && (
                 <div className="text-xs opacity-70 mt-1">
-                  마지막 확인: {lastRefresh.toLocaleTimeString('ko-KR')}
+                  마지막 확인: <LocalTimeDisplay date={lastRefresh} format="time" />
                 </div>
               )}
             </div>
@@ -138,7 +147,7 @@ export default function SystemStatusCard({
                 총 이미지
               </div>
             </div>
-            
+
             <div className="text-center p-3 bg-emerald-50 rounded-xl">
               <div className="text-xl font-light text-emerald-700">
                 {storeStats.protectedImages || 0}
@@ -151,33 +160,53 @@ export default function SystemStatusCard({
         )}
 
         {/* 카테고리 통계 */}
-        {storeStats?.categories && Object.keys(storeStats.categories).length > 0 && (
-          <div>
-            <h4 className="text-sm font-medium text-[#2D2823] mb-2">카테고리별 분포</h4>
-            <div className="space-y-2">
-              {Object.entries(storeStats.categories).map(([category, count]) => (
-                <div key={category} className="flex justify-between items-center text-sm">
-                  <span className="text-[#4A453E] capitalize">{category}</span>
-                  <span className="text-[#2D2823] font-medium">{count as number}</span>
-                </div>
-              ))}
+        {storeStats?.categories &&
+          Object.keys(storeStats.categories).length > 0 && (
+            <div>
+              <h4 className="text-sm font-medium text-[#2D2823] mb-2">
+                카테고리별 분포
+              </h4>
+              <div className="space-y-2">
+                {Object.entries(storeStats.categories).map(
+                  ([category, count]) => (
+                    <div
+                      key={category}
+                      className="flex justify-between items-center text-sm"
+                    >
+                      <span className="text-[#4A453E] capitalize">
+                        {category}
+                      </span>
+                      <span className="text-[#2D2823] font-medium">
+                        {count as number}
+                      </span>
+                    </div>
+                  )
+                )}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
         {/* 오류 및 경고 */}
         {systemHealth?.missing && systemHealth.missing.length > 0 && (
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-3">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-amber-600">⚠️</span>
-              <span className="text-sm font-medium text-amber-800">누락된 파일</span>
+              <span className="text-sm font-medium text-amber-800">
+                누락된 파일
+              </span>
             </div>
             <div className="text-xs text-amber-700 space-y-1">
-              {systemHealth.missing.slice(0, 3).map((file: string, index: number) => (
-                <div key={index} className="truncate">• {file}</div>
-              ))}
+              {systemHealth.missing
+                .slice(0, 3)
+                .map((file: string, index: number) => (
+                  <div key={index} className="truncate">
+                    • {file}
+                  </div>
+                ))}
               {systemHealth.missing.length > 3 && (
-                <div className="text-amber-600">...그 외 {systemHealth.missing.length - 3}개</div>
+                <div className="text-amber-600">
+                  ...그 외 {systemHealth.missing.length - 3}개
+                </div>
               )}
             </div>
             <motion.button
@@ -193,7 +222,9 @@ export default function SystemStatusCard({
         {/* 성능 정보 */}
         {systemHealth?.performance && (
           <div className="bg-gray-50 rounded-xl p-3">
-            <h4 className="text-sm font-medium text-[#2D2823] mb-2">성능 정보</h4>
+            <h4 className="text-sm font-medium text-[#2D2823] mb-2">
+              성능 정보
+            </h4>
             <div className="grid grid-cols-2 gap-2 text-xs">
               <div className="text-center p-2 bg-white rounded">
                 <div className="font-medium text-[#2D2823]">
@@ -213,4 +244,4 @@ export default function SystemStatusCard({
       </div>
     </div>
   );
-} 
+}

@@ -7,5 +7,5 @@ export default function middleware(request: NextRequest) {
 
 export const config = {
   // 매처를 비활성화
-  matcher: []
-}; 
+  matcher: [],
+};

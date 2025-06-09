@@ -31,15 +31,15 @@ declare namespace NodeJS {
   interface ProcessEnv {
     // Google Analytics
     NEXT_PUBLIC_GA_ID?: string;
-    
+
     // PWA 설정
     NEXT_PUBLIC_APP_NAME?: string;
     NEXT_PUBLIC_APP_DESCRIPTION?: string;
-    
+
     // Notion CMS
     NOTION_API_KEY?: string;
     NOTION_DATABASE_ID?: string;
   }
 }
 
-export {}; 
+export {};

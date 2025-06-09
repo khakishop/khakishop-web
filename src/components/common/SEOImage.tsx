@@ -38,13 +38,17 @@ export default function SEOImage({
     'khaki-shop-image',
     metadata ? `style-${metadata.dataStyle}` : 'style-soft-minimal',
     metadata ? `category-${metadata.category}` : `category-${category}`,
-    className
-  ].filter(Boolean).join(' ');
+    className,
+  ]
+    .filter(Boolean)
+    .join(' ');
 
   return (
     <Image
       {...props}
-      alt={alt || metadata?.alt || description || 'khaki shop 감성 인테리어 이미지'}
+      alt={
+        alt || metadata?.alt || description || 'khaki shop 감성 인테리어 이미지'
+      }
       title={metadata?.title || `${description || 'khaki shop'} by khaki shop`}
       className={seoClasses}
       data-style={metadata?.dataStyle || 'soft-minimal'}
@@ -73,4 +77,4 @@ export function ReferenceImage(props: Omit<SEOImageProps, 'category'>) {
 
 export function ProjectImage(props: Omit<SEOImageProps, 'category'>) {
   return <SEOImage {...props} category="projects" />;
-} 
+}

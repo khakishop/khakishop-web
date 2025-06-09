@@ -1,13 +1,13 @@
-'use client'
-import { motion, AnimatePresence } from 'framer-motion'
-import { useEffect, useState } from 'react'
+'use client';
+import { motion, AnimatePresence } from '../lib/motion';
+import { useEffect, useState } from 'react';
 
 export default function HeroIntro() {
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(true);
   useEffect(() => {
-    const timer = setTimeout(() => setShow(false), 3000)
-    return () => clearTimeout(timer)
-  }, [])
+    const timer = setTimeout(() => setShow(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="absolute inset-0 flex items-center justify-center z-50 bg-black/80">
@@ -25,5 +25,5 @@ export default function HeroIntro() {
         )}
       </AnimatePresence>
     </div>
-  )
-} 
+  );
+}

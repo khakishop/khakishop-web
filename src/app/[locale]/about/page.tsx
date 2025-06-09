@@ -7,4 +7,4 @@ export const metadata = createSEOMetadata('about');
 
 export default function AboutPage() {
   return <AboutPageClient />;
-} 
+}

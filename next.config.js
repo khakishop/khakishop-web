@@ -24,22 +24,55 @@ const withPWA = require('next-pwa')({
 // const withNextIntl = createNextIntlPlugin('./src/i18n.ts');
 
 const nextConfig = {
-  // webpack 설정 제거 - Next.js가 알아서 처리하도록
-  // webpack: (config, { dev, isServer }) => {
-  //   if (dev) {
-  //     // 개발 모드에서 캐시 안정성 향상 - process.cwd() 사용
-  //     config.cache = {
-  //       type: 'filesystem',
-  //       version: 'v1',
-  //       cacheDirectory: path.resolve(process.cwd(), '.next/cache/webpack'),
-  //       store: 'pack',
-  //       buildDependencies: {
-  //         config: [__filename],
-  //       },
-  //     };
-  //   }
-  //   return config;
-  // },
+  // Webpack 설정 - Framer Motion 지원 및 캐시 안정성 향상
+  webpack: (config, { dev, isServer }) => {
+    // Framer Motion과 emotion 호환성 설정
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@emotion/is-prop-valid': require.resolve('@emotion/is-prop-valid'),
+    };
+
+    // Framer Motion 트랜스파일 설정
+    config.module.rules.push({
+      test: /\.m?js$/,
+      include: /node_modules\/framer-motion/,
+      type: 'javascript/auto',
+      resolve: {
+        fullySpecified: false,
+      },
+    });
+
+    // ESM 호환성 강화
+    config.resolve.extensionAlias = {
+      '.js': ['.js', '.ts', '.tsx'],
+      '.jsx': ['.jsx', '.tsx'],
+    };
+
+    if (dev) {
+      // 개발 모드에서 캐시 안정성 향상
+      config.cache = {
+        type: 'filesystem',
+        version: 'v2',
+        cacheDirectory: path.resolve(process.cwd(), '.next/cache/webpack'),
+        store: 'pack',
+        buildDependencies: {
+          config: [__filename],
+        },
+      };
+
+      // 빠른 새로고침 최적화
+      config.optimization = {
+        ...config.optimization,
+        moduleIds: 'named',
+        chunkIds: 'named',
+      };
+    }
+
+    return config;
+  },
+
+  // Framer Motion과 호환되는 transpilePackages 설정
+  transpilePackages: ['framer-motion', '@emotion/is-prop-valid'],
 
   // 이미지 최적화 설정 - sharp 자동 사용됨
   images: {
@@ -52,10 +85,7 @@ const nextConfig = {
     // 이미지 크기별 브레이크포인트
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     
-    // 허용된 도메인 (로컬 개발 + 추후 CMS/CDN 추가 가능)
-    domains: ['localhost'],
-    
-    // 외부 이미지 패턴 설정
+    // 외부 이미지 패턴 설정 (domains 대신 remotePatterns 사용)
     remotePatterns: [
       {
         protocol: 'https',

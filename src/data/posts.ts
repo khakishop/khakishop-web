@@ -6,15 +6,21 @@ export interface Post {
   date: string; // YYYY-MM-DD 형식
   summary: string;
   content: string;
-  category: 'curtain' | 'blind' | 'motorized' | 'design-tips' | 'interior-trends';
+  category:
+    | 'curtain'
+    | 'blind'
+    | 'motorized'
+    | 'design-tips'
+    | 'interior-trends';
 }
 
 export const posts: Post[] = [
   {
-    slug: "curtain-fabric-guide-2024",
-    title: "2024년 커튼 원단 선택 가이드",
-    date: "2024-01-15",
-    summary: "공간의 분위기를 결정하는 커튼 원단 선택의 모든 것. 소재별 특성과 인테리어 스타일에 따른 최적의 조합을 알아보세요.",
+    slug: 'curtain-fabric-guide-2024',
+    title: '2024년 커튼 원단 선택 가이드',
+    date: '2024-01-15',
+    summary:
+      '공간의 분위기를 결정하는 커튼 원단 선택의 모든 것. 소재별 특성과 인테리어 스타일에 따른 최적의 조합을 알아보세요.',
     content: `
 # 커튼 원단, 어떻게 선택해야 할까요?
 
@@ -39,13 +45,14 @@ export const posts: Post[] = [
 
 적절한 원단 선택으로 공간의 완성도를 높여보세요.
     `,
-    category: "curtain"
+    category: 'curtain',
   },
   {
-    slug: "smart-blind-installation-tips",
-    title: "스마트 블라인드 설치와 활용법",
-    date: "2024-01-10",
-    summary: "최신 스마트 홈 트렌드에 맞춘 전동 블라인드 설치부터 스마트폰 연동까지. 편리하고 효율적인 생활을 위한 가이드입니다.",
+    slug: 'smart-blind-installation-tips',
+    title: '스마트 블라인드 설치와 활용법',
+    date: '2024-01-10',
+    summary:
+      '최신 스마트 홈 트렌드에 맞춘 전동 블라인드 설치부터 스마트폰 연동까지. 편리하고 효율적인 생활을 위한 가이드입니다.',
     content: `
 # 스마트 블라인드로 편리한 생활을
 
@@ -77,13 +84,14 @@ export const posts: Post[] = [
 
 스마트 블라인드로 더욱 편리하고 효율적인 생활을 경험해보세요.
     `,
-    category: "motorized"
+    category: 'motorized',
   },
   {
-    slug: "minimalist-interior-design-trends",
-    title: "미니멀 인테리어와 텍스타일의 조화",
-    date: "2024-01-05",
-    summary: "깔끔하고 세련된 미니멀 인테리어에서 텍스타일이 어떤 역할을 하는지 알아보고, RIGAS 스타일로 공간을 완성하는 방법을 소개합니다.",
+    slug: 'minimalist-interior-design-trends',
+    title: '미니멀 인테리어와 텍스타일의 조화',
+    date: '2024-01-05',
+    summary:
+      '깔끔하고 세련된 미니멀 인테리어에서 텍스타일이 어떤 역할을 하는지 알아보고, RIGAS 스타일로 공간을 완성하는 방법을 소개합니다.',
     content: `
 # 미니멀 인테리어의 핵심, 텍스타일
 
@@ -121,13 +129,14 @@ export const posts: Post[] = [
 
 미니멀함 속에서 찾는 따뜻함, 그것이 진정한 미니멀 인테리어입니다.
     `,
-    category: "design-tips"
+    category: 'design-tips',
   },
   {
-    slug: "sustainable-textile-choices",
-    title: "지속가능한 텍스타일 선택하기",
-    date: "2023-12-28",
-    summary: "환경을 생각하는 인테리어 디자인. 지속가능한 소재와 제작 과정을 통해 아름다우면서도 친환경적인 공간을 만드는 방법을 알아보세요.",
+    slug: 'sustainable-textile-choices',
+    title: '지속가능한 텍스타일 선택하기',
+    date: '2023-12-28',
+    summary:
+      '환경을 생각하는 인테리어 디자인. 지속가능한 소재와 제작 과정을 통해 아름다우면서도 친환경적인 공간을 만드는 방법을 알아보세요.',
     content: `
 # 지구를 생각하는 인테리어
 
@@ -173,13 +182,14 @@ export const posts: Post[] = [
 
 작은 선택이 만드는 큰 변화, 지속가능한 인테리어로 시작해보세요.
     `,
-    category: "interior-trends"
+    category: 'interior-trends',
   },
   {
-    slug: "window-treatment-for-small-spaces",
-    title: "작은 공간을 위한 창문 인테리어",
-    date: "2023-12-20",
-    summary: "제한된 공간에서도 스타일리시하고 기능적인 창문 인테리어를 완성하는 노하우. 공간을 넓어 보이게 하는 창문 트리트먼트 아이디어를 소개합니다.",
+    slug: 'window-treatment-for-small-spaces',
+    title: '작은 공간을 위한 창문 인테리어',
+    date: '2023-12-20',
+    summary:
+      '제한된 공간에서도 스타일리시하고 기능적인 창문 인테리어를 완성하는 노하우. 공간을 넓어 보이게 하는 창문 트리트먼트 아이디어를 소개합니다.',
     content: `
 # 작은 공간, 큰 변화
 
@@ -223,38 +233,46 @@ export const posts: Post[] = [
 
 작은 공간이라는 제약을 창의성의 원동력으로 바꿔보세요.
     `,
-    category: "design-tips"
-  }
+    category: 'design-tips',
+  },
 ];
 
 // 헬퍼 함수들
 export const getAllPosts = (): Post[] => {
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return posts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 };
 
 export const getPostBySlug = (slug: string): Post | undefined => {
-  return posts.find(post => post.slug === slug);
+  return posts.find((post) => post.slug === slug);
 };
 
 export const getPostsByCategory = (category: Post['category']): Post[] => {
   return posts
-    .filter(post => post.category === category)
+    .filter((post) => post.category === category)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 };
 
 export const getCategories = (): Post['category'][] => {
-  const categories = Array.from(new Set(posts.map(post => post.category)));
+  const categories = Array.from(new Set(posts.map((post) => post.category)));
   return categories;
 };
 
 // 카테고리 한글 변환
 export const getCategoryName = (category: Post['category']): string => {
   switch (category) {
-    case 'curtain': return '커튼';
-    case 'blind': return '블라인드';
-    case 'motorized': return '전동 시스템';
-    case 'design-tips': return '디자인 팁';
-    case 'interior-trends': return '인테리어 트렌드';
-    default: return category;
+    case 'curtain':
+      return '커튼';
+    case 'blind':
+      return '블라인드';
+    case 'motorized':
+      return '전동 시스템';
+    case 'design-tips':
+      return '디자인 팁';
+    case 'interior-trends':
+      return '인테리어 트렌드';
+    default:
+      return category;
   }
-}; 
+};

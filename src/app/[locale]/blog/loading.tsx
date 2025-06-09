@@ -6,7 +6,6 @@ export default function BlogLoadingSkeleton() {
           {/* 스켈레톤 카드들 */}
           {Array.from({ length: 6 }).map((_, index) => (
             <article key={index} className="space-y-6 animate-pulse">
-              
               {/* 커버 이미지 스켈레톤 */}
               <div className="relative aspect-[4/3] bg-gray-200 rounded-2xl"></div>
 
@@ -22,7 +21,7 @@ export default function BlogLoadingSkeleton() {
                   <div className="h-8 bg-gray-200 rounded w-full"></div>
                   <div className="h-8 bg-gray-200 rounded w-3/4"></div>
                 </div>
-                
+
                 <div className="space-y-2">
                   <div className="h-4 bg-gray-200 rounded w-full"></div>
                   <div className="h-4 bg-gray-200 rounded w-full"></div>
@@ -36,7 +35,7 @@ export default function BlogLoadingSkeleton() {
                   <div className="h-4 w-24 bg-gray-200 rounded"></div>
                   <div className="h-3 w-16 bg-gray-200 rounded"></div>
                 </div>
-                
+
                 <div className="h-4 w-20 bg-gray-200 rounded"></div>
               </div>
             </article>
@@ -45,4 +44,4 @@ export default function BlogLoadingSkeleton() {
       </div>
     </section>
   );
-} 
+}

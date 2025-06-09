@@ -1,7 +1,11 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getAllPosts, getPostBySlug, getCategoryName } from '../../../../data/posts';
+import {
+  getAllPosts,
+  getPostBySlug,
+  getCategoryName,
+} from '../../../../data/posts';
 
 // 타입 정의
 interface PostPageProps {
@@ -11,13 +15,15 @@ interface PostPageProps {
 }
 
 // 메타데이터 생성
-export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PostPageProps): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
     return {
       title: '포스트를 찾을 수 없습니다 | khaki shop',
-      description: '요청하신 포스트를 찾을 수 없습니다.'
+      description: '요청하신 포스트를 찾을 수 없습니다.',
     };
   }
 
@@ -33,20 +39,20 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
           url: '/og-image.jpg',
           width: 1200,
           height: 630,
-          alt: post.title
-        }
+          alt: post.title,
+        },
       ],
       type: 'article',
       locale: 'ko_KR',
       publishedTime: post.date,
-    }
+    },
   };
 }
 
 // 정적 경로 생성
 export async function generateStaticParams() {
   const posts = getAllPosts();
-  
+
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -66,7 +72,7 @@ export default function PostDetailPage({ params }: PostPageProps) {
     return date.toLocaleDateString('ko-KR', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
+      day: 'numeric',
     });
   };
 
@@ -76,23 +82,32 @@ export default function PostDetailPage({ params }: PostPageProps) {
       // 제목 파싱
       if (line.startsWith('# ')) {
         return (
-          <h1 key={index} className="text-3xl lg:text-4xl font-serif text-gray-900 leading-tight tracking-tight mb-8 mt-12 first:mt-0">
+          <h1
+            key={index}
+            className="text-3xl lg:text-4xl font-serif text-gray-900 leading-tight tracking-tight mb-8 mt-12 first:mt-0"
+          >
             {line.substring(2)}
           </h1>
         );
       }
-      
+
       if (line.startsWith('## ')) {
         return (
-          <h2 key={index} className="text-2xl lg:text-3xl font-serif text-gray-900 leading-tight tracking-tight mb-6 mt-10">
+          <h2
+            key={index}
+            className="text-2xl lg:text-3xl font-serif text-gray-900 leading-tight tracking-tight mb-6 mt-10"
+          >
             {line.substring(3)}
           </h2>
         );
       }
-      
+
       if (line.startsWith('### ')) {
         return (
-          <h3 key={index} className="text-xl lg:text-2xl font-serif text-gray-900 leading-tight tracking-tight mb-4 mt-8">
+          <h3
+            key={index}
+            className="text-xl lg:text-2xl font-serif text-gray-900 leading-tight tracking-tight mb-4 mt-8"
+          >
             {line.substring(4)}
           </h3>
         );
@@ -101,7 +116,10 @@ export default function PostDetailPage({ params }: PostPageProps) {
       // 리스트 파싱
       if (line.startsWith('- ')) {
         return (
-          <li key={index} className="text-lg text-gray-700 font-light leading-relaxed mb-2 ml-6 list-disc">
+          <li
+            key={index}
+            className="text-lg text-gray-700 font-light leading-relaxed mb-2 ml-6 list-disc"
+          >
             {line.substring(2).replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}
           </li>
         );
@@ -110,8 +128,13 @@ export default function PostDetailPage({ params }: PostPageProps) {
       // 숫자 리스트 파싱
       if (/^\d+\.\s/.test(line)) {
         return (
-          <li key={index} className="text-lg text-gray-700 font-light leading-relaxed mb-2 ml-6 list-decimal">
-            {line.replace(/^\d+\.\s/, '').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}
+          <li
+            key={index}
+            className="text-lg text-gray-700 font-light leading-relaxed mb-2 ml-6 list-decimal"
+          >
+            {line
+              .replace(/^\d+\.\s/, '')
+              .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}
           </li>
         );
       }
@@ -119,11 +142,13 @@ export default function PostDetailPage({ params }: PostPageProps) {
       // 일반 문단
       if (line.trim() && !line.startsWith('#')) {
         return (
-          <p key={index} className="text-lg text-gray-700 font-light leading-relaxed mb-6"
-             dangerouslySetInnerHTML={{ 
-               __html: line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') 
-             }}>
-          </p>
+          <p
+            key={index}
+            className="text-lg text-gray-700 font-light leading-relaxed mb-6"
+            dangerouslySetInnerHTML={{
+              __html: line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'),
+            }}
+          ></p>
         );
       }
 
@@ -142,7 +167,10 @@ export default function PostDetailPage({ params }: PostPageProps) {
               Home
             </Link>
             <span>/</span>
-            <Link href="/blog" className="hover:text-gray-900 transition-colors">
+            <Link
+              href="/blog"
+              className="hover:text-gray-900 transition-colors"
+            >
               Journal
             </Link>
             <span>/</span>
@@ -153,13 +181,11 @@ export default function PostDetailPage({ params }: PostPageProps) {
 
       {/* 메인 콘텐츠 */}
       <article className="max-w-4xl mx-auto px-6 py-16 lg:py-24">
-        
         {/* 포스트 헤더 */}
         <header className="mb-16 lg:mb-20 text-center">
-          
           {/* 카테고리 */}
           <div className="mb-8">
-            <Link 
+            <Link
               href={`/blog?category=${post.category}`}
               className="inline-block px-4 py-2 bg-gray-100 text-gray-700 text-sm uppercase tracking-widest rounded-full font-medium hover:bg-gray-200 transition-colors"
             >
@@ -183,10 +209,8 @@ export default function PostDetailPage({ params }: PostPageProps) {
           <div className="text-xl lg:text-2xl text-gray-600 font-light leading-relaxed mb-12 p-8 bg-gray-50 rounded-2xl">
             {post.summary}
           </div>
-          
-          <div className="space-y-6">
-            {renderContent(post.content)}
-          </div>
+
+          <div className="space-y-6">{renderContent(post.content)}</div>
         </div>
       </article>
 
@@ -197,47 +221,47 @@ export default function PostDetailPage({ params }: PostPageProps) {
             전문적인 상담이 필요하신가요?
           </h2>
           <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto mb-10">
-            이 글이 도움이 되셨다면, 실제 시공과 설치에 대한 전문 상담을 받아보세요. 
-            고객님의 공간에 최적화된 솔루션을 제안해드립니다.
+            이 글이 도움이 되셨다면, 실제 시공과 설치에 대한 전문 상담을
+            받아보세요. 고객님의 공간에 최적화된 솔루션을 제안해드립니다.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
+            <Link
               href="/contact"
               className="inline-flex items-center bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 text-sm uppercase tracking-wider font-medium group"
             >
               <span>시공 문의하기</span>
-              <svg 
-                className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform duration-300" 
-                fill="none" 
-                stroke="currentColor" 
+              <svg
+                className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M17 8l4 4m0 0l-4 4m4-4H3" 
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
             </Link>
-            
-            <Link 
+
+            <Link
               href="/blog"
               className="inline-flex items-center text-gray-900 hover:text-gray-600 transition-colors text-sm uppercase tracking-wider font-medium border-b border-transparent hover:border-gray-900"
             >
               <span>다른 글 둘러보기</span>
-              <svg 
-                className="w-4 h-4 ml-2" 
-                fill="none" 
-                stroke="currentColor" 
+              <svg
+                className="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M17 8l4 4m0 0l-4 4m4-4H3" 
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
             </Link>
@@ -246,4 +270,4 @@ export default function PostDetailPage({ params }: PostPageProps) {
       </section>
     </div>
   );
-} 
+}

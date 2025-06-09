@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from "../../../lib/motion";
 import { getAllProducts } from '../../../data/products';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -17,24 +17,24 @@ export default function ProductsPage() {
       transition: {
         duration: 0.8,
         staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
-    initial: { 
-      opacity: 0, 
-      y: 30 
+    initial: {
+      opacity: 0,
+      y: 30,
     },
-    animate: { 
-      opacity: 1, 
+    animate: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: 'easeOut',
+      },
+    },
   };
 
   return (
@@ -51,7 +51,8 @@ export default function ProductsPage() {
             All Products
           </h1>
           <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
-            공간을 완성하는 모든 제품을 한눈에 확인하세요. 커튼부터 블라인드, 전동 시스템까지 다양한 컬렉션을 만나보실 수 있습니다.
+            공간을 완성하는 모든 제품을 한눈에 확인하세요. 커튼부터 블라인드,
+            전동 시스템까지 다양한 컬렉션을 만나보실 수 있습니다.
           </p>
         </motion.div>
 
@@ -61,14 +62,8 @@ export default function ProductsPage() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12"
         >
           {allProducts.map((product, index) => (
-            <motion.div
-              key={product.slug}
-              variants={itemVariants}
-            >
-              <Link
-                href={`/products/${product.slug}`}
-                className="group block"
-              >
+            <motion.div key={product.slug} variants={itemVariants}>
+              <Link href={`/products/${product.slug}`} className="group block">
                 {/* RIGAS 스타일 미니멀 제품 카드 */}
                 <div className="space-y-4">
                   {/* 제품 이미지 */}
@@ -85,8 +80,16 @@ export default function ProductsPage() {
                       <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
                         <div className="text-gray-400 text-center">
                           <div className="w-16 h-16 mx-auto mb-3 bg-gray-300 rounded flex items-center justify-center">
-                            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                            <svg
+                              className="w-8 h-8"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                                clipRule="evenodd"
+                              />
                             </svg>
                           </div>
                           <p className="text-sm font-medium">제품 이미지</p>
@@ -143,7 +146,8 @@ export default function ProductsPage() {
               맞춤 상담 서비스
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              전문가와 함께 공간에 가장 적합한 제품을 찾아보세요.<br />
+              전문가와 함께 공간에 가장 적합한 제품을 찾아보세요.
+              <br />
               무료 상담을 통해 완벽한 솔루션을 제안해드립니다.
             </p>
             <div className="pt-4">
@@ -156,4 +160,4 @@ export default function ProductsPage() {
       </motion.div>
     </div>
   );
-} 
+}

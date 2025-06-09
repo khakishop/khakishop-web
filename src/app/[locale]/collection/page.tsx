@@ -7,4 +7,4 @@ export const metadata = createSEOMetadata('collection');
 
 export default function CollectionPage() {
   return <CollectionPageClient />;
-} 
+}

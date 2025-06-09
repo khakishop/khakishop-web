@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from "../../../lib/motion";
 
 export default function ContactPage() {
   // 페이지 애니메이션 variants
@@ -12,54 +12,54 @@ export default function ContactPage() {
       transition: {
         duration: 0.8,
         staggerChildren: 0.2,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
-    initial: { 
-      opacity: 0, 
-      y: 30 
+    initial: {
+      opacity: 0,
+      y: 30,
     },
-    animate: { 
-      opacity: 1, 
+    animate: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: 'easeOut',
+      },
+    },
   };
 
   const mapVariants = {
-    initial: { 
-      opacity: 0, 
-      x: -50 
+    initial: {
+      opacity: 0,
+      x: -50,
     },
-    animate: { 
-      opacity: 1, 
+    animate: {
+      opacity: 1,
       x: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
-      }
-    }
+        ease: 'easeOut',
+      },
+    },
   };
 
   const infoVariants = {
-    initial: { 
-      opacity: 0, 
-      x: 50 
+    initial: {
+      opacity: 0,
+      x: 50,
     },
-    animate: { 
-      opacity: 1, 
+    animate: {
+      opacity: 1,
       x: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
-      }
-    }
+        ease: 'easeOut',
+      },
+    },
   };
 
   return (
@@ -77,7 +77,7 @@ export default function ContactPage() {
               <h1 className="text-5xl lg:text-7xl font-serif tracking-tight text-gray-900">
                 Contact
               </h1>
-              
+
               {/* 서브 설명 */}
               <p className="text-xl lg:text-2xl text-gray-600 font-light leading-relaxed max-w-3xl mx-auto">
                 카키샵은 항상 공간에 대한 당신의 생각을 기다립니다.
@@ -90,12 +90,8 @@ export default function ContactPage() {
         <section className="pb-24 lg:pb-32">
           <div className="max-w-7xl mx-auto px-6 md:px-20">
             <div className="flex flex-col lg:flex-row gap-16">
-              
               {/* 좌측: 지도 영역 */}
-              <motion.div 
-                variants={mapVariants}
-                className="flex-1"
-              >
+              <motion.div variants={mapVariants} className="flex-1">
                 <div className="aspect-[4/3] lg:aspect-square bg-gray-100 rounded-lg overflow-hidden">
                   {/* Google Maps iframe */}
                   <iframe
@@ -109,13 +105,21 @@ export default function ContactPage() {
                     title="카키샵 위치"
                     className="w-full h-full"
                   ></iframe>
-                  
+
                   {/* 지도 로딩 실패시 플레이스홀더 */}
                   <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                     <div className="text-gray-400 text-center">
                       <div className="w-16 h-16 mx-auto mb-4 bg-gray-300 rounded-lg flex items-center justify-center">
-                        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                        <svg
+                          className="w-8 h-8"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                            clipRule="evenodd"
+                          />
                         </svg>
                       </div>
                       <p className="text-sm font-medium">매장 위치</p>
@@ -125,10 +129,7 @@ export default function ContactPage() {
               </motion.div>
 
               {/* 우측: 연락처 정보 */}
-              <motion.div 
-                variants={infoVariants}
-                className="flex-1 space-y-12"
-              >
+              <motion.div variants={infoVariants} className="flex-1 space-y-12">
                 {/* 매장 주소 */}
                 <div className="space-y-4">
                   <h3 className="text-2xl font-serif tracking-tight text-gray-900">
@@ -146,7 +147,7 @@ export default function ContactPage() {
                     대표 번호
                   </h3>
                   <div className="text-lg text-gray-700">
-                    <a 
+                    <a
                       href="tel:0507-1372-0358"
                       className="hover:text-gray-900 transition-colors font-medium"
                     >
@@ -161,7 +162,7 @@ export default function ContactPage() {
                     이메일
                   </h3>
                   <div className="text-lg text-gray-700">
-                    <a 
+                    <a
                       href="mailto:lskshsrl@naver.com"
                       className="hover:text-gray-900 transition-colors font-medium"
                     >
@@ -188,17 +189,17 @@ export default function ContactPage() {
                   <button className="w-full sm:w-auto rounded-full bg-black text-white px-8 py-3 hover:bg-gray-800 transition-colors duration-300 text-sm uppercase tracking-wider font-medium">
                     상담 예약하기
                   </button>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                    <a 
-                      href="https://naver.me/F0wo4Ive" 
-                      target="_blank" 
+                    <a
+                      href="https://naver.me/F0wo4Ive"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 hover:text-gray-900 transition-colors text-sm uppercase tracking-wider font-medium border-b border-transparent hover:border-gray-900 pb-1"
                     >
                       네이버 플레이스
                     </a>
-                    <a 
+                    <a
                       href="tel:0507-1372-0358"
                       className="text-gray-600 hover:text-gray-900 transition-colors text-sm uppercase tracking-wider font-medium border-b border-transparent hover:border-gray-900 pb-1"
                     >
@@ -218,15 +219,16 @@ export default function ContactPage() {
               <h2 className="text-3xl lg:text-4xl font-serif tracking-tight text-gray-900">
                 Visit Our Showroom
               </h2>
-              
+
               <div className="space-y-8">
                 <p className="text-xl lg:text-2xl text-gray-600 font-light italic leading-relaxed">
                   "실제 패브릭을 만져보고, 공간에서 직접 확인해보세요."
                 </p>
-                
+
                 <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                  카키샵 쇼룸에서는 다양한 텍스타일 샘플을 직접 체험하실 수 있습니다. 
-                  전문 컨설턴트와 함께 당신의 공간에 가장 적합한 솔루션을 찾아보세요.
+                  카키샵 쇼룸에서는 다양한 텍스타일 샘플을 직접 체험하실 수
+                  있습니다. 전문 컨설턴트와 함께 당신의 공간에 가장 적합한
+                  솔루션을 찾아보세요.
                 </p>
               </div>
             </motion.div>
@@ -240,20 +242,21 @@ export default function ContactPage() {
               <h2 className="text-3xl lg:text-4xl font-serif tracking-tight text-white">
                 언제든 문의하세요
               </h2>
-              
+
               <p className="text-lg text-gray-300 leading-relaxed">
-                공간에 대한 고민이나 텍스타일 상담이 필요하시면<br />
+                공간에 대한 고민이나 텍스타일 상담이 필요하시면
+                <br />
                 언제든 연락주세요. 전문가가 친절히 도움드리겠습니다.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
-                <a 
+                <a
                   href="tel:0507-1372-0358"
                   className="bg-white text-gray-900 px-8 py-3 rounded-full hover:bg-gray-100 transition-colors duration-300 text-sm uppercase tracking-wider font-medium"
                 >
                   지금 전화하기
                 </a>
-                <a 
+                <a
                   href="mailto:lskshsrl@naver.com"
                   className="text-white hover:text-gray-300 transition-colors duration-300 text-sm uppercase tracking-wider font-medium border-b border-transparent hover:border-gray-300"
                 >
@@ -266,4 +269,4 @@ export default function ContactPage() {
       </motion.div>
     </div>
   );
-} 
+}

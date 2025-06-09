@@ -11,14 +11,14 @@ export const metadata = createSEOMetadata('blog');
 // 태그 필터 컴포넌트
 async function TagFilter() {
   const tags = await getAllTags();
-  
+
   if (tags.length === 0) return null;
 
   return (
     <section className="py-16 border-b border-gray-100">
       <div className="max-w-screen-xl mx-auto px-6">
         <div className="flex flex-wrap justify-center gap-3 lg:gap-4">
-          <Link 
+          <Link
             href="/blog"
             className="px-4 py-2 text-sm font-medium text-gray-900 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
           >
@@ -40,14 +40,18 @@ async function TagFilter() {
 }
 
 // 서버 컴포넌트로 블로그 포스트 목록을 렌더링
-async function BlogPosts({ searchParams }: { searchParams?: { tag?: string } }) {
+async function BlogPosts({
+  searchParams,
+}: {
+  searchParams?: { tag?: string };
+}) {
   const allPosts = await getNotionPosts();
-  
+
   // 태그 필터링
-  const posts = searchParams?.tag 
-    ? allPosts.filter(post => 
-        post.tags?.some(postTag => 
-          postTag.toLowerCase() === searchParams.tag?.toLowerCase()
+  const posts = searchParams?.tag
+    ? allPosts.filter((post) =>
+        post.tags?.some(
+          (postTag) => postTag.toLowerCase() === searchParams.tag?.toLowerCase()
         )
       )
     : allPosts;
@@ -58,53 +62,61 @@ async function BlogPosts({ searchParams }: { searchParams?: { tag?: string } }) 
     return date.toLocaleDateString('ko-KR', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
+      day: 'numeric',
     });
   };
 
   // 게시글이 없는 경우
   if (!posts || posts.length === 0) {
     const isFiltered = searchParams?.tag;
-    
+
     return (
       <section className="py-20 lg:py-32">
         <div className="max-w-screen-xl mx-auto px-6">
           <div className="text-center">
             <div className="w-24 h-24 mx-auto mb-8 bg-gray-100 rounded-2xl flex items-center justify-center">
-              <svg 
-                className="w-12 h-12 text-gray-400" 
-                fill="none" 
-                stroke="currentColor" 
+              <svg
+                className="w-12 h-12 text-gray-400"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={1.5} 
-                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                 />
               </svg>
             </div>
             <h3 className="text-2xl lg:text-3xl font-serif text-gray-900 mb-4">
-              {isFiltered 
-                ? `'${searchParams.tag}' 태그의 글이 없습니다` 
-                : '작성된 글이 없습니다'
-              }
+              {isFiltered
+                ? `'${searchParams.tag}' 태그의 글이 없습니다`
+                : '작성된 글이 없습니다'}
             </h3>
             <p className="text-lg text-gray-600 font-light max-w-md mx-auto leading-relaxed mb-6">
-              {isFiltered 
-                ? '다른 태그를 선택하거나 전체보기를 확인해보세요.' 
-                : '새로운 글이 준비되는 대로 여기에서 만나보실 수 있습니다.'
-              }
+              {isFiltered
+                ? '다른 태그를 선택하거나 전체보기를 확인해보세요.'
+                : '새로운 글이 준비되는 대로 여기에서 만나보실 수 있습니다.'}
             </p>
             {isFiltered && (
-              <Link 
+              <Link
                 href="/blog"
                 className="inline-flex items-center text-gray-900 hover:text-gray-600 transition-colors text-sm uppercase tracking-wider font-medium"
               >
                 전체 글 보기
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg
+                  className="w-4 h-4 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </Link>
             )}
@@ -122,14 +134,26 @@ async function BlogPosts({ searchParams }: { searchParams?: { tag?: string } }) 
           <div className="mb-12 text-center">
             <div className="inline-flex items-center bg-gray-50 rounded-full px-6 py-3 mb-4">
               <span className="text-sm text-gray-600 mr-2">필터:</span>
-              <span className="text-sm font-medium text-gray-900">{searchParams.tag}</span>
-              <Link 
+              <span className="text-sm font-medium text-gray-900">
+                {searchParams.tag}
+              </span>
+              <Link
                 href="/blog"
                 className="ml-3 text-gray-400 hover:text-gray-600 transition-colors"
                 title="필터 제거"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </Link>
             </div>
@@ -142,7 +166,6 @@ async function BlogPosts({ searchParams }: { searchParams?: { tag?: string } }) 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12 lg:gap-16">
           {posts.map((post: NotionPost) => (
             <article key={post.id} className="group space-y-6">
-              
               {/* 커버 이미지 */}
               {post.coverImage && (
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-gray-100">
@@ -173,11 +196,9 @@ async function BlogPosts({ searchParams }: { searchParams?: { tag?: string } }) 
               {/* 포스트 내용 */}
               <div className="space-y-4">
                 <h2 className="text-2xl lg:text-3xl font-serif text-gray-900 leading-tight tracking-tight group-hover:text-gray-600 transition-colors">
-                  <Link href={`/blog/${post.slug}`}>
-                    {post.title}
-                  </Link>
+                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </h2>
-                
+
                 {post.summary && (
                   <p className="text-base lg:text-lg text-gray-600 font-light leading-relaxed line-clamp-3">
                     {post.summary}
@@ -192,9 +213,7 @@ async function BlogPosts({ searchParams }: { searchParams?: { tag?: string } }) 
                     {formatDate(post.date)}
                   </time>
                   <div className="flex items-center space-x-3 text-xs text-gray-400">
-                    {post.author && (
-                      <span>by {post.author}</span>
-                    )}
+                    {post.author && <span>by {post.author}</span>}
                     {post.readingTime && (
                       <>
                         <span>•</span>
@@ -203,23 +222,23 @@ async function BlogPosts({ searchParams }: { searchParams?: { tag?: string } }) 
                     )}
                   </div>
                 </div>
-                
-                <Link 
+
+                <Link
                   href={`/blog/${post.slug}`}
                   className="inline-flex items-center text-gray-900 hover:text-gray-600 transition-colors text-sm uppercase tracking-wider font-medium group"
                 >
                   <span>자세히 보기</span>
-                  <svg 
-                    className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" 
-                    fill="none" 
-                    stroke="currentColor" 
+                  <svg
+                    className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M17 8l4 4m0 0l-4 4m4-4H3" 
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
                     />
                   </svg>
                 </Link>
@@ -232,10 +251,10 @@ async function BlogPosts({ searchParams }: { searchParams?: { tag?: string } }) 
   );
 }
 
-export default function BlogPage({ 
-  searchParams 
-}: { 
-  searchParams?: { tag?: string } 
+export default function BlogPage({
+  searchParams,
+}: {
+  searchParams?: { tag?: string };
 }) {
   return (
     <div className="min-h-screen bg-white">
@@ -246,19 +265,27 @@ export default function BlogPage({
             Journal
           </h1>
           <p className="text-lg lg:text-xl text-gray-600 font-light leading-relaxed max-w-3xl mx-auto">
-            인테리어와 텍스타일에 대한 깊이 있는 이야기들. 
-            공간을 더욱 아름답게 만드는 지혜와 영감을 나누어 드립니다.
+            인테리어와 텍스타일에 대한 깊이 있는 이야기들. 공간을 더욱 아름답게
+            만드는 지혜와 영감을 나누어 드립니다.
           </p>
         </div>
       </section>
 
       {/* 태그 필터 - Suspense로 래핑 */}
-      <Suspense fallback={<div className="py-16 border-b border-gray-100"></div>}>
+      <Suspense
+        fallback={<div className="py-16 border-b border-gray-100"></div>}
+      >
         <TagFilter />
       </Suspense>
 
       {/* 포스트 목록 - Suspense로 래핑 */}
-      <Suspense fallback={<div className="py-20 lg:py-32"><div className="text-center">로딩 중...</div></div>}>
+      <Suspense
+        fallback={
+          <div className="py-20 lg:py-32">
+            <div className="text-center">로딩 중...</div>
+          </div>
+        }
+      >
         <BlogPosts searchParams={searchParams} />
       </Suspense>
 
@@ -271,23 +298,23 @@ export default function BlogPage({
           <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto mb-10">
             전문 상담을 통해 고객님의 공간에 최적화된 솔루션을 제안해드립니다.
           </p>
-          
-          <Link 
+
+          <Link
             href="/contact"
             className="inline-flex items-center bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 text-sm uppercase tracking-wider font-medium group"
           >
             <span>상담 문의하기</span>
-            <svg 
-              className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform duration-300" 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M17 8l4 4m0 0l-4 4m4-4H3" 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
           </Link>
@@ -295,4 +322,4 @@ export default function BlogPage({
       </section>
     </div>
   );
-} 
+}

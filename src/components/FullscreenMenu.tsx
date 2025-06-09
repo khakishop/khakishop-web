@@ -1,61 +1,69 @@
 'use client';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from "../lib/motion";
 import Link from 'next/link';
+import { useRouter, useParams } from 'next/navigation';
 
 const menuItems = [
   {
     english: 'ABOUT',
     korean: '브랜드 소개',
-    path: '/about'
+    path: '/about',
   },
   {
     english: 'COLLECTION',
     korean: '컬렉션',
-    path: '/collection'
+    path: '/collection',
   },
   {
     english: 'PRODUCTS',
     korean: '전체 제품',
-    path: '/products'
+    path: '/products',
   },
   {
     english: 'PROJECT',
     korean: '시공 사례',
-    path: '/project'
+    path: '/project',
   },
   {
     english: 'REFERENCES',
     korean: '레퍼런스',
-    path: '/references'
+    path: '/references',
   },
   {
     english: 'CURTAIN',
     korean: '커튼',
-    path: '/curtain'
+    path: '/curtain',
   },
   {
     english: 'BLIND',
     korean: '블라인드',
-    path: '/blind'
+    path: '/blind',
   },
   {
     english: 'MOTORIZED',
     korean: '모터 제품',
-    path: '/motorized'
+    path: '/motorized',
   },
   {
     english: 'CONTACT',
     korean: '상담/후기/지도',
-    path: '/contact'
-  }
+    path: '/contact',
+  },
 ];
 
 export default function FullscreenMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const params = useParams();
+  const locale = params?.locale || 'ko'; // 기본값을 'ko'로 설정
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+
+  // locale이 포함된 경로를 생성하는 함수
+  const getLocalizedPath = (path: string) => {
+    return `/${locale}${path}`;
+  };
 
   // Disable scroll when menu is open
   useEffect(() => {
@@ -72,88 +80,88 @@ export default function FullscreenMenu() {
   // Animation variants for overlay background
   const overlayVariants = {
     initial: { opacity: 0 },
-    animate: { 
+    animate: {
       opacity: 1,
-      transition: { 
-        duration: 0.5, 
-        ease: "easeOut" 
-      }
+      transition: {
+        duration: 0.5,
+        ease: 'easeOut',
+      },
     },
-    exit: { 
+    exit: {
       opacity: 0,
-      transition: { 
-        duration: 0.3, 
-        ease: "easeIn",
-        delay: 0.4
-      }
-    }
+      transition: {
+        duration: 0.3,
+        ease: 'easeIn',
+        delay: 0.4,
+      },
+    },
   };
 
   // DESKTOP Animation variants
   const desktopLogoVariants = {
-    initial: { 
+    initial: {
       opacity: 0,
-      x: -50 
+      x: -50,
     },
-    animate: { 
+    animate: {
       opacity: 1,
       x: 0,
-      transition: { 
-        duration: 0.8, 
-        ease: "easeOut",
-        delay: 0.3
-      }
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut',
+        delay: 0.3,
+      },
     },
     exit: {
       opacity: 0,
       x: -30,
       transition: {
         duration: 0.3,
-        ease: "easeIn"
-      }
-    }
+        ease: 'easeIn',
+      },
+    },
   };
 
   const desktopContactVariants = {
-    initial: { 
+    initial: {
       opacity: 0,
-      x: 50 
+      x: 50,
     },
-    animate: { 
+    animate: {
       opacity: 1,
       x: 0,
-      transition: { 
-        duration: 0.8, 
-        ease: "easeOut",
-        delay: 0.4
-      }
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut',
+        delay: 0.4,
+      },
     },
     exit: {
       opacity: 0,
       x: 30,
       transition: {
         duration: 0.3,
-        ease: "easeIn"
-      }
-    }
+        ease: 'easeIn',
+      },
+    },
   };
 
   // MOBILE Animation variants
   const mobileLogoVariants = {
-    initial: { 
+    initial: {
       opacity: 0,
       y: -30,
-      scale: 0.9
+      scale: 0.9,
     },
-    animate: { 
+    animate: {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: { 
-        duration: 0.6, 
-        ease: "easeOut",
-        delay: 0.2
-      }
+      transition: {
+        duration: 0.6,
+        ease: 'easeOut',
+        delay: 0.2,
+      },
     },
     exit: {
       opacity: 0,
@@ -161,51 +169,51 @@ export default function FullscreenMenu() {
       scale: 0.95,
       transition: {
         duration: 0.25,
-        ease: "easeIn"
-      }
-    }
+        ease: 'easeIn',
+      },
+    },
   };
 
   const mobileContactVariants = {
-    initial: { 
+    initial: {
       opacity: 0,
-      y: 30
+      y: 30,
     },
-    animate: { 
+    animate: {
       opacity: 1,
       y: 0,
-      transition: { 
-        duration: 0.5, 
-        ease: "easeOut",
-        delay: 0.6
-      }
+      transition: {
+        duration: 0.5,
+        ease: 'easeOut',
+        delay: 0.6,
+      },
     },
     exit: {
       opacity: 0,
       y: 20,
       transition: {
         duration: 0.2,
-        ease: "easeIn"
-      }
-    }
+        ease: 'easeIn',
+      },
+    },
   };
 
   // Animation variants for close button
   const closeButtonVariants = {
-    initial: { 
+    initial: {
       opacity: 0,
       scale: 0.8,
-      rotate: -90
+      rotate: -90,
     },
-    animate: { 
+    animate: {
       opacity: 1,
       scale: 1,
       rotate: 0,
       transition: {
         duration: 0.4,
         delay: 0.3,
-        ease: "easeOut"
-      }
+        ease: 'easeOut',
+      },
     },
     exit: {
       opacity: 0,
@@ -213,9 +221,9 @@ export default function FullscreenMenu() {
       rotate: 90,
       transition: {
         duration: 0.2,
-        ease: "easeIn"
-      }
-    }
+        ease: 'easeIn',
+      },
+    },
   };
 
   // DESKTOP Menu container variants
@@ -224,15 +232,15 @@ export default function FullscreenMenu() {
     animate: {
       transition: {
         staggerChildren: 0.08,
-        delayChildren: 0.4
-      }
+        delayChildren: 0.4,
+      },
     },
     exit: {
       transition: {
         staggerChildren: 0.04,
-        staggerDirection: -1
-      }
-    }
+        staggerDirection: -1,
+      },
+    },
   };
 
   // MOBILE Menu container variants
@@ -241,56 +249,56 @@ export default function FullscreenMenu() {
     animate: {
       transition: {
         staggerChildren: 0.06,
-        delayChildren: 0.35
-      }
+        delayChildren: 0.35,
+      },
     },
     exit: {
       transition: {
         staggerChildren: 0.03,
-        staggerDirection: -1
-      }
-    }
+        staggerDirection: -1,
+      },
+    },
   };
 
   // DESKTOP Menu item variants
   const desktopMenuItemVariants = {
-    initial: { 
+    initial: {
       opacity: 0,
-      y: 30
+      y: 30,
     },
-    animate: { 
+    animate: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
+        ease: 'easeOut',
+      },
     },
     exit: {
       opacity: 0,
       y: -20,
       transition: {
         duration: 0.3,
-        ease: "easeIn"
-      }
-    }
+        ease: 'easeIn',
+      },
+    },
   };
 
   // MOBILE Menu item variants
   const mobileMenuItemVariants = {
-    initial: { 
+    initial: {
       opacity: 0,
       y: 20,
-      x: -10
+      x: -10,
     },
-    animate: { 
+    animate: {
       opacity: 1,
       y: 0,
       x: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
-      }
+        ease: 'easeOut',
+      },
     },
     exit: {
       opacity: 0,
@@ -298,9 +306,9 @@ export default function FullscreenMenu() {
       x: 5,
       transition: {
         duration: 0.2,
-        ease: "easeIn"
-      }
-    }
+        ease: 'easeIn',
+      },
+    },
   };
 
   return (
@@ -308,38 +316,38 @@ export default function FullscreenMenu() {
       {/* Menu Button */}
       <div className="fixed top-6 right-6 z-50 flex items-center space-x-4">
         {/* MENU/CLOSE Text */}
-        <span 
+        <span
           onClick={toggleMenu}
           className="text-sm sm:text-base font-medium tracking-wide uppercase cursor-pointer text-black hover:opacity-70 transition-opacity"
           style={{
             WebkitTextStroke: '1px white',
-            textShadow: 'none'
+            textShadow: 'none',
           }}
         >
           {isOpen ? 'CLOSE' : 'MENU'}
         </span>
-        
+
         {/* Black Circle Toggle */}
-        <div 
+        <div
           onClick={toggleMenu}
           className="w-3.5 h-3.5 bg-black border border-white rounded-full cursor-pointer hover:opacity-70 transition-opacity"
         />
-        
+
         {/* Search Icon */}
         <div className="cursor-pointer hover:opacity-70 transition-opacity">
-          <svg 
-            width="20" 
-            height="20" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="white" 
-            strokeWidth="1.5" 
-            strokeLinecap="round" 
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            strokeWidth="1.5"
+            strokeLinecap="round"
             strokeLinejoin="round"
             className="border border-white rounded-sm p-0.5"
           >
-            <circle cx="11" cy="11" r="8"/>
-            <path d="21 21l-4.35-4.35"/>
+            <circle cx="11" cy="11" r="8" />
+            <path d="21 21l-4.35-4.35" />
           </svg>
         </div>
       </div>
@@ -370,7 +378,6 @@ export default function FullscreenMenu() {
             {/* Mobile Layout */}
             <div className="block lg:hidden h-full">
               <div className="flex flex-col h-full">
-                
                 {/* Mobile Logo Section - 상단 */}
                 <motion.div
                   variants={mobileLogoVariants}
@@ -381,7 +388,9 @@ export default function FullscreenMenu() {
                 >
                   <div className="text-center">
                     <div className="text-white text-4xl sm:text-5xl flex flex-col items-center">
-                      <span className="font-serif font-bold tracking-tight">khaki</span>
+                      <span className="font-serif font-bold tracking-tight">
+                        khaki
+                      </span>
                       <span className="font-serif italic opacity-90">shop</span>
                     </div>
                   </div>
@@ -398,9 +407,12 @@ export default function FullscreenMenu() {
                   >
                     <ul className="space-y-6 sm:space-y-8">
                       {menuItems.map((item, index) => (
-                        <motion.li key={index} variants={mobileMenuItemVariants}>
+                        <motion.li
+                          key={index}
+                          variants={mobileMenuItemVariants}
+                        >
                           <Link
-                            href={item.path}
+                            href={getLocalizedPath(item.path)}
                             onClick={closeMenu}
                             className="block group"
                           >
@@ -434,9 +446,9 @@ export default function FullscreenMenu() {
                       <div className="text-white/60 text-xs leading-relaxed space-y-1">
                         <div>T: 0507-1372-0358</div>
                         <div>
-                          <a 
-                            href="https://naver.me/F0wo4Ive" 
-                            target="_blank" 
+                          <a
+                            href="https://naver.me/F0wo4Ive"
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="text-white/60 hover:text-white transition-colors underline underline-offset-2"
                           >
@@ -462,7 +474,6 @@ export default function FullscreenMenu() {
 
             {/* Desktop Layout - 기존 3-column 유지 */}
             <div className="hidden lg:grid grid-cols-3 h-full">
-              
               {/* 1. 좌측 영역 - Logo */}
               <motion.div
                 variants={desktopLogoVariants}
@@ -473,7 +484,9 @@ export default function FullscreenMenu() {
               >
                 <div className="text-center">
                   <div className="text-white text-6xl md:text-7xl lg:text-8xl flex flex-col items-center">
-                    <span className="font-serif font-bold tracking-tight">khaki</span>
+                    <span className="font-serif font-bold tracking-tight">
+                      khaki
+                    </span>
                     <span className="font-serif italic opacity-90">shop</span>
                   </div>
                 </div>
@@ -492,7 +505,7 @@ export default function FullscreenMenu() {
                     {menuItems.map((item, index) => (
                       <motion.li key={index} variants={desktopMenuItemVariants}>
                         <Link
-                          href={item.path}
+                          href={getLocalizedPath(item.path)}
                           onClick={closeMenu}
                           className="block group"
                         >
@@ -537,9 +550,9 @@ export default function FullscreenMenu() {
                     <div className="text-white/70 text-sm leading-relaxed space-y-2">
                       <div>T: 0507-1372-0358</div>
                       <div>
-                        <a 
-                          href="https://naver.me/F0wo4Ive" 
-                          target="_blank" 
+                        <a
+                          href="https://naver.me/F0wo4Ive"
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="text-white hover:text-white/70 transition-colors underline underline-offset-2"
                         >
@@ -555,10 +568,38 @@ export default function FullscreenMenu() {
                       SOCIAL
                     </div>
                     <div className="text-white/70 text-sm leading-relaxed space-y-2">
-                      <div><a href="#" className="hover:text-white transition-colors">Instagram</a></div>
-                      <div><a href="#" className="hover:text-white transition-colors">Facebook</a></div>
-                      <div><a href="#" className="hover:text-white transition-colors">Pinterest</a></div>
-                      <div><a href="#" className="hover:text-white transition-colors">Naver Blog</a></div>
+                      <div>
+                        <a
+                          href="#"
+                          className="hover:text-white transition-colors"
+                        >
+                          Instagram
+                        </a>
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          className="hover:text-white transition-colors"
+                        >
+                          Facebook
+                        </a>
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          className="hover:text-white transition-colors"
+                        >
+                          Pinterest
+                        </a>
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          className="hover:text-white transition-colors"
+                        >
+                          Naver Blog
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -569,4 +610,4 @@ export default function FullscreenMenu() {
       </AnimatePresence>
     </>
   );
-} 
+}

@@ -24,7 +24,7 @@ export const collections: Collection[] = [
     image: '/images/collections/essential-linen.png',
     featured: true,
     products: ['linen-white', 'linen-beige'],
-    season: 'All Season'
+    season: 'All Season',
   },
   {
     slug: 'modern-sheer',
@@ -34,7 +34,7 @@ export const collections: Collection[] = [
     image: '/images/collections/modern-sheer.png',
     featured: true,
     products: ['sheer-curtain'],
-    season: 'Spring/Summer'
+    season: 'Spring/Summer',
   },
   {
     slug: 'venetian-premium',
@@ -44,7 +44,7 @@ export const collections: Collection[] = [
     image: '/images/collections/venetian-premium.png',
     featured: true,
     products: ['wood-blind'],
-    season: 'All Season'
+    season: 'All Season',
   },
   {
     slug: 'wood-texture',
@@ -54,7 +54,7 @@ export const collections: Collection[] = [
     image: '/images/collections/wood-texture.png',
     featured: false,
     products: ['wood-blind'],
-    season: 'Fall/Winter'
+    season: 'Fall/Winter',
   },
   {
     slug: 'smart-automation',
@@ -64,7 +64,7 @@ export const collections: Collection[] = [
     image: '/images/collections/smart-automation.png',
     featured: true,
     products: ['motorized-curtain-system', 'smart-home-integration'],
-    season: 'All Season'
+    season: 'All Season',
   },
   {
     slug: 'wireless-motor',
@@ -74,7 +74,7 @@ export const collections: Collection[] = [
     image: '/images/collections/wireless-motor.png',
     featured: false,
     products: ['motorized-blind-system'],
-    season: 'All Season'
+    season: 'All Season',
   },
   {
     slug: 'designer-hardware',
@@ -84,7 +84,7 @@ export const collections: Collection[] = [
     image: '/images/collections/designer-hardware.png',
     featured: false,
     products: [],
-    season: 'All Season'
+    season: 'All Season',
   },
   {
     slug: 'luxury-tieback',
@@ -94,36 +94,36 @@ export const collections: Collection[] = [
     image: '/images/collections/luxury-tieback.png',
     featured: false,
     products: [],
-    season: 'All Season'
-  }
+    season: 'All Season',
+  },
 ];
 
 // 컬렉션 관련 유틸리티 함수들
 export const getAllCollections = (): Collection[] => collections;
 
 export const getCollectionBySlug = (slug: string): Collection | undefined => {
-  return collections.find(collection => collection.slug === slug);
+  return collections.find((collection) => collection.slug === slug);
 };
 
 export const getFeaturedCollections = (): Collection[] => {
-  return collections.filter(collection => collection.featured);
+  return collections.filter((collection) => collection.featured);
 };
 
 export const getCollectionsByCategory = (category: string): Collection[] => {
-  return collections.filter(collection => collection.category === category);
+  return collections.filter((collection) => collection.category === category);
 };
 
 export const getCollectionCategories = (): string[] => {
-  const categories = collections.map(collection => collection.category);
+  const categories = collections.map((collection) => collection.category);
   return Array.from(new Set(categories));
 };
 
 export const getCollectionCategoryName = (category: string): string => {
   const categoryNames: { [key: string]: string } = {
-    'Curtain': '커튼',
-    'Blind': '블라인드',
-    'Motorized': '전동시스템',
-    'Accessories': '액세서리'
+    Curtain: '커튼',
+    Blind: '블라인드',
+    Motorized: '전동시스템',
+    Accessories: '액세서리',
   };
   return categoryNames[category] || category;
-}; 
+};

@@ -7,4 +7,4 @@ export const metadata = createSEOMetadata('references');
 
 export default function ReferencesPage() {
   return <ReferencesPageClient />;
-} 
+}

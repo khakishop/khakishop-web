@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion } from "../lib/motion";
 import Link from 'next/link';
 import { Collection } from '../data/collections';
 import { getValidImagePath, handleImageError } from '../utils/imageFallback';
@@ -12,15 +12,23 @@ export interface CollectionCardProps {
   index?: number;
 }
 
-const CollectionCard: React.FC<CollectionCardProps> = ({ collection, index = 0 }) => {
+const CollectionCard: React.FC<CollectionCardProps> = ({
+  collection,
+  index = 0,
+}) => {
   // 안전성 검사
   if (!collection || !collection.slug) {
-    console.error('CollectionCard: collection is undefined or missing slug', collection);
+    console.error(
+      'CollectionCard: collection is undefined or missing slug',
+      collection
+    );
     return null;
   }
 
   // 이미지 경로 폴백 적용
-  const safeImagePath = getValidImagePath(collection.image || '/placeholder-collection.jpg');
+  const safeImagePath = getValidImagePath(
+    collection.image || '/placeholder-collection.jpg'
+  );
 
   return (
     <motion.div
@@ -44,7 +52,7 @@ const CollectionCard: React.FC<CollectionCardProps> = ({ collection, index = 0 }
             </span>
           </div>
         </div>
-        
+
         <div className="p-6">
           <h3 className="text-xl font-medium text-[#8B7A6B] mb-2 group-hover:text-[#D4C4A8] transition-colors">
             {collection.title}
@@ -58,4 +66,4 @@ const CollectionCard: React.FC<CollectionCardProps> = ({ collection, index = 0 }
   );
 };
 
-export default CollectionCard; 
+export default CollectionCard;

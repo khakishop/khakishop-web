@@ -13,13 +13,13 @@ const LanguageSwitcher: React.FC = () => {
   const handleLocaleChange = (newLocale: Locale) => {
     // 현재 경로에서 언어 코드 제거
     const pathnameWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
-    
+
     // 새로운 언어로 라우팅
     const newPath = `/${newLocale}${pathnameWithoutLocale}`;
-    
+
     // 페이지 상단으로 스크롤
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    
+
     // 라우터 푸시
     router.push(newPath);
   };
@@ -27,7 +27,7 @@ const LanguageSwitcher: React.FC = () => {
   const getLanguageLabel = (locale: Locale): string => {
     const labels: Record<Locale, string> = {
       ko: '한국어',
-      en: 'English'
+      en: 'English',
     };
     return labels[locale];
   };
@@ -54,4 +54,4 @@ const LanguageSwitcher: React.FC = () => {
   );
 };
 
-export default LanguageSwitcher; 
+export default LanguageSwitcher;

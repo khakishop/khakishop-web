@@ -1,4 +1,3 @@
-
 // ================================================================================
 // 🎨 KHAKISHOP 이미지 폴백 컴포넌트
 // ================================================================================
@@ -23,16 +22,16 @@ export default function KhakiImage({
   height,
   className = '',
   fallbackType = 'collection',
-  priority = false
+  priority = false,
 }: KhakiImageProps) {
   const [imageError, setImageError] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
 
   const fallbackClasses = {
     hero: 'khaki-fallback-hero',
-    collection: 'khaki-fallback-collection', 
+    collection: 'khaki-fallback-collection',
     product: 'khaki-fallback-product',
-    gallery: 'khaki-fallback-gallery'
+    gallery: 'khaki-fallback-gallery',
   };
 
   const handleImageLoad = () => {
@@ -46,15 +45,25 @@ export default function KhakiImage({
 
   if (imageError) {
     return (
-      <div 
+      <div
         className={`khaki-image-container ${fallbackClasses[fallbackType]} ${className}`}
-        style={{ width: width || '100%', height: height || 'auto', minHeight: '200px' }}
+        style={{
+          width: width || '100%',
+          height: height || 'auto',
+          minHeight: '200px',
+        }}
       >
         <div className="khaki-hero-text">
           <h3 style={{ color: 'var(--khaki-text-primary)', margin: 0 }}>
             khakishop
           </h3>
-          <p style={{ color: 'var(--khaki-text-secondary)', margin: '0.5rem 0 0 0', fontSize: '0.9rem' }}>
+          <p
+            style={{
+              color: 'var(--khaki-text-secondary)',
+              margin: '0.5rem 0 0 0',
+              fontSize: '0.9rem',
+            }}
+          >
             {alt}
           </p>
         </div>
@@ -65,9 +74,13 @@ export default function KhakiImage({
   return (
     <div className={`khaki-image-container ${className}`}>
       {imageLoading && (
-        <div 
+        <div
           className="khaki-image-loading"
-          style={{ width: width || '100%', height: height || 'auto', minHeight: '200px' }}
+          style={{
+            width: width || '100%',
+            height: height || 'auto',
+            minHeight: '200px',
+          }}
         />
       )}
       <Image
@@ -78,7 +91,11 @@ export default function KhakiImage({
         priority={priority}
         onLoad={handleImageLoad}
         onError={handleImageError}
-        className={imageLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}
+        className={
+          imageLoading
+            ? 'opacity-0'
+            : 'opacity-100 transition-opacity duration-500'
+        }
       />
     </div>
   );

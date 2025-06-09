@@ -1,5 +1,5 @@
 'use client';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from "../lib/motion";
 import { useState } from 'react';
 import Image from 'next/image';
 
@@ -10,7 +10,12 @@ interface AccordionItemProps {
   description: string;
 }
 
-export function AccordionItem({ title, image, alt, description }: AccordionItemProps) {
+export function AccordionItem({
+  title,
+  image,
+  alt,
+  description,
+}: AccordionItemProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -25,7 +30,7 @@ export function AccordionItem({ title, image, alt, description }: AccordionItemP
         </h3>
         <motion.div
           animate={{ rotate: isOpen ? 45 : 0 }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
+          transition={{ duration: 0.3, ease: 'easeInOut' }}
           className="w-6 h-6 flex items-center justify-center"
         >
           <div className="w-4 h-px bg-gray-400 absolute"></div>
@@ -38,12 +43,12 @@ export function AccordionItem({ title, image, alt, description }: AccordionItemP
         {isOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
+            animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ 
-              duration: 0.4, 
+            transition={{
+              duration: 0.4,
               ease: [0.25, 0.1, 0.25, 1],
-              opacity: { duration: 0.3 }
+              opacity: { duration: 0.3 },
             }}
             className="overflow-hidden"
           >
@@ -59,7 +64,7 @@ export function AccordionItem({ title, image, alt, description }: AccordionItemP
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-                
+
                 {/* Description */}
                 <div className="space-y-4">
                   <p className="text-gray-600 leading-relaxed text-lg font-light">
@@ -83,4 +88,4 @@ export function AccordionItem({ title, image, alt, description }: AccordionItemP
       </AnimatePresence>
     </div>
   );
-} 
+}

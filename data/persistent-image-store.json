@@ -1,10 +1,14 @@
 {
   "version": "1.0.0",
-  "lastSync": "2025-06-08T09:24:38.778Z",
+  "lastSync": "2025-06-09T07:27:13.165Z",
   "protectedImages": {
     "17493788351175oeo0cnx0": true,
     "1749378850665tuc1ouvcw": true,
-    "1749378866054eatxhcwkl": true
+    "1749378866054eatxhcwkl": true,
+    "1749457866558s4qy0d1od": true,
+    "17494581646420fr7lf4ea": true,
+    "1749458909612qlejo925h": true,
+    "17494595796324tuyl54f7": true
   },
   "mappings": {
     "1": {
@@ -530,6 +534,271 @@
         "alt": "khaki shop references - curtain-modern-livingroom-1",
         "title": "khaki shop references - curtain-modern-livingroom-1",
         "dataStyle": "references-auto"
+      }
+    },
+    "17494540331656p8aav8vh": {
+      "id": "17494540331656p8aav8vh",
+      "sourceFile": "gallery-sample.jpg",
+      "targetPath": "/images/midjourney/gallery-sample.jpg",
+      "isProtected": false,
+      "createdAt": "2025-06-09T07:27:13.165Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 gallery-sample.jpg",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 gallery-sample.jpg",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 gallery-sample.jpg",
+        "priority": 6
+      }
+    },
+    "17494540331650vwxvmepv": {
+      "id": "17494540331650vwxvmepv",
+      "sourceFile": "hero-main.jpg",
+      "targetPath": "/images/midjourney/hero-main.jpg",
+      "isProtected": false,
+      "createdAt": "2025-06-09T07:27:13.165Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 hero-main.jpg",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 hero-main.jpg",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 hero-main.jpg",
+        "priority": 6
+      }
+    },
+    "17494540331650j6fgt04r": {
+      "id": "17494540331650j6fgt04r",
+      "sourceFile": "landing-showcase.jpg",
+      "targetPath": "/images/midjourney/landing-showcase.jpg",
+      "isProtected": false,
+      "createdAt": "2025-06-09T07:27:13.165Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 landing-showcase.jpg",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 landing-showcase.jpg",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 landing-showcase.jpg",
+        "priority": 6
+      }
+    },
+    "1749457866558s4qy0d1od": {
+      "id": "1749457866558s4qy0d1od",
+      "sourceFile": "hero.jpg",
+      "targetPath": "/images/test/hero.jpg",
+      "isProtected": true,
+      "createdAt": "2025-06-09T08:31:06.558Z",
+      "metadata": {
+        "alt": "khaki shop - hero.jpg",
+        "title": "khaki shop - hero.jpg",
+        "dataStyle": "test-style",
+        "category": "test",
+        "description": "업로드된 이미지 hero.jpg",
+        "priority": 5
+      }
+    },
+    "17494581646420fr7lf4ea": {
+      "id": "17494581646420fr7lf4ea",
+      "sourceFile": "hero.jpg",
+      "targetPath": "/images/test-upload/hero.jpg",
+      "isProtected": true,
+      "createdAt": "2025-06-09T08:36:04.642Z",
+      "metadata": {
+        "alt": "khaki shop - API 테스트",
+        "title": "khaki shop - API 테스트",
+        "dataStyle": "test-upload-style",
+        "category": "test-upload",
+        "description": "API 테스트",
+        "priority": 5
+      }
+    },
+    "1749458909612qlejo925h": {
+      "id": "1749458909612qlejo925h",
+      "sourceFile": "hero.jpg",
+      "targetPath": "/images/api-test/hero.jpg",
+      "isProtected": true,
+      "createdAt": "2025-06-09T08:48:29.612Z",
+      "metadata": {
+        "alt": "khaki shop - 최종 시스템 테스트",
+        "title": "khaki shop - 최종 시스템 테스트",
+        "dataStyle": "api-test-style",
+        "category": "api-test",
+        "description": "최종 시스템 테스트",
+        "priority": 5
+      }
+    },
+    "17494595796324tuyl54f7": {
+      "id": "17494595796324tuyl54f7",
+      "sourceFile": "hero.jpg",
+      "targetPath": "/images/test-final/hero.jpg",
+      "isProtected": true,
+      "createdAt": "2025-06-09T08:59:39.632Z",
+      "metadata": {
+        "alt": "khaki shop - 최종 테스트",
+        "title": "khaki shop - 최종 테스트",
+        "dataStyle": "test-final-style",
+        "category": "test-final",
+        "description": "최종 테스트",
+        "priority": 5
+      }
+    },
+    "17494635062549706l2c5f": {
+      "id": "17494635062549706l2c5f",
+      "sourceFile": "gallery-1.png",
+      "targetPath": "/images/references/minimal-residence-bundang",
+      "isProtected": false,
+      "createdAt": "2025-06-09T10:05:06.254Z",
+      "metadata": {
+        "description": "자동 매핑된 references 이미지 - gallery-1.png",
+        "category": "references",
+        "priority": 4,
+        "alt": "khaki shop references - gallery-1",
+        "title": "khaki shop references - gallery-1",
+        "dataStyle": "references-auto",
+        "uploadedAt": "2025-06-08T07:29:43.705Z"
+      }
+    },
+    "1749463506255yonyy1vu5": {
+      "id": "1749463506255yonyy1vu5",
+      "sourceFile": "gallery-2.jpg",
+      "targetPath": "/images/references/modern-office-gangnam",
+      "isProtected": false,
+      "createdAt": "2025-06-09T10:05:06.255Z",
+      "metadata": {
+        "description": "자동 매핑된 references 이미지 - gallery-2.jpg",
+        "category": "references",
+        "priority": 4,
+        "alt": "khaki shop references - gallery-2",
+        "title": "khaki shop references - gallery-2",
+        "dataStyle": "references-auto",
+        "uploadedAt": "2025-06-07T03:41:24.881Z"
+      }
+    },
+    "1749463506256fk6owum7v": {
+      "id": "1749463506256fk6owum7v",
+      "sourceFile": "gallery-1.jpg",
+      "targetPath": "/images/references/modern-office-gangnam",
+      "isProtected": false,
+      "createdAt": "2025-06-09T10:05:06.256Z",
+      "metadata": {
+        "description": "자동 매핑된 references 이미지 - gallery-1.jpg",
+        "category": "references",
+        "priority": 4,
+        "alt": "khaki shop references - gallery-1",
+        "title": "khaki shop references - gallery-1",
+        "dataStyle": "references-auto",
+        "uploadedAt": "2025-06-07T03:41:24.311Z"
+      }
+    },
+    "174946350625798txbpt4a": {
+      "id": "174946350625798txbpt4a",
+      "sourceFile": "lifestyle.jpg",
+      "targetPath": "/images/products/curtain/sheer-curtain",
+      "isProtected": false,
+      "createdAt": "2025-06-09T10:05:06.257Z",
+      "metadata": {
+        "description": "자동 매핑된 products 이미지 - lifestyle.jpg",
+        "category": "products",
+        "priority": 5,
+        "alt": "khaki shop products - lifestyle",
+        "title": "khaki shop products - lifestyle",
+        "dataStyle": "products-auto",
+        "uploadedAt": "2025-06-07T03:41:26.043Z"
+      }
+    },
+    "1749463506258refesno1y": {
+      "id": "1749463506258refesno1y",
+      "sourceFile": "detail.jpg",
+      "targetPath": "/images/products/curtain/sheer-curtain",
+      "isProtected": false,
+      "createdAt": "2025-06-09T10:05:06.258Z",
+      "metadata": {
+        "description": "자동 매핑된 products 이미지 - detail.jpg",
+        "category": "products",
+        "priority": 5,
+        "alt": "khaki shop products - detail",
+        "title": "khaki shop products - detail",
+        "dataStyle": "products-auto",
+        "uploadedAt": "2025-06-07T03:41:25.456Z"
+      }
+    },
+    "1749463506259padsany1w": {
+      "id": "1749463506259padsany1w",
+      "sourceFile": "gallery-1.png",
+      "targetPath": "/images/references/minimal-residence-bundang",
+      "isProtected": false,
+      "createdAt": "2025-06-09T10:05:06.259Z",
+      "metadata": {
+        "description": "자동 매핑된 references 이미지 - gallery-1.png",
+        "category": "references",
+        "priority": 4,
+        "alt": "khaki shop references - gallery-1",
+        "title": "khaki shop references - gallery-1",
+        "dataStyle": "references-auto",
+        "uploadedAt": "2025-06-08T07:29:43.705Z"
+      }
+    },
+    "1749463506259hcptkjpg3": {
+      "id": "1749463506259hcptkjpg3",
+      "sourceFile": "gallery-2.jpg",
+      "targetPath": "/images/references/modern-office-gangnam",
+      "isProtected": false,
+      "createdAt": "2025-06-09T10:05:06.259Z",
+      "metadata": {
+        "description": "자동 매핑된 references 이미지 - gallery-2.jpg",
+        "category": "references",
+        "priority": 4,
+        "alt": "khaki shop references - gallery-2",
+        "title": "khaki shop references - gallery-2",
+        "dataStyle": "references-auto",
+        "uploadedAt": "2025-06-07T03:41:24.881Z"
+      }
+    },
+    "1749463506260m7mwv68qa": {
+      "id": "1749463506260m7mwv68qa",
+      "sourceFile": "gallery-1.jpg",
+      "targetPath": "/images/references/modern-office-gangnam",
+      "isProtected": false,
+      "createdAt": "2025-06-09T10:05:06.260Z",
+      "metadata": {
+        "description": "자동 매핑된 references 이미지 - gallery-1.jpg",
+        "category": "references",
+        "priority": 4,
+        "alt": "khaki shop references - gallery-1",
+        "title": "khaki shop references - gallery-1",
+        "dataStyle": "references-auto",
+        "uploadedAt": "2025-06-07T03:41:24.311Z"
+      }
+    },
+    "1749463506261pi5jut36j": {
+      "id": "1749463506261pi5jut36j",
+      "sourceFile": "lifestyle.jpg",
+      "targetPath": "/images/products/curtain/sheer-curtain",
+      "isProtected": false,
+      "createdAt": "2025-06-09T10:05:06.261Z",
+      "metadata": {
+        "description": "자동 매핑된 products 이미지 - lifestyle.jpg",
+        "category": "products",
+        "priority": 5,
+        "alt": "khaki shop products - lifestyle",
+        "title": "khaki shop products - lifestyle",
+        "dataStyle": "products-auto",
+        "uploadedAt": "2025-06-07T03:41:26.043Z"
+      }
+    },
+    "1749463506261fdgp1lis1": {
+      "id": "1749463506261fdgp1lis1",
+      "sourceFile": "detail.jpg",
+      "targetPath": "/images/products/curtain/sheer-curtain",
+      "isProtected": false,
+      "createdAt": "2025-06-09T10:05:06.261Z",
+      "metadata": {
+        "description": "자동 매핑된 products 이미지 - detail.jpg",
+        "category": "products",
+        "priority": 5,
+        "alt": "khaki shop products - detail",
+        "title": "khaki shop products - detail",
+        "dataStyle": "products-auto",
+        "uploadedAt": "2025-06-07T03:41:25.456Z"
       }
     }
   }

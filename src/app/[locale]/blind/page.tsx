@@ -1,10 +1,10 @@
 import React from 'react';
 import { createSEOMetadata } from '../../../utils/seoMetadata';
-import BlindPageClient from './BlindPageClient';
+import BlindClientView from '../../../components/BlindClientView';
 
-// 🎨 SEO 메타데이터 - 블라인드 컬렉션  
+// 🎨 SEO 메타데이터 - 블라인드 컬렉션
 export const metadata = createSEOMetadata('blind');
 
 export default function BlindPage() {
-  return <BlindPageClient />;
-} 
+  return <BlindClientView />;
+}

@@ -28,17 +28,17 @@ export const curtainProducts: Product[] = [
     title: 'Sheer Curtain',
     category: 'Curtain',
     description: '자연광을 부드럽게 확산시키는 쉬어 커튼',
-    image: '/images/products/curtain/sheer-curtain/lifestyle.jpg',
+    image: '/images/hero/hero.jpg',
     features: ['자연광 조절', '프라이버시 확보', '우아한 드레이프'],
     specifications: {
       material: '폴리에스터 100%',
       size: '맞춤 제작',
-      installation: '레일/로드 설치'
+      installation: '레일/로드 설치',
     },
     gallery: [
-      '/images/products/curtain/sheer-curtain/lifestyle.jpg',
-      '/images/products/curtain/sheer-curtain/detail.jpg'
-    ]
+      '/images/hero/hero.jpg',
+      '/images/projects/our-projects-bg.jpg',
+    ],
   },
   {
     slug: 'classic-curtain',
@@ -50,65 +50,61 @@ export const curtainProducts: Product[] = [
     specifications: {
       material: '면 혼방',
       size: '맞춤 제작',
-      installation: '레일/로드 설치'
+      installation: '레일/로드 설치',
     },
-    gallery: [
-      '/images/hero/hero.jpg',
-      '/images/projects/our-projects-bg.jpg'
-    ]
+    gallery: ['/images/hero/hero.jpg', '/images/projects/our-projects-bg.jpg'],
   },
   {
     slug: 'modern-curtain',
     title: 'Modern Curtain',
     category: 'Curtain',
     description: '모던한 공간에 어울리는 심플한 커튼',
-    image: '/images/references/modern-office-gangnam/main.jpg',
+    image: '/images/hero/hero.jpg',
     features: ['미니멀 디자인', '다양한 컬러', '쉬운 관리'],
     specifications: {
       material: '린넨 혼방',
       size: '맞춤 제작',
-      installation: '레일/로드 설치'
+      installation: '레일/로드 설치',
     },
     gallery: [
-      '/images/references/modern-office-gangnam/main.jpg',
-      '/images/references/modern-office-gangnam/gallery-1.jpg',
-      '/images/references/modern-office-gangnam/gallery-2.jpg'
-    ]
+      '/images/hero/hero.jpg',
+      '/images/projects/our-projects-bg.jpg',
+    ],
   },
   {
     slug: 'linen-white',
     title: 'Linen White',
     category: 'Curtain',
     description: '자연스러운 린넨 소재의 화이트 커튼',
-    image: '/images/collections/essential-linen.png',
+    image: '/images/hero/hero.jpg',
     features: ['천연 린넨', '화이트 컬러', '자연스러운 질감'],
     specifications: {
       material: '린넨 100%',
       size: '맞춤 제작',
-      installation: '레일/로드 설치'
+      installation: '레일/로드 설치',
     },
     gallery: [
-      '/images/collections/essential-linen.png',
-      '/images/products/curtain/sheer-curtain/lifestyle.jpg'
-    ]
+      '/images/hero/hero.jpg',
+      '/images/projects/our-projects-bg.jpg',
+    ],
   },
   {
     slug: 'pleats-ivory',
     title: 'Pleats Ivory',
     category: 'Curtain',
     description: '우아한 플리츠 디자인의 아이보리 커튼',
-    image: '/images/collections/modern-sheer.png',
+    image: '/images/hero/hero.jpg',
     features: ['플리츠 디자인', '아이보리 컬러', '고급스러운 드레이프'],
     specifications: {
       material: '폴리에스터 혼방',
       size: '맞춤 제작',
-      installation: '레일/로드 설치'
+      installation: '레일/로드 설치',
     },
     gallery: [
-      '/images/collections/modern-sheer.png',
-      '/images/products/curtain/sheer-curtain/detail.jpg'
-    ]
-  }
+      '/images/hero/hero.jpg',
+      '/images/projects/our-projects-bg.jpg',
+    ],
+  },
 ];
 
 // 블라인드 제품 데이터
@@ -123,12 +119,12 @@ export const blindProducts: Product[] = [
     specifications: {
       material: '천연 원목',
       size: '맞춤 제작',
-      installation: '벽걸이/천장 설치'
+      installation: '벽걸이/천장 설치',
     },
     gallery: [
       '/images/collections/wood-texture.png',
-      '/images/collections/venetian-premium.png'
-    ]
+      '/images/collections/venetian-premium.png',
+    ],
   },
   {
     slug: 'aluminum-blind',
@@ -140,12 +136,12 @@ export const blindProducts: Product[] = [
     specifications: {
       material: '알루미늄',
       size: '맞춤 제작',
-      installation: '벽걸이/천장 설치'
+      installation: '벽걸이/천장 설치',
     },
     gallery: [
       '/images/collections/venetian-premium.png',
-      '/images/collections/wood-texture.png'
-    ]
+      '/images/collections/wood-texture.png',
+    ],
   },
   {
     slug: 'fabric-blind',
@@ -157,13 +153,10 @@ export const blindProducts: Product[] = [
     specifications: {
       material: '폴리에스터',
       size: '맞춤 제작',
-      installation: '벽걸이/천장 설치'
+      installation: '벽걸이/천장 설치',
     },
-    gallery: [
-      '/images/hero/hero.jpg',
-      '/images/projects/our-projects-bg.jpg'
-    ]
-  }
+    gallery: ['/images/hero/hero.jpg', '/images/projects/our-projects-bg.jpg'],
+  },
 ];
 
 // 전동 제품 데이터
@@ -178,12 +171,12 @@ export const motorizedProducts: Product[] = [
     specifications: {
       material: '모터 시스템',
       size: '맞춤 제작',
-      installation: '전문 설치'
+      installation: '전문 설치',
     },
     gallery: [
       '/images/collections/smart-automation.png',
-      '/images/collections/wireless-motor.png'
-    ]
+      '/images/collections/wireless-motor.png',
+    ],
   },
   {
     slug: 'motorized-blind-system',
@@ -195,12 +188,12 @@ export const motorizedProducts: Product[] = [
     specifications: {
       material: '모터 시스템',
       size: '맞춤 제작',
-      installation: '전문 설치'
+      installation: '전문 설치',
     },
     gallery: [
       '/images/collections/wireless-motor.png',
-      '/images/collections/smart-automation.png'
-    ]
+      '/images/collections/smart-automation.png',
+    ],
   },
   {
     slug: 'smart-home-integration',
@@ -212,33 +205,33 @@ export const motorizedProducts: Product[] = [
     specifications: {
       material: '통합 시스템',
       size: '맞춤 제작',
-      installation: '전문 설치'
+      installation: '전문 설치',
     },
     gallery: [
       '/images/collections/designer-hardware.png',
-      '/images/collections/luxury-tieback.png'
-    ]
-  }
+      '/images/collections/luxury-tieback.png',
+    ],
+  },
 ];
 
 // 모든 제품 데이터
 export const allProducts: Product[] = [
   ...curtainProducts,
   ...blindProducts,
-  ...motorizedProducts
+  ...motorizedProducts,
 ];
 
 // 제품 관련 유틸리티 함수들
 export const getAllProducts = (): Product[] => allProducts;
 
 export const getProductBySlug = (slug: string): Product | undefined => {
-  return allProducts.find(product => product.slug === slug);
+  return allProducts.find((product) => product.slug === slug);
 };
 
 export const getProductsByCategory = (category: string): Product[] => {
-  return allProducts.filter(product => product.category === category);
+  return allProducts.filter((product) => product.category === category);
 };
 
 export const getFeaturedProducts = (limit: number = 6): Product[] => {
   return allProducts.slice(0, limit);
-}; 
+};

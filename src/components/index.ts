@@ -14,4 +14,4 @@ export { default as Navbar } from './Navbar';
 export type { ButtonProps } from './Button';
 export type { CollectionCardProps } from './CollectionCard';
 export type { ProductCardProps } from './ProductCard';
-export type { ReferenceCardProps } from './ReferenceCard'; 
+export type { ReferenceCardProps } from './ReferenceCard';

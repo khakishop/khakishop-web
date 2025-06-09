@@ -22,12 +22,12 @@ export function AdminLayoutProvider({ children }: AdminLayoutProviderProps) {
     <>
       {/* 네비게이션 바 */}
       <Navbar />
-      
+
       {/* 풀스크린 메뉴 */}
       <FullscreenMenu />
-      
+
       {/* 메인 콘텐츠 */}
       {children}
     </>
   );
-} 
+}

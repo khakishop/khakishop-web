@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from "../lib/motion";
 import Image from 'next/image';
 import Link from 'next/link';
 import { Project } from '../data/projects';
@@ -11,10 +11,16 @@ export interface ReferenceCardProps {
   index?: number;
 }
 
-const ReferenceCard: React.FC<ReferenceCardProps> = ({ project, index = 0 }) => {
+const ReferenceCard: React.FC<ReferenceCardProps> = ({
+  project,
+  index = 0,
+}) => {
   // 안전성 검사
   if (!project || !project.slug) {
-    console.error('ReferenceCard: project is undefined or missing slug', project);
+    console.error(
+      'ReferenceCard: project is undefined or missing slug',
+      project
+    );
     return null;
   }
 
@@ -39,7 +45,7 @@ const ReferenceCard: React.FC<ReferenceCardProps> = ({ project, index = 0 }) => 
             </span>
           </div>
         </div>
-        
+
         <div className="p-6">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-xl font-medium text-[#8B7A6B] group-hover:text-[#D4C4A8] transition-colors">
@@ -47,15 +53,15 @@ const ReferenceCard: React.FC<ReferenceCardProps> = ({ project, index = 0 }) => 
             </h3>
             <span className="text-sm text-[#8B7A6B]/60">{project.year}</span>
           </div>
-          
+
           <p className="text-[#8B7A6B]/70 text-sm mb-3">
             📍 {project.location}
           </p>
-          
+
           <p className="text-[#8B7A6B]/70 text-sm mb-4 line-clamp-2">
             {project.description}
           </p>
-          
+
           {project.features && project.features.length > 0 && (
             <div className="flex flex-wrap gap-2">
               {project.features.slice(0, 3).map((feature, idx) => (
@@ -68,7 +74,7 @@ const ReferenceCard: React.FC<ReferenceCardProps> = ({ project, index = 0 }) => 
               ))}
             </div>
           )}
-          
+
           {project.area && (
             <div className="mt-3 pt-3 border-t border-[#F7F5F3]">
               <span className="text-xs text-[#8B7A6B]/60">
@@ -82,4 +88,4 @@ const ReferenceCard: React.FC<ReferenceCardProps> = ({ project, index = 0 }) => 
   );
 };
 
-export default ReferenceCard; 
+export default ReferenceCard;
