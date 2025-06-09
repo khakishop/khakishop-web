@@ -1,0 +1,3174 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khakishop 148개 이미지 완전 미리보기</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #FEFDFB 0%, #F7F5F3 100%);
+            margin: 0;
+            padding: 2rem;
+            color: #2D2823;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            font-weight: 300;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #8B7A6B;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #4A453E;
+            margin-bottom: 3rem;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(139, 122, 107, 0.1);
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #8B7A6B;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #6B645B;
+        }
+        
+        .category-section {
+            margin-bottom: 4rem;
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #E8E5E1;
+        }
+        
+        .category-icon {
+            font-size: 2rem;
+        }
+        
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #2D2823;
+            margin: 0;
+        }
+        
+        .category-count {
+            background: #8B7A6B;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-left: auto;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .image-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(139, 122, 107, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px rgba(139, 122, 107, 0.2);
+        }
+        
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            display: flex;
+            align-items: flex-end;
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .image-card:hover .image-overlay {
+            opacity: 1;
+        }
+        
+        .image-id {
+            background: #8B7A6B;
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .image-info {
+            padding: 1.5rem;
+        }
+        
+        .image-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2D2823;
+            margin-bottom: 0.5rem;
+        }
+        
+        .image-description {
+            font-size: 0.9rem;
+            color: #6B645B;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+        
+        .image-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #8B857C;
+        }
+        
+        .priority-badge {
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+        
+        .priority-1 { background: #ff6b6b; color: white; }
+        .priority-2 { background: #ffd93d; color: #333; }
+        .priority-3 { background: #6bcf7f; color: white; }
+        
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 2px solid #E8E5E1;
+            color: #8B857C;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: #8B7A6B;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1rem;
+            }
+            
+            .stats {
+                gap: 1rem;
+            }
+            
+            .stat-card {
+                min-width: 100px;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 khakishop</h1>
+        <p class="subtitle">148개 이미지 완전 자동 생성 완료</p>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">148</div>
+                <div class="stat-label">총 이미지</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">75</div>
+                <div class="stat-label">생성 완료</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">무료 라이선스</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">0</div>
+                <div class="stat-label">저작권 문제</div>
+            </div>
+        </div>
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🔥</span>
+                <h2 class="category-title">HERO</h2>
+                <span class="category-count">2개</span>
+            </div>
+            <div class="image-grid">
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/hero/hero-mobile.svg" alt="모바일용 세로형 히어로" loading="lazy" 
+                             onerror="this.src='/images/hero/hero-mobile.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#1</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">모바일용 세로형 히어로</div>
+                        <div class="image-description">/images/hero/hero-mobile.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: hero</span>
+                            <span class="priority-badge priority-1">
+                                1순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/hero/hero-desktop-alt.svg" alt="데스크톱용 대체 히어로 이미지" loading="lazy" 
+                             onerror="this.src='/images/hero/hero-desktop-alt.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#112</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">데스크톱용 대체 히어로 이미지</div>
+                        <div class="image-description">/images/hero/hero-desktop-alt.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: hero</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🏠</span>
+                <h2 class="category-title">LANDING</h2>
+                <span class="category-count">5개</span>
+            </div>
+            <div class="image-grid">
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/landing/hero-main.svg" alt="랜딩 페이지 메인 배경" loading="lazy" 
+                             onerror="this.src='/images/landing/hero-main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#2</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">랜딩 페이지 메인 배경</div>
+                        <div class="image-description">/images/landing/hero-main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: landing</span>
+                            <span class="priority-badge priority-1">
+                                1순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/landing/brand-lifestyle.svg" alt="브랜드 라이프스타일" loading="lazy" 
+                             onerror="this.src='/images/landing/brand-lifestyle.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#3</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">브랜드 라이프스타일</div>
+                        <div class="image-description">/images/landing/brand-lifestyle.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: landing</span>
+                            <span class="priority-badge priority-1">
+                                1순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/landing/collection-overview.svg" alt="컬렉션 개요 쇼케이스" loading="lazy" 
+                             onerror="this.src='/images/landing/collection-overview.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#4</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">컬렉션 개요 쇼케이스</div>
+                        <div class="image-description">/images/landing/collection-overview.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: landing</span>
+                            <span class="priority-badge priority-1">
+                                1순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/landing/about-section.svg" alt="회사 소개 섹션 배경" loading="lazy" 
+                             onerror="this.src='/images/landing/about-section.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#113</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">회사 소개 섹션 배경</div>
+                        <div class="image-description">/images/landing/about-section.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: landing</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/landing/contact-background.svg" alt="연락처 섹션 배경" loading="lazy" 
+                             onerror="this.src='/images/landing/contact-background.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#114</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">연락처 섹션 배경</div>
+                        <div class="image-description">/images/landing/contact-background.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: landing</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🏗️</span>
+                <h2 class="category-title">PROJECTS</h2>
+                <span class="category-count">4개</span>
+            </div>
+            <div class="image-grid">
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/projects/our-projects-bg.svg" alt="OUR PROJECTS 섹션 배경" loading="lazy" 
+                             onerror="this.src='/images/projects/our-projects-bg.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#5</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">OUR PROJECTS 섹션 배경</div>
+                        <div class="image-description">/images/projects/our-projects-bg.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: projects</span>
+                            <span class="priority-badge priority-1">
+                                1순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/projects/project-showcase.svg" alt="프로젝트 쇼케이스" loading="lazy" 
+                             onerror="this.src='/images/projects/project-showcase.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#6</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">프로젝트 쇼케이스</div>
+                        <div class="image-description">/images/projects/project-showcase.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: projects</span>
+                            <span class="priority-badge priority-1">
+                                1순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/projects/portfolio-header.svg" alt="포트폴리오 헤더 이미지" loading="lazy" 
+                             onerror="this.src='/images/projects/portfolio-header.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#115</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">포트폴리오 헤더 이미지</div>
+                        <div class="image-description">/images/projects/portfolio-header.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: projects</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/projects/consultation-bg.svg" alt="상담 섹션 배경" loading="lazy" 
+                             onerror="this.src='/images/projects/consultation-bg.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#116</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">상담 섹션 배경</div>
+                        <div class="image-description">/images/projects/consultation-bg.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: projects</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🎨</span>
+                <h2 class="category-title">COLLECTIONS</h2>
+                <span class="category-count">12개</span>
+            </div>
+            <div class="image-grid">
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/collections/essential-linen.svg" alt="에센셜 리넨 컬렉션" loading="lazy" 
+                             onerror="this.src='/images/collections/essential-linen.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#7</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">에센셜 리넨 컬렉션</div>
+                        <div class="image-description">/images/collections/essential-linen.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: collections</span>
+                            <span class="priority-badge priority-1">
+                                1순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/collections/modern-sheer.svg" alt="모던 셰어 시리즈" loading="lazy" 
+                             onerror="this.src='/images/collections/modern-sheer.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#8</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">모던 셰어 시리즈</div>
+                        <div class="image-description">/images/collections/modern-sheer.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: collections</span>
+                            <span class="priority-badge priority-1">
+                                1순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/collections/venetian-premium.svg" alt="프리미엄 베네치안 블라인드" loading="lazy" 
+                             onerror="this.src='/images/collections/venetian-premium.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#9</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">프리미엄 베네치안 블라인드</div>
+                        <div class="image-description">/images/collections/venetian-premium.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: collections</span>
+                            <span class="priority-badge priority-1">
+                                1순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/collections/wood-texture.svg" alt="우드 텍스처 블라인드" loading="lazy" 
+                             onerror="this.src='/images/collections/wood-texture.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#10</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">우드 텍스처 블라인드</div>
+                        <div class="image-description">/images/collections/wood-texture.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: collections</span>
+                            <span class="priority-badge priority-1">
+                                1순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/collections/smart-automation.svg" alt="스마트 자동화 시스템" loading="lazy" 
+                             onerror="this.src='/images/collections/smart-automation.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#11</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">스마트 자동화 시스템</div>
+                        <div class="image-description">/images/collections/smart-automation.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: collections</span>
+                            <span class="priority-badge priority-1">
+                                1순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/collections/wireless-motor.svg" alt="무선 모터 컬렉션" loading="lazy" 
+                             onerror="this.src='/images/collections/wireless-motor.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#12</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">무선 모터 컬렉션</div>
+                        <div class="image-description">/images/collections/wireless-motor.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: collections</span>
+                            <span class="priority-badge priority-1">
+                                1순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/collections/designer-hardware.svg" alt="디자이너 하드웨어" loading="lazy" 
+                             onerror="this.src='/images/collections/designer-hardware.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#13</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">디자이너 하드웨어</div>
+                        <div class="image-description">/images/collections/designer-hardware.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: collections</span>
+                            <span class="priority-badge priority-1">
+                                1순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/collections/luxury-tieback.svg" alt="럭셔리 타이백" loading="lazy" 
+                             onerror="this.src='/images/collections/luxury-tieback.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#14</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">럭셔리 타이백</div>
+                        <div class="image-description">/images/collections/luxury-tieback.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: collections</span>
+                            <span class="priority-badge priority-1">
+                                1순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/collections/seasonal-spring.svg" alt="계절 컬렉션 - 봄" loading="lazy" 
+                             onerror="this.src='/images/collections/seasonal-spring.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#117</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">계절 컬렉션 - 봄</div>
+                        <div class="image-description">/images/collections/seasonal-spring.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: collections</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/collections/seasonal-summer.svg" alt="계절 컬렉션 - 여름" loading="lazy" 
+                             onerror="this.src='/images/collections/seasonal-summer.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#118</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">계절 컬렉션 - 여름</div>
+                        <div class="image-description">/images/collections/seasonal-summer.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: collections</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/collections/seasonal-autumn.svg" alt="계절 컬렉션 - 가을" loading="lazy" 
+                             onerror="this.src='/images/collections/seasonal-autumn.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#119</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">계절 컬렉션 - 가을</div>
+                        <div class="image-description">/images/collections/seasonal-autumn.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: collections</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/collections/seasonal-winter.svg" alt="계절 컬렉션 - 겨울" loading="lazy" 
+                             onerror="this.src='/images/collections/seasonal-winter.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#120</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">계절 컬렉션 - 겨울</div>
+                        <div class="image-description">/images/collections/seasonal-winter.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: collections</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🏢</span>
+                <h2 class="category-title">REFERENCES</h2>
+                <span class="category-count">37개</span>
+            </div>
+            <div class="image-grid">
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/minimal-residence-bundang/main.svg" alt="Minimal Residence Bundang - Main Hero Shot" loading="lazy" 
+                             onerror="this.src='/images/references/minimal-residence-bundang/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#15</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Minimal Residence Bundang - Main Hero Shot</div>
+                        <div class="image-description">/images/references/minimal-residence-bundang/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/minimal-residence-bundang/gallery-1.svg" alt="Minimal Residence Bundang - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/references/minimal-residence-bundang/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#16</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Minimal Residence Bundang - Gallery Image 1</div>
+                        <div class="image-description">/images/references/minimal-residence-bundang/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/minimal-residence-bundang/gallery-2.svg" alt="Minimal Residence Bundang - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/references/minimal-residence-bundang/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#17</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Minimal Residence Bundang - Gallery Image 2</div>
+                        <div class="image-description">/images/references/minimal-residence-bundang/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/minimal-residence-bundang/gallery-3.svg" alt="Minimal Residence Bundang - Gallery Image 3" loading="lazy" 
+                             onerror="this.src='/images/references/minimal-residence-bundang/gallery-3.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#18</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Minimal Residence Bundang - Gallery Image 3</div>
+                        <div class="image-description">/images/references/minimal-residence-bundang/gallery-3.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/classic-cafe-hongdae/main.svg" alt="Classic Cafe Hongdae - Main Hero Shot" loading="lazy" 
+                             onerror="this.src='/images/references/classic-cafe-hongdae/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#19</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Classic Cafe Hongdae - Main Hero Shot</div>
+                        <div class="image-description">/images/references/classic-cafe-hongdae/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/classic-cafe-hongdae/gallery-1.svg" alt="Classic Cafe Hongdae - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/references/classic-cafe-hongdae/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#20</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Classic Cafe Hongdae - Gallery Image 1</div>
+                        <div class="image-description">/images/references/classic-cafe-hongdae/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/classic-cafe-hongdae/gallery-2.svg" alt="Classic Cafe Hongdae - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/references/classic-cafe-hongdae/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#21</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Classic Cafe Hongdae - Gallery Image 2</div>
+                        <div class="image-description">/images/references/classic-cafe-hongdae/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/classic-cafe-hongdae/gallery-3.svg" alt="Classic Cafe Hongdae - Gallery Image 3" loading="lazy" 
+                             onerror="this.src='/images/references/classic-cafe-hongdae/gallery-3.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#22</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Classic Cafe Hongdae - Gallery Image 3</div>
+                        <div class="image-description">/images/references/classic-cafe-hongdae/gallery-3.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/contemporary-house-goyang/main.svg" alt="Contemporary House Goyang - Main Hero Shot" loading="lazy" 
+                             onerror="this.src='/images/references/contemporary-house-goyang/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#23</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Contemporary House Goyang - Main Hero Shot</div>
+                        <div class="image-description">/images/references/contemporary-house-goyang/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/contemporary-house-goyang/gallery-1.svg" alt="Contemporary House Goyang - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/references/contemporary-house-goyang/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#24</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Contemporary House Goyang - Gallery Image 1</div>
+                        <div class="image-description">/images/references/contemporary-house-goyang/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/contemporary-house-goyang/gallery-2.svg" alt="Contemporary House Goyang - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/references/contemporary-house-goyang/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#25</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Contemporary House Goyang - Gallery Image 2</div>
+                        <div class="image-description">/images/references/contemporary-house-goyang/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/contemporary-house-goyang/gallery-3.svg" alt="Contemporary House Goyang - Gallery Image 3" loading="lazy" 
+                             onerror="this.src='/images/references/contemporary-house-goyang/gallery-3.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#26</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Contemporary House Goyang - Gallery Image 3</div>
+                        <div class="image-description">/images/references/contemporary-house-goyang/gallery-3.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/scandinavian-apartment-mapo/main.svg" alt="Scandinavian Apartment Mapo - Main Hero Shot" loading="lazy" 
+                             onerror="this.src='/images/references/scandinavian-apartment-mapo/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#27</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Scandinavian Apartment Mapo - Main Hero Shot</div>
+                        <div class="image-description">/images/references/scandinavian-apartment-mapo/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/scandinavian-apartment-mapo/gallery-1.svg" alt="Scandinavian Apartment Mapo - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/references/scandinavian-apartment-mapo/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#28</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Scandinavian Apartment Mapo - Gallery Image 1</div>
+                        <div class="image-description">/images/references/scandinavian-apartment-mapo/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/scandinavian-apartment-mapo/gallery-2.svg" alt="Scandinavian Apartment Mapo - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/references/scandinavian-apartment-mapo/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#29</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Scandinavian Apartment Mapo - Gallery Image 2</div>
+                        <div class="image-description">/images/references/scandinavian-apartment-mapo/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/scandinavian-apartment-mapo/gallery-3.svg" alt="Scandinavian Apartment Mapo - Gallery Image 3" loading="lazy" 
+                             onerror="this.src='/images/references/scandinavian-apartment-mapo/gallery-3.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#30</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Scandinavian Apartment Mapo - Gallery Image 3</div>
+                        <div class="image-description">/images/references/scandinavian-apartment-mapo/gallery-3.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/industrial-lobby-yongsan/main.svg" alt="Industrial Lobby Yongsan - Main Hero Shot" loading="lazy" 
+                             onerror="this.src='/images/references/industrial-lobby-yongsan/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#31</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Industrial Lobby Yongsan - Main Hero Shot</div>
+                        <div class="image-description">/images/references/industrial-lobby-yongsan/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/industrial-lobby-yongsan/gallery-1.svg" alt="Industrial Lobby Yongsan - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/references/industrial-lobby-yongsan/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#32</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Industrial Lobby Yongsan - Gallery Image 1</div>
+                        <div class="image-description">/images/references/industrial-lobby-yongsan/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/industrial-lobby-yongsan/gallery-2.svg" alt="Industrial Lobby Yongsan - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/references/industrial-lobby-yongsan/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#33</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Industrial Lobby Yongsan - Gallery Image 2</div>
+                        <div class="image-description">/images/references/industrial-lobby-yongsan/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/industrial-lobby-yongsan/gallery-3.svg" alt="Industrial Lobby Yongsan - Gallery Image 3" loading="lazy" 
+                             onerror="this.src='/images/references/industrial-lobby-yongsan/gallery-3.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#34</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Industrial Lobby Yongsan - Gallery Image 3</div>
+                        <div class="image-description">/images/references/industrial-lobby-yongsan/gallery-3.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/luxury-penthouse-seocho/main.svg" alt="Luxury Penthouse Seocho - Main Hero Shot" loading="lazy" 
+                             onerror="this.src='/images/references/luxury-penthouse-seocho/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#35</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Luxury Penthouse Seocho - Main Hero Shot</div>
+                        <div class="image-description">/images/references/luxury-penthouse-seocho/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/luxury-penthouse-seocho/gallery-1.svg" alt="Luxury Penthouse Seocho - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/references/luxury-penthouse-seocho/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#36</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Luxury Penthouse Seocho - Gallery Image 1</div>
+                        <div class="image-description">/images/references/luxury-penthouse-seocho/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/luxury-penthouse-seocho/gallery-2.svg" alt="Luxury Penthouse Seocho - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/references/luxury-penthouse-seocho/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#37</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Luxury Penthouse Seocho - Gallery Image 2</div>
+                        <div class="image-description">/images/references/luxury-penthouse-seocho/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/luxury-penthouse-seocho/gallery-3.svg" alt="Luxury Penthouse Seocho - Gallery Image 3" loading="lazy" 
+                             onerror="this.src='/images/references/luxury-penthouse-seocho/gallery-3.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#38</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Luxury Penthouse Seocho - Gallery Image 3</div>
+                        <div class="image-description">/images/references/luxury-penthouse-seocho/gallery-3.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/modern-clinic-seongnam/main.svg" alt="Modern Clinic Seongnam - Main Hero Shot" loading="lazy" 
+                             onerror="this.src='/images/references/modern-clinic-seongnam/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#39</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Modern Clinic Seongnam - Main Hero Shot</div>
+                        <div class="image-description">/images/references/modern-clinic-seongnam/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/modern-clinic-seongnam/gallery-1.svg" alt="Modern Clinic Seongnam - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/references/modern-clinic-seongnam/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#40</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Modern Clinic Seongnam - Gallery Image 1</div>
+                        <div class="image-description">/images/references/modern-clinic-seongnam/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/modern-clinic-seongnam/gallery-2.svg" alt="Modern Clinic Seongnam - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/references/modern-clinic-seongnam/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#41</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Modern Clinic Seongnam - Gallery Image 2</div>
+                        <div class="image-description">/images/references/modern-clinic-seongnam/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/modern-clinic-seongnam/gallery-3.svg" alt="Modern Clinic Seongnam - Gallery Image 3" loading="lazy" 
+                             onerror="this.src='/images/references/modern-clinic-seongnam/gallery-3.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#42</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Modern Clinic Seongnam - Gallery Image 3</div>
+                        <div class="image-description">/images/references/modern-clinic-seongnam/gallery-3.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/art-gallery-jongno/main.svg" alt="Art Gallery Jongno - Main Hero Shot" loading="lazy" 
+                             onerror="this.src='/images/references/art-gallery-jongno/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#43</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Art Gallery Jongno - Main Hero Shot</div>
+                        <div class="image-description">/images/references/art-gallery-jongno/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/art-gallery-jongno/gallery-1.svg" alt="Art Gallery Jongno - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/references/art-gallery-jongno/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#44</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Art Gallery Jongno - Gallery Image 1</div>
+                        <div class="image-description">/images/references/art-gallery-jongno/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/art-gallery-jongno/gallery-2.svg" alt="Art Gallery Jongno - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/references/art-gallery-jongno/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#45</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Art Gallery Jongno - Gallery Image 2</div>
+                        <div class="image-description">/images/references/art-gallery-jongno/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/art-gallery-jongno/gallery-3.svg" alt="Art Gallery Jongno - Gallery Image 3" loading="lazy" 
+                             onerror="this.src='/images/references/art-gallery-jongno/gallery-3.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#46</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Art Gallery Jongno - Gallery Image 3</div>
+                        <div class="image-description">/images/references/art-gallery-jongno/gallery-3.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-2">
+                                2순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/hotel-lobby-seoul.svg" alt="서울 호텔 로비 프로젝트" loading="lazy" 
+                             onerror="this.src='/images/references/hotel-lobby-seoul.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#131</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">서울 호텔 로비 프로젝트</div>
+                        <div class="image-description">/images/references/hotel-lobby-seoul.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/restaurant-busan.svg" alt="부산 레스토랑 프로젝트" loading="lazy" 
+                             onerror="this.src='/images/references/restaurant-busan.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#132</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">부산 레스토랑 프로젝트</div>
+                        <div class="image-description">/images/references/restaurant-busan.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/office-tower-incheon.svg" alt="인천 오피스 타워 프로젝트" loading="lazy" 
+                             onerror="this.src='/images/references/office-tower-incheon.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#133</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">인천 오피스 타워 프로젝트</div>
+                        <div class="image-description">/images/references/office-tower-incheon.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/showroom-display.svg" alt="쇼룸 디스플레이" loading="lazy" 
+                             onerror="this.src='/images/references/showroom-display.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#134</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">쇼룸 디스플레이</div>
+                        <div class="image-description">/images/references/showroom-display.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/references/residential-complex.svg" alt="주거 복합시설 프로젝트" loading="lazy" 
+                             onerror="this.src='/images/references/residential-complex.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#135</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">주거 복합시설 프로젝트</div>
+                        <div class="image-description">/images/references/residential-complex.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: references</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🛍️</span>
+                <h2 class="category-title">PRODUCTS</h2>
+                <span class="category-count">58개</span>
+            </div>
+            <div class="image-grid">
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/sheer-curtain/main.svg" alt="Sheer Curtain - Main Product Shot" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/sheer-curtain/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#47</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Sheer Curtain - Main Product Shot</div>
+                        <div class="image-description">/images/products/curtain/sheer-curtain/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/sheer-curtain/gallery-1.svg" alt="Sheer Curtain - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/sheer-curtain/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#48</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Sheer Curtain - Gallery Image 1</div>
+                        <div class="image-description">/images/products/curtain/sheer-curtain/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/sheer-curtain/gallery-2.svg" alt="Sheer Curtain - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/sheer-curtain/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#49</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Sheer Curtain - Gallery Image 2</div>
+                        <div class="image-description">/images/products/curtain/sheer-curtain/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/classic-curtain/main.svg" alt="Classic Curtain - Main Product Shot" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/classic-curtain/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#50</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Classic Curtain - Main Product Shot</div>
+                        <div class="image-description">/images/products/curtain/classic-curtain/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/classic-curtain/detail.svg" alt="Classic Curtain - Detail Close-up" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/classic-curtain/detail.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#51</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Classic Curtain - Detail Close-up</div>
+                        <div class="image-description">/images/products/curtain/classic-curtain/detail.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/classic-curtain/lifestyle.svg" alt="Classic Curtain - Lifestyle Scene" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/classic-curtain/lifestyle.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#52</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Classic Curtain - Lifestyle Scene</div>
+                        <div class="image-description">/images/products/curtain/classic-curtain/lifestyle.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/classic-curtain/gallery-1.svg" alt="Classic Curtain - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/classic-curtain/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#53</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Classic Curtain - Gallery Image 1</div>
+                        <div class="image-description">/images/products/curtain/classic-curtain/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/classic-curtain/gallery-2.svg" alt="Classic Curtain - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/classic-curtain/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#54</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Classic Curtain - Gallery Image 2</div>
+                        <div class="image-description">/images/products/curtain/classic-curtain/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/modern-curtain/main.svg" alt="Modern Curtain - Main Product Shot" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/modern-curtain/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#55</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Modern Curtain - Main Product Shot</div>
+                        <div class="image-description">/images/products/curtain/modern-curtain/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/modern-curtain/detail.svg" alt="Modern Curtain - Detail Close-up" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/modern-curtain/detail.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#56</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Modern Curtain - Detail Close-up</div>
+                        <div class="image-description">/images/products/curtain/modern-curtain/detail.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/modern-curtain/lifestyle.svg" alt="Modern Curtain - Lifestyle Scene" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/modern-curtain/lifestyle.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#57</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Modern Curtain - Lifestyle Scene</div>
+                        <div class="image-description">/images/products/curtain/modern-curtain/lifestyle.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/modern-curtain/gallery-1.svg" alt="Modern Curtain - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/modern-curtain/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#58</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Modern Curtain - Gallery Image 1</div>
+                        <div class="image-description">/images/products/curtain/modern-curtain/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/modern-curtain/gallery-2.svg" alt="Modern Curtain - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/modern-curtain/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#59</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Modern Curtain - Gallery Image 2</div>
+                        <div class="image-description">/images/products/curtain/modern-curtain/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/linen-white/main.svg" alt="Linen White - Main Product Shot" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/linen-white/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#60</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Linen White - Main Product Shot</div>
+                        <div class="image-description">/images/products/curtain/linen-white/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/linen-white/detail.svg" alt="Linen White - Detail Close-up" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/linen-white/detail.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#61</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Linen White - Detail Close-up</div>
+                        <div class="image-description">/images/products/curtain/linen-white/detail.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/linen-white/lifestyle.svg" alt="Linen White - Lifestyle Scene" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/linen-white/lifestyle.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#62</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Linen White - Lifestyle Scene</div>
+                        <div class="image-description">/images/products/curtain/linen-white/lifestyle.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/linen-white/gallery-1.svg" alt="Linen White - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/linen-white/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#63</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Linen White - Gallery Image 1</div>
+                        <div class="image-description">/images/products/curtain/linen-white/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/linen-white/gallery-2.svg" alt="Linen White - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/linen-white/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#64</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Linen White - Gallery Image 2</div>
+                        <div class="image-description">/images/products/curtain/linen-white/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/pleats-ivory/main.svg" alt="Pleats Ivory - Main Product Shot" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/pleats-ivory/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#65</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Pleats Ivory - Main Product Shot</div>
+                        <div class="image-description">/images/products/curtain/pleats-ivory/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/pleats-ivory/detail.svg" alt="Pleats Ivory - Detail Close-up" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/pleats-ivory/detail.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#66</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Pleats Ivory - Detail Close-up</div>
+                        <div class="image-description">/images/products/curtain/pleats-ivory/detail.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/pleats-ivory/lifestyle.svg" alt="Pleats Ivory - Lifestyle Scene" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/pleats-ivory/lifestyle.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#67</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Pleats Ivory - Lifestyle Scene</div>
+                        <div class="image-description">/images/products/curtain/pleats-ivory/lifestyle.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/pleats-ivory/gallery-1.svg" alt="Pleats Ivory - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/pleats-ivory/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#68</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Pleats Ivory - Gallery Image 1</div>
+                        <div class="image-description">/images/products/curtain/pleats-ivory/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/curtain/pleats-ivory/gallery-2.svg" alt="Pleats Ivory - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/products/curtain/pleats-ivory/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#69</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Pleats Ivory - Gallery Image 2</div>
+                        <div class="image-description">/images/products/curtain/pleats-ivory/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/blind/wood-blind/main.svg" alt="Wood Blind - Main Product Shot" loading="lazy" 
+                             onerror="this.src='/images/products/blind/wood-blind/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#70</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Wood Blind - Main Product Shot</div>
+                        <div class="image-description">/images/products/blind/wood-blind/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/blind/wood-blind/detail.svg" alt="Wood Blind - Detail Close-up" loading="lazy" 
+                             onerror="this.src='/images/products/blind/wood-blind/detail.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#71</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Wood Blind - Detail Close-up</div>
+                        <div class="image-description">/images/products/blind/wood-blind/detail.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/blind/wood-blind/lifestyle.svg" alt="Wood Blind - Lifestyle Scene" loading="lazy" 
+                             onerror="this.src='/images/products/blind/wood-blind/lifestyle.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#72</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Wood Blind - Lifestyle Scene</div>
+                        <div class="image-description">/images/products/blind/wood-blind/lifestyle.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/blind/wood-blind/gallery-1.svg" alt="Wood Blind - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/products/blind/wood-blind/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#73</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Wood Blind - Gallery Image 1</div>
+                        <div class="image-description">/images/products/blind/wood-blind/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/blind/wood-blind/gallery-2.svg" alt="Wood Blind - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/products/blind/wood-blind/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#74</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Wood Blind - Gallery Image 2</div>
+                        <div class="image-description">/images/products/blind/wood-blind/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/blind/aluminum-blind/main.svg" alt="Aluminum Blind - Main Product Shot" loading="lazy" 
+                             onerror="this.src='/images/products/blind/aluminum-blind/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#75</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Aluminum Blind - Main Product Shot</div>
+                        <div class="image-description">/images/products/blind/aluminum-blind/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/blind/aluminum-blind/detail.svg" alt="Aluminum Blind - Detail Close-up" loading="lazy" 
+                             onerror="this.src='/images/products/blind/aluminum-blind/detail.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#76</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Aluminum Blind - Detail Close-up</div>
+                        <div class="image-description">/images/products/blind/aluminum-blind/detail.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/blind/aluminum-blind/lifestyle.svg" alt="Aluminum Blind - Lifestyle Scene" loading="lazy" 
+                             onerror="this.src='/images/products/blind/aluminum-blind/lifestyle.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#77</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Aluminum Blind - Lifestyle Scene</div>
+                        <div class="image-description">/images/products/blind/aluminum-blind/lifestyle.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/blind/aluminum-blind/gallery-1.svg" alt="Aluminum Blind - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/products/blind/aluminum-blind/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#78</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Aluminum Blind - Gallery Image 1</div>
+                        <div class="image-description">/images/products/blind/aluminum-blind/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/blind/aluminum-blind/gallery-2.svg" alt="Aluminum Blind - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/products/blind/aluminum-blind/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#79</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Aluminum Blind - Gallery Image 2</div>
+                        <div class="image-description">/images/products/blind/aluminum-blind/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/blind/fabric-blind/main.svg" alt="Fabric Blind - Main Product Shot" loading="lazy" 
+                             onerror="this.src='/images/products/blind/fabric-blind/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#80</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Fabric Blind - Main Product Shot</div>
+                        <div class="image-description">/images/products/blind/fabric-blind/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/blind/fabric-blind/detail.svg" alt="Fabric Blind - Detail Close-up" loading="lazy" 
+                             onerror="this.src='/images/products/blind/fabric-blind/detail.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#81</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Fabric Blind - Detail Close-up</div>
+                        <div class="image-description">/images/products/blind/fabric-blind/detail.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/blind/fabric-blind/lifestyle.svg" alt="Fabric Blind - Lifestyle Scene" loading="lazy" 
+                             onerror="this.src='/images/products/blind/fabric-blind/lifestyle.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#82</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Fabric Blind - Lifestyle Scene</div>
+                        <div class="image-description">/images/products/blind/fabric-blind/lifestyle.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/blind/fabric-blind/gallery-1.svg" alt="Fabric Blind - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/products/blind/fabric-blind/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#83</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Fabric Blind - Gallery Image 1</div>
+                        <div class="image-description">/images/products/blind/fabric-blind/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/blind/fabric-blind/gallery-2.svg" alt="Fabric Blind - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/products/blind/fabric-blind/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#84</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Fabric Blind - Gallery Image 2</div>
+                        <div class="image-description">/images/products/blind/fabric-blind/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/motorized/motorized-curtain-system/main.svg" alt="Motorized Curtain System - Main Product Shot" loading="lazy" 
+                             onerror="this.src='/images/products/motorized/motorized-curtain-system/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#85</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Motorized Curtain System - Main Product Shot</div>
+                        <div class="image-description">/images/products/motorized/motorized-curtain-system/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/motorized/motorized-curtain-system/detail.svg" alt="Motorized Curtain System - Detail Close-up" loading="lazy" 
+                             onerror="this.src='/images/products/motorized/motorized-curtain-system/detail.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#86</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Motorized Curtain System - Detail Close-up</div>
+                        <div class="image-description">/images/products/motorized/motorized-curtain-system/detail.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/motorized/motorized-curtain-system/lifestyle.svg" alt="Motorized Curtain System - Lifestyle Scene" loading="lazy" 
+                             onerror="this.src='/images/products/motorized/motorized-curtain-system/lifestyle.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#87</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Motorized Curtain System - Lifestyle Scene</div>
+                        <div class="image-description">/images/products/motorized/motorized-curtain-system/lifestyle.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/motorized/motorized-curtain-system/gallery-1.svg" alt="Motorized Curtain System - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/products/motorized/motorized-curtain-system/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#88</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Motorized Curtain System - Gallery Image 1</div>
+                        <div class="image-description">/images/products/motorized/motorized-curtain-system/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/motorized/motorized-curtain-system/gallery-2.svg" alt="Motorized Curtain System - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/products/motorized/motorized-curtain-system/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#89</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Motorized Curtain System - Gallery Image 2</div>
+                        <div class="image-description">/images/products/motorized/motorized-curtain-system/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/motorized/motorized-blind-system/main.svg" alt="Motorized Blind System - Main Product Shot" loading="lazy" 
+                             onerror="this.src='/images/products/motorized/motorized-blind-system/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#90</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Motorized Blind System - Main Product Shot</div>
+                        <div class="image-description">/images/products/motorized/motorized-blind-system/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/motorized/motorized-blind-system/detail.svg" alt="Motorized Blind System - Detail Close-up" loading="lazy" 
+                             onerror="this.src='/images/products/motorized/motorized-blind-system/detail.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#91</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Motorized Blind System - Detail Close-up</div>
+                        <div class="image-description">/images/products/motorized/motorized-blind-system/detail.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/motorized/motorized-blind-system/lifestyle.svg" alt="Motorized Blind System - Lifestyle Scene" loading="lazy" 
+                             onerror="this.src='/images/products/motorized/motorized-blind-system/lifestyle.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#92</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Motorized Blind System - Lifestyle Scene</div>
+                        <div class="image-description">/images/products/motorized/motorized-blind-system/lifestyle.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/motorized/motorized-blind-system/gallery-1.svg" alt="Motorized Blind System - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/products/motorized/motorized-blind-system/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#93</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Motorized Blind System - Gallery Image 1</div>
+                        <div class="image-description">/images/products/motorized/motorized-blind-system/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/motorized/motorized-blind-system/gallery-2.svg" alt="Motorized Blind System - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/products/motorized/motorized-blind-system/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#94</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Motorized Blind System - Gallery Image 2</div>
+                        <div class="image-description">/images/products/motorized/motorized-blind-system/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/motorized/smart-home-integration/main.svg" alt="Smart Home Integration - Main Product Shot" loading="lazy" 
+                             onerror="this.src='/images/products/motorized/smart-home-integration/main.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#95</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Smart Home Integration - Main Product Shot</div>
+                        <div class="image-description">/images/products/motorized/smart-home-integration/main.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/motorized/smart-home-integration/detail.svg" alt="Smart Home Integration - Detail Close-up" loading="lazy" 
+                             onerror="this.src='/images/products/motorized/smart-home-integration/detail.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#96</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Smart Home Integration - Detail Close-up</div>
+                        <div class="image-description">/images/products/motorized/smart-home-integration/detail.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/motorized/smart-home-integration/lifestyle.svg" alt="Smart Home Integration - Lifestyle Scene" loading="lazy" 
+                             onerror="this.src='/images/products/motorized/smart-home-integration/lifestyle.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#97</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Smart Home Integration - Lifestyle Scene</div>
+                        <div class="image-description">/images/products/motorized/smart-home-integration/lifestyle.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/motorized/smart-home-integration/gallery-1.svg" alt="Smart Home Integration - Gallery Image 1" loading="lazy" 
+                             onerror="this.src='/images/products/motorized/smart-home-integration/gallery-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#98</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Smart Home Integration - Gallery Image 1</div>
+                        <div class="image-description">/images/products/motorized/smart-home-integration/gallery-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/motorized/smart-home-integration/gallery-2.svg" alt="Smart Home Integration - Gallery Image 2" loading="lazy" 
+                             onerror="this.src='/images/products/motorized/smart-home-integration/gallery-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#99</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Smart Home Integration - Gallery Image 2</div>
+                        <div class="image-description">/images/products/motorized/smart-home-integration/gallery-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/accessories/curtain-rings.svg" alt="커튼 링 액세서리" loading="lazy" 
+                             onerror="this.src='/images/products/accessories/curtain-rings.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#126</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">커튼 링 액세서리</div>
+                        <div class="image-description">/images/products/accessories/curtain-rings.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/accessories/tiebacks.svg" alt="타이백 컬렉션" loading="lazy" 
+                             onerror="this.src='/images/products/accessories/tiebacks.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#127</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">타이백 컬렉션</div>
+                        <div class="image-description">/images/products/accessories/tiebacks.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/accessories/valances.svg" alt="발란스 컬렉션" loading="lazy" 
+                             onerror="this.src='/images/products/accessories/valances.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#128</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">발란스 컬렉션</div>
+                        <div class="image-description">/images/products/accessories/valances.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/accessories/holdbacks.svg" alt="홀드백 액세서리" loading="lazy" 
+                             onerror="this.src='/images/products/accessories/holdbacks.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#129</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">홀드백 액세서리</div>
+                        <div class="image-description">/images/products/accessories/holdbacks.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/products/accessories/tracks-rails.svg" alt="트랙 & 레일 시스템" loading="lazy" 
+                             onerror="this.src='/images/products/accessories/tracks-rails.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#130</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">트랙 & 레일 시스템</div>
+                        <div class="image-description">/images/products/accessories/tracks-rails.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: products</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🖼️</span>
+                <h2 class="category-title">GALLERY</h2>
+                <span class="category-count">17개</span>
+            </div>
+            <div class="image-grid">
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/gallery-grid-1.svg" alt="Gallery Grid - Showcase 1" loading="lazy" 
+                             onerror="this.src='/images/gallery/gallery-grid-1.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#100</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Gallery Grid - Showcase 1</div>
+                        <div class="image-description">/images/gallery/gallery-grid-1.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/gallery-grid-2.svg" alt="Gallery Grid - Showcase 2" loading="lazy" 
+                             onerror="this.src='/images/gallery/gallery-grid-2.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#101</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Gallery Grid - Showcase 2</div>
+                        <div class="image-description">/images/gallery/gallery-grid-2.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/gallery-grid-3.svg" alt="Gallery Grid - Showcase 3" loading="lazy" 
+                             onerror="this.src='/images/gallery/gallery-grid-3.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#102</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Gallery Grid - Showcase 3</div>
+                        <div class="image-description">/images/gallery/gallery-grid-3.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/gallery-grid-4.svg" alt="Gallery Grid - Showcase 4" loading="lazy" 
+                             onerror="this.src='/images/gallery/gallery-grid-4.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#103</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Gallery Grid - Showcase 4</div>
+                        <div class="image-description">/images/gallery/gallery-grid-4.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/gallery-grid-5.svg" alt="Gallery Grid - Showcase 5" loading="lazy" 
+                             onerror="this.src='/images/gallery/gallery-grid-5.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#104</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Gallery Grid - Showcase 5</div>
+                        <div class="image-description">/images/gallery/gallery-grid-5.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/gallery-grid-6.svg" alt="Gallery Grid - Showcase 6" loading="lazy" 
+                             onerror="this.src='/images/gallery/gallery-grid-6.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#105</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Gallery Grid - Showcase 6</div>
+                        <div class="image-description">/images/gallery/gallery-grid-6.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/gallery-grid-7.svg" alt="Gallery Grid - Showcase 7" loading="lazy" 
+                             onerror="this.src='/images/gallery/gallery-grid-7.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#106</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Gallery Grid - Showcase 7</div>
+                        <div class="image-description">/images/gallery/gallery-grid-7.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/gallery-grid-8.svg" alt="Gallery Grid - Showcase 8" loading="lazy" 
+                             onerror="this.src='/images/gallery/gallery-grid-8.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#107</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Gallery Grid - Showcase 8</div>
+                        <div class="image-description">/images/gallery/gallery-grid-8.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/gallery-grid-9.svg" alt="Gallery Grid - Showcase 9" loading="lazy" 
+                             onerror="this.src='/images/gallery/gallery-grid-9.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#108</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Gallery Grid - Showcase 9</div>
+                        <div class="image-description">/images/gallery/gallery-grid-9.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/gallery-grid-10.svg" alt="Gallery Grid - Showcase 10" loading="lazy" 
+                             onerror="this.src='/images/gallery/gallery-grid-10.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#109</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Gallery Grid - Showcase 10</div>
+                        <div class="image-description">/images/gallery/gallery-grid-10.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/gallery-grid-11.svg" alt="Gallery Grid - Showcase 11" loading="lazy" 
+                             onerror="this.src='/images/gallery/gallery-grid-11.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#110</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Gallery Grid - Showcase 11</div>
+                        <div class="image-description">/images/gallery/gallery-grid-11.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/gallery-grid-12.svg" alt="Gallery Grid - Showcase 12" loading="lazy" 
+                             onerror="this.src='/images/gallery/gallery-grid-12.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#111</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">Gallery Grid - Showcase 12</div>
+                        <div class="image-description">/images/gallery/gallery-grid-12.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/best-of-year.svg" alt="올해의 베스트 프로젝트" loading="lazy" 
+                             onerror="this.src='/images/gallery/best-of-year.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#121</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">올해의 베스트 프로젝트</div>
+                        <div class="image-description">/images/gallery/best-of-year.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/customer-favorites.svg" alt="고객 선호 작품" loading="lazy" 
+                             onerror="this.src='/images/gallery/customer-favorites.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#122</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">고객 선호 작품</div>
+                        <div class="image-description">/images/gallery/customer-favorites.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/award-winning.svg" alt="수상 작품" loading="lazy" 
+                             onerror="this.src='/images/gallery/award-winning.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#123</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">수상 작품</div>
+                        <div class="image-description">/images/gallery/award-winning.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/trending-styles.svg" alt="트렌딩 스타일" loading="lazy" 
+                             onerror="this.src='/images/gallery/trending-styles.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#124</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">트렌딩 스타일</div>
+                        <div class="image-description">/images/gallery/trending-styles.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/gallery/luxury-collection.svg" alt="럭셔리 컬렉션 쇼케이스" loading="lazy" 
+                             onerror="this.src='/images/gallery/luxury-collection.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#125</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">럭셔리 컬렉션 쇼케이스</div>
+                        <div class="image-description">/images/gallery/luxury-collection.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: gallery</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-icon">📝</span>
+                <h2 class="category-title">BLOG</h2>
+                <span class="category-count">5개</span>
+            </div>
+            <div class="image-grid">
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/blog/design-trends-2024.svg" alt="2024 디자인 트렌드" loading="lazy" 
+                             onerror="this.src='/images/blog/design-trends-2024.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#136</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">2024 디자인 트렌드</div>
+                        <div class="image-description">/images/blog/design-trends-2024.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: blog</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/blog/maintenance-tips.svg" alt="커튼/블라인드 관리 팁" loading="lazy" 
+                             onerror="this.src='/images/blog/maintenance-tips.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#137</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">커튼/블라인드 관리 팁</div>
+                        <div class="image-description">/images/blog/maintenance-tips.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: blog</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/blog/installation-guide.svg" alt="설치 가이드" loading="lazy" 
+                             onerror="this.src='/images/blog/installation-guide.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#138</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">설치 가이드</div>
+                        <div class="image-description">/images/blog/installation-guide.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: blog</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/blog/color-matching.svg" alt="색상 매칭 가이드" loading="lazy" 
+                             onerror="this.src='/images/blog/color-matching.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#139</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">색상 매칭 가이드</div>
+                        <div class="image-description">/images/blog/color-matching.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: blog</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/blog/room-styling.svg" alt="룸 스타일링 팁" loading="lazy" 
+                             onerror="this.src='/images/blog/room-styling.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#140</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">룸 스타일링 팁</div>
+                        <div class="image-description">/images/blog/room-styling.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: blog</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-icon">👥</span>
+                <h2 class="category-title">ABOUT</h2>
+                <span class="category-count">5개</span>
+            </div>
+            <div class="image-grid">
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/about/company-story.svg" alt="회사 이야기" loading="lazy" 
+                             onerror="this.src='/images/about/company-story.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#141</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">회사 이야기</div>
+                        <div class="image-description">/images/about/company-story.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: about</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/about/team-workspace.svg" alt="팀 작업 공간" loading="lazy" 
+                             onerror="this.src='/images/about/team-workspace.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#142</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">팀 작업 공간</div>
+                        <div class="image-description">/images/about/team-workspace.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: about</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/about/manufacturing.svg" alt="제작 과정" loading="lazy" 
+                             onerror="this.src='/images/about/manufacturing.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#143</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">제작 과정</div>
+                        <div class="image-description">/images/about/manufacturing.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: about</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/about/quality-control.svg" alt="품질 관리" loading="lazy" 
+                             onerror="this.src='/images/about/quality-control.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#144</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">품질 관리</div>
+                        <div class="image-description">/images/about/quality-control.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: about</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/about/certifications.svg" alt="인증서 및 자격증" loading="lazy" 
+                             onerror="this.src='/images/about/certifications.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#145</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">인증서 및 자격증</div>
+                        <div class="image-description">/images/about/certifications.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: about</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-section">
+            <div class="category-header">
+                <span class="category-icon">🚀</span>
+                <h2 class="category-title">FUTURE</h2>
+                <span class="category-count">3개</span>
+            </div>
+            <div class="image-grid">
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/future/concept-designs.svg" alt="컨셉 디자인 (미래 확장용)" loading="lazy" 
+                             onerror="this.src='/images/future/concept-designs.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#146</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">컨셉 디자인 (미래 확장용)</div>
+                        <div class="image-description">/images/future/concept-designs.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: future</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/future/innovation-lab.svg" alt="혁신 연구소 (미래 확장용)" loading="lazy" 
+                             onerror="this.src='/images/future/innovation-lab.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#147</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">혁신 연구소 (미래 확장용)</div>
+                        <div class="image-description">/images/future/innovation-lab.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: future</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="/images/future/next-generation.svg" alt="차세대 제품 (미래 확장용)" loading="lazy" 
+                             onerror="this.src='/images/future/next-generation.jpg'">
+                        <div class="image-overlay">
+                            <span class="image-id">#148</span>
+                        </div>
+                    </div>
+                    <div class="image-info">
+                        <div class="image-title">차세대 제품 (미래 확장용)</div>
+                        <div class="image-description">/images/future/next-generation.jpg</div>
+                        <div class="image-meta">
+                            <span>카테고리: future</span>
+                            <span class="priority-badge priority-3">
+                                3순위
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>🏷️ 모든 이미지는 khakishop 자동 생성 시스템으로 제작되었습니다.</p>
+            <p>🎨 RIGAS 모티브 + khakishop 브랜드 감성 / 100% 무료 상업용 라이선스</p>
+            <div class="footer-links">
+                <a href="/" class="footer-link">🏠 홈페이지</a>
+                <a href="/ko/collection" class="footer-link">🎨 컬렉션</a>
+                <a href="/ko/references" class="footer-link">🏢 레퍼런스</a>
+                <a href="/ko/about" class="footer-link">👥 회사소개</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

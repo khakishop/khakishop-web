@@ -1,112 +1,244 @@
 // src/data/products.ts
 
+// ================================================================================
+// 🎨 KHAKISHOP 제품 데이터
+// ================================================================================
+
 export interface Product {
-  title: string;
-  description: string;
-  features: string[];
-  image?: string;
   slug: string;
-  category: 'curtain' | 'blind' | 'motorized';
+  title: string;
+  category: string;
+  description: string;
+  image?: string;
+  price?: string;
+  features?: string[];
+  specifications?: {
+    material?: string;
+    size?: string;
+    color?: string;
+    installation?: string;
+  };
+  gallery?: string[];
 }
 
+// 커튼 제품 데이터
 export const curtainProducts: Product[] = [
   {
-    title: "클래식 커튼",
-    description: "전통적인 우아함과 현대적 감각이 만나는 클래식 커튼 컬렉션. 다양한 패브릭과 색상으로 공간에 품격을 더합니다.",
-    features: ["프리미엄 패브릭", "맞춤 제작", "다양한 색상"],
-    image: "/images/classic.jpg",
-    slug: "classic-curtain",
-    category: "curtain"
+    slug: 'sheer-curtain',
+    title: 'Sheer Curtain',
+    category: 'Curtain',
+    description: '자연광을 부드럽게 확산시키는 쉬어 커튼',
+    image: '/images/products/curtain/sheer-curtain/lifestyle.jpg',
+    features: ['자연광 조절', '프라이버시 확보', '우아한 드레이프'],
+    specifications: {
+      material: '폴리에스터 100%',
+      size: '맞춤 제작',
+      installation: '레일/로드 설치'
+    },
+    gallery: [
+      '/images/products/curtain/sheer-curtain/lifestyle.jpg',
+      '/images/products/curtain/sheer-curtain/detail.jpg'
+    ]
   },
   {
-    title: "모던 커튼",
-    description: "미니멀하고 세련된 디자인의 모던 커튼. 심플한 라인과 기능성을 중시하는 현대적 공간에 완벽한 선택입니다.",
-    features: ["미니멀 디자인", "기능성 우선", "현대적 감각"],
-    image: "/images/modern.jpg",
-    slug: "modern-curtain",
-    category: "curtain"
+    slug: 'classic-curtain',
+    title: 'Classic Curtain',
+    category: 'Curtain',
+    description: '클래식한 감성의 두꺼운 암막 커튼',
+    image: '/images/hero/hero.jpg',
+    features: ['완전 차광', '방음 효과', '단열 기능'],
+    specifications: {
+      material: '면 혼방',
+      size: '맞춤 제작',
+      installation: '레일/로드 설치'
+    },
+    gallery: [
+      '/images/hero/hero.jpg',
+      '/images/projects/our-projects-bg.jpg'
+    ]
   },
   {
-    title: "셰어 커튼",
-    description: "은은한 빛의 투과와 프라이버시를 동시에 제공하는 셰어 커튼. 공간에 부드러운 분위기를 연출합니다.",
-    features: ["자연스러운 빛 투과", "프라이버시 보호", "부드러운 분위기"],
-    image: "/images/sheer.jpg",
-    slug: "sheer-curtain",
-    category: "curtain"
+    slug: 'modern-curtain',
+    title: 'Modern Curtain',
+    category: 'Curtain',
+    description: '모던한 공간에 어울리는 심플한 커튼',
+    image: '/images/references/modern-office-gangnam/main.jpg',
+    features: ['미니멀 디자인', '다양한 컬러', '쉬운 관리'],
+    specifications: {
+      material: '린넨 혼방',
+      size: '맞춤 제작',
+      installation: '레일/로드 설치'
+    },
+    gallery: [
+      '/images/references/modern-office-gangnam/main.jpg',
+      '/images/references/modern-office-gangnam/gallery-1.jpg',
+      '/images/references/modern-office-gangnam/gallery-2.jpg'
+    ]
   },
   {
-    title: "린넨 화이트 커튼",
-    description: "자연광을 부드럽게 받아들이는 린넨 화이트 커튼입니다.",
-    features: ["고급 린넨 원단", "화이트 컬러", "은은한 자연광"],
-    image: "/images/products/linen-white.jpg",
-    slug: "linen-white",
-    category: "curtain"
+    slug: 'linen-white',
+    title: 'Linen White',
+    category: 'Curtain',
+    description: '자연스러운 린넨 소재의 화이트 커튼',
+    image: '/images/collections/essential-linen.png',
+    features: ['천연 린넨', '화이트 컬러', '자연스러운 질감'],
+    specifications: {
+      material: '린넨 100%',
+      size: '맞춤 제작',
+      installation: '레일/로드 설치'
+    },
+    gallery: [
+      '/images/collections/essential-linen.png',
+      '/images/products/curtain/sheer-curtain/lifestyle.jpg'
+    ]
   },
   {
-    title: "플리츠 아이보리",
-    description: "세련된 주름과 부드러운 톤의 아이보리 컬러.",
-    features: ["플리츠 디자인", "아이보리톤", "미니멀 인테리어에 적합"],
-    image: "/images/products/pleats-ivory.jpg",
-    slug: "pleats-ivory",
-    category: "curtain"
+    slug: 'pleats-ivory',
+    title: 'Pleats Ivory',
+    category: 'Curtain',
+    description: '우아한 플리츠 디자인의 아이보리 커튼',
+    image: '/images/collections/modern-sheer.png',
+    features: ['플리츠 디자인', '아이보리 컬러', '고급스러운 드레이프'],
+    specifications: {
+      material: '폴리에스터 혼방',
+      size: '맞춤 제작',
+      installation: '레일/로드 설치'
+    },
+    gallery: [
+      '/images/collections/modern-sheer.png',
+      '/images/products/curtain/sheer-curtain/detail.jpg'
+    ]
   }
 ];
 
+// 블라인드 제품 데이터
 export const blindProducts: Product[] = [
   {
-    title: "우드 블라인드",
-    description: "자연스러운 나무의 질감과 따뜻함을 공간에 더하는 우드 블라인드. 고급스러운 마감과 내구성을 자랑합니다.",
-    features: ["천연 나무 소재", "고급스러운 마감", "뛰어난 내구성"],
-    image: "/images/wood.jpg",
-    slug: "wood-blind",
-    category: "blind"
+    slug: 'wood-blind',
+    title: 'Wood Blind',
+    category: 'Blind',
+    description: '자연스러운 우드 블라인드',
+    image: '/images/collections/wood-texture.png',
+    features: ['천연 원목', '다양한 색상', '각도 조절'],
+    specifications: {
+      material: '천연 원목',
+      size: '맞춤 제작',
+      installation: '벽걸이/천장 설치'
+    },
+    gallery: [
+      '/images/collections/wood-texture.png',
+      '/images/collections/venetian-premium.png'
+    ]
   },
   {
-    title: "알루미늄 블라인드",
-    description: "세련되고 모던한 알루미늄 블라인드. 다양한 색상과 크기로 어떤 공간에도 완벽하게 어울립니다.",
-    features: ["모던한 디자인", "다양한 색상", "쉬운 관리"],
-    image: "/images/aluminum.jpg",
-    slug: "aluminum-blind",
-    category: "blind"
+    slug: 'aluminum-blind',
+    title: 'Aluminum Blind',
+    category: 'Blind',
+    description: '실용적인 알루미늄 블라인드',
+    image: '/images/collections/venetian-premium.png',
+    features: ['내구성', '방수 기능', '쉬운 청소'],
+    specifications: {
+      material: '알루미늄',
+      size: '맞춤 제작',
+      installation: '벽걸이/천장 설치'
+    },
+    gallery: [
+      '/images/collections/venetian-premium.png',
+      '/images/collections/wood-texture.png'
+    ]
   },
   {
-    title: "패브릭 블라인드",
-    description: "부드러운 빛 조절과 세련된 디자인의 패브릭 블라인드. 공간에 따뜻하고 아늑한 분위기를 연출합니다.",
-    features: ["부드러운 빛 조절", "세련된 패턴", "아늑한 분위기"],
-    image: "/images/fabric.jpg",
-    slug: "fabric-blind",
-    category: "blind"
+    slug: 'fabric-blind',
+    title: 'Fabric Blind',
+    category: 'Blind',
+    description: '패브릭 소재의 롤러 블라인드',
+    image: '/images/hero/hero.jpg',
+    features: ['다양한 패턴', '부드러운 질감', '차광 조절'],
+    specifications: {
+      material: '폴리에스터',
+      size: '맞춤 제작',
+      installation: '벽걸이/천장 설치'
+    },
+    gallery: [
+      '/images/hero/hero.jpg',
+      '/images/projects/our-projects-bg.jpg'
+    ]
   }
 ];
 
+// 전동 제품 데이터
 export const motorizedProducts: Product[] = [
   {
-    title: "전동 커튼 시스템",
-    description: "리모컨 하나로 조작 가능한 전동 커튼 시스템. 스마트폰 앱과 연동하여 언제 어디서나 제어할 수 있습니다.",
-    features: ["리모컨 조작", "스마트폰 연동", "조용한 모터"],
-    image: "/images/motorized-curtain.jpg",
-    slug: "motorized-curtain-system",
-    category: "motorized"
+    slug: 'motorized-curtain-system',
+    title: 'Motorized Curtain System',
+    category: 'Motorized',
+    description: '스마트한 전동 커튼 시스템',
+    image: '/images/collections/smart-automation.png',
+    features: ['스마트 컨트롤', '무선 리모컨', '스케줄 설정'],
+    specifications: {
+      material: '모터 시스템',
+      size: '맞춤 제작',
+      installation: '전문 설치'
+    },
+    gallery: [
+      '/images/collections/smart-automation.png',
+      '/images/collections/wireless-motor.png'
+    ]
   },
   {
-    title: "전동 블라인드 시스템",
-    description: "정밀한 각도 조절이 가능한 전동 블라인드. 시간대별 자동 조절 기능으로 최적의 빛 환경을 제공합니다.",
-    features: ["정밀 각도 조절", "시간별 자동 조절", "에너지 절약"],
-    image: "/images/motorized-blind.jpg",
-    slug: "motorized-blind-system",
-    category: "motorized"
+    slug: 'motorized-blind-system',
+    title: 'Motorized Blind System',
+    category: 'Motorized',
+    description: '자동화된 블라인드 시스템',
+    image: '/images/collections/wireless-motor.png',
+    features: ['자동 개폐', '타이머 기능', '앱 연동'],
+    specifications: {
+      material: '모터 시스템',
+      size: '맞춤 제작',
+      installation: '전문 설치'
+    },
+    gallery: [
+      '/images/collections/wireless-motor.png',
+      '/images/collections/smart-automation.png'
+    ]
   },
   {
-    title: "스마트 홈 연동",
-    description: "IoT 기반 스마트 홈 시스템과 연동 가능한 전동 제품군. 음성 인식과 AI 학습을 통한 최적화된 공간 제어.",
-    features: ["IoT 연동", "음성 제어", "AI 학습 기능"],
-    image: "/images/smart.jpg",
-    slug: "smart-home-integration",
-    category: "motorized"
+    slug: 'smart-home-integration',
+    title: 'Smart Home Integration',
+    category: 'Motorized',
+    description: '스마트홈 통합 솔루션',
+    image: '/images/collections/designer-hardware.png',
+    features: ['AI 음성 제어', '앱 통합', 'IoT 연동'],
+    specifications: {
+      material: '통합 시스템',
+      size: '맞춤 제작',
+      installation: '전문 설치'
+    },
+    gallery: [
+      '/images/collections/designer-hardware.png',
+      '/images/collections/luxury-tieback.png'
+    ]
   }
 ];
 
-// 모든 제품을 하나의 배열로 합치는 헬퍼 함수
-export const getAllProducts = (): Product[] => {
-  return [...curtainProducts, ...blindProducts, ...motorizedProducts];
+// 모든 제품 데이터
+export const allProducts: Product[] = [
+  ...curtainProducts,
+  ...blindProducts,
+  ...motorizedProducts
+];
+
+// 제품 관련 유틸리티 함수들
+export const getAllProducts = (): Product[] => allProducts;
+
+export const getProductBySlug = (slug: string): Product | undefined => {
+  return allProducts.find(product => product.slug === slug);
+};
+
+export const getProductsByCategory = (category: string): Product[] => {
+  return allProducts.filter(product => product.category === category);
+};
+
+export const getFeaturedProducts = (limit: number = 6): Product[] => {
+  return allProducts.slice(0, limit);
 }; 

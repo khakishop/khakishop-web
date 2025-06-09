@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google';
 import '../globals.css';
-import { Navbar, FullscreenMenu } from '../../components';
+import { AdminLayoutProvider } from './admin-layout-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -12,19 +12,8 @@ export default async function LocaleLayout({
   params: { locale: string };
 }) {
   return (
-    <html lang={locale || 'ko'}>
-      <body className={inter.className}>
-        {/* 네비게이션 바 */}
-        <Navbar />
-        
-        {/* 풀스크린 메뉴 */}
-        <FullscreenMenu />
-        
-        {/* 메인 콘텐츠 */}
-        <main>
-          {children}
-        </main>
-      </body>
-    </html>
+    <AdminLayoutProvider>
+      {children}
+    </AdminLayoutProvider>
   );
 } 

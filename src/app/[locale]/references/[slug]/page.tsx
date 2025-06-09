@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getProjectBySlug, getAllProjects, type ProjectDetail } from '../../../../data/projects';
+import { getProjectBySlug, getAllProjects, type Project } from '../../../../data/projects';
 import { ImageGallery } from './ImageGallery';
 
 // 타입 정의
@@ -150,7 +150,7 @@ export default function ReferenceDetailPage({ params }: ReferencePageProps) {
                 </div>
                 <div>
                   <dt className="text-sm uppercase tracking-wider text-gray-500 font-medium mb-2">Size</dt>
-                  <dd className="text-lg font-light text-gray-900">{project.size}</dd>
+                  <dd className="text-lg font-light text-gray-900">{project.area || 'N/A'}</dd>
                 </div>
                 <div>
                   <dt className="text-sm uppercase tracking-wider text-gray-500 font-medium mb-2">Category</dt>
@@ -178,92 +178,68 @@ export default function ReferenceDetailPage({ params }: ReferencePageProps) {
               </p>
             </div>
 
-            <div>
-              <h3 className="text-xl font-serif tracking-tight text-gray-900 mb-4">
-                Design Concept
-              </h3>
-              <p className="text-lg text-gray-600 font-light leading-relaxed italic">
-                "{project.concept}"
-              </p>
-            </div>
+            {project.client && (
+              <div>
+                <h3 className="text-xl font-serif tracking-tight text-gray-900 mb-4">
+                  클라이언트
+                </h3>
+                <p className="text-lg text-gray-600 font-light leading-relaxed">
+                  {project.client}
+                </p>
+              </div>
+            )}
           </div>
 
           <div className="space-y-8">
-            {/* 사용 소재 */}
-            <div>
-              <h3 className="text-xl font-serif tracking-tight text-gray-900 mb-6">
-                사용 소재
-              </h3>
-              <ul className="space-y-3">
-                {project.materials.map((material, index) => (
-                  <li key={index} className="flex items-start text-gray-700">
-                    <span className="w-2 h-2 bg-gray-400 rounded-full mr-4 mt-2 flex-shrink-0"></span>
-                    <span className="text-lg font-light leading-relaxed">{material}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
             {/* 주요 특징 */}
-            <div>
-              <h3 className="text-xl font-serif tracking-tight text-gray-900 mb-6">
-                주요 특징
-              </h3>
-              <ul className="space-y-3">
-                {project.features.map((feature, index) => (
-                  <li key={index} className="flex items-start text-gray-700">
-                    <span className="w-2 h-2 bg-gray-400 rounded-full mr-4 mt-2 flex-shrink-0"></span>
-                    <span className="text-lg font-light leading-relaxed">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {project.features && project.features.length > 0 && (
+              <div>
+                <h3 className="text-xl font-serif tracking-tight text-gray-900 mb-6">
+                  주요 특징
+                </h3>
+                <ul className="space-y-3">
+                  {project.features.map((feature, index) => (
+                    <li key={index} className="flex items-start text-gray-700">
+                      <span className="w-2 h-2 bg-gray-400 rounded-full mr-4 mt-2 flex-shrink-0"></span>
+                      <span className="text-lg font-light">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
 
-        {/* CTA 섹션 */}
-        <div className="text-center py-16 lg:py-20 bg-gray-50 rounded-2xl">
-          <div className="max-w-3xl mx-auto px-8">
-            <h2 className="text-3xl lg:text-4xl font-serif tracking-tight text-gray-900 mb-6">
-              비슷한 프로젝트를 원하시나요?
-            </h2>
-            <p className="text-lg lg:text-xl text-gray-600 font-light leading-relaxed mb-10">
-              전문 상담을 통해 고객님만의 특별한 공간을 만들어보세요.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/ko/contact"
-                className="group inline-flex items-center justify-center bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 text-sm uppercase tracking-wider font-medium"
-              >
-                <span>프로젝트 문의하기</span>
-                <svg 
-                  className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform duration-300" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M17 8l4 4m0 0l-4 4m4-4H3" 
-                  />
-                </svg>
-              </Link>
-              
-              <Link 
-                href="/ko/references"
-                className="inline-flex items-center justify-center text-gray-900 hover:text-gray-600 transition-colors duration-300 text-sm uppercase tracking-wider font-medium border border-gray-900 hover:border-gray-600 px-8 py-4 rounded-full"
-              >
-                다른 프로젝트 보기
-              </Link>
-            </div>
-            
-            <p className="text-sm text-gray-500 font-light mt-8">
-              상담 시간: 평일 10:00 - 20:00 | 전화: 0507-1372-0358
-            </p>
-          </div>
+        {/* 네비게이션 */}
+        <div className="flex items-center justify-between pt-16 border-t border-gray-100">
+          <Link 
+            href="/ko/references"
+            className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+          >
+            <svg 
+              className="w-5 h-5 mr-3 group-hover:-translate-x-1 transition-transform duration-300" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M7 16l-4-4m0 0l4-4m-4 4h18" 
+              />
+            </svg>
+            <span className="text-sm uppercase tracking-wider font-medium">
+              모든 프로젝트 보기
+            </span>
+          </Link>
+          
+          <Link 
+            href="/ko/contact"
+            className="inline-flex items-center px-6 py-3 bg-gray-900 text-white text-sm uppercase tracking-wider font-medium rounded-full hover:bg-gray-800 transition-colors duration-300"
+          >
+            문의하기
+          </Link>
         </div>
       </div>
     </div>

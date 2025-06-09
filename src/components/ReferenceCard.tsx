@@ -1,82 +1,85 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
+import { Project } from '../data/projects';
 
-// Reference 카드 타입 정의
 export interface ReferenceCardProps {
-  title: string;
-  location: string;
-  href: string;
-  thumbnail?: string;
+  project: Project;
+  index?: number;
 }
 
-// ReferenceCard 컴포넌트 - RIGAS 스타일로 업데이트
-export default function ReferenceCard({ 
-  title, 
-  location, 
-  href, 
-  thumbnail 
-}: ReferenceCardProps) {
+const ReferenceCard: React.FC<ReferenceCardProps> = ({ project, index = 0 }) => {
+  // 안전성 검사
+  if (!project || !project.slug) {
+    console.error('ReferenceCard: project is undefined or missing slug', project);
+    return null;
+  }
+
   return (
-    <Link href={href} className="group block">
-      <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-        {/* 이미지 영역 */}
-        <div className="aspect-[4/3] relative bg-gray-100">
-          {thumbnail ? (
-            <Image
-              src={thumbnail}
-              alt={`${title} - ${location}`}
-              fill
-              className="object-cover group-hover:scale-105 transition-transform duration-300"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center text-gray-400">
-              <svg 
-                className="w-16 h-16" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={1} 
-                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden"
+    >
+      <Link href={`/references/${project.slug}`}>
+        <div className="relative aspect-[4/3] overflow-hidden">
+          <Image
+            src={project.mainImage || '/placeholder-project.jpg'}
+            alt={project.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          <div className="absolute top-4 left-4">
+            <span className="px-3 py-1 bg-white/90 text-[#8B7A6B] text-xs font-medium rounded-full">
+              {project.category}
+            </span>
+          </div>
+        </div>
+        
+        <div className="p-6">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-xl font-medium text-[#8B7A6B] group-hover:text-[#D4C4A8] transition-colors">
+              {project.title}
+            </h3>
+            <span className="text-sm text-[#8B7A6B]/60">{project.year}</span>
+          </div>
+          
+          <p className="text-[#8B7A6B]/70 text-sm mb-3">
+            📍 {project.location}
+          </p>
+          
+          <p className="text-[#8B7A6B]/70 text-sm mb-4 line-clamp-2">
+            {project.description}
+          </p>
+          
+          {project.features && project.features.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {project.features.slice(0, 3).map((feature, idx) => (
+                <span
+                  key={idx}
+                  className="px-2 py-1 bg-[#F7F5F3] text-[#8B7A6B] text-xs rounded-full"
+                >
+                  {feature}
+                </span>
+              ))}
+            </div>
+          )}
+          
+          {project.area && (
+            <div className="mt-3 pt-3 border-t border-[#F7F5F3]">
+              <span className="text-xs text-[#8B7A6B]/60">
+                시공 면적: {project.area}
+              </span>
             </div>
           )}
         </div>
-        
-        {/* 콘텐츠 영역 */}
-        <div className="p-6">
-          <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors">
-            {title}
-          </h3>
-          <p className="text-gray-600 mb-4">
-            {location}
-          </p>
-          <div className="flex items-center text-sm text-gray-500 group-hover:text-gray-700 transition-colors">
-            <span>자세히 보기</span>
-            <svg 
-              className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M17 8l4 4m0 0l-4 4m4-4H3" 
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </Link>
+      </Link>
+    </motion.div>
   );
-} 
+};
+
+export default ReferenceCard; 

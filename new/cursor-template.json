@@ -1,0 +1,244 @@
+{
+  "templateVersion": "1.0.0",
+  "metadata": {
+    "title": "Universal Brand Website Template",
+    "description": "khakishop 기반 자동화 웹사이트 생성 템플릿",
+    "author": "khakishop development team",
+    "created": "2024-12",
+    "lastUpdated": "2024-12"
+  },
+  
+  "brandTypes": {
+    "CLOTHING": {
+      "brandName": "STYLE MAVEN",
+      "slogan": "패션으로 표현하는 나만의 스타일",
+      "description": "트렌디하고 합리적인 가격의 패션 아이템을 제공하는 브랜드",
+      "primaryColor": "#2D3748",
+      "secondaryColor": "#4A5568", 
+      "accentColor": "#E53E3E",
+      "backgroundColor": "#F7FAFC",
+      "textColor": "#1A202C",
+      "menus": [
+        { "name": "Collections", "path": "/collections", "icon": "👕" },
+        { "name": "New Arrivals", "path": "/new", "icon": "✨" },
+        { "name": "Sale", "path": "/sale", "icon": "💥" },
+        { "name": "Lookbook", "path": "/lookbook", "icon": "📸" },
+        { "name": "Size Guide", "path": "/guide", "icon": "📏" }
+      ],
+      "imageStyle": {
+        "primary": "minimalist fashion photography",
+        "secondary": "lifestyle clothing shots",
+        "colors": ["neutral tones", "warm whites", "soft grays"],
+        "mood": "clean, modern, aspirational"
+      },
+      "features": ["size-chart", "color-options", "virtual-fitting", "styling-guide"]
+    },
+
+    "BEDDING": {
+      "brandName": "DREAM COMFORT",
+      "slogan": "완벽한 휴식을 위한 프리미엄 침구",
+      "description": "최고급 소재와 장인정신이 만나 완성된 침구 브랜드",
+      "primaryColor": "#2B6CB0",
+      "secondaryColor": "#3182CE",
+      "accentColor": "#63B3ED", 
+      "backgroundColor": "#EBF8FF",
+      "textColor": "#1A365D",
+      "menus": [
+        { "name": "Bedding Sets", "path": "/bedding", "icon": "🛏️" },
+        { "name": "Pillows", "path": "/pillows", "icon": "🪶" },
+        { "name": "Blankets", "path": "/blankets", "icon": "🧸" },
+        { "name": "Room Guide", "path": "/rooms", "icon": "🏠" },
+        { "name": "Care Tips", "path": "/care", "icon": "🧼" }
+      ],
+      "imageStyle": {
+        "primary": "cozy bedroom scenes",
+        "secondary": "textile close-ups",
+        "colors": ["soft blues", "warm whites", "natural beiges"],
+        "mood": "comfortable, peaceful, luxurious"
+      },
+      "features": ["material-guide", "care-instructions", "room-coordinator", "comfort-rating"]
+    },
+
+    "MOTORCYCLE": {
+      "brandName": "THUNDER BIKES",
+      "slogan": "자유를 달리는 야생의 힘",
+      "description": "강력한 성능과 독창적 디자인의 프리미엄 오토바이",
+      "primaryColor": "#1A202C",
+      "secondaryColor": "#2D3748",
+      "accentColor": "#FF6B35",
+      "backgroundColor": "#F7FAFC", 
+      "textColor": "#1A202C",
+      "menus": [
+        { "name": "Models", "path": "/models", "icon": "🏍️" },
+        { "name": "Custom", "path": "/custom", "icon": "🔧" },
+        { "name": "Parts", "path": "/parts", "icon": "⚙️" },
+        { "name": "Riding Guide", "path": "/guide", "icon": "🛣️" },
+        { "name": "Service", "path": "/service", "icon": "🔧" }
+      ],
+      "imageStyle": {
+        "primary": "dynamic motorcycle shots",
+        "secondary": "riding lifestyle",
+        "colors": ["deep blacks", "metallic grays", "chrome accents"],
+        "mood": "powerful, adventurous, rebellious"
+      },
+      "features": ["spec-comparison", "customization", "maintenance-schedule", "rider-community"]
+    },
+
+    "FURNITURE": {
+      "brandName": "NORDIC LIVING",
+      "slogan": "북유럽 감성이 담긴 모던 라이프",
+      "description": "심플하고 기능적인 북유럽 스타일 가구 브랜드",
+      "primaryColor": "#8B7A6B",
+      "secondaryColor": "#A0927D",
+      "accentColor": "#D69E2E",
+      "backgroundColor": "#F7F5F3",
+      "textColor": "#2D2823",
+      "menus": [
+        { "name": "Living Room", "path": "/living", "icon": "🛋️" },
+        { "name": "Bedroom", "path": "/bedroom", "icon": "🛏️" },
+        { "name": "Office", "path": "/office", "icon": "💼" },
+        { "name": "3D Simulator", "path": "/simulator", "icon": "🏠" },
+        { "name": "Installation", "path": "/install", "icon": "🔨" }
+      ],
+      "imageStyle": {
+        "primary": "nordic interior photography",
+        "secondary": "furniture detail shots",
+        "colors": ["warm woods", "cream whites", "natural textures"],
+        "mood": "minimalist, cozy, scandinavian"
+      },
+      "features": ["3d-viewer", "space-simulator", "material-guide", "custom-order"]
+    },
+
+    "COSMETICS": {
+      "brandName": "PURE GLOW",
+      "slogan": "자연 그대로의 아름다움",
+      "description": "천연 성분 기반의 클린 뷰티 화장품 브랜드",
+      "primaryColor": "#B794F6",
+      "secondaryColor": "#9F7AEA",
+      "accentColor": "#F093FB",
+      "backgroundColor": "#FAF5FF",
+      "textColor": "#44337A",
+      "menus": [
+        { "name": "Skincare", "path": "/skincare", "icon": "✨" },
+        { "name": "Makeup", "path": "/makeup", "icon": "💄" },
+        { "name": "Natural", "path": "/natural", "icon": "🌿" },
+        { "name": "Skin Test", "path": "/test", "icon": "🔬" },
+        { "name": "Routine", "path": "/routine", "icon": "📅" }
+      ],
+      "imageStyle": {
+        "primary": "natural beauty photography",
+        "secondary": "product macro shots",
+        "colors": ["soft pinks", "natural greens", "pearl whites"],
+        "mood": "fresh, natural, radiant"
+      },
+      "features": ["skin-analysis", "ingredient-guide", "routine-builder", "shade-finder"]
+    }
+  },
+
+  "defaultSettings": {
+    "language": {
+      "default": "ko",
+      "supported": ["ko", "en", "ja", "zh"]
+    },
+    "layout": {
+      "header": "fixed",
+      "navigation": "horizontal",
+      "footer": "minimal"
+    },
+    "features": {
+      "darkMode": true,
+      "animations": true,
+      "lazyLoading": true,
+      "seo": true,
+      "analytics": true,
+      "chatbot": false
+    },
+    "performance": {
+      "imageOptimization": true,
+      "codesplitting": true,
+      "prefetching": true,
+      "compression": true
+    }
+  },
+
+  "imageGeneration": {
+    "totalImages": 150,
+    "categories": {
+      "hero": { "count": 3, "priority": 1 },
+      "products": { "count": 50, "priority": 1 },
+      "gallery": { "count": 30, "priority": 2 },
+      "lifestyle": { "count": 25, "priority": 2 },
+      "about": { "count": 10, "priority": 3 },
+      "blog": { "count": 15, "priority": 3 },
+      "misc": { "count": 17, "priority": 3 }
+    },
+    "formats": ["SVG", "WebP", "JPEG"],
+    "sources": ["generated", "unsplash", "custom"],
+    "metadata": {
+      "author": "Generated by {brandName}",
+      "alt": "auto-generated",
+      "watermark": false
+    }
+  },
+
+  "seoSettings": {
+    "sitemap": true,
+    "robots": true,
+    "structured": true,
+    "openGraph": true,
+    "twitter": true,
+    "locale": "ko_KR"
+  },
+
+  "deploymentOptions": {
+    "vercel": {
+      "auto": true,
+      "domain": "{brandName.toLowerCase()}.vercel.app"
+    },
+    "netlify": {
+      "auto": false,
+      "domain": "{brandName.toLowerCase()}.netlify.app"
+    },
+    "github": {
+      "pages": true,
+      "actions": true
+    }
+  },
+
+  "customizationOptions": {
+    "colors": {
+      "editable": true,
+      "presets": ["minimal", "bold", "pastel", "dark", "vintage"]
+    },
+    "fonts": {
+      "primary": ["Inter", "Noto Sans KR"],
+      "secondary": ["Playfair Display", "Nanum Myeongjo"],
+      "options": ["Roboto", "Open Sans", "Lato", "Montserrat"]
+    },
+    "layout": {
+      "templates": ["default", "magazine", "portfolio", "ecommerce", "blog"],
+      "customizable": true
+    }
+  },
+
+  "integrations": {
+    "cms": ["strapi", "contentful", "sanity"],
+    "ecommerce": ["shopify", "woocommerce", "snipcart"],
+    "analytics": ["google", "vercel", "plausible"],
+    "forms": ["formspree", "netlify", "emailjs"],
+    "chat": ["intercom", "crisp", "tawk"]
+  },
+
+  "supportedIndustries": [
+    "Fashion & Clothing",
+    "Home & Bedding", 
+    "Automotive & Motorcycle",
+    "Furniture & Interior",
+    "Beauty & Cosmetics",
+    "Food & Beverage",
+    "Technology & Electronics",
+    "Health & Fitness",
+    "Art & Design",
+    "Education & Courses"
+  ]
+} 

@@ -1,0 +1,243 @@
+
+/* ================================================================================
+   🎨 KHAKISHOP 브랜드 CSS 변수 & 유틸리티
+   ================================================================================ */
+
+:root {
+  /* 🎨 브랜드 컬러 팔레트 */
+  --khaki-cream: #F7F5F3;
+  --khaki-warm-white: #FEFDFB;
+  --khaki-soft-beige: #F5F2EE;
+  --khaki-natural-linen: #F0EDE8;
+  
+  --khaki-warm-gray: #E8E5E1;
+  --khaki-light-taupe: #D9D5D0;
+  --khaki-soft-sand: #CDC8C1;
+  --khaki-stone-dust: #B8B3AC;
+  
+  --khaki-earth-brown: #8B7A6B;
+  --khaki-natural-wood: #A0927D;
+  --khaki-deep-linen: #7C6F5F;
+  --khaki-warm-charcoal: #5D564E;
+  
+  --khaki-text-primary: #2D2823;
+  --khaki-text-secondary: #4A453E;
+  --khaki-text-light: #6B645B;
+  --khaki-text-subtle: #8B857C;
+
+  /* 🎨 브랜드 그라디언트 */
+  --khaki-gradient-hero: linear-gradient(180deg, var(--khaki-warm-white) 0%, var(--khaki-cream) 70%, var(--khaki-warm-gray) 100%);
+  --khaki-gradient-card: linear-gradient(135deg, var(--khaki-warm-white) 0%, var(--khaki-cream) 50%, var(--khaki-natural-linen) 100%);
+  --khaki-gradient-subtle: linear-gradient(90deg, var(--khaki-cream) 0%, var(--khaki-natural-linen) 50%, var(--khaki-cream) 100%);
+  
+  /* 🎨 브랜드 쉐도우 */
+  --khaki-shadow-soft: 0 4px 20px rgba(139, 122, 107, 0.1);
+  --khaki-shadow-medium: 0 8px 32px rgba(139, 122, 107, 0.15);
+  --khaki-shadow-strong: 0 16px 48px rgba(139, 122, 107, 0.2);
+  
+  /* 📐 브랜드 반응형 */
+  --khaki-radius: 8px;
+  --khaki-radius-large: 16px;
+  --khaki-spacing: 1.5rem;
+  --khaki-spacing-large: 3rem;
+}
+
+/* ================================================================================
+   🎨 이미지 폴백 유틸리티
+   ================================================================================ */
+
+.khaki-fallback-hero {
+  background: var(--khaki-gradient-hero);
+  position: relative;
+  overflow: hidden;
+}
+
+.khaki-fallback-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 40px,
+    rgba(139, 122, 107, 0.03) 40px,
+    rgba(139, 122, 107, 0.03) 80px
+  );
+  pointer-events: none;
+}
+
+.khaki-fallback-collection {
+  background: var(--khaki-gradient-card);
+  box-shadow: var(--khaki-shadow-soft);
+  border-radius: var(--khaki-radius);
+}
+
+.khaki-fallback-product {
+  background: var(--khaki-warm-white);
+  border: 2px solid var(--khaki-warm-gray);
+  border-radius: var(--khaki-radius);
+  position: relative;
+}
+
+.khaki-fallback-product::after {
+  content: '🏠';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  opacity: 0.3;
+  color: var(--khaki-earth-brown);
+}
+
+.khaki-fallback-gallery {
+  background: var(--khaki-gradient-subtle);
+  position: relative;
+}
+
+.khaki-fallback-gallery::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 30% 40%,
+    rgba(139, 122, 107, 0.1) 0%,
+    transparent 50%
+  ), radial-gradient(
+    circle at 80% 80%,
+    rgba(160, 146, 125, 0.1) 0%,
+    transparent 50%
+  );
+}
+
+/* ================================================================================
+   🎨 타이포그래피 중심 디자인
+   ================================================================================ */
+
+.khaki-hero-text {
+  background: var(--khaki-gradient-hero);
+  padding: var(--khaki-spacing-large);
+  text-align: center;
+  border-radius: var(--khaki-radius-large);
+  box-shadow: var(--khaki-shadow-medium);
+}
+
+.khaki-hero-text h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 300;
+  color: var(--khaki-text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.khaki-hero-text p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: var(--khaki-text-secondary);
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ================================================================================
+   🎨 브랜드 애니메이션
+   ================================================================================ */
+
+@keyframes khaki-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes khaki-glow {
+  0%, 100% {
+    box-shadow: var(--khaki-shadow-soft);
+  }
+  50% {
+    box-shadow: var(--khaki-shadow-medium);
+  }
+}
+
+.khaki-animate-in {
+  animation: khaki-fade-in 0.8s ease-out;
+}
+
+.khaki-hover-glow:hover {
+  animation: khaki-glow 2s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+/* ================================================================================
+   🎨 이미지 로딩 상태
+   ================================================================================ */
+
+.khaki-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--khaki-radius);
+}
+
+.khaki-image-loading {
+  background: var(--khaki-gradient-card);
+  position: relative;
+}
+
+.khaki-image-loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: khaki-shimmer 2s infinite;
+}
+
+@keyframes khaki-shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* ================================================================================
+   🎨 반응형 브랜드 레이아웃
+   ================================================================================ */
+
+@media (max-width: 768px) {
+  :root {
+    --khaki-spacing: 1rem;
+    --khaki-spacing-large: 2rem;
+  }
+  
+  .khaki-hero-text {
+    padding: var(--khaki-spacing);
+  }
+}
+
+/* ================================================================================
+   🎨 다크모드 지원 (미래 확장용)
+   ================================================================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --khaki-cream: #2D2823;
+    --khaki-warm-white: #3A3530;
+    --khaki-text-primary: #F7F5F3;
+    --khaki-text-secondary: #E8E5E1;
+  }
+}

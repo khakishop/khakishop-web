@@ -1,0 +1,296 @@
+# ================================================================================
+# 🎨 KHAKISHOP 이미지 관리 설정 파일
+# ================================================================================
+# 📅 생성: 2024년 12월
+# 🎯 목적: 이미지 교체/추가 시 자동 처리를 위한 마스터 설정
+# 🔧 형식: YAML (가독성 극대화)
+
+metadata:
+  title: "KHAKISHOP Midjourney 이미지 관리 시스템"
+  version: "2.0"
+  totalImages: 148
+  baseSource: "/Users/kiholee/Projects/Midjourney/"
+  targetBase: "/Users/kiholee/Projects/khakishop-web/public/images/"
+  lastUpdated: "2024-12"
+  
+# ================================================================================
+# 🏷️ 카테고리 정의 및 설명
+# ================================================================================
+categories:
+  hero:
+    name: "브랜드 히어로"
+    description: "메인 페이지 최상단 브랜드 아이덴티티 이미지"
+    priority: 1
+    usage: "HomeClient.tsx, HeroSection 컴포넌트"
+    
+  landing:
+    name: "랜딩 페이지"
+    description: "랜딩 페이지 섹션별 배경 이미지"
+    priority: 1
+    usage: "LandingSection, AboutSection"
+    
+  projects:
+    name: "프로젝트 배경"
+    description: "프로젝트 섹션 배경 및 쇼케이스"
+    priority: 1
+    usage: "ProjectsSection, PortfolioPage"
+    
+  collections:
+    name: "컬렉션 카탈로그"
+    description: "제품 컬렉션 대표 이미지"
+    priority: 1
+    usage: "CollectionPage, CollectionCard"
+    
+  references:
+    name: "시공 포트폴리오"
+    description: "실제 시공 사례 및 프로젝트 갤러리"
+    priority: 2
+    usage: "ReferencePage, ProjectDetail"
+    
+  products:
+    name: "제품 카탈로그"
+    description: "개별 제품 상세 이미지"
+    priority: 3
+    usage: "ProductPage, ProductCard"
+    
+  gallery:
+    name: "갤러리 쇼케이스"
+    description: "베스트 작품 및 트렌딩 컬렉션"
+    priority: 3
+    usage: "GalleryPage, ShowcaseGrid"
+    
+  blog:
+    name: "블로그 배경"
+    description: "블로그 포스트 및 가이드 배경 이미지"
+    priority: 3
+    usage: "BlogPage, ArticleHeader"
+    
+  about:
+    name: "회사 소개"
+    description: "회사 스토리 및 팀 소개"
+    priority: 3
+    usage: "AboutPage, CompanySection"
+    
+  future:
+    name: "미래 확장"
+    description: "향후 추가될 기능을 위한 예비 이미지"
+    priority: 3
+    usage: "확장 예정"
+
+# ================================================================================
+# 🗂️ 이미지 매핑 (사용 위치별 그룹화)
+# ================================================================================
+imageMapping:
+  
+  # 🔥 1순위: 브랜드 핵심 (14개)
+  brandCore:
+    hero:
+      mobile:
+        slot: 1
+        file: "hero-mobile.jpg"
+        description: "모바일용 세로형 히어로"
+        dimensions: "9:16 권장"
+        usage: "모바일 디바이스 메인 히어로"
+        
+    landing:
+      main:
+        slot: 2
+        file: "hero-main.jpg"
+        description: "랜딩 페이지 메인 배경"
+        dimensions: "16:9"
+        usage: "랜딩 페이지 최상단"
+      lifestyle:
+        slot: 3
+        file: "brand-lifestyle.jpg"
+        description: "브랜드 라이프스타일"
+        dimensions: "16:9"
+        usage: "브랜드 스토리 섹션"
+      overview:
+        slot: 4
+        file: "collection-overview.jpg"
+        description: "컬렉션 개요 쇼케이스"
+        dimensions: "16:9"
+        usage: "컬렉션 소개 섹션"
+        
+    projects:
+      background:
+        slot: 5
+        file: "our-projects-bg.jpg"
+        description: "OUR PROJECTS 섹션 배경"
+        dimensions: "16:9"
+        usage: "프로젝트 섹션 헤더"
+      showcase:
+        slot: 6
+        file: "project-showcase.jpg"
+        description: "프로젝트 쇼케이스"
+        dimensions: "16:9"
+        usage: "프로젝트 갤러리"
+        
+    collections:
+      essentialLinen:
+        slot: 7
+        file: "essential-linen.jpg"
+        description: "에센셜 리넨 컬렉션"
+        productType: "curtain"
+        usage: "컬렉션 카드"
+      modernSheer:
+        slot: 8
+        file: "modern-sheer.jpg"
+        description: "모던 셰어 시리즈"
+        productType: "curtain"
+        usage: "컬렉션 카드"
+      venetianPremium:
+        slot: 9
+        file: "venetian-premium.jpg"
+        description: "프리미엄 베네치안 블라인드"
+        productType: "blind"
+        usage: "컬렉션 카드"
+      woodTexture:
+        slot: 10
+        file: "wood-texture.jpg"
+        description: "우드 텍스처 블라인드"
+        productType: "blind"
+        usage: "컬렉션 카드"
+      smartAutomation:
+        slot: 11
+        file: "smart-automation.jpg"
+        description: "스마트 자동화 시스템"
+        productType: "motorized"
+        usage: "컬렉션 카드"
+      wirelessMotor:
+        slot: 12
+        file: "wireless-motor.jpg"
+        description: "무선 모터 컬렉션"
+        productType: "motorized"
+        usage: "컬렉션 카드"
+      designerHardware:
+        slot: 13
+        file: "designer-hardware.jpg"
+        description: "디자이너 하드웨어"
+        productType: "accessories"
+        usage: "컬렉션 카드"
+      luxuryTieback:
+        slot: 14
+        file: "luxury-tieback.jpg"
+        description: "럭셔리 타이백"
+        productType: "accessories"
+        usage: "컬렉션 카드"
+
+  # ⭐ 2순위: 시공 포트폴리오 (32개)
+  portfolio:
+    minimalResidenceBundang:
+      main:
+        slot: 15
+        file: "main.jpg"
+        spaceType: "residential"
+        location: "분당"
+      gallery1:
+        slot: 16
+        file: "gallery-1.jpg"
+      gallery2:
+        slot: 17
+        file: "gallery-2.jpg"
+      gallery3:
+        slot: 18
+        file: "gallery-3.jpg"
+        
+    classicCafeHongdae:
+      main:
+        slot: 19
+        file: "main.jpg"
+        spaceType: "cafe"
+        location: "홍대"
+      gallery1:
+        slot: 20
+        file: "gallery-1.jpg"
+      gallery2:
+        slot: 21
+        file: "gallery-2.jpg"
+      gallery3:
+        slot: 22
+        file: "gallery-3.jpg"
+        
+    # ... (나머지 프로젝트들도 동일한 패턴)
+
+  # 🌟 3순위: 제품 카탈로그 (102개)
+  productCatalog:
+    curtain:
+      sheerCurtain:
+        main:
+          slot: 47
+          file: "main.jpg"
+          productType: "sheer"
+          category: "curtain"
+        gallery1:
+          slot: 48
+          file: "gallery-1.jpg"
+        gallery2:
+          slot: 49
+          file: "gallery-2.jpg"
+          
+      classicCurtain:
+        main:
+          slot: 50
+          file: "main.jpg"
+          productType: "classic"
+        detail:
+          slot: 51
+          file: "detail.jpg"
+        lifestyle:
+          slot: 52
+          file: "lifestyle.jpg"
+        gallery1:
+          slot: 53
+          file: "gallery-1.jpg"
+        gallery2:
+          slot: 54
+          file: "gallery-2.jpg"
+    
+    # ... (나머지 제품들)
+
+# ================================================================================
+# 🔧 자동화 규칙
+# ================================================================================
+automationRules:
+  
+  # 파일 감지 규칙
+  detection:
+    newImagePattern: "*.png"
+    sourceDirectory: "/Users/kiholee/Projects/Midjourney/"
+    
+  # 교체 감지 규칙  
+  replacement:
+    - trigger: "파일 크기 변경"
+    - trigger: "수정 시간 변경"
+    - action: "기존 매핑 위치에 자동 교체"
+    
+  # 추가 이미지 처리 규칙
+  addition:
+    - range: "149-200"
+      status: "대기 목록"
+      action: "수동 할당 필요"
+    - range: "201+"
+      status: "확장 대기"
+      action: "guide.txt 업데이트 후 처리"
+
+# ================================================================================
+# 🎨 RIGAS 스타일 가이드
+# ================================================================================
+styleGuide:
+  technical:
+    quality: "8K ultra-photorealistic"
+    lens: "50mm prime lens, f/2.2"
+    lighting: "cinematic natural lighting"
+    level: "eye-level shot"
+    
+  aesthetic:
+    time: "afternoon sunlight filtering"
+    style: "minimal styling, quiet warm atmosphere"
+    palette: "sophisticated neutral colors"
+    layout: "wide spacious interior"
+    furniture: "high-end including USM modular"
+    
+  output:
+    format: "JPG 95% quality"
+    metadata: "Artist: By khaki shop"
+    style: "Architectural Digest magazine" 

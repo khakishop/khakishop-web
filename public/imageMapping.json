@@ -1,0 +1,1048 @@
+{
+  "metadata": {
+    "title": "KHAKISHOP Midjourney 이미지 자동 매핑 설정",
+    "totalImages": 148,
+    "baseSource": "/Users/kiholee/Projects/Midjourney/",
+    "targetBase": "/Users/kiholee/Projects/khakishop-web/public/images/",
+    "created": "2024-12",
+    "priority": "1순위 → 2순위 → 3순위 순서"
+  },
+  "mapping": {
+    "1": {
+      "source": "1.png",
+      "target": "hero/hero-mobile.jpg",
+      "description": "모바일용 세로형 히어로",
+      "category": "hero",
+      "priority": 1
+    },
+    "2": {
+      "source": "2.png", 
+      "target": "landing/hero-main.jpg",
+      "description": "랜딩 페이지 메인 배경",
+      "category": "landing",
+      "priority": 1
+    },
+    "3": {
+      "source": "3.png",
+      "target": "landing/brand-lifestyle.jpg", 
+      "description": "브랜드 라이프스타일",
+      "category": "landing",
+      "priority": 1
+    },
+    "4": {
+      "source": "4.png",
+      "target": "landing/collection-overview.jpg",
+      "description": "컬렉션 개요 쇼케이스", 
+      "category": "landing",
+      "priority": 1
+    },
+    "5": {
+      "source": "5.png",
+      "target": "projects/our-projects-bg.jpg",
+      "description": "OUR PROJECTS 섹션 배경",
+      "category": "projects", 
+      "priority": 1
+    },
+    "6": {
+      "source": "6.png",
+      "target": "projects/project-showcase.jpg",
+      "description": "프로젝트 쇼케이스",
+      "category": "projects",
+      "priority": 1
+    },
+    "7": {
+      "source": "7.png",
+      "target": "collections/essential-linen.jpg",
+      "description": "에센셜 리넨 컬렉션",
+      "category": "collections",
+      "priority": 1
+    },
+    "8": {
+      "source": "8.png", 
+      "target": "collections/modern-sheer.jpg",
+      "description": "모던 셰어 시리즈",
+      "category": "collections",
+      "priority": 1
+    },
+    "9": {
+      "source": "9.png",
+      "target": "collections/venetian-premium.jpg", 
+      "description": "프리미엄 베네치안 블라인드",
+      "category": "collections",
+      "priority": 1
+    },
+    "10": {
+      "source": "10.png",
+      "target": "collections/wood-texture.jpg",
+      "description": "우드 텍스처 블라인드",
+      "category": "collections",
+      "priority": 1
+    },
+    "11": {
+      "source": "11.png",
+      "target": "collections/smart-automation.jpg",
+      "description": "스마트 자동화 시스템", 
+      "category": "collections",
+      "priority": 1
+    },
+    "12": {
+      "source": "12.png",
+      "target": "collections/wireless-motor.jpg",
+      "description": "무선 모터 컬렉션",
+      "category": "collections",
+      "priority": 1
+    },
+    "13": {
+      "source": "13.png",
+      "target": "collections/designer-hardware.jpg",
+      "description": "디자이너 하드웨어",
+      "category": "collections", 
+      "priority": 1
+    },
+    "14": {
+      "source": "14.png",
+      "target": "collections/luxury-tieback.jpg",
+      "description": "럭셔리 타이백",
+      "category": "collections",
+      "priority": 1
+    },
+    "15": {
+      "source": "15.png",
+      "target": "references/minimal-residence-bundang/main.jpg",
+      "description": "Minimal Residence Bundang - Main Hero Shot",
+      "category": "references",
+      "priority": 2
+    },
+    "16": {
+      "source": "16.png",
+      "target": "references/minimal-residence-bundang/gallery-1.jpg", 
+      "description": "Minimal Residence Bundang - Gallery Image 1",
+      "category": "references",
+      "priority": 2
+    },
+    "17": {
+      "source": "17.png",
+      "target": "references/minimal-residence-bundang/gallery-2.jpg",
+      "description": "Minimal Residence Bundang - Gallery Image 2",
+      "category": "references",
+      "priority": 2
+    },
+    "18": {
+      "source": "18.png",
+      "target": "references/minimal-residence-bundang/gallery-3.jpg",
+      "description": "Minimal Residence Bundang - Gallery Image 3", 
+      "category": "references",
+      "priority": 2
+    },
+    "19": {
+      "source": "19.png",
+      "target": "references/classic-cafe-hongdae/main.jpg",
+      "description": "Classic Cafe Hongdae - Main Hero Shot",
+      "category": "references",
+      "priority": 2
+    },
+    "20": {
+      "source": "20.png",
+      "target": "references/classic-cafe-hongdae/gallery-1.jpg",
+      "description": "Classic Cafe Hongdae - Gallery Image 1",
+      "category": "references",
+      "priority": 2
+    },
+    "21": {
+      "source": "21.png",
+      "target": "references/classic-cafe-hongdae/gallery-2.jpg",
+      "description": "Classic Cafe Hongdae - Gallery Image 2",
+      "category": "references", 
+      "priority": 2
+    },
+    "22": {
+      "source": "22.png",
+      "target": "references/classic-cafe-hongdae/gallery-3.jpg",
+      "description": "Classic Cafe Hongdae - Gallery Image 3",
+      "category": "references",
+      "priority": 2
+    },
+    "23": {
+      "source": "23.png",
+      "target": "references/contemporary-house-goyang/main.jpg",
+      "description": "Contemporary House Goyang - Main Hero Shot",
+      "category": "references",
+      "priority": 2
+    },
+    "24": {
+      "source": "24.png",
+      "target": "references/contemporary-house-goyang/gallery-1.jpg",
+      "description": "Contemporary House Goyang - Gallery Image 1",
+      "category": "references",
+      "priority": 2
+    },
+    "25": {
+      "source": "25.png",
+      "target": "references/contemporary-house-goyang/gallery-2.jpg",
+      "description": "Contemporary House Goyang - Gallery Image 2",
+      "category": "references",
+      "priority": 2
+    },
+    "26": {
+      "source": "26.png",
+      "target": "references/contemporary-house-goyang/gallery-3.jpg",
+      "description": "Contemporary House Goyang - Gallery Image 3",
+      "category": "references",
+      "priority": 2
+    },
+    "27": {
+      "source": "27.png",
+      "target": "references/scandinavian-apartment-mapo/main.jpg",
+      "description": "Scandinavian Apartment Mapo - Main Hero Shot",
+      "category": "references",
+      "priority": 2
+    },
+    "28": {
+      "source": "28.png",
+      "target": "references/scandinavian-apartment-mapo/gallery-1.jpg",
+      "description": "Scandinavian Apartment Mapo - Gallery Image 1",
+      "category": "references",
+      "priority": 2
+    },
+    "29": {
+      "source": "29.png",
+      "target": "references/scandinavian-apartment-mapo/gallery-2.jpg",
+      "description": "Scandinavian Apartment Mapo - Gallery Image 2",
+      "category": "references",
+      "priority": 2
+    },
+    "30": {
+      "source": "30.png",
+      "target": "references/scandinavian-apartment-mapo/gallery-3.jpg",
+      "description": "Scandinavian Apartment Mapo - Gallery Image 3",
+      "category": "references",
+      "priority": 2
+    },
+    "31": {
+      "source": "31.png",
+      "target": "references/industrial-lobby-yongsan/main.jpg",
+      "description": "Industrial Lobby Yongsan - Main Hero Shot",
+      "category": "references",
+      "priority": 2
+    },
+    "32": {
+      "source": "32.png",
+      "target": "references/industrial-lobby-yongsan/gallery-1.jpg",
+      "description": "Industrial Lobby Yongsan - Gallery Image 1",
+      "category": "references",
+      "priority": 2
+    },
+    "33": {
+      "source": "33.png",
+      "target": "references/industrial-lobby-yongsan/gallery-2.jpg",
+      "description": "Industrial Lobby Yongsan - Gallery Image 2",
+      "category": "references",
+      "priority": 2
+    },
+    "34": {
+      "source": "34.png",
+      "target": "references/industrial-lobby-yongsan/gallery-3.jpg",
+      "description": "Industrial Lobby Yongsan - Gallery Image 3",
+      "category": "references",
+      "priority": 2
+    },
+    "35": {
+      "source": "35.png",
+      "target": "references/luxury-penthouse-seocho/main.jpg",
+      "description": "Luxury Penthouse Seocho - Main Hero Shot",
+      "category": "references",
+      "priority": 2
+    },
+    "36": {
+      "source": "36.png",
+      "target": "references/luxury-penthouse-seocho/gallery-1.jpg",
+      "description": "Luxury Penthouse Seocho - Gallery Image 1",
+      "category": "references",
+      "priority": 2
+    },
+    "37": {
+      "source": "37.png",
+      "target": "references/luxury-penthouse-seocho/gallery-2.jpg",
+      "description": "Luxury Penthouse Seocho - Gallery Image 2",
+      "category": "references",
+      "priority": 2
+    },
+    "38": {
+      "source": "38.png",
+      "target": "references/luxury-penthouse-seocho/gallery-3.jpg",
+      "description": "Luxury Penthouse Seocho - Gallery Image 3",
+      "category": "references",
+      "priority": 2
+    },
+    "39": {
+      "source": "39.png",
+      "target": "references/modern-clinic-seongnam/main.jpg",
+      "description": "Modern Clinic Seongnam - Main Hero Shot",
+      "category": "references",
+      "priority": 2
+    },
+    "40": {
+      "source": "40.png",
+      "target": "references/modern-clinic-seongnam/gallery-1.jpg",
+      "description": "Modern Clinic Seongnam - Gallery Image 1",
+      "category": "references",
+      "priority": 2
+    },
+    "41": {
+      "source": "41.png",
+      "target": "references/modern-clinic-seongnam/gallery-2.jpg",
+      "description": "Modern Clinic Seongnam - Gallery Image 2",
+      "category": "references",
+      "priority": 2
+    },
+    "42": {
+      "source": "42.png",
+      "target": "references/modern-clinic-seongnam/gallery-3.jpg",
+      "description": "Modern Clinic Seongnam - Gallery Image 3",
+      "category": "references",
+      "priority": 2
+    },
+    "43": {
+      "source": "43.png",
+      "target": "references/art-gallery-jongno/main.jpg",
+      "description": "Art Gallery Jongno - Main Hero Shot",
+      "category": "references",
+      "priority": 2
+    },
+    "44": {
+      "source": "44.png",
+      "target": "references/art-gallery-jongno/gallery-1.jpg",
+      "description": "Art Gallery Jongno - Gallery Image 1",
+      "category": "references",
+      "priority": 2
+    },
+    "45": {
+      "source": "45.png",
+      "target": "references/art-gallery-jongno/gallery-2.jpg",
+      "description": "Art Gallery Jongno - Gallery Image 2",
+      "category": "references",
+      "priority": 2
+    },
+    "46": {
+      "source": "46.png",
+      "target": "references/art-gallery-jongno/gallery-3.jpg",
+      "description": "Art Gallery Jongno - Gallery Image 3",
+      "category": "references",
+      "priority": 2
+    },
+    "47": {
+      "source": "47.png",
+      "target": "products/curtain/sheer-curtain/main.jpg",
+      "description": "Sheer Curtain - Main Product Shot",
+      "category": "products",
+      "priority": 3
+    },
+    "48": {
+      "source": "48.png",
+      "target": "products/curtain/sheer-curtain/gallery-1.jpg",
+      "description": "Sheer Curtain - Gallery Image 1",
+      "category": "products",
+      "priority": 3
+    },
+    "49": {
+      "source": "49.png",
+      "target": "products/curtain/sheer-curtain/gallery-2.jpg",
+      "description": "Sheer Curtain - Gallery Image 2",
+      "category": "products",
+      "priority": 3
+    },
+    "50": {
+      "source": "50.png",
+      "target": "products/curtain/classic-curtain/main.jpg",
+      "description": "Classic Curtain - Main Product Shot",
+      "category": "products",
+      "priority": 3
+    },
+    "51": {
+      "source": "51.png",
+      "target": "products/curtain/classic-curtain/detail.jpg",
+      "description": "Classic Curtain - Detail Close-up",
+      "category": "products",
+      "priority": 3
+    },
+    "52": {
+      "source": "52.png",
+      "target": "products/curtain/classic-curtain/lifestyle.jpg",
+      "description": "Classic Curtain - Lifestyle Scene",
+      "category": "products",
+      "priority": 3
+    },
+    "53": {
+      "source": "53.png",
+      "target": "products/curtain/classic-curtain/gallery-1.jpg",
+      "description": "Classic Curtain - Gallery Image 1",
+      "category": "products",
+      "priority": 3
+    },
+    "54": {
+      "source": "54.png",
+      "target": "products/curtain/classic-curtain/gallery-2.jpg",
+      "description": "Classic Curtain - Gallery Image 2",
+      "category": "products",
+      "priority": 3
+    },
+    "55": {
+      "source": "55.png",
+      "target": "products/curtain/modern-curtain/main.jpg",
+      "description": "Modern Curtain - Main Product Shot",
+      "category": "products",
+      "priority": 3
+    },
+    "56": {
+      "source": "56.png",
+      "target": "products/curtain/modern-curtain/detail.jpg",
+      "description": "Modern Curtain - Detail Close-up",
+      "category": "products",
+      "priority": 3
+    },
+    "57": {
+      "source": "57.png",
+      "target": "products/curtain/modern-curtain/lifestyle.jpg",
+      "description": "Modern Curtain - Lifestyle Scene",
+      "category": "products",
+      "priority": 3
+    },
+    "58": {
+      "source": "58.png",
+      "target": "products/curtain/modern-curtain/gallery-1.jpg",
+      "description": "Modern Curtain - Gallery Image 1",
+      "category": "products",
+      "priority": 3
+    },
+    "59": {
+      "source": "59.png",
+      "target": "products/curtain/modern-curtain/gallery-2.jpg",
+      "description": "Modern Curtain - Gallery Image 2",
+      "category": "products",
+      "priority": 3
+    },
+    "60": {
+      "source": "60.png",
+      "target": "products/curtain/linen-white/main.jpg",
+      "description": "Linen White - Main Product Shot",
+      "category": "products",
+      "priority": 3
+    },
+    "61": {
+      "source": "61.png",
+      "target": "products/curtain/linen-white/detail.jpg",
+      "description": "Linen White - Detail Close-up",
+      "category": "products",
+      "priority": 3
+    },
+    "62": {
+      "source": "62.png",
+      "target": "products/curtain/linen-white/lifestyle.jpg",
+      "description": "Linen White - Lifestyle Scene",
+      "category": "products",
+      "priority": 3
+    },
+    "63": {
+      "source": "63.png",
+      "target": "products/curtain/linen-white/gallery-1.jpg",
+      "description": "Linen White - Gallery Image 1",
+      "category": "products",
+      "priority": 3
+    },
+    "64": {
+      "source": "64.png",
+      "target": "products/curtain/linen-white/gallery-2.jpg",
+      "description": "Linen White - Gallery Image 2",
+      "category": "products",
+      "priority": 3
+    },
+    "65": {
+      "source": "65.png",
+      "target": "products/curtain/pleats-ivory/main.jpg",
+      "description": "Pleats Ivory - Main Product Shot",
+      "category": "products",
+      "priority": 3
+    },
+    "66": {
+      "source": "66.png",
+      "target": "products/curtain/pleats-ivory/detail.jpg",
+      "description": "Pleats Ivory - Detail Close-up",
+      "category": "products",
+      "priority": 3
+    },
+    "67": {
+      "source": "67.png",
+      "target": "products/curtain/pleats-ivory/lifestyle.jpg",
+      "description": "Pleats Ivory - Lifestyle Scene",
+      "category": "products",
+      "priority": 3
+    },
+    "68": {
+      "source": "68.png",
+      "target": "products/curtain/pleats-ivory/gallery-1.jpg",
+      "description": "Pleats Ivory - Gallery Image 1",
+      "category": "products",
+      "priority": 3
+    },
+    "69": {
+      "source": "69.png",
+      "target": "products/curtain/pleats-ivory/gallery-2.jpg",
+      "description": "Pleats Ivory - Gallery Image 2",
+      "category": "products",
+      "priority": 3
+    },
+    "70": {
+      "source": "70.png",
+      "target": "products/blind/wood-blind/main.jpg",
+      "description": "Wood Blind - Main Product Shot",
+      "category": "products",
+      "priority": 3
+    },
+    "71": {
+      "source": "71.png",
+      "target": "products/blind/wood-blind/detail.jpg",
+      "description": "Wood Blind - Detail Close-up",
+      "category": "products",
+      "priority": 3
+    },
+    "72": {
+      "source": "72.png",
+      "target": "products/blind/wood-blind/lifestyle.jpg",
+      "description": "Wood Blind - Lifestyle Scene",
+      "category": "products",
+      "priority": 3
+    },
+    "73": {
+      "source": "73.png",
+      "target": "products/blind/wood-blind/gallery-1.jpg",
+      "description": "Wood Blind - Gallery Image 1",
+      "category": "products",
+      "priority": 3
+    },
+    "74": {
+      "source": "74.png",
+      "target": "products/blind/wood-blind/gallery-2.jpg",
+      "description": "Wood Blind - Gallery Image 2",
+      "category": "products",
+      "priority": 3
+    },
+    "75": {
+      "source": "75.png",
+      "target": "products/blind/aluminum-blind/main.jpg",
+      "description": "Aluminum Blind - Main Product Shot",
+      "category": "products",
+      "priority": 3
+    },
+    "76": {
+      "source": "76.png",
+      "target": "products/blind/aluminum-blind/detail.jpg",
+      "description": "Aluminum Blind - Detail Close-up",
+      "category": "products",
+      "priority": 3
+    },
+    "77": {
+      "source": "77.png",
+      "target": "products/blind/aluminum-blind/lifestyle.jpg",
+      "description": "Aluminum Blind - Lifestyle Scene",
+      "category": "products",
+      "priority": 3
+    },
+    "78": {
+      "source": "78.png",
+      "target": "products/blind/aluminum-blind/gallery-1.jpg",
+      "description": "Aluminum Blind - Gallery Image 1",
+      "category": "products",
+      "priority": 3
+    },
+    "79": {
+      "source": "79.png",
+      "target": "products/blind/aluminum-blind/gallery-2.jpg",
+      "description": "Aluminum Blind - Gallery Image 2",
+      "category": "products",
+      "priority": 3
+    },
+    "80": {
+      "source": "80.png",
+      "target": "products/blind/fabric-blind/main.jpg",
+      "description": "Fabric Blind - Main Product Shot",
+      "category": "products",
+      "priority": 3
+    },
+    "81": {
+      "source": "81.png",
+      "target": "products/blind/fabric-blind/detail.jpg",
+      "description": "Fabric Blind - Detail Close-up",
+      "category": "products",
+      "priority": 3
+    },
+    "82": {
+      "source": "82.png",
+      "target": "products/blind/fabric-blind/lifestyle.jpg",
+      "description": "Fabric Blind - Lifestyle Scene",
+      "category": "products",
+      "priority": 3
+    },
+    "83": {
+      "source": "83.png",
+      "target": "products/blind/fabric-blind/gallery-1.jpg",
+      "description": "Fabric Blind - Gallery Image 1",
+      "category": "products",
+      "priority": 3
+    },
+    "84": {
+      "source": "84.png",
+      "target": "products/blind/fabric-blind/gallery-2.jpg",
+      "description": "Fabric Blind - Gallery Image 2",
+      "category": "products",
+      "priority": 3
+    },
+    "85": {
+      "source": "85.png",
+      "target": "products/motorized/motorized-curtain-system/main.jpg",
+      "description": "Motorized Curtain System - Main Product Shot",
+      "category": "products",
+      "priority": 3
+    },
+    "86": {
+      "source": "86.png",
+      "target": "products/motorized/motorized-curtain-system/detail.jpg",
+      "description": "Motorized Curtain System - Detail Close-up",
+      "category": "products",
+      "priority": 3
+    },
+    "87": {
+      "source": "87.png",
+      "target": "products/motorized/motorized-curtain-system/lifestyle.jpg",
+      "description": "Motorized Curtain System - Lifestyle Scene",
+      "category": "products",
+      "priority": 3
+    },
+    "88": {
+      "source": "88.png",
+      "target": "products/motorized/motorized-curtain-system/gallery-1.jpg",
+      "description": "Motorized Curtain System - Gallery Image 1",
+      "category": "products",
+      "priority": 3
+    },
+    "89": {
+      "source": "89.png",
+      "target": "products/motorized/motorized-curtain-system/gallery-2.jpg",
+      "description": "Motorized Curtain System - Gallery Image 2",
+      "category": "products",
+      "priority": 3
+    },
+    "90": {
+      "source": "90.png",
+      "target": "products/motorized/motorized-blind-system/main.jpg",
+      "description": "Motorized Blind System - Main Product Shot",
+      "category": "products",
+      "priority": 3
+    },
+    "91": {
+      "source": "91.png",
+      "target": "products/motorized/motorized-blind-system/detail.jpg",
+      "description": "Motorized Blind System - Detail Close-up",
+      "category": "products",
+      "priority": 3
+    },
+    "92": {
+      "source": "92.png",
+      "target": "products/motorized/motorized-blind-system/lifestyle.jpg",
+      "description": "Motorized Blind System - Lifestyle Scene",
+      "category": "products",
+      "priority": 3
+    },
+    "93": {
+      "source": "93.png",
+      "target": "products/motorized/motorized-blind-system/gallery-1.jpg",
+      "description": "Motorized Blind System - Gallery Image 1",
+      "category": "products",
+      "priority": 3
+    },
+    "94": {
+      "source": "94.png",
+      "target": "products/motorized/motorized-blind-system/gallery-2.jpg",
+      "description": "Motorized Blind System - Gallery Image 2",
+      "category": "products",
+      "priority": 3
+    },
+    "95": {
+      "source": "95.png",
+      "target": "products/motorized/smart-home-integration/main.jpg",
+      "description": "Smart Home Integration - Main Product Shot",
+      "category": "products",
+      "priority": 3
+    },
+    "96": {
+      "source": "96.png",
+      "target": "products/motorized/smart-home-integration/detail.jpg",
+      "description": "Smart Home Integration - Detail Close-up",
+      "category": "products",
+      "priority": 3
+    },
+    "97": {
+      "source": "97.png",
+      "target": "products/motorized/smart-home-integration/lifestyle.jpg",
+      "description": "Smart Home Integration - Lifestyle Scene",
+      "category": "products",
+      "priority": 3
+    },
+    "98": {
+      "source": "98.png",
+      "target": "products/motorized/smart-home-integration/gallery-1.jpg",
+      "description": "Smart Home Integration - Gallery Image 1",
+      "category": "products",
+      "priority": 3
+    },
+    "99": {
+      "source": "99.png",
+      "target": "products/motorized/smart-home-integration/gallery-2.jpg",
+      "description": "Smart Home Integration - Gallery Image 2",
+      "category": "products",
+      "priority": 3
+    },
+    "100": {
+      "source": "100.png",
+      "target": "gallery/gallery-grid-1.jpg",
+      "description": "Gallery Grid - Showcase 1",
+      "category": "gallery",
+      "priority": 3
+    },
+    "101": {
+      "source": "101.png",
+      "target": "gallery/gallery-grid-2.jpg",
+      "description": "Gallery Grid - Showcase 2",
+      "category": "gallery",
+      "priority": 3
+    },
+    "102": {
+      "source": "102.png",
+      "target": "gallery/gallery-grid-3.jpg",
+      "description": "Gallery Grid - Showcase 3",
+      "category": "gallery",
+      "priority": 3
+    },
+    "103": {
+      "source": "103.png",
+      "target": "gallery/gallery-grid-4.jpg",
+      "description": "Gallery Grid - Showcase 4",
+      "category": "gallery",
+      "priority": 3
+    },
+    "104": {
+      "source": "104.png",
+      "target": "gallery/gallery-grid-5.jpg",
+      "description": "Gallery Grid - Showcase 5",
+      "category": "gallery",
+      "priority": 3
+    },
+    "105": {
+      "source": "105.png",
+      "target": "gallery/gallery-grid-6.jpg",
+      "description": "Gallery Grid - Showcase 6",
+      "category": "gallery",
+      "priority": 3
+    },
+    "106": {
+      "source": "106.png",
+      "target": "gallery/gallery-grid-7.jpg",
+      "description": "Gallery Grid - Showcase 7",
+      "category": "gallery",
+      "priority": 3
+    },
+    "107": {
+      "source": "107.png",
+      "target": "gallery/gallery-grid-8.jpg",
+      "description": "Gallery Grid - Showcase 8",
+      "category": "gallery",
+      "priority": 3
+    },
+    "108": {
+      "source": "108.png",
+      "target": "gallery/gallery-grid-9.jpg",
+      "description": "Gallery Grid - Showcase 9",
+      "category": "gallery",
+      "priority": 3
+    },
+    "109": {
+      "source": "109.png",
+      "target": "gallery/gallery-grid-10.jpg",
+      "description": "Gallery Grid - Showcase 10",
+      "category": "gallery",
+      "priority": 3
+    },
+    "110": {
+      "source": "110.png",
+      "target": "gallery/gallery-grid-11.jpg",
+      "description": "Gallery Grid - Showcase 11",
+      "category": "gallery",
+      "priority": 3
+    },
+    "111": {
+      "source": "111.png",
+      "target": "gallery/gallery-grid-12.jpg",
+      "description": "Gallery Grid - Showcase 12",
+      "category": "gallery",
+      "priority": 3
+    },
+    "112": {
+      "source": "112.png",
+      "target": "hero/hero-desktop-alt.jpg",
+      "description": "데스크톱용 대체 히어로 이미지",
+      "category": "hero",
+      "priority": 3
+    },
+    "113": {
+      "source": "113.png",
+      "target": "landing/about-section.jpg",
+      "description": "회사 소개 섹션 배경",
+      "category": "landing",
+      "priority": 3
+    },
+    "114": {
+      "source": "114.png",
+      "target": "landing/contact-background.jpg",
+      "description": "연락처 섹션 배경", 
+      "category": "landing",
+      "priority": 3
+    },
+    "115": {
+      "source": "115.png",
+      "target": "projects/portfolio-header.jpg",
+      "description": "포트폴리오 헤더 이미지",
+      "category": "projects",
+      "priority": 3
+    },
+    "116": {
+      "source": "116.png",
+      "target": "projects/consultation-bg.jpg",
+      "description": "상담 섹션 배경",
+      "category": "projects",
+      "priority": 3
+    },
+    "117": {
+      "source": "117.png",
+      "target": "collections/seasonal-spring.jpg",
+      "description": "계절 컬렉션 - 봄",
+      "category": "collections",
+      "priority": 3
+    },
+    "118": {
+      "source": "118.png",
+      "target": "collections/seasonal-summer.jpg",
+      "description": "계절 컬렉션 - 여름",
+      "category": "collections",
+      "priority": 3
+    },
+    "119": {
+      "source": "119.png",
+      "target": "collections/seasonal-autumn.jpg",
+      "description": "계절 컬렉션 - 가을",
+      "category": "collections",
+      "priority": 3
+    },
+    "120": {
+      "source": "120.png",
+      "target": "collections/seasonal-winter.jpg",
+      "description": "계절 컬렉션 - 겨울",
+      "category": "collections",
+      "priority": 3
+    },
+    "121": {
+      "source": "121.png",
+      "target": "gallery/best-of-year.jpg",
+      "description": "올해의 베스트 프로젝트",
+      "category": "gallery",
+      "priority": 3
+    },
+    "122": {
+      "source": "122.png",
+      "target": "gallery/customer-favorites.jpg",
+      "description": "고객 선호 작품",
+      "category": "gallery",
+      "priority": 3
+    },
+    "123": {
+      "source": "123.png",
+      "target": "gallery/award-winning.jpg",
+      "description": "수상 작품",
+      "category": "gallery",
+      "priority": 3
+    },
+    "124": {
+      "source": "124.png",
+      "target": "gallery/trending-styles.jpg",
+      "description": "트렌딩 스타일",
+      "category": "gallery",
+      "priority": 3
+    },
+    "125": {
+      "source": "125.png",
+      "target": "gallery/luxury-collection.jpg",
+      "description": "럭셔리 컬렉션 쇼케이스",
+      "category": "gallery",
+      "priority": 3
+    },
+    "126": {
+      "source": "126.png",
+      "target": "products/accessories/curtain-rings.jpg",
+      "description": "커튼 링 액세서리",
+      "category": "products",
+      "priority": 3
+    },
+    "127": {
+      "source": "127.png",
+      "target": "products/accessories/tiebacks.jpg", 
+      "description": "타이백 컬렉션",
+      "category": "products",
+      "priority": 3
+    },
+    "128": {
+      "source": "128.png",
+      "target": "products/accessories/valances.jpg",
+      "description": "발란스 컬렉션",
+      "category": "products",
+      "priority": 3
+    },
+    "129": {
+      "source": "129.png",
+      "target": "products/accessories/holdbacks.jpg",
+      "description": "홀드백 액세서리",
+      "category": "products",
+      "priority": 3
+    },
+    "130": {
+      "source": "130.png",
+      "target": "products/accessories/tracks-rails.jpg",
+      "description": "트랙 & 레일 시스템",
+      "category": "products",
+      "priority": 3
+    },
+    "131": {
+      "source": "131.png",
+      "target": "references/hotel-lobby-seoul.jpg",
+      "description": "서울 호텔 로비 프로젝트",
+      "category": "references",
+      "priority": 3
+    },
+    "132": {
+      "source": "132.png",
+      "target": "references/restaurant-busan.jpg",
+      "description": "부산 레스토랑 프로젝트",
+      "category": "references",
+      "priority": 3
+    },
+    "133": {
+      "source": "133.png",
+      "target": "references/office-tower-incheon.jpg",
+      "description": "인천 오피스 타워 프로젝트",
+      "category": "references",
+      "priority": 3
+    },
+    "134": {
+      "source": "134.png",
+      "target": "references/showroom-display.jpg",
+      "description": "쇼룸 디스플레이",
+      "category": "references",
+      "priority": 3
+    },
+    "135": {
+      "source": "135.png",
+      "target": "references/residential-complex.jpg",
+      "description": "주거 복합시설 프로젝트",
+      "category": "references",
+      "priority": 3
+    },
+    "136": {
+      "source": "136.png",
+      "target": "blog/design-trends-2024.jpg",
+      "description": "2024 디자인 트렌드",
+      "category": "blog",
+      "priority": 3
+    },
+    "137": {
+      "source": "137.png",
+      "target": "blog/maintenance-tips.jpg",
+      "description": "커튼/블라인드 관리 팁",
+      "category": "blog",
+      "priority": 3
+    },
+    "138": {
+      "source": "138.png",
+      "target": "blog/installation-guide.jpg",
+      "description": "설치 가이드",
+      "category": "blog",
+      "priority": 3
+    },
+    "139": {
+      "source": "139.png",
+      "target": "blog/color-matching.jpg",
+      "description": "색상 매칭 가이드",
+      "category": "blog",
+      "priority": 3
+    },
+    "140": {
+      "source": "140.png",
+      "target": "blog/room-styling.jpg",
+      "description": "룸 스타일링 팁",
+      "category": "blog",
+      "priority": 3
+    },
+    "141": {
+      "source": "141.png",
+      "target": "about/company-story.jpg",
+      "description": "회사 이야기",
+      "category": "about",
+      "priority": 3
+    },
+    "142": {
+      "source": "142.png",
+      "target": "about/team-workspace.jpg",
+      "description": "팀 작업 공간",
+      "category": "about",
+      "priority": 3
+    },
+    "143": {
+      "source": "143.png",
+      "target": "about/manufacturing.jpg",
+      "description": "제작 과정",
+      "category": "about",
+      "priority": 3
+    },
+    "144": {
+      "source": "144.png",
+      "target": "about/quality-control.jpg",
+      "description": "품질 관리",
+      "category": "about",
+      "priority": 3
+    },
+    "145": {
+      "source": "145.png",
+      "target": "about/certifications.jpg",
+      "description": "인증서 및 자격증",
+      "category": "about",
+      "priority": 3
+    },
+    "146": {
+      "source": "146.png",
+      "target": "future/concept-designs.jpg",
+      "description": "컨셉 디자인 (미래 확장용)",
+      "category": "future",
+      "priority": 3
+    },
+    "147": {
+      "source": "147.png",
+      "target": "future/innovation-lab.jpg",
+      "description": "혁신 연구소 (미래 확장용)",
+      "category": "future",
+      "priority": 3
+    },
+    "148": {
+      "source": "148.png",
+      "target": "future/next-generation.jpg",
+      "description": "차세대 제품 (미래 확장용)",
+      "category": "future",
+      "priority": 3
+    }
+  }
+} 

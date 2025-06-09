@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khakishop 관리자 도구</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #FEFDFB 0%, #F7F5F3 100%);
+            margin: 0;
+            padding: 2rem;
+            color: #2D2823;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 600px;
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 8px 32px rgba(139, 122, 107, 0.1);
+            border: 1px solid #E8E5E1;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .title {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #8B7A6B;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: #4A453E;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .admin-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .admin-link {
+            display: block;
+            padding: 1.5rem 2rem;
+            background: #8B7A6B;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        
+        .admin-link:hover {
+            background: #6B645B;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(139, 122, 107, 0.3);
+        }
+        
+        .admin-link .icon {
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
+        }
+        
+        .secondary-link {
+            background: #E8E5E1;
+            color: #2D2823;
+        }
+        
+        .secondary-link:hover {
+            background: #D4D0CC;
+        }
+        
+        .info {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #F7F5F3;
+            border-radius: 8px;
+            border-left: 4px solid #8B7A6B;
+            text-align: left;
+            font-size: 0.9rem;
+            color: #4A453E;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🎨</div>
+        <h1 class="title">khakishop 관리자</h1>
+        <p class="subtitle">RIGAS 모티브를 반영한 브랜드 관리 도구</p>
+        
+        <div class="admin-links">
+            <a href="/ko/admin/images" class="admin-link">
+                <span class="icon">🖼️</span>
+                이미지 관리 시스템
+            </a>
+            
+            <a href="/image-complete-preview.html" class="admin-link secondary-link">
+                <span class="icon">👁️</span>
+                이미지 미리보기
+            </a>
+            
+            <a href="/ko" class="admin-link secondary-link">
+                <span class="icon">🏠</span>
+                메인 사이트로 이동
+            </a>
+        </div>
+        
+        <div class="info">
+            <strong>🎯 이미지 관리 시스템 기능:</strong><br>
+            • 드래그 앤 드롭으로 이미지 교체<br>
+            • 실시간 미리보기 및 업데이트<br>
+            • 카테고리별 분류 및 검색<br>
+            • imageMapping.json 자동 연동<br>
+            • RIGAS 모티브 미니멀 디자인
+        </div>
+    </div>
+</body>
+</html> 

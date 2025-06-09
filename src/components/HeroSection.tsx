@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function HeroSection() {
   // 애니메이션 variants - RIGAS 스타일의 부드러운 페이드인

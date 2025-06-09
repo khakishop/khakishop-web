@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "title": "KHAKISHOP 이미지 상태 추적",
+    "version": "2.0",
+    "lastScan": "2024-12-XX",
+    "totalSlots": 148,
+    "assignedSlots": 148,
+    "pendingSlots": 0,
+    "errorSlots": 0
+  },
+  
+  "status": {
+    "1": {
+      "sourceFile": "1.png",
+      "targetPath": "hero/hero-mobile.jpg",
+      "status": "active",
+      "lastProcessed": "2024-12-XX 15:30:00",
+      "fileSize": "2.4MB",
+      "md5Hash": "abc123...",
+      "category": "hero",
+      "priority": 1,
+      "usage": "HomeClient.tsx - 모바일 히어로",
+      "webPath": "/images/hero/hero-mobile.jpg"
+    },
+    "2": {
+      "sourceFile": "2.png",
+      "targetPath": "landing/hero-main.jpg",
+      "status": "active",
+      "lastProcessed": "2024-12-XX 15:30:01",
+      "fileSize": "3.1MB",
+      "md5Hash": "def456...",
+      "category": "landing",
+      "priority": 1,
+      "usage": "LandingSection - 메인 배경",
+      "webPath": "/images/landing/hero-main.jpg"
+    }
+  },
+  
+  "pending": {
+    "149": {
+      "sourceFile": "149.png",
+      "status": "pending_assignment",
+      "detectedAt": "2024-12-XX 16:00:00",
+      "fileSize": "2.8MB",
+      "suggestedCategory": "gallery",
+      "suggestedSlot": "gallery-grid-13",
+      "requiresManualReview": true
+    }
+  },
+  
+  "errors": {
+    "45": {
+      "sourceFile": "45.png",
+      "error": "source_file_missing",
+      "lastAttempt": "2024-12-XX 15:30:45",
+      "retryCount": 3,
+      "targetPath": "references/art-gallery-jongno/gallery-2.jpg",
+      "requiresAttention": true
+    }
+  },
+  
+  "changelog": [
+    {
+      "timestamp": "2024-12-XX 15:30:00",
+      "action": "bulk_process",
+      "details": "148개 이미지 일괄 처리 완료",
+      "success": 148,
+      "failed": 0
+    },
+    {
+      "timestamp": "2024-12-XX 16:00:00", 
+      "action": "new_image_detected",
+      "details": "149.png 신규 이미지 감지",
+      "status": "pending_assignment"
+    }
+  ]
+} 

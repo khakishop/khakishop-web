@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import HomeClient from '../HomeClient';
 
+// 🎨 SEO 메타데이터 (RIGAS 모티브 + 일산 커튼 전문점 브랜딩)
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "khaki shop | 감성과 기능을 담은 텍스타일 전문점",
@@ -12,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: "공간을 아름답게 만드는 텍스타일 브랜드 카키샵. 커튼, 블라인드, 전동 시스템으로 당신의 공간을 특별하게 완성해보세요.",
       images: [
         {
-          url: "/og-image.jpg",
+          url: "/images/hero/hero.jpg",
           width: 1200,
           height: 630,
           alt: "khaki shop 대표 이미지"
@@ -40,7 +42,7 @@ export default function Home() {
     },
     "telephone": "0507-1372-0358",
     "email": "lskshsrl@naver.com",
-    "image": "https://khakishop.kr/og-image.jpg",
+    "image": "https://khakishop.kr/images/hero/hero.jpg",
     "description": "감성과 기능을 담은 텍스타일 전문 커튼 브랜드",
     "priceRange": "$$",
     "openingHours": [

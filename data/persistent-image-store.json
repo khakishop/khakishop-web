@@ -1,0 +1,536 @@
+{
+  "version": "1.0.0",
+  "lastSync": "2025-06-08T09:24:38.778Z",
+  "protectedImages": {
+    "17493788351175oeo0cnx0": true,
+    "1749378850665tuc1ouvcw": true,
+    "1749378866054eatxhcwkl": true
+  },
+  "mappings": {
+    "1": {
+      "id": "1",
+      "sourceFile": "1.png",
+      "targetPath": "/images/midjourney/1.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T09:24:38.777Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 1.png",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 1.png",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 1.png",
+        "priority": 6
+      }
+    },
+    "2": {
+      "id": "2",
+      "sourceFile": "2.png",
+      "targetPath": "/images/midjourney/2.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T09:24:38.777Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 2.png",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 2.png",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 2.png",
+        "priority": 6
+      }
+    },
+    "3": {
+      "id": "3",
+      "sourceFile": "3.png",
+      "targetPath": "/images/midjourney/3.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T09:24:38.777Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 3.png",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 3.png",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 3.png",
+        "priority": 6
+      }
+    },
+    "4": {
+      "id": "4",
+      "sourceFile": "4.png",
+      "targetPath": "/images/midjourney/4.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T09:24:38.778Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 4.png",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 4.png",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 4.png",
+        "priority": 6
+      }
+    },
+    "6": {
+      "id": "6",
+      "sourceFile": "6.png",
+      "targetPath": "/images/midjourney/6.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T09:24:38.778Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 6.png",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 6.png",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 6.png",
+        "priority": 6
+      }
+    },
+    "7": {
+      "id": "7",
+      "sourceFile": "7.png",
+      "targetPath": "/images/midjourney/7.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T09:24:38.778Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 7.png",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 7.png",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 7.png",
+        "priority": 6
+      }
+    },
+    "8": {
+      "id": "8",
+      "sourceFile": "8.png",
+      "targetPath": "/images/midjourney/8.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T09:24:38.778Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 8.png",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 8.png",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 8.png",
+        "priority": 6
+      }
+    },
+    "9": {
+      "id": "9",
+      "sourceFile": "9.png",
+      "targetPath": "/images/midjourney/9.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T09:24:38.778Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 9.png",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 9.png",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 9.png",
+        "priority": 6
+      }
+    },
+    "10": {
+      "id": "10",
+      "sourceFile": "10.png",
+      "targetPath": "/images/midjourney/10.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T09:24:38.777Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 10.png",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 10.png",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 10.png",
+        "priority": 6
+      }
+    },
+    "11": {
+      "id": "11",
+      "sourceFile": "11.png",
+      "targetPath": "/images/midjourney/11.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T09:24:38.777Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 11.png",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 11.png",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 11.png",
+        "priority": 6
+      }
+    },
+    "12": {
+      "id": "12",
+      "sourceFile": "12.png",
+      "targetPath": "/images/midjourney/12.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T09:24:38.777Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 12.png",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 12.png",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 12.png",
+        "priority": 6
+      }
+    },
+    "13": {
+      "id": "13",
+      "sourceFile": "13.png",
+      "targetPath": "/images/midjourney/13.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T09:24:38.777Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 13.png",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 13.png",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 13.png",
+        "priority": 6
+      }
+    },
+    "15": {
+      "id": "15",
+      "sourceFile": "15.png",
+      "targetPath": "/images/midjourney/15.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T09:24:38.777Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 15.png",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 15.png",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 15.png",
+        "priority": 6
+      }
+    },
+    "16": {
+      "id": "16",
+      "sourceFile": "16.png",
+      "targetPath": "/images/midjourney/16.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T09:24:38.777Z",
+      "metadata": {
+        "alt": "khaki shop 갤러리 - 자동 복원된 이미지 16.png",
+        "title": "갤러리 이미지 - 자동 복원된 이미지 16.png",
+        "dataStyle": "gallery-aesthetic",
+        "category": "gallery",
+        "description": "자동 복원된 이미지 16.png",
+        "priority": 6
+      }
+    },
+    "17493788351175oeo0cnx0": {
+      "id": "17493788351175oeo0cnx0",
+      "sourceFile": "1749378835107yeubvb.png",
+      "targetPath": "/images/midjourney/1749378835107yeubvb.png",
+      "isProtected": true,
+      "createdAt": "2025-06-08T10:33:55.117Z",
+      "metadata": {
+        "alt": "khaki shop - 1749378835107yeubvb.png",
+        "title": "감성적인 텍스타일 브랜드 khaki shop - 1749378835107yeubvb.png",
+        "dataStyle": "hero-style",
+        "category": "hero",
+        "description": "업로드된 이미지 1749378835107yeubvb",
+        "priority": 1
+      }
+    },
+    "1749378850665tuc1ouvcw": {
+      "id": "1749378850665tuc1ouvcw",
+      "sourceFile": "1749378850657h6d40e.png",
+      "targetPath": "/images/midjourney/1749378850657h6d40e.png",
+      "isProtected": true,
+      "createdAt": "2025-06-08T10:34:10.665Z",
+      "metadata": {
+        "alt": "khaki shop - 1749378850657h6d40e.png",
+        "title": "khaki shop - 1749378850657h6d40e.png",
+        "dataStyle": "landing-style",
+        "category": "landing",
+        "description": "업로드된 이미지 1749378850657h6d40e",
+        "priority": 1
+      }
+    },
+    "1749378866054eatxhcwkl": {
+      "id": "1749378866054eatxhcwkl",
+      "sourceFile": "174937886604803zw6g.png",
+      "targetPath": "/images/midjourney/174937886604803zw6g.png",
+      "isProtected": true,
+      "createdAt": "2025-06-08T10:34:26.054Z",
+      "metadata": {
+        "alt": "khaki shop - 174937886604803zw6g.png",
+        "title": "khaki shop - 174937886604803zw6g.png",
+        "dataStyle": "products-style",
+        "category": "products",
+        "description": "업로드된 이미지 174937886604803zw6g",
+        "priority": 5
+      }
+    },
+    "1749382412306v9zpfxee9": {
+      "id": "1749382412306v9zpfxee9",
+      "sourceFile": "our-projects-bg.jpg",
+      "targetPath": "/images/projects/our-projects-bg.jpg",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:33:32.306Z",
+      "metadata": {
+        "description": "프로젝트 이미지 - our-projects-bg",
+        "category": "projects",
+        "priority": 2,
+        "alt": "khaki shop 프로젝트 - our-projects-bg",
+        "title": "완성된 공간들 - our-projects-bg",
+        "dataStyle": "project-showcase"
+      }
+    },
+    "1749382412307tuo77yt33": {
+      "id": "1749382412307tuo77yt33",
+      "sourceFile": "project-showcase.png",
+      "targetPath": "/images/projects/project-showcase.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:33:32.307Z",
+      "metadata": {
+        "description": "프로젝트 이미지 - project-showcase",
+        "category": "projects",
+        "priority": 2,
+        "alt": "khaki shop 프로젝트 - project-showcase",
+        "title": "완성된 공간들 - project-showcase",
+        "dataStyle": "project-showcase"
+      }
+    },
+    "17493833785668knekrcgz": {
+      "id": "17493833785668knekrcgz",
+      "sourceFile": "luxury-tieback.png",
+      "targetPath": "/images/collections/luxury-tieback.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.566Z",
+      "metadata": {
+        "description": "자동 매핑된 collections 이미지 - luxury-tieback.png",
+        "category": "collections",
+        "priority": 3,
+        "alt": "khaki shop collections - luxury-tieback",
+        "title": "khaki shop collections - luxury-tieback",
+        "dataStyle": "collections-auto"
+      }
+    },
+    "1749383378568j9pwwbs0f": {
+      "id": "1749383378568j9pwwbs0f",
+      "sourceFile": "designer-hardware.png",
+      "targetPath": "/images/collections/designer-hardware.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.568Z",
+      "metadata": {
+        "description": "자동 매핑된 collections 이미지 - designer-hardware.png",
+        "category": "collections",
+        "priority": 3,
+        "alt": "khaki shop collections - designer-hardware",
+        "title": "khaki shop collections - designer-hardware",
+        "dataStyle": "collections-auto"
+      }
+    },
+    "1749383378568sgbhry2kz": {
+      "id": "1749383378568sgbhry2kz",
+      "sourceFile": "wireless-motor.png",
+      "targetPath": "/images/collections/wireless-motor.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.568Z",
+      "metadata": {
+        "description": "자동 매핑된 collections 이미지 - wireless-motor.png",
+        "category": "collections",
+        "priority": 3,
+        "alt": "khaki shop collections - wireless-motor",
+        "title": "khaki shop collections - wireless-motor",
+        "dataStyle": "collections-auto"
+      }
+    },
+    "1749383378569k6lxv5yo7": {
+      "id": "1749383378569k6lxv5yo7",
+      "sourceFile": "smart-automation.png",
+      "targetPath": "/images/collections/smart-automation.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.569Z",
+      "metadata": {
+        "description": "자동 매핑된 collections 이미지 - smart-automation.png",
+        "category": "collections",
+        "priority": 3,
+        "alt": "khaki shop collections - smart-automation",
+        "title": "khaki shop collections - smart-automation",
+        "dataStyle": "collections-auto"
+      }
+    },
+    "1749383378569qsxgv0em3": {
+      "id": "1749383378569qsxgv0em3",
+      "sourceFile": "wood-texture.png",
+      "targetPath": "/images/collections/wood-texture.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.569Z",
+      "metadata": {
+        "description": "자동 매핑된 collections 이미지 - wood-texture.png",
+        "category": "collections",
+        "priority": 3,
+        "alt": "khaki shop collections - wood-texture",
+        "title": "khaki shop collections - wood-texture",
+        "dataStyle": "collections-auto"
+      }
+    },
+    "1749383378569wspxv0pki": {
+      "id": "1749383378569wspxv0pki",
+      "sourceFile": "venetian-premium.png",
+      "targetPath": "/images/collections/venetian-premium.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.569Z",
+      "metadata": {
+        "description": "자동 매핑된 collections 이미지 - venetian-premium.png",
+        "category": "collections",
+        "priority": 3,
+        "alt": "khaki shop collections - venetian-premium",
+        "title": "khaki shop collections - venetian-premium",
+        "dataStyle": "collections-auto"
+      }
+    },
+    "1749383378570gtsjxhe3o": {
+      "id": "1749383378570gtsjxhe3o",
+      "sourceFile": "modern-sheer.png",
+      "targetPath": "/images/collections/modern-sheer.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.570Z",
+      "metadata": {
+        "description": "자동 매핑된 collections 이미지 - modern-sheer.png",
+        "category": "collections",
+        "priority": 3,
+        "alt": "khaki shop collections - modern-sheer",
+        "title": "khaki shop collections - modern-sheer",
+        "dataStyle": "collections-auto"
+      }
+    },
+    "1749383378570012ehe8y2": {
+      "id": "1749383378570012ehe8y2",
+      "sourceFile": "essential-linen.png",
+      "targetPath": "/images/collections/essential-linen.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.570Z",
+      "metadata": {
+        "description": "자동 매핑된 collections 이미지 - essential-linen.png",
+        "category": "collections",
+        "priority": 3,
+        "alt": "khaki shop collections - essential-linen",
+        "title": "khaki shop collections - essential-linen",
+        "dataStyle": "collections-auto"
+      }
+    },
+    "1749383378571f0vy1x4mh": {
+      "id": "1749383378571f0vy1x4mh",
+      "sourceFile": "collection-overview.png",
+      "targetPath": "/images/landing/collection-overview.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.571Z",
+      "metadata": {
+        "description": "자동 매핑된 landing 이미지 - collection-overview.png",
+        "category": "landing",
+        "priority": 1,
+        "alt": "khaki shop landing - collection-overview",
+        "title": "khaki shop landing - collection-overview",
+        "dataStyle": "landing-auto"
+      }
+    },
+    "1749383378571zqx41kcbz": {
+      "id": "1749383378571zqx41kcbz",
+      "sourceFile": "brand-lifestyle.png",
+      "targetPath": "/images/landing/brand-lifestyle.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.571Z",
+      "metadata": {
+        "description": "자동 매핑된 landing 이미지 - brand-lifestyle.png",
+        "category": "landing",
+        "priority": 1,
+        "alt": "khaki shop landing - brand-lifestyle",
+        "title": "khaki shop landing - brand-lifestyle",
+        "dataStyle": "landing-auto"
+      }
+    },
+    "17493833785725su4t7b39": {
+      "id": "17493833785725su4t7b39",
+      "sourceFile": "hero-main.png",
+      "targetPath": "/images/landing/hero-main.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.572Z",
+      "metadata": {
+        "description": "자동 매핑된 landing 이미지 - hero-main.png",
+        "category": "landing",
+        "priority": 1,
+        "alt": "khaki shop landing - hero-main",
+        "title": "khaki shop landing - hero-main",
+        "dataStyle": "landing-auto"
+      }
+    },
+    "1749383378572zejy34itm": {
+      "id": "1749383378572zejy34itm",
+      "sourceFile": "hero-mobile.png",
+      "targetPath": "/images/hero/hero-mobile.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.572Z",
+      "metadata": {
+        "description": "자동 매핑된 hero 이미지 - hero-mobile.png",
+        "category": "hero",
+        "priority": 1,
+        "alt": "khaki shop hero - hero-mobile",
+        "title": "khaki shop hero - hero-mobile",
+        "dataStyle": "hero-auto"
+      }
+    },
+    "1749383378573yjn9pc5ij": {
+      "id": "1749383378573yjn9pc5ij",
+      "sourceFile": "hero.jpg",
+      "targetPath": "/images/hero/hero.jpg",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.573Z",
+      "metadata": {
+        "description": "자동 매핑된 hero 이미지 - hero.jpg",
+        "category": "hero",
+        "priority": 1,
+        "alt": "khaki shop hero - hero",
+        "title": "khaki shop hero - hero",
+        "dataStyle": "hero-auto"
+      }
+    },
+    "1749383378573sfutr4588": {
+      "id": "1749383378573sfutr4588",
+      "sourceFile": "motorized-smart-livingroom-1.png",
+      "targetPath": "/images/references/motorized-smart-livingroom-1.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.573Z",
+      "metadata": {
+        "description": "자동 매핑된 references 이미지 - motorized-smart-livingroom-1.png",
+        "category": "references",
+        "priority": 4,
+        "alt": "khaki shop references - motorized-smart-livingroom-1",
+        "title": "khaki shop references - motorized-smart-livingroom-1",
+        "dataStyle": "references-auto"
+      }
+    },
+    "1749383378574pwxo056r3": {
+      "id": "1749383378574pwxo056r3",
+      "sourceFile": "blind-minimal-bedroom-1.png",
+      "targetPath": "/images/references/blind-minimal-bedroom-1.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.574Z",
+      "metadata": {
+        "description": "자동 매핑된 references 이미지 - blind-minimal-bedroom-1.png",
+        "category": "references",
+        "priority": 4,
+        "alt": "khaki shop references - blind-minimal-bedroom-1",
+        "title": "khaki shop references - blind-minimal-bedroom-1",
+        "dataStyle": "references-auto"
+      }
+    },
+    "174938337857434s3j6fm8": {
+      "id": "174938337857434s3j6fm8",
+      "sourceFile": "curtain-modern-livingroom-1.png",
+      "targetPath": "/images/references/curtain-modern-livingroom-1.png",
+      "isProtected": false,
+      "createdAt": "2025-06-08T11:49:38.574Z",
+      "metadata": {
+        "description": "자동 매핑된 references 이미지 - curtain-modern-livingroom-1.png",
+        "category": "references",
+        "priority": 4,
+        "alt": "khaki shop references - curtain-modern-livingroom-1",
+        "title": "khaki shop references - curtain-modern-livingroom-1",
+        "dataStyle": "references-auto"
+      }
+    }
+  }
+}

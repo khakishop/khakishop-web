@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khakishop 폴백 이미지 미리보기</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #FEFDFB 0%, #F7F5F3 100%);
+            margin: 0;
+            padding: 2rem;
+            color: #2D2823;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            font-weight: 300;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #8B7A6B;
+        }
+        
+        .category {
+            margin-bottom: 3rem;
+        }
+        
+        .category h2 {
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #4A453E;
+            border-bottom: 1px solid #E8E5E1;
+            padding-bottom: 0.5rem;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .image-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 4px 20px rgba(139, 122, 107, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .image-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .image-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        
+        .image-info h3 {
+            margin: 0 0 0.5rem 0;
+            font-weight: 400;
+            color: #2D2823;
+        }
+        
+        .image-info p {
+            margin: 0;
+            color: #6B645B;
+            font-size: 0.9rem;
+        }
+        
+        .hero-images .image-card img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #E8E5E1;
+            color: #8B857C;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 khakishop 폴백 이미지 시스템</h1>
+        
+        <div class="category hero-images">
+            <h2>🔥 Hero Images</h2>
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="/images/hero/hero-desktop.svg" alt="khakishop" loading="lazy">
+                    <div class="image-info">
+                        <h3>khakishop</h3>
+                        <p>premium window treatments</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/hero/hero-mobile.svg" alt="khakishop" loading="lazy">
+                    <div class="image-info">
+                        <h3>khakishop</h3>
+                        <p>minimal design</p>
+                    </div>
+                </div>
+        </div>
+        </div>
+        
+        <div class="category">
+            <h2>🎨 Collections</h2>
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="/images/collections/essential-linen.svg" alt="Essential Linen" loading="lazy">
+                    <div class="image-info">
+                        <h3>Essential Linen</h3>
+                        <p>natural elegance</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/collections/modern-sheer.svg" alt="Modern Sheer" loading="lazy">
+                    <div class="image-info">
+                        <h3>Modern Sheer</h3>
+                        <p>soft transparency</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/collections/venetian-premium.svg" alt="Venetian Premium" loading="lazy">
+                    <div class="image-info">
+                        <h3>Venetian Premium</h3>
+                        <p>classic sophistication</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/collections/wood-texture.svg" alt="Wood Texture" loading="lazy">
+                    <div class="image-info">
+                        <h3>Wood Texture</h3>
+                        <p>natural warmth</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/collections/smart-automation.svg" alt="Smart Automation" loading="lazy">
+                    <div class="image-info">
+                        <h3>Smart Automation</h3>
+                        <p>intelligent control</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/collections/wireless-motor.svg" alt="Wireless Motor" loading="lazy">
+                    <div class="image-info">
+                        <h3>Wireless Motor</h3>
+                        <p>effortless operation</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/collections/designer-hardware.svg" alt="Designer Hardware" loading="lazy">
+                    <div class="image-info">
+                        <h3>Designer Hardware</h3>
+                        <p>premium finishes</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/collections/luxury-tieback.svg" alt="Luxury Tieback" loading="lazy">
+                    <div class="image-info">
+                        <h3>Luxury Tieback</h3>
+                        <p>elegant details</p>
+                    </div>
+                </div>
+        </div>
+        </div>
+        
+        <div class="category">
+            <h2>🛍️ Products</h2>
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="/images/products/sheer-curtain-main.svg" alt="Sheer Curtain" loading="lazy">
+                    <div class="image-info">
+                        <h3>Sheer Curtain</h3>
+                        <p>premium quality</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/products/classic-curtain-main.svg" alt="Classic Curtain" loading="lazy">
+                    <div class="image-info">
+                        <h3>Classic Curtain</h3>
+                        <p>timeless design</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/products/wood-blind-main.svg" alt="Wood Blind" loading="lazy">
+                    <div class="image-info">
+                        <h3>Wood Blind</h3>
+                        <p>natural materials</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/products/aluminum-blind-main.svg" alt="Aluminum Blind" loading="lazy">
+                    <div class="image-info">
+                        <h3>Aluminum Blind</h3>
+                        <p>modern functionality</p>
+                    </div>
+                </div>
+        </div>
+        </div>
+        
+        <div class="category">
+            <h2>🖼️ Gallery</h2>
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="/images/gallery/gallery-1.svg" alt="Inspiration" loading="lazy">
+                    <div class="image-info">
+                        <h3>Inspiration</h3>
+                        <p>600x400</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/gallery/gallery-2.svg" alt="Design" loading="lazy">
+                    <div class="image-info">
+                        <h3>Design</h3>
+                        <p>600x400</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/gallery/gallery-3.svg" alt="Lifestyle" loading="lazy">
+                    <div class="image-info">
+                        <h3>Lifestyle</h3>
+                        <p>600x400</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/gallery/gallery-4.svg" alt="Premium" loading="lazy">
+                    <div class="image-info">
+                        <h3>Premium</h3>
+                        <p>600x400</p>
+                    </div>
+                </div>
+        </div>
+        </div>
+        
+        <div class="category">
+            <h2>🏢 References</h2>
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="/images/references/modern-office-main.svg" alt="Modern Office" loading="lazy">
+                    <div class="image-info">
+                        <h3>Modern Office</h3>
+                        <p>professional spaces</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/references/minimal-residence-main.svg" alt="Minimal Residence" loading="lazy">
+                    <div class="image-info">
+                        <h3>Minimal Residence</h3>
+                        <p>clean living</p>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="/images/references/classic-cafe-main.svg" alt="Classic Cafe" loading="lazy">
+                    <div class="image-info">
+                        <h3>Classic Cafe</h3>
+                        <p>commercial elegance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🏷️ 모든 이미지는 khakishop 자체 제작으로 저작권 문제가 없습니다.</p>
+            <p>🎨 RIGAS 모티브 + khakishop 브랜드 감성으로 디자인되었습니다.</p>
+        </footer>
+    </div>
+</body>
+</html>

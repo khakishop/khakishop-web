@@ -1,0 +1,12 @@
+
+        <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="linen" patternUnits="userSpaceOnUse" width="4" height="4">
+              <rect width="4" height="4" fill="#F7F5F3"/>
+              <circle cx="1" cy="1" r="0.5" fill="#E8E5E1" opacity="0.3"/>
+              <circle cx="3" cy="3" r="0.5" fill="#D9D5D0" opacity="0.2"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#linen)"/>
+        </svg>
+      

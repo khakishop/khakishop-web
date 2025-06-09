@@ -1,27 +1,12 @@
+import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import { getNotionPosts, getAllTags, NotionPost } from '../../../../lib/notion';
+import { createSEOMetadata } from '../../../utils/seoMetadata';
 
-export const metadata: Metadata = {
-  title: 'Blog | khaki shop',
-  description: '인테리어와 텍스타일에 대한 유용한 정보와 팁을 제공합니다. 커튼, 블라인드, 스마트 홈 시스템에 대한 전문적인 가이드를 만나보세요.',
-  keywords: '인테리어 블로그, 커튼 가이드, 블라인드 설치, 홈 인테리어, 텍스타일, khaki shop',
-  openGraph: {
-    title: 'Blog | khaki shop',
-    description: '인테리어와 텍스타일에 대한 유용한 정보와 팁을 제공합니다.',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'khaki shop blog'
-      }
-    ],
-    type: 'website',
-    locale: 'ko_KR',
-  }
-};
+// 🎨 SEO 메타데이터 - 인테리어 가이드
+export const metadata = createSEOMetadata('blog');
 
 // 태그 필터 컴포넌트
 async function TagFilter() {

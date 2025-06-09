@@ -3,7 +3,7 @@
 import React, { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { getAllProjects, type ProjectDetail } from '../../../data/projects';
+import { getAllProjects, type Project } from '../../../data/projects';
 
 // 관리자 대시보드 페이지
 export default function AdminPage() {
@@ -207,7 +207,7 @@ export default function AdminPage() {
                           </Link>
                           <button
                             onClick={() => handleEdit(project.slug)}
-                            className="inline-flex items-center px-3 py-1.5 border border-blue-300 rounded-md text-sm font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 transition-colors duration-200"
+                            className="inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
                           >
                             <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
@@ -216,7 +216,7 @@ export default function AdminPage() {
                           </button>
                           <button
                             onClick={() => handleDelete(project.slug)}
-                            className="inline-flex items-center px-3 py-1.5 border border-red-300 rounded-md text-sm font-medium text-red-700 bg-red-50 hover:bg-red-100 transition-colors duration-200"
+                            className="inline-flex items-center px-3 py-1.5 border border-red-300 rounded-md text-sm font-medium text-red-700 bg-white hover:bg-red-50 transition-colors duration-200"
                           >
                             <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
@@ -231,55 +231,50 @@ export default function AdminPage() {
               </table>
             </div>
 
-            {/* 모바일 리스트 */}
+            {/* 모바일 카드 뷰 */}
             <div className="lg:hidden divide-y divide-gray-200">
               {sortedProjects.map((project, index) => (
                 <motion.div
                   key={project.slug}
-                  className="p-6 space-y-4"
+                  className="p-6"
                   variants={itemVariants}
                   custom={index}
                 >
-                  <div className="flex items-start justify-between">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex-shrink-0"></div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-lg font-medium text-gray-900 truncate">{project.title}</h3>
-                      <p className="text-sm text-gray-500 mt-1">{project.location} • {project.year}</p>
-                      <p className="text-xs text-gray-400 font-mono mt-1">{project.slug}</p>
+                      <div className="font-medium text-gray-900 truncate">{project.title}</div>
+                      <div className="text-sm text-gray-500 font-mono">{project.slug}</div>
+                      <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-gray-600">
+                        <span>{project.location}</span>
+                        <span>•</span>
+                        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800">
+                          {getCategoryName(project.category)}
+                        </span>
+                        <span>•</span>
+                        <span>{project.year}</span>
+                      </div>
+                      <div className="mt-3 flex space-x-2">
+                        <Link
+                          href={`/ko/references/${project.slug}`}
+                          className="inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
+                        >
+                          보기
+                        </Link>
+                        <button
+                          onClick={() => handleEdit(project.slug)}
+                          className="inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
+                        >
+                          편집
+                        </button>
+                        <button
+                          onClick={() => handleDelete(project.slug)}
+                          className="inline-flex items-center px-3 py-1.5 border border-red-300 rounded-md text-sm font-medium text-red-700 bg-white hover:bg-red-50 transition-colors duration-200"
+                        >
+                          삭제
+                        </button>
+                      </div>
                     </div>
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 ml-4">
-                      {getCategoryName(project.category)}
-                    </span>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2">
-                    <Link
-                      href={`/ko/references/${project.slug}`}
-                      className="flex-1 inline-flex items-center justify-center px-3 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
-                    >
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                      </svg>
-                      보기
-                    </Link>
-                    <button
-                      onClick={() => handleEdit(project.slug)}
-                      className="flex-1 inline-flex items-center justify-center px-3 py-2 border border-blue-300 rounded-md text-sm font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 transition-colors duration-200"
-                    >
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                      </svg>
-                      편집
-                    </button>
-                    <button
-                      onClick={() => handleDelete(project.slug)}
-                      className="flex-1 inline-flex items-center justify-center px-3 py-2 border border-red-300 rounded-md text-sm font-medium text-red-700 bg-red-50 hover:bg-red-100 transition-colors duration-200"
-                    >
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                      </svg>
-                      삭제
-                    </button>
                   </div>
                 </motion.div>
               ))}
@@ -288,7 +283,7 @@ export default function AdminPage() {
         ) : (
           /* 카드 뷰 */
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
             variants={containerVariants}
           >
             {sortedProjects.map((project, index) => (
@@ -298,68 +293,76 @@ export default function AdminPage() {
                 variants={itemVariants}
                 custom={index}
               >
-                <div className="aspect-[16/10] bg-gray-100"></div>
+                <div className="aspect-video bg-gray-100"></div>
                 <div className="p-6">
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-lg font-medium text-gray-900 leading-tight">{project.title}</h3>
-                      <p className="text-sm text-gray-500 mt-1">{project.location} • {project.year}</p>
-                      <p className="text-xs text-gray-400 font-mono mt-1">{project.slug}</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="font-medium text-gray-900 text-lg leading-tight">{project.title}</h3>
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800 ml-2 flex-shrink-0">
+                      {getCategoryName(project.category)}
+                    </span>
+                  </div>
+                  <div className="text-sm text-gray-600 space-y-1 mb-4">
+                    <div>{project.location}</div>
+                    <div className="flex items-center space-x-4">
+                      <span>{project.year}</span>
+                      <span>•</span>
+                      <span>{project.size}</span>
                     </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                        {getCategoryName(project.category)}
-                      </span>
-                      <div className="text-sm text-gray-500">{project.size}</div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-2">
-                      <Link
-                        href={`/ko/references/${project.slug}`}
-                        className="flex-1 inline-flex items-center justify-center px-3 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
-                      >
-                        보기
-                      </Link>
-                      <button
-                        onClick={() => handleEdit(project.slug)}
-                        className="flex-1 inline-flex items-center justify-center px-3 py-2 border border-blue-300 rounded-md text-sm font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 transition-colors duration-200"
-                      >
-                        편집
-                      </button>
-                      <button
-                        onClick={() => handleDelete(project.slug)}
-                        className="px-3 py-2 border border-red-300 rounded-md text-sm font-medium text-red-700 bg-red-50 hover:bg-red-100 transition-colors duration-200"
-                      >
-                        삭제
-                      </button>
-                    </div>
+                  </div>
+                  <div className="flex space-x-2">
+                    <Link
+                      href={`/ko/references/${project.slug}`}
+                      className="flex-1 inline-flex items-center justify-center px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
+                    >
+                      보기
+                    </Link>
+                    <button
+                      onClick={() => handleEdit(project.slug)}
+                      className="flex-1 inline-flex items-center justify-center px-3 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
+                    >
+                      편집
+                    </button>
+                    <button
+                      onClick={() => handleDelete(project.slug)}
+                      className="inline-flex items-center justify-center px-3 py-2 border border-red-300 rounded-lg text-sm font-medium text-red-700 bg-white hover:bg-red-50 transition-colors duration-200"
+                    >
+                      삭제
+                    </button>
                   </div>
                 </div>
               </motion.div>
             ))}
           </motion.div>
         )}
-      </div>
 
-      {/* 하단 정보 섹션 */}
-      <motion.div 
-        className="bg-white border-t border-gray-200 mt-12"
-        variants={itemVariants}
-      >
-        <div className="max-w-screen-2xl mx-auto px-6 py-8">
-          <div className="text-center space-y-4">
-            <h3 className="text-lg font-medium text-gray-900">프로젝트 관리</h3>
-            <p className="text-sm text-gray-600 max-w-2xl mx-auto">
-              현재 {sortedProjects.length}개의 프로젝트가 등록되어 있습니다. 
-              각 프로젝트를 클릭하여 상세 정보를 확인하거나 편집할 수 있습니다.
-            </p>
-            <div className="text-xs text-gray-500">
-              마지막 업데이트: {new Date().toLocaleDateString('ko-KR')}
-            </div>
+        {/* 하단 액션 영역 */}
+        <motion.div 
+          className="mt-12 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0"
+          variants={itemVariants}
+        >
+          <div className="text-sm text-gray-600">
+            총 {sortedProjects.length}개의 프로젝트가 있습니다.
           </div>
-        </div>
-      </motion.div>
+          
+          <div className="flex items-center space-x-4">
+            <Link
+              href="/ko/admin/images"
+              className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
+            >
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              이미지 관리
+            </Link>
+            <button className="inline-flex items-center px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors duration-200">
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+              새 프로젝트
+            </button>
+          </div>
+        </motion.div>
+      </div>
     </motion.div>
   );
 } 

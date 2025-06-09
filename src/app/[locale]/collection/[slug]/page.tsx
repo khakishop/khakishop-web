@@ -28,11 +28,11 @@ export async function generateMetadata({ params }: CollectionPageProps): Promise
 
   return {
     title: `${collection.title} | khaki shop`,
-    description: collection.summary,
+    description: collection.description,
     keywords: `${collection.title}, ${getCollectionCategoryName(collection.category)}, 텍스타일, 인테리어, khaki shop`,
     openGraph: {
       title: `${collection.title} | khaki shop`,
-      description: collection.summary,
+      description: collection.description,
       images: [
         {
           url: collection.image,
@@ -122,7 +122,7 @@ export default function CollectionDetailPage({ params }: CollectionPageProps) {
                 </h1>
                 
                 <p className="text-xl lg:text-2xl text-gray-600 font-light leading-relaxed">
-                  {collection.summary}
+                  {collection.description}
                 </p>
               </div>
 
@@ -202,7 +202,7 @@ export default function CollectionDetailPage({ params }: CollectionPageProps) {
                           {relatedCollection.title}
                         </h3>
                         <p className="text-gray-600 font-light leading-relaxed">
-                          {relatedCollection.summary}
+                          {relatedCollection.description}
                         </p>
                       </div>
                     </div>

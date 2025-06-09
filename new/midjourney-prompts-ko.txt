@@ -1,0 +1,127 @@
+🎨 KHAKISHOP MIDJOURNEY 프롬프트 지침서
+================================================================
+📌 RIGAS 가구 (rigas-furniture.gr) 모티브 반영
+📌 카키샵 감성: 소프트 미니멀, 여백, 자연광, 중성톤
+📌 교체 순서: 우선순위별 (1순위 → 2순위 → 3순위)
+
+================================================================
+🔥 1순위 (Priority 1) - 핵심 랜딩 이미지
+================================================================
+
+1. 모바일용 세로형 히어로 이미지
+prompt: ultra-photorealistic portrait orientation interior photograph, 8K architectural magazine quality, modern minimalist living room with khaki beige neutral color palette, floor-to-ceiling windows with natural daylight, 2-3 USM modular furniture pieces in cream and wood tones, eye-level 50mm lens, shallow depth of field, soft natural lighting, city skyline view background, spacious room with generous white space, clean lines, no text, no people, architectural digest mood --ar 9:16 --v 6
+
+2. 랜딩 페이지 메인 배경 이미지
+prompt: ultra-photorealistic 8K interior magazine photography, expansive modern living space with khaki beige color scheme, floor-to-ceiling windows with Seoul city view, 2-3 USM modular furniture pieces strategically placed, natural sunlight filtering through sheer curtains, eye-level 50mm lens, shallow depth of field, generous white space, soft minimalist aesthetic, no text, no people, architectural digest style --ar 16:9 --v 6
+
+3. 브랜드 라이프스타일 이미지
+prompt: ultra-photorealistic 8K lifestyle interior photograph, serene minimalist living room with khaki beige neutral tones, large windows with natural light, 2-3 USM modular furniture pieces in cream and wood finishes, soft textiles and curtains, eye-level 50mm lens, shallow depth of field, airy spacious feeling, contemporary Korean apartment aesthetic, no text, no people --ar 16:9 --v 6
+
+4. 컬렉션 개요 쇼케이스 이미지
+prompt: ultra-photorealistic 8K interior showcase photography, modern living space displaying various window treatments, beige khaki color palette, floor-to-ceiling windows with different curtain and blind styles, 2-3 USM modular furniture pieces, natural lighting, eye-level 50mm lens, shallow depth of field, spacious room layout, architectural digest quality, no text, no people --ar 16:9 --v 6
+
+5. OUR PROJECTS 섹션 배경 이미지
+prompt: ultra-photorealistic 8K architectural interior photography, sophisticated modern office space with khaki beige tones, large windows with custom window treatments, 2-3 USM modular office furniture pieces, natural daylight, eye-level 50mm lens, shallow depth of field, professional minimalist aesthetic, city view background, spacious open layout, no text, no people --ar 16:9 --v 6
+
+6. 프로젝트 쇼케이스 이미지
+prompt: ultra-photorealistic 8K interior design showcase photography, elegant modern residential space with khaki beige color scheme, floor-to-ceiling windows with premium curtains, 2-3 USM modular furniture pieces, soft natural lighting, eye-level 50mm lens, shallow depth of field, luxury minimalist aesthetic, Seoul cityscape view, generous white space, no text, no people --ar 16:9 --v 6
+
+7. 에센셜 리넨 컬렉션 이미지
+prompt: ultra-photorealistic 8K textile detail photography, luxurious linen curtains in natural beige tones, soft natural lighting highlighting fabric texture, modern minimalist interior background, 2-3 USM modular furniture pieces, eye-level 50mm lens, shallow depth of field, elegant draping, khaki color palette, no text, no people --ar 16:9 --v 6
+
+8. 모던 셰어 시리즈 이미지
+prompt: ultra-photorealistic 8K interior photography, modern sheer curtains filtering natural light, khaki beige minimalist living space, floor-to-ceiling windows, 2-3 USM modular furniture pieces in neutral tones, eye-level 50mm lens, shallow depth of field, ethereal lighting effect, architectural digest quality, no text, no people --ar 16:9 --v 6
+
+9. 프리미엄 베네치안 블라인드 이미지
+prompt: ultra-photorealistic 8K interior detail photography, premium venetian blinds in warm wood tones, modern minimalist room with khaki beige palette, natural daylight streaming through slats, 2-3 USM modular furniture pieces, eye-level 50mm lens, shallow depth of field, sophisticated lighting patterns, architectural magazine quality, no text, no people --ar 16:9 --v 6
+
+10. 우드 텍스처 블라인드 이미지
+prompt: ultra-photorealistic 8K close-up interior photography, natural wood texture blinds with warm grain patterns, khaki beige minimalist interior, soft natural lighting, 2-3 USM modular furniture pieces in background, eye-level 50mm lens, shallow depth of field, tactile wood surface detail, architectural digest aesthetic, no text, no people --ar 16:9 --v 6
+
+11. 스마트 자동화 시스템 이미지
+prompt: ultra-photorealistic 8K modern technology interior photography, automated curtain system in contemporary living space, khaki beige color scheme, floor-to-ceiling smart windows, 2-3 USM modular furniture pieces, natural lighting, eye-level 50mm lens, shallow depth of field, high-tech minimalist aesthetic, no text, no people --ar 16:9 --v 6
+
+12. 무선 모터 컬렉션 이미지
+prompt: ultra-photorealistic 8K interior technology photography, wireless motorized window treatments, modern minimalist space with khaki beige tones, large windows with automated blinds, 2-3 USM modular furniture pieces, natural daylight, eye-level 50mm lens, shallow depth of field, clean tech aesthetic, no text, no people --ar 16:9 --v 6
+
+13. 디자이너 하드웨어 이미지
+prompt: ultra-photorealistic 8K detail photography, premium curtain hardware and brackets in brushed metal finishes, khaki beige minimalist interior background, natural lighting highlighting metal textures, 2-3 USM modular furniture pieces, eye-level 50mm lens, shallow depth of field, luxury hardware details, no text, no people --ar 16:9 --v 6
+
+14. 럭셔리 타이백 이미지
+prompt: ultra-photorealistic 8K textile detail photography, elegant curtain tiebacks in natural materials, khaki beige minimalist interior, soft natural lighting, 2-3 USM modular furniture pieces in background, eye-level 50mm lens, shallow depth of field, luxury textile accessories, architectural magazine quality, no text, no people --ar 16:9 --v 6
+
+================================================================
+🏠 2순위 (Priority 2) - 레퍼런스 프로젝트 이미지
+================================================================
+
+15. Minimal Residence Bundang - 메인 히어로 샷
+prompt: ultra-photorealistic 8K residential interior photography, minimal modern Korean apartment in Bundang, khaki beige color palette, floor-to-ceiling windows with city view, 2-3 USM modular furniture pieces, natural daylight, eye-level 50mm lens, shallow depth of field, spacious minimalist living room, contemporary Korean residential aesthetic, no text, no people --ar 16:9 --v 6
+
+16. Minimal Residence Bundang - 갤러리 이미지 1
+prompt: ultra-photorealistic 8K interior detail photography, minimal bedroom with khaki beige tones, large windows with soft curtains, 2-3 USM modular bedroom furniture, natural lighting, eye-level 50mm lens, shallow depth of field, serene minimalist atmosphere, Korean residential style, no text, no people --ar 16:9 --v 6
+
+17. Minimal Residence Bundang - 갤러리 이미지 2
+prompt: ultra-photorealistic 8K interior photography, minimal dining area with khaki beige palette, floor-to-ceiling windows, 2-3 USM modular dining furniture pieces, natural sunlight, eye-level 50mm lens, shallow depth of field, clean minimalist design, Korean apartment aesthetic, no text, no people --ar 16:9 --v 6
+
+18. Minimal Residence Bundang - 갤러리 이미지 3
+prompt: ultra-photorealistic 8K interior photography, minimal study room with khaki beige tones, large windows with blinds, 2-3 USM modular office furniture, natural daylight, eye-level 50mm lens, shallow depth of field, peaceful work environment, Korean residential interior, no text, no people --ar 16:9 --v 6
+
+19. Classic Cafe Hongdae - 메인 히어로 샷
+prompt: ultra-photorealistic 8K commercial interior photography, classic modern cafe in Hongdae with khaki beige color scheme, large windows with custom curtains, 2-3 USM modular cafe furniture, natural lighting, eye-level 50mm lens, shallow depth of field, warm inviting atmosphere, Korean cafe aesthetic, no text, no people --ar 16:9 --v 6
+
+20. Classic Cafe Hongdae - 갤러리 이미지 1
+prompt: ultra-photorealistic 8K cafe interior detail, classic seating area with khaki beige tones, windows with soft curtains, 2-3 USM modular chairs and tables, natural daylight, eye-level 50mm lens, shallow depth of field, cozy coffee shop atmosphere, Korean commercial interior, no text, no people --ar 16:9 --v 6
+
+21. Classic Cafe Hongdae - 갤러리 이미지 2
+prompt: ultra-photorealistic 8K cafe interior photography, classic counter area with khaki beige palette, large windows with window treatments, 2-3 USM modular furniture pieces, natural lighting, eye-level 50mm lens, shallow depth of field, professional cafe environment, Korean hospitality design, no text, no people --ar 16:9 --v 6
+
+22. Classic Cafe Hongdae - 갤러리 이미지 3
+prompt: ultra-photorealistic 8K cafe detail photography, classic reading corner with khaki beige tones, windows with blinds, 2-3 USM modular lounge furniture, soft natural lighting, eye-level 50mm lens, shallow depth of field, intimate cafe space, Korean commercial aesthetic, no text, no people --ar 16:9 --v 6
+
+23. Contemporary House Goyang - 메인 히어로 샷
+prompt: ultra-photorealistic 8K residential interior photography, contemporary house in Goyang with khaki beige color scheme, floor-to-ceiling windows with premium curtains, 2-3 USM modular furniture pieces, natural daylight, eye-level 50mm lens, shallow depth of field, modern Korean house interior, spacious living area, no text, no people --ar 16:9 --v 6
+
+24. Contemporary House Goyang - 갤러리 이미지 1
+prompt: ultra-photorealistic 8K house interior detail, contemporary kitchen with khaki beige tones, large windows with window treatments, 2-3 USM modular kitchen furniture, natural lighting, eye-level 50mm lens, shallow depth of field, modern Korean residential kitchen, no text, no people --ar 16:9 --v 6
+
+25. Contemporary House Goyang - 갤러리 이미지 2
+prompt: ultra-photorealistic 8K house interior photography, contemporary master bedroom with khaki beige palette, floor-to-ceiling windows with curtains, 2-3 USM modular bedroom furniture, natural sunlight, eye-level 50mm lens, shallow depth of field, luxurious Korean residential bedroom, no text, no people --ar 16:9 --v 6
+
+26. Contemporary House Goyang - 갤러리 이미지 3
+prompt: ultra-photorealistic 8K house interior detail, contemporary bathroom with khaki beige tones, windows with privacy blinds, 2-3 USM modular bathroom furniture, natural daylight, eye-level 50mm lens, shallow depth of field, modern Korean residential bathroom, no text, no people --ar 16:9 --v 6
+
+27. Scandinavian Apartment Mapo - 메인 히어로 샷
+prompt: ultra-photorealistic 8K Scandinavian interior photography, modern apartment in Mapo with khaki beige and Nordic elements, floor-to-ceiling windows with natural curtains, 2-3 USM modular furniture in wood and cream tones, natural daylight, eye-level 50mm lens, shallow depth of field, Scandinavian-Korean fusion aesthetic, no text, no people --ar 16:9 --v 6
+
+================================================================
+🛍️ 3순위 (Priority 3) - 제품 상세 이미지
+================================================================
+
+[계속되는 프롬프트들은 제품별로 동일한 스타일 가이드라인을 따라 작성...]
+
+================================================================
+📝 프롬프트 작성 가이드라인
+================================================================
+
+🎨 필수 포함 요소:
+- ultra-photorealistic, 8K interior magazine photography style
+- eye-level, 50mm lens, shallow depth of field
+- natural lighting, architectural digest 무드
+- khaki beige color palette (카키샵 감성)
+- 2-3 USM modular furniture pieces 배치
+- spacious room with generous white space
+- no text, no people
+- Seoul city view or Korean aesthetic elements
+
+🏠 공간별 특화 요소:
+- Living Room: floor-to-ceiling windows, soft curtains
+- Bedroom: serene atmosphere, soft textiles
+- Kitchen: clean lines, natural materials
+- Office: professional minimalist aesthetic
+- Cafe: warm inviting atmosphere
+
+🔧 기술적 설정:
+- Aspect Ratio: --ar 16:9 (일반), --ar 9:16 (모바일)
+- Version: --v 6
+- Quality: architectural magazine standard
+- Lighting: natural daylight preferred 
