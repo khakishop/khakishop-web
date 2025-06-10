@@ -7,17 +7,21 @@ import { getCategoryIcon, getCategoryDisplayName } from '../../utils/constants/c
 import ImageUploadZone from './ImageUploadZone';
 import { LocalDateDisplay } from '../LocalTimeDisplay';
 import VirtualizedImageGrid from './VirtualizedImageGrid';
+import DraggableImageGrid from './DraggableImageGrid';
 import { ImageGridSkeleton } from '../ui/Skeleton';
 
 interface AdminImagesBrowserProps {
   images: ImageMapping[];
   onImageSelect?: (image: ImageMapping) => void;
   onImageEdit?: (image: ImageMapping) => void;
+  onImageDelete?: (image: ImageMapping) => void;
+  onImageReorder?: (reorderedImages: ImageMapping[]) => Promise<void>;
   selectedImage?: ImageMapping | null;
   onImagesUpdate?: () => void;
   uploadCategory?: string;
   uploadSubcategory?: string;
   categoryDisplayName?: string;
+  enableDragReorder?: boolean; // 드래그 순서 변경 활성화 여부
 }
 
 // 🖼️ 최적화된 이미지 카드 컴포넌트
@@ -25,12 +29,14 @@ const ImageCard = memo(({
   image, 
   isSelected, 
   onClick, 
-  onEdit 
+  onEdit,
+  onDelete
 }: { 
   image: ImageMapping; 
   isSelected: boolean; 
   onClick: () => void; 
   onEdit: () => void; 
+  onDelete?: () => void;
 }) => {
   const [imageError, setImageError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -104,6 +110,17 @@ const ImageCard = memo(({
             >
               편집
             </button>
+            {onDelete && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onDelete();
+                }}
+                className="bg-red-500 text-white px-3 py-1 rounded-md text-sm hover:scale-110 hover:bg-red-600 transition-all shadow-md"
+              >
+                🗑️
+              </button>
+            )}
           </div>
         </div>
 
@@ -256,11 +273,14 @@ export default function AdminImagesBrowser({
   images, 
   onImageSelect, 
   onImageEdit, 
+  onImageDelete,
+  onImageReorder,
   selectedImage,
   onImagesUpdate,
   uploadCategory,
   uploadSubcategory,
-  categoryDisplayName
+  categoryDisplayName,
+  enableDragReorder
 }: AdminImagesBrowserProps) {
   // 📊 디버깅 로그 추가
   console.log('🖼️ AdminImagesBrowser 초기화:', {
@@ -364,6 +384,10 @@ export default function AdminImagesBrowser({
     onImageEdit?.(image);
   }, [onImageEdit]);
 
+  const handleImageDelete = useCallback((image: ImageMapping) => {
+    onImageDelete?.(image);
+  }, [onImageDelete]);
+
   // 업로드 새로고침
   const handleUploadSuccess = useCallback(() => {
     setUploadKey(prev => prev + 1);
@@ -438,15 +462,18 @@ export default function AdminImagesBrowser({
         {/* 가상화된 이미지 그리드 */}
         <div className="relative">
           <Suspense fallback={<ImageGridSkeleton count={12} />}>
-            <VirtualizedImageGrid
+            <DraggableImageGrid
               images={images}
               onImageSelect={onImageSelect}
               onImageEdit={onImageEdit}
+              onImageDelete={onImageDelete}
+              onImageReorder={onImageReorder}
               selectedImage={selectedImage}
               onImagesUpdate={handleImagesUpdate}
               uploadCategory={uploadCategory}
               uploadSubcategory={uploadSubcategory}
               loading={isImageGridLoading}
+              enableDrag={enableDragReorder}
             />
           </Suspense>
         </div>

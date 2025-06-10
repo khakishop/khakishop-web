@@ -1,0 +1,189 @@
+===============================================================================
+KHAKISHOP 웹사이트 비어있는 이미지 카드 분석 리포트
+===============================================================================
+
+생성일시: 2025년 1월 9일
+목적: 각 카테고리별 비어있는 이미지 카드 파악 및 Midjourney v7 프롬프트 제안
+
+===============================================================================
+
+📊 전체 요약
+===============================================================================
+
+총 분석 카테고리: 7개 (CURTAIN, BLIND, MOTORIZED, REFERENCES, PROJECTS, COLLECTION, ABOUT)
+전체 비어있는 카드: 약 85-90개
+우선순위 높은 항목: 제품 이미지 > 레퍼런스 갤러리 > 브랜드 이미지
+
+===============================================================================
+
+1. **CURTAIN (커튼)**
+===============================================================================
+   - 비어 있는 카드 개수: 5개 (메인 제품 이미지들이 모두 placeholder)
+   - 필요 스타일: 거실, 침실, 서재, 모던 아파트, 클래식 공간
+   
+   📝 현재 상태: 모든 커튼 제품이 /images/hero/hero.jpg를 공유 사용 중
+   
+   🎨 Midjourney 프롬프트 예시:
+   
+   ▸ Sheer Curtain (쉬어 커튼):
+   "ultra-photorealistic modern bedroom with flowing sheer curtains, soft natural daylight filtering through fabric, minimalist Scandinavian interior, eye-level 50mm lens, f/2.2, warm neutral tones, cinematic lighting, USM modular furniture, Architectural Digest style"
+   
+   ▸ Classic Curtain (클래식 커튼):
+   "ultra-photorealistic traditional living room with heavy classic curtains, rich burgundy velvet fabric, formal dining area, golden hour lighting, eye-level 50mm lens, f/2.2, sophisticated color palette, Architectural Digest style"
+   
+   ▸ Modern Curtain (모던 커튼):
+   "ultra-photorealistic contemporary open-plan living space with sleek modern curtains, clean lines, floor-to-ceiling windows, natural morning light, eye-level 50mm lens, f/2.2, neutral minimalist tones, Architectural Digest style"
+   
+   ▸ Linen White (린넨 화이트):
+   "ultra-photorealistic serene bedroom with pure white linen curtains, organic texture, gentle breeze effect, natural morning sunlight, Japandi interior style, eye-level 50mm lens, f/2.2, soft neutral palette, Architectural Digest style"
+   
+   ▸ Pleats Ivory (플리츠 아이보리):
+   "ultra-photorealistic elegant study room with pleated ivory curtains, geometric fold patterns, classical library setting, warm ambient lighting, eye-level 50mm lens, f/2.2, sophisticated neutral tones, Architectural Digest style"
+
+===============================================================================
+
+2. **BLIND (블라인드)**
+===============================================================================
+   - 비어 있는 카드 개수: 1개 (fabric-blind가 placeholder 사용)
+   - 필요 스타일: 사무실, 주방, 베드룸, 현대적 공간
+   
+   📝 현재 상태: Wood Blind, Aluminum Blind는 이미지 있음, Fabric Blind만 부족
+   
+   🎨 Midjourney 프롬프트 예시:
+   
+   ▸ Fabric Blind (패브릭 블라인드):
+   "ultra-photorealistic modern kitchen with textured fabric roller blinds, soft natural weave pattern, contemporary cooking space, controlled daylight, eye-level 50mm lens, f/2.2, warm neutral tones, USM modular cabinets, Architectural Digest style"
+
+===============================================================================
+
+3. **MOTORIZED (전동 시스템)**
+===============================================================================
+   - 비어 있는 카드 개수: 0개
+   - 현재 상태: 모든 전동 제품 이미지 정상 (collections 폴더 이미지 사용)
+   
+   📝 참고: 스마트홈, 전동 커튼, 전동 블라인드 시스템 이미지 모두 존재
+
+===============================================================================
+
+4. **REFERENCES (레퍼런스/시공 사례)**
+===============================================================================
+   - 비어 있는 카드 개수: 약 20-25개 (갤러리 이미지들 대부분 .svg placeholder)
+   - 필요 스타일: 다양한 상업/주거 공간, 실제 시공 현장, Before/After
+   
+   📝 현재 상태: 메인 이미지는 일부 존재, 갤러리 이미지들이 대부분 .svg placeholder
+   
+   🎨 Midjourney 프롬프트 예시:
+   
+   ▸ Modern Office Gangnam (강남 모던 오피스):
+   "ultra-photorealistic sleek corporate office space with aluminum blinds, floor-to-ceiling windows, Seoul city view, professional business environment, natural daylight, eye-level 50mm lens, f/2.2, modern neutral palette, Architectural Digest style"
+   
+   ▸ Minimal Residence Bundang (분당 미니멀 레지던스):
+   "ultra-photorealistic minimalist Korean apartment living room with white linen curtains, clean modern furniture, abundant natural light, serene atmosphere, eye-level 50mm lens, f/2.2, soft neutral tones, Architectural Digest style"
+   
+   ▸ Classic Cafe Hongdae (홍대 클래식 카페):
+   "ultra-photorealistic cozy vintage cafe interior with warm fabric curtains, exposed brick walls, coffee bar setup, ambient warm lighting, eye-level 50mm lens, f/2.2, warm earth tones, cafe atmosphere, Architectural Digest style"
+   
+   ▸ Contemporary House Goyang (고양 컨템포러리 하우스):
+   "ultra-photorealistic smart home living room with automated blinds, IoT control panel, modern Korean residence, integrated technology, natural lighting, eye-level 50mm lens, f/2.2, contemporary neutral palette, Architectural Digest style"
+   
+   ▸ Scandinavian Apartment Mapo (마포 스칸디나비아 아파트):
+   "ultra-photorealistic Nordic-style Korean apartment with light cotton curtains, natural wood accents, hygge atmosphere, soft natural lighting, eye-level 50mm lens, f/2.2, light neutral Scandinavian palette, Architectural Digest style"
+
+===============================================================================
+
+5. **PROJECTS (프로젝트)**
+===============================================================================
+   - 비어 있는 카드 개수: 1개 (메인 배경 이미지는 존재)
+   - 필요 스타일: 프로젝트 포트폴리오, 시공 과정, 완성 공간
+   
+   📝 현재 상태: our-projects-bg.jpg는 존재, 추가 프로젝트 이미지 필요할 수 있음
+   
+   🎨 Midjourney 프롬프트 예시:
+   
+   ▸ Project Showcase:
+   "ultra-photorealistic portfolio montage of various interior spaces with different window treatments, curtains and blinds installations, professional photography style, multiple room types, eye-level 50mm lens, f/2.2, cohesive neutral palette, Architectural Digest style"
+
+===============================================================================
+
+6. **COLLECTION (컬렉션)**
+===============================================================================
+   - 비어 있는 카드 개수: 0개
+   - 현재 상태: 모든 컬렉션 이미지 정상 존재
+   
+   📝 참고: Essential Linen, Modern Sheer, Venetian Premium 등 모든 컬렉션 이미지 완비
+
+===============================================================================
+
+7. **ABOUT (브랜드 소개)**
+===============================================================================
+   - 비어 있는 카드 개수: 약 50-60개 (about 카테고리 이미지들 대부분 부재)
+   - 필요 스타일: 회사 소개, 팀 워크스페이스, 제작 과정, 품질 관리, 매장 공간
+   
+   📝 현재 상태: ABOUT 페이지용 이미지들이 대부분 없는 상태 (imageMapping.json 기준)
+   
+   🎨 Midjourney 프롬프트 예시:
+   
+   ▸ Company Story (회사 이야기):
+   "ultra-photorealistic elegant textile showroom with fabric samples, design consultation area, Korean interior design studio, professional lighting, eye-level 50mm lens, f/2.2, sophisticated neutral tones, Architectural Digest style"
+   
+   ▸ Team Workspace (팀 작업 공간):
+   "ultra-photorealistic modern design studio with textile designers working, fabric cutting table, color swatches, creative workspace, natural lighting, eye-level 50mm lens, f/2.2, creative professional environment, Architectural Digest style"
+   
+   ▸ Manufacturing Process (제작 과정):
+   "ultra-photorealistic high-end textile manufacturing facility, precision sewing machines, quality fabric production, artisan craftsmanship, industrial lighting, eye-level 50mm lens, f/2.2, professional manufacturing environment, Architectural Digest style"
+   
+   ▸ Quality Control (품질 관리):
+   "ultra-photorealistic quality inspection station with fabric testing equipment, color matching tools, professional quality control environment, precise lighting, eye-level 50mm lens, f/2.2, technical professional setting, Architectural Digest style"
+   
+   ▸ Certifications (인증서 및 자격증):
+   "ultra-photorealistic professional office wall with framed certifications, quality awards, textile industry credentials, elegant display, ambient lighting, eye-level 50mm lens, f/2.2, corporate professional environment, Architectural Digest style"
+
+===============================================================================
+
+🎯 우선순위 권장사항
+===============================================================================
+
+🔥 긴급 (1순위):
+   1. CURTAIN 카테고리 - 5개 제품 이미지 (메인 제품 페이지)
+   2. REFERENCES 갤러리 - 주요 프로젝트 15개 이미지
+   3. BLIND Fabric Blind - 1개 제품 이미지
+
+⚡ 중요 (2순위):
+   4. ABOUT 회사 소개 - 핵심 브랜드 이미지 5개
+   5. REFERENCES 추가 갤러리 - 나머지 프로젝트 이미지들
+
+📋 일반 (3순위):
+   6. ABOUT 세부 카테고리 - 제작 과정, 품질 관리 등
+   7. PROJECTS 추가 포트폴리오 이미지
+
+===============================================================================
+
+📝 Midjourney v7 공통 스타일 가이드라인
+===============================================================================
+
+✅ 모든 프롬프트 공통 요소:
+   - ultra-photorealistic
+   - 8K interior magazine photography style
+   - cinematic natural lighting
+   - eye-level, 50mm prime lens
+   - shallow depth of field, f/2.2 aperture
+   - realistic materials, neutral tones
+   - Architectural Digest 스타일
+
+🏠 공간별 특화 요소:
+   - 거실: USM 모듈러 가구, 넓은 개방감
+   - 침실: 세레니티, 부드러운 조명
+   - 사무실: 프로페셔널, 도시 전망
+   - 카페: 따뜻함, 빈티지 요소
+   - 매장: 쇼룸 스타일, 제품 진열
+
+===============================================================================
+
+📧 문의 및 업데이트
+===============================================================================
+
+리포트 생성: 2025년 1월 9일
+다음 업데이트: 이미지 제작 완료 후
+담당: khakishop 개발팀
+
+=============================================================================== 

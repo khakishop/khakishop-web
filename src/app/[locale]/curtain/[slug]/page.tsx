@@ -1,25 +1,42 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
-import { curtainProducts } from '../../../../data/products';
-import CurtainProductView from '../../../../components/CurtainProductView';
+import { Metadata } from 'next';
+import { getCurtainProductBySlug, getAllCurtainProducts } from '../../../../data/curtain';
+import { createCurtainMetadata } from '../../../../utils/seoMetadata';
+import CurtainDetailPage from '../../../../components/CurtainDetailPage';
 
 interface CurtainDetailPageProps {
-  params: { slug: string };
+  params: { slug: string; locale: string };
 }
 
 // generateStaticParams 함수 추가
 export async function generateStaticParams() {
-  return curtainProducts.map((product) => ({
+  const products = getAllCurtainProducts();
+  return products.map((product) => ({
     slug: product.slug,
   }));
 }
 
-export default function CurtainDetailPage({ params }: CurtainDetailPageProps) {
-  const product = curtainProducts.find((p) => p.slug === params.slug);
+// 동적 메타데이터 생성
+export async function generateMetadata({ params }: CurtainDetailPageProps): Promise<Metadata> {
+  const product = getCurtainProductBySlug(params.slug);
+  
+  if (!product) {
+    return {
+      title: '제품을 찾을 수 없습니다 - KHAKISHOP',
+      description: '요청하신 커튼 제품을 찾을 수 없습니다.',
+    };
+  }
+  
+  return createCurtainMetadata(product, params.locale);
+}
+
+export default function CurtainDetailPageRoute({ params }: CurtainDetailPageProps) {
+  const product = getCurtainProductBySlug(params.slug);
 
   if (!product) {
     notFound();
   }
 
-  return <CurtainProductView product={product} />;
+  return <CurtainDetailPage product={product} />;
 } 

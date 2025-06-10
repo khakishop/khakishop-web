@@ -21,6 +21,7 @@ export interface ImageMetadata {
   keywords?: string[];
   subject?: string[];
   uploadedAt?: string;
+  slug?: string; // 추가: 제품/프로젝트 슬러그
 }
 
 export interface ImageMapping {
@@ -30,6 +31,7 @@ export interface ImageMapping {
   isProtected: boolean;
   createdAt: string;
   metadata?: ImageMetadata; // metadata를 옵셔널로 변경
+  displayOrder?: number; // 추가: 이미지 표시 순서
   // 확장된 속성들 - 모두 옵셔널로 안전하게 처리
   src?: string;
   fileName?: string;

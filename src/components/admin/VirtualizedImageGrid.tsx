@@ -8,6 +8,7 @@ interface VirtualizedImageGridProps {
   images: ImageMapping[];
   onImageSelect?: (image: ImageMapping) => void;
   onImageEdit?: (image: ImageMapping) => void;
+  onImageDelete?: (image: ImageMapping) => void;
   selectedImage?: ImageMapping | null;
   onImagesUpdate?: () => void;
   uploadCategory?: string;
@@ -24,6 +25,7 @@ export default function VirtualizedImageGrid({
   images,
   onImageSelect,
   onImageEdit,
+  onImageDelete,
   selectedImage,
   onImagesUpdate,
   uploadCategory,
@@ -97,14 +99,17 @@ export default function VirtualizedImageGrid({
               onImagesUpdate?.();
             }}
             onDelete={(imageId: string) => {
-              console.log('Image deleted:', imageId);
-              onImagesUpdate?.();
+              console.log('VirtualizedImageGrid: Image delete requested:', imageId);
+              const imageToDelete = images.find(img => img.id === imageId);
+              if (imageToDelete && onImageDelete) {
+                onImageDelete(imageToDelete);
+              }
             }}
           />
         </div>
       </div>
     );
-  }, [images, columnCount, onImagesUpdate]);
+  }, [images, columnCount, onImagesUpdate, onImageDelete]);
 
   // 로딩 상태
   if (loading) {

@@ -1,5 +1,16 @@
 // placeholder 이미지 생성 유틸리티
 
+// UTF-8 문자열을 안전하게 base64로 인코딩하는 함수
+const utf8ToBase64 = (str: string): string => {
+  try {
+    // 브라우저 환경에서 UTF-8을 안전하게 인코딩
+    return btoa(unescape(encodeURIComponent(str)));
+  } catch (error) {
+    // 폴백: URI 인코딩만 사용
+    return encodeURIComponent(str);
+  }
+};
+
 export const createPlaceholderDataURL = (
   width: number = 400, 
   height: number = 300,
@@ -14,7 +25,12 @@ export const createPlaceholderDataURL = (
     </svg>
   `;
   
-  return `data:image/svg+xml;base64,${btoa(svg)}`;
+  try {
+    return `data:image/svg+xml;base64,${utf8ToBase64(svg)}`;
+  } catch (error) {
+    // base64 인코딩 실패 시 URI 인코딩 사용
+    return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+  }
 };
 
 export const PLACEHOLDER_DATA_URL = createPlaceholderDataURL(400, 300, '이미지 로딩 중...');
@@ -35,7 +51,12 @@ export const createErrorPlaceholder = (width: number = 400, height: number = 300
     </svg>
   `;
   
-  return `data:image/svg+xml;base64,${btoa(svg)}`;
+  try {
+    return `data:image/svg+xml;base64,${utf8ToBase64(svg)}`;
+  } catch (error) {
+    // base64 인코딩 실패 시 URI 인코딩 사용
+    return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+  }
 };
 
 export const ERROR_PLACEHOLDER_URL = createErrorPlaceholder(400, 300); 

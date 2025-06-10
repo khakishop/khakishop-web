@@ -1,464 +1,433 @@
 // ================================================================================
-// 🔒 KHAKISHOP 이미지 매핑 시스템 (서버 전용)
+// 🎯 KHAKISHOP 이미지 매핑 서버 유틸리티
 // ================================================================================
-// 🎯 목적: fs 모듈을 사용하는 서버 사이드 함수들
-// 🛡️ 보안: 클라이언트에서 접근 불가, API 라우트에서만 사용
+// 🎨 디자인 모티브: https://www.rigas-furniture.gr/
+// 🔧 관리자 연동: /ko/admin/images
 
-import fs from 'fs';
-import path from 'path';
-import type {
-  ImageMapping,
-  PersistentImageStore,
-  ImageMetadata,
-} from './imageMap';
+import { isServer, ensureServerEnvironment } from '../lib/isServer';
+import { fs, path, fsSync, checkServerModules } from '../lib/serverUtils';
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const STORE_FILE = path.join(DATA_DIR, 'persistent-image-store.json');
+// ================================================================================
+// 💾 이미지 매핑 저장소 타입 정의
+// ================================================================================
 
-// 🔍 서버 환경 확인
-function ensureServerEnvironment() {
-  if (typeof window !== 'undefined') {
-    throw new Error('❌ 이 함수는 서버에서만 사용할 수 있습니다.');
-  }
-}
-
-// 📁 데이터 폴더 생성
-function ensureDataDirectory() {
-  ensureServerEnvironment();
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
-  }
-}
-
-// 💾 영구 저장소 로드
-function loadPersistentStore(): PersistentImageStore {
-  ensureServerEnvironment();
-  ensureDataDirectory();
-
-  if (!fs.existsSync(STORE_FILE)) {
-    const defaultStore: PersistentImageStore = {
-      version: '1.0.0',
-      lastSync: null,
-      protectedImages: {},
-      mappings: {},
-    };
-    savePersistentStore(defaultStore);
-    return defaultStore;
-  }
-
-  try {
-    const data = fs.readFileSync(STORE_FILE, 'utf8');
-    return JSON.parse(data);
-  } catch (error) {
-    console.error('🚨 저장소 로드 실패:', error);
-    const defaultStore: PersistentImageStore = {
-      version: '1.0.0',
-      lastSync: null,
-      protectedImages: {},
-      mappings: {},
-    };
-    return defaultStore;
-  }
-}
-
-// 💾 영구 저장소 저장
-function savePersistentStore(store: PersistentImageStore): void {
-  ensureServerEnvironment();
-  ensureDataDirectory();
-
-  try {
-    fs.writeFileSync(STORE_FILE, JSON.stringify(store, null, 2), 'utf8');
-  } catch (error) {
-    console.error('🚨 저장소 저장 실패:', error);
-    throw error;
-  }
-}
-
-// 🎯 카테고리별 우선순위 (1=최고 우선순위)
-const categoryPriority: Record<string, number> = {
-  hero: 1,
-  landing: 1,
-  projects: 2,
-  collections: 3,
-  references: 4,
-  products: 5,
-  gallery: 6,
-  blog: 7,
-  about: 8,
-  future: 9,
-};
-
-// 🏷️ 카테고리별 메타데이터 생성
-const generateMetadataForCategory = (
-  category: string,
-  description: string
-): ImageMetadata => {
-  const priority = categoryPriority[category] || 5;
-
-  const categoryTags: Record<string, Partial<ImageMetadata>> = {
-    hero: {
-      alt: `khaki shop - ${description}`,
-      title: `감성적인 텍스타일 브랜드 khaki shop - ${description}`,
-      dataStyle: 'hero-elegant',
-    },
-    landing: {
-      alt: `khaki shop 홈페이지 - ${description}`,
-      title: `공간을 완성하는 텍스타일 - ${description}`,
-      dataStyle: 'landing-warm',
-    },
-    projects: {
-      alt: `khaki shop 프로젝트 - ${description}`,
-      title: `완성된 공간들 - ${description}`,
-      dataStyle: 'project-showcase',
-    },
-    collections: {
-      alt: `khaki shop 컬렉션 - ${description}`,
-      title: `감성 컬렉션 - ${description}`,
-      dataStyle: 'collection-curated',
-    },
-    references: {
-      alt: `khaki shop 시공 사례 - ${description}`,
-      title: `실제 시공 사례 - ${description}`,
-      dataStyle: 'reference-proven',
-    },
-    products: {
-      alt: `khaki shop 제품 - ${description}`,
-      title: `품질 제품 - ${description}`,
-      dataStyle: 'product-quality',
-    },
-    gallery: {
-      alt: `khaki shop 갤러리 - ${description}`,
-      title: `갤러리 이미지 - ${description}`,
-      dataStyle: 'gallery-aesthetic',
-    },
-    blog: {
-      alt: `khaki shop 블로그 - ${description}`,
-      title: `인사이트 & 팁 - ${description}`,
-      dataStyle: 'blog-informative',
-    },
-    about: {
-      alt: `khaki shop 소개 - ${description}`,
-      title: `브랜드 스토리 - ${description}`,
-      dataStyle: 'about-authentic',
-    },
-    future: {
-      alt: `khaki shop 미래 계획 - ${description}`,
-      title: `앞으로의 비전 - ${description}`,
-      dataStyle: 'future-vision',
-    },
+export interface ImageMapping {
+  id: string;
+  originalPath: string;
+  targetPath: string;
+  displayOrder: number;
+  metadata?: {
+    category?: string;
+    slug?: string;
+    description?: string;
+    isProtected?: boolean;
+    createdAt?: string;
+    updatedAt?: string;
   };
+}
 
-  const baseTemplate = categoryTags[category] || categoryTags.gallery;
+export interface ImageStore {
+  version: string;
+  lastUpdated: string;
+  mappings: { [id: string]: ImageMapping };
+  categories: string[];
+  stats: {
+    totalImages: number;
+    protectedImages: number;
+  };
+}
 
+// ================================================================================
+// 📁 저장소 파일 관리
+// ================================================================================
+
+const STORE_FILE_PATH = 'persistent-image-store.json';
+
+/**
+ * 이미지 저장소를 메모리에서 로드
+ * @returns 이미지 저장소 객체
+ */
+export function loadPersistentStore(): ImageStore {
+  if (!checkServerModules('loadPersistentStore')) {
+    return getDefaultStore();
+  }
+
+  try {
+    const storePath = path!.join(process.cwd(), STORE_FILE_PATH);
+    
+    if (!fsSync!.existsSync(storePath)) {
+      console.log('📁 새로운 이미지 저장소 파일 생성');
+      const defaultStore = getDefaultStore();
+      savePersistentStore(defaultStore);
+      return defaultStore;
+    }
+
+    const fileContent = fsSync!.readFileSync(storePath, 'utf-8');
+    const store = JSON.parse(fileContent) as ImageStore;
+    
+    // 버전 호환성 체크
+    if (!store.version || store.version !== '1.0') {
+      console.log('🔄 저장소 버전 업그레이드');
+      return migrateLegacyStore(store);
+    }
+
+    return store;
+  } catch (error) {
+    console.error('❌ 저장소 로드 실패:', error);
+    return getDefaultStore();
+  }
+}
+
+/**
+ * 이미지 저장소를 파일에 저장
+ * @param store 저장할 이미지 저장소
+ */
+export function savePersistentStore(store: ImageStore): void {
+  if (!checkServerModules('savePersistentStore')) {
+    console.warn('⚠️ 클라이언트에서는 저장소를 저장할 수 없습니다.');
+    return;
+  }
+
+  try {
+    const storePath = path!.join(process.cwd(), STORE_FILE_PATH);
+    store.lastUpdated = new Date().toISOString();
+    
+    // 원자적 쓰기를 위한 임시 파일 사용
+    const tempPath = `${storePath}.tmp`;
+    fsSync!.writeFileSync(tempPath, JSON.stringify(store, null, 2), 'utf-8');
+    fsSync!.renameSync(tempPath, storePath);
+    
+    console.log('💾 이미지 저장소 저장 완료');
+  } catch (error) {
+    console.error('❌ 저장소 저장 실패:', error);
+  }
+}
+
+/**
+ * 기본 저장소 구조 생성
+ * @returns 기본 이미지 저장소
+ */
+function getDefaultStore(): ImageStore {
   return {
-    alt: baseTemplate.alt || `khaki shop - ${description}`,
-    title: baseTemplate.title || `khaki shop - ${description}`,
-    dataStyle: baseTemplate.dataStyle || 'default-style',
-    category,
-    description,
-    priority,
-  };
-};
-
-// 🔄 이미지 맵 동기화
-export async function syncImageMap(): Promise<void> {
-  ensureServerEnvironment();
-
-  try {
-    const store = loadPersistentStore();
-    const imageDir = path.join(process.cwd(), 'public', 'images', 'midjourney');
-
-    // 디렉토리가 존재하지 않으면 생성
-    if (!fs.existsSync(imageDir)) {
-      fs.mkdirSync(imageDir, { recursive: true });
-    }
-
-    // 물리적 파일 스캔
-    const files = fs
-      .readdirSync(imageDir)
-      .filter((file) => /\.(png|jpg|jpeg|webp)$/i.test(file));
-
-    let syncCount = 0;
-
-    // 새로운 파일들을 매핑에 추가
-    for (const fileName of files) {
-      const existingMapping = Object.values(store.mappings).find(
-        (mapping) =>
-          mapping.sourceFile === fileName ||
-          mapping.targetPath.includes(fileName)
-      );
-
-      if (!existingMapping) {
-        const imageId =
-          Date.now().toString() + Math.random().toString(36).substr(2, 9);
-        const newMapping: ImageMapping = {
-          id: imageId,
-          sourceFile: fileName,
-          targetPath: `/images/midjourney/${fileName}`,
-          isProtected: false,
-          createdAt: new Date().toISOString(),
-          metadata: generateMetadataForCategory(
-            'gallery',
-            `자동 복원된 이미지 ${fileName}`
-          ),
-        };
-
-        store.mappings[imageId] = newMapping;
-        syncCount++;
-      }
-    }
-
-    if (syncCount > 0) {
-      store.lastSync = new Date().toISOString();
-      savePersistentStore(store);
-      console.log(`✅ ${syncCount}개의 새로운 이미지가 동기화되었습니다.`);
-    }
-  } catch (error) {
-    console.error('🚨 이미지 맵 동기화 실패:', error);
-    throw error;
-  }
-}
-
-// 📋 모든 이미지 정보 가져오기
-export function getAllImageInfo(): ImageMapping[] {
-  ensureServerEnvironment();
-
-  try {
-    const store = loadPersistentStore();
-    return Object.values(store.mappings);
-  } catch (error) {
-    console.error('🚨 이미지 정보 조회 실패:', error);
-    return [];
-  }
-}
-
-// 🔒 보호된 이미지 가져오기
-export function getProtectedImages(): ImageMapping[] {
-  ensureServerEnvironment();
-
-  try {
-    const store = loadPersistentStore();
-    return Object.values(store.mappings).filter(
-      (mapping) => mapping.isProtected
-    );
-  } catch (error) {
-    console.error('🚨 보호된 이미지 조회 실패:', error);
-    return [];
-  }
-}
-
-// 📊 저장소 통계
-export function getStoreStats() {
-  ensureServerEnvironment();
-
-  try {
-    const store = loadPersistentStore();
-    const mappings = Object.values(store.mappings);
-
-    const categories = mappings.reduce(
-      (acc, mapping) => {
-        const category = mapping.metadata.category;
-        acc[category] = (acc[category] || 0) + 1;
-        return acc;
-      },
-      {} as Record<string, number>
-    );
-
-    return {
-      totalImages: mappings.length,
-      protectedImages: mappings.filter((m) => m.isProtected).length,
-      categories,
-      lastSync: store.lastSync,
-    };
-  } catch (error) {
-    console.error('🚨 통계 조회 실패:', error);
-    return {
+    version: '1.0',
+    lastUpdated: new Date().toISOString(),
+    mappings: {},
+    categories: ['gallery', 'collections', 'hero', 'landing', 'projects', 'references', 'curtain', 'blind'],
+    stats: {
       totalImages: 0,
       protectedImages: 0,
-      categories: {},
-      lastSync: null,
-    };
-  }
+    },
+  };
 }
 
-// 🛡️ 이미지 보호 설정
-export function setImageProtection(
-  imageId: string,
-  isProtected: boolean
-): boolean {
-  ensureServerEnvironment();
-
-  try {
-    const store = loadPersistentStore();
-
-    if (store.mappings[imageId]) {
-      store.mappings[imageId].isProtected = isProtected;
-      store.protectedImages[imageId] = isProtected;
-      savePersistentStore(store);
-
-      console.log(
-        `🔒 이미지 보호 설정 변경: ${imageId} → ${isProtected ? '보호됨' : '보호 해제'}`
-      );
-      return true;
-    }
-
-    return false;
-  } catch (error) {
-    console.error('🚨 보호 설정 실패:', error);
-    return false;
+/**
+ * 레거시 저장소 마이그레이션
+ * @param legacyStore 기존 저장소
+ * @returns 새로운 버전의 저장소
+ */
+function migrateLegacyStore(legacyStore: any): ImageStore {
+  const newStore = getDefaultStore();
+  
+  // 기존 매핑 데이터가 있다면 마이그레이션
+  if (legacyStore.mappings) {
+    Object.entries(legacyStore.mappings).forEach(([id, mapping]: [string, any]) => {
+      newStore.mappings[id] = {
+        id,
+        originalPath: mapping.originalPath || mapping.targetPath,
+        targetPath: mapping.targetPath,
+        displayOrder: mapping.displayOrder || 0,
+        metadata: {
+          category: mapping.metadata?.category || 'gallery',
+          description: mapping.metadata?.description || '',
+          isProtected: mapping.metadata?.isProtected || false,
+          createdAt: mapping.metadata?.createdAt || new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+        },
+      };
+    });
   }
+
+  savePersistentStore(newStore);
+  return newStore;
 }
 
-// 🔧 무결성 검사 및 복원
-export async function validateAndRepairImageStore(): Promise<{
-  success: boolean;
-  repaired: string[];
-  missing: string[];
-  error?: string;
+// ================================================================================
+// 🔄 이미지 동기화 및 매핑
+// ================================================================================
+
+/**
+ * 이미지 파일들을 스캔하고 저장소와 동기화
+ * @param forceRepair 강제 복구 모드
+ * @returns 동기화 결과
+ */
+export async function syncImageMap(forceRepair: boolean = false): Promise<{
+  mappedImages: number;
+  unmappedFiles: number;
+  missingFiles: number;
+  protectedImages: number;
+  newlyAdded?: number;
 }> {
-  ensureServerEnvironment();
+  if (!checkServerModules('syncImageMap')) {
+    return { mappedImages: 0, unmappedFiles: 0, missingFiles: 0, protectedImages: 0 };
+  }
+
+  console.log('🔄 이미지 동기화 시작...');
 
   try {
     const store = loadPersistentStore();
-    const imageDir = path.join(process.cwd(), 'public', 'images', 'midjourney');
-    const repaired: string[] = [];
-    const missing: string[] = [];
+    let newlyAdded = 0;
 
-    // 매핑된 이미지들의 실제 파일 존재 여부 확인
-    for (const [imageId, mapping] of Object.entries(store.mappings)) {
-      const fileName = mapping.sourceFile;
-      const filePath = path.join(imageDir, fileName);
+    // 다양한 이미지 디렉토리들 스캔
+    const imageDirs = [
+      { path: path!.join(process.cwd(), 'public', 'images', 'midjourney'), category: 'gallery' },
+      { path: path!.join(process.cwd(), 'public', 'images', 'curtain'), category: 'curtain' },
+      { path: path!.join(process.cwd(), 'public', 'images', 'blind'), category: 'blind' },
+      { path: path!.join(process.cwd(), 'public', 'images', 'references'), category: 'references' },
+      { path: path!.join(process.cwd(), 'public', 'images', 'projects'), category: 'projects' },
+      { path: path!.join(process.cwd(), 'public', 'images', 'collections'), category: 'collections' },
+      { path: path!.join(process.cwd(), 'public', 'images', 'hero'), category: 'hero' },
+      { path: path!.join(process.cwd(), 'public', 'images', 'landing'), category: 'landing' },
+    ];
 
-      if (!fs.existsSync(filePath)) {
-        missing.push(fileName);
+    // 각 디렉토리의 이미지 파일들 스캔
+    for (const dir of imageDirs) {
+      if (fsSync!.existsSync(dir.path)) {
+        await scanDirectoryRecursively(dir.path, dir.category, store);
       }
     }
 
-    // 실제 파일들 중 매핑되지 않은 것들 자동 복원
-    if (fs.existsSync(imageDir)) {
-      const files = fs
-        .readdirSync(imageDir)
-        .filter((file) => /\.(png|jpg|jpeg|webp)$/i.test(file));
+    // 특별 처리: projects 폴더 디렉토리별 스캔
+    const projectsPath = path!.join(process.cwd(), 'public', 'images', 'projects');
+    if (fsSync!.existsSync(projectsPath)) {
+      const projectFolders = fsSync!.readdirSync(projectsPath)
+        .filter(item => fsSync!.statSync(path!.join(projectsPath, item)).isDirectory());
+      
+      console.log(`📁 projects 폴더에서 ${projectFolders.length}개 파일 발견`);
+      
+      for (const folder of projectFolders) {
+        const folderPath = path!.join(projectsPath, folder);
+        await scanDirectoryRecursively(folderPath, 'projects', store, folder);
+      }
+    }
 
-      for (const fileName of files) {
-        const existingMapping = Object.values(store.mappings).find(
-          (mapping) =>
-            mapping.sourceFile === fileName ||
-            mapping.targetPath.includes(fileName)
-        );
+    // 강제 복구 모드 시 무결성 검사 실행
+    if (forceRepair) {
+      console.log('🔧 강제 무결성 검사 및 복원 시작...');
+      const repairResult = await validateAndRepairImageStore();
+      console.log(`✅ 시스템 복원 완료: 복원 ${repairResult.repairedMappings}개, 누락 ${repairResult.missingFiles}개`);
+    }
 
-        if (!existingMapping) {
-          const imageId =
-            Date.now().toString() + Math.random().toString(36).substr(2, 9);
-          const newMapping: ImageMapping = {
-            id: imageId,
-            sourceFile: fileName,
-            targetPath: `/images/midjourney/${fileName}`,
-            isProtected: false,
-            createdAt: new Date().toISOString(),
-            metadata: generateMetadataForCategory(
-              'gallery',
-              `자동 복원된 이미지 ${fileName}`
-            ),
+    // 통계 업데이트
+    const mappedImages = Object.keys(store.mappings).length;
+    const protectedImages = Object.values(store.mappings)
+      .filter(mapping => mapping.metadata?.isProtected).length;
+
+    store.stats = {
+      totalImages: mappedImages,
+      protectedImages,
+    };
+
+    savePersistentStore(store);
+
+    console.log('✅ 이미지 동기화 완료:', {
+      mappedImages,
+      protectedImages,
+    });
+
+    return {
+      mappedImages,
+      unmappedFiles: 0,
+      missingFiles: 0,
+      protectedImages,
+      newlyAdded,
+    };
+
+  } catch (error) {
+    console.error('❌ 이미지 동기화 실패:', error);
+    return { mappedImages: 0, unmappedFiles: 0, missingFiles: 0, protectedImages: 0 };
+  }
+}
+
+/**
+ * 디렉토리를 재귀적으로 스캔하여 이미지 파일들 매핑
+ * @param dirPath 스캔할 디렉토리 경로
+ * @param category 카테고리
+ * @param store 이미지 저장소
+ * @param slug 프로젝트 slug (옵션)
+ */
+async function scanDirectoryRecursively(
+  dirPath: string,
+  category: string,
+  store: ImageStore,
+  slug?: string
+): Promise<void> {
+  if (!checkServerModules('scanDirectoryRecursively')) {
+    return;
+  }
+
+  try {
+    const items = fsSync!.readdirSync(dirPath);
+
+    for (const item of items) {
+      const itemPath = path!.join(dirPath, item);
+      const stat = fsSync!.statSync(itemPath);
+
+      if (stat.isDirectory()) {
+        // 하위 디렉토리 재귀 처리
+        await scanDirectoryRecursively(itemPath, category, store, slug || item);
+      } else if (isImageFile(item)) {
+        // 이미지 파일 매핑
+        const relativePath = path!.relative(
+          path!.join(process.cwd(), 'public'),
+          itemPath
+        ).replace(/\\/g, '/');
+        const targetPath = `/${relativePath}`;
+
+        const id = generateImageId(targetPath);
+        
+        if (!store.mappings[id]) {
+          store.mappings[id] = {
+            id,
+            originalPath: targetPath,
+            targetPath,
+            displayOrder: Object.keys(store.mappings).length,
+            metadata: {
+              category,
+              slug: slug || extractSlugFromPath(targetPath),
+              description: '',
+              isProtected: false,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString(),
+            },
           };
+        }
+      }
+    }
+  } catch (error) {
+    console.warn(`⚠️ 디렉토리 스캔 실패: ${dirPath}`, error);
+  }
+}
 
-          store.mappings[imageId] = newMapping;
-          repaired.push(fileName);
+/**
+ * 파일이 이미지인지 확인
+ * @param fileName 파일명
+ * @returns 이미지 파일 여부
+ */
+function isImageFile(fileName: string): boolean {
+  const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
+  const ext = path!.extname(fileName).toLowerCase();
+  return imageExtensions.includes(ext);
+}
+
+/**
+ * 이미지 경로에서 고유 ID 생성
+ * @param imagePath 이미지 경로
+ * @returns 고유 ID
+ */
+function generateImageId(imagePath: string): string {
+  return imagePath.replace(/[^a-zA-Z0-9]/g, '_').replace(/_+/g, '_');
+}
+
+/**
+ * 경로에서 slug 추출
+ * @param imagePath 이미지 경로
+ * @returns 추출된 slug
+ */
+function extractSlugFromPath(imagePath: string): string {
+  const pathParts = imagePath.split('/').filter(Boolean);
+  if (pathParts.length >= 3) {
+    return pathParts[pathParts.length - 2] || 'unknown';
+  }
+  return 'unknown';
+}
+
+// ================================================================================
+// 🔧 무결성 검사 및 복구
+// ================================================================================
+
+/**
+ * 이미지 저장소 무결성 검사 및 자동 복구
+ * @returns 복구 결과
+ */
+export async function validateAndRepairImageStore(): Promise<{
+  repairedMappings: number;
+  missingFiles: number;
+  isHealthy: boolean;
+}> {
+  if (!checkServerModules('validateAndRepairImageStore')) {
+    return { repairedMappings: 0, missingFiles: 0, isHealthy: false };
+  }
+
+  try {
+    const store = loadPersistentStore();
+    let repairedMappings = 0;
+    let missingFiles = 0;
+
+    // 매핑된 파일들의 실제 존재 여부 확인
+    for (const [id, mapping] of Object.entries(store.mappings)) {
+      const filePath = path!.join(process.cwd(), 'public', mapping.targetPath.substring(1));
+      
+      if (!fsSync!.existsSync(filePath)) {
+        console.warn(`⚠️ 누락된 파일: ${mapping.targetPath}`);
+        missingFiles++;
+      } else {
+        // 메타데이터 복구
+        if (!mapping.metadata?.updatedAt) {
+          mapping.metadata = {
+            ...mapping.metadata,
+            updatedAt: new Date().toISOString(),
+          };
+          repairedMappings++;
         }
       }
     }
 
-    if (repaired.length > 0) {
-      store.lastSync = new Date().toISOString();
+    if (repairedMappings > 0) {
       savePersistentStore(store);
     }
 
-    console.log(
-      `✅ 무결성 검사 완료: 복원 ${repaired.length}개, 누락 ${missing.length}개`
-    );
+    console.log(`✅ 무결성 검사 완료: 복원 ${repairedMappings}개, 누락 ${missingFiles}개`);
 
     return {
-      success: true,
-      repaired,
-      missing,
+      repairedMappings,
+      missingFiles,
+      isHealthy: missingFiles === 0,
     };
+
   } catch (error) {
-    console.error('🚨 무결성 검사 실패:', error);
-    return {
-      success: false,
-      repaired: [],
-      missing: [],
-      error: error instanceof Error ? error.message : '알 수 없는 오류',
-    };
+    console.error('❌ 무결성 검사 실패:', error);
+    return { repairedMappings: 0, missingFiles: 0, isHealthy: false };
   }
 }
 
-// 📷 이미지 맵에 추가
-export function addImageToMap(
-  sourceFile: string,
-  targetPath: string,
-  metadata: ImageMetadata,
-  isProtected: boolean = false
-): string {
-  ensureServerEnvironment();
-
-  try {
-    const store = loadPersistentStore();
-    const imageId =
-      Date.now().toString() + Math.random().toString(36).substr(2, 9);
-
-    const newMapping: ImageMapping = {
-      id: imageId,
-      sourceFile,
-      targetPath,
-      isProtected,
-      createdAt: new Date().toISOString(),
-      metadata,
-    };
-
-    store.mappings[imageId] = newMapping;
-    if (isProtected) {
-      store.protectedImages[imageId] = true;
-    }
-
-    savePersistentStore(store);
-
-    console.log(`📷 이미지 매핑 추가: ${sourceFile} → ${targetPath}`);
-    return imageId;
-  } catch (error) {
-    console.error('🚨 이미지 매핑 추가 실패:', error);
-    throw error;
+/**
+ * 이미지 보호 설정
+ * @param imageId 이미지 ID
+ * @param isProtected 보호 여부
+ * @returns 설정 성공 여부
+ */
+export function setImageProtection(imageId: string, isProtected: boolean): boolean {
+  if (!checkServerModules('setImageProtection')) {
+    return false;
   }
-}
-
-// 🗑️ 이미지 맵에서 제거
-export function removeImageFromMap(imageId: string): boolean {
-  ensureServerEnvironment();
 
   try {
     const store = loadPersistentStore();
-
+    
     if (store.mappings[imageId]) {
-      delete store.mappings[imageId];
-      delete store.protectedImages[imageId];
+      store.mappings[imageId].metadata = {
+        ...store.mappings[imageId].metadata,
+        isProtected,
+        updatedAt: new Date().toISOString(),
+      };
+      
       savePersistentStore(store);
-
-      console.log(`🗑️ 이미지 매핑 제거: ${imageId}`);
       return true;
     }
-
+    
     return false;
   } catch (error) {
-    console.error('🚨 이미지 매핑 제거 실패:', error);
+    console.error('❌ 이미지 보호 설정 실패:', error);
     return false;
   }
 }
-
-// 보호된 이미지 추가 (별칭)
-export const addProtectedImage = (
-  sourceFile: string,
-  targetPath: string,
-  metadata: ImageMetadata
-): string => {
-  return addImageToMap(sourceFile, targetPath, metadata, true);
-};

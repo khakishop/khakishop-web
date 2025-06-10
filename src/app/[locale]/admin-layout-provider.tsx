@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { ReactNode } from 'react';
-import { Navbar, FullscreenMenu } from '../../components';
+import { FullscreenMenu } from '../../components';
 
 interface AdminLayoutProviderProps {
   children: ReactNode;
@@ -17,12 +17,9 @@ export function AdminLayoutProvider({ children }: AdminLayoutProviderProps) {
     return <>{children}</>;
   }
 
-  // 일반 페이지에서는 Navbar와 FullscreenMenu 포함
+  // 일반 페이지에서는 FullscreenMenu만 포함 (Navbar 제거)
   return (
     <>
-      {/* 네비게이션 바 */}
-      <Navbar />
-
       {/* 풀스크린 메뉴 */}
       <FullscreenMenu />
 

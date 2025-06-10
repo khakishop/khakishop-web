@@ -76,11 +76,8 @@ const HomeClient = memo(function HomeClient() {
         </div>
       </div>
 
-      {/* 새로운 Hero 섹션 */}
-      <HeroSection />
-
-      {/* 기존 Hero Section - Full Screen, No Top Offset */}
-      <section ref={heroRef} className="relative h-screen -mt-16">
+      {/* 첫 번째: 풀스크린 이미지 섹션 - Full Screen, No Top Offset */}
+      <section ref={heroRef} className="relative h-screen">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -109,6 +106,9 @@ const HomeClient = memo(function HomeClient() {
         </motion.div>
       </section>
 
+      {/* 두 번째: 브랜드 소개 Hero 섹션 */}
+      <HeroSection />
+
       {/* Today's Space Suggestions */}
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-6">
@@ -128,7 +128,7 @@ const HomeClient = memo(function HomeClient() {
               viewport={{ once: true, amount: 0.3 }}
               className="group cursor-pointer"
             >
-              <Link href={`/${locale}/curtain/sheer-curtain`} className="block">
+              <Link href={`/${locale}/curtain`} className="block">
                 <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
                   <div className="aspect-[16/9] relative">
                     <img
@@ -170,7 +170,7 @@ const HomeClient = memo(function HomeClient() {
               viewport={{ once: true, amount: 0.3 }}
               className="group cursor-pointer"
             >
-              <Link href={`/${locale}/blind/wood-blind`} className="block">
+              <Link href={`/${locale}/blind`} className="block">
                 <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
                   <div className="aspect-[16/9] relative">
                     <img
@@ -212,7 +212,7 @@ const HomeClient = memo(function HomeClient() {
               viewport={{ once: true, amount: 0.3 }}
               className="group cursor-pointer"
             >
-              <Link href={`/${locale}/motorized/motorized-curtain-system`} className="block">
+              <Link href={`/${locale}/motorized`} className="block">
                 <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
                   <div className="aspect-[16/9] relative">
                     <img

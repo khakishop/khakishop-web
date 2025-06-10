@@ -8,7 +8,8 @@ export { default as FullscreenMenu } from './FullscreenMenu';
 export { default as ProjectSection } from './ProjectSection';
 export { default as HeroIntro } from './HeroIntro';
 export { AccordionItem } from './AccordionItem';
-export { default as Navbar } from './Navbar';
+export { default as VirtualizedProjectGrid } from './VirtualizedProjectGrid';
+export { default as Pagination } from './ui/Pagination';
 
 // Type exports
 export type { ButtonProps } from './Button';

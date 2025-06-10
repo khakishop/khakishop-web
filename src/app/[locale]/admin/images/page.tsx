@@ -18,6 +18,7 @@ import { ImageGridSkeleton } from '../../../../components/ui/Skeleton';
 const AdminImagesBrowser = lazy(() => import('../../../../components/admin/AdminImagesBrowser'));
 const AdminImageEditPanel = lazy(() => import('../../../../components/admin/AdminImageEditPanel'));
 const ImageUploadZone = lazy(() => import('../../../../components/admin/ImageUploadZone'));
+const DeleteImageDialog = lazy(() => import('../../../../components/admin/DeleteImageDialog'));
 
 // ================================================================================
 // 🚀 OPTIMIZED 이미지 관리 메인 페이지 (성능 최적화 버전)
@@ -93,6 +94,11 @@ export default function AdminImagesPage() {
   const [currentCategory, setCurrentCategory] = useState<string | null>(null);
   const [currentSubcategory, setCurrentSubcategory] = useState<string | null>(null);
 
+  // 🗑️ 삭제 관련 상태
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [imageToDelete, setImageToDelete] = useState<ImageMapping | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
+
   console.log('✅ 모든 useState 초기화 완료');
 
   // isLoading 상태 변경 감지
@@ -119,6 +125,128 @@ export default function AdminImagesPage() {
       setActiveView('categories');
     }
   }, [searchParams]);
+
+  // 🗑️ 이미지 삭제 핸들러
+  const handleDeleteImage = useCallback(async (imageId: string): Promise<boolean> => {
+    console.log('🗑️ 이미지 삭제 시작:', imageId);
+    setIsDeleting(true);
+
+    try {
+      const response = await fetch('/api/delete-image', {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          imageId,
+          confirmDeletion: true,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        console.log('✅ 이미지 삭제 성공:', result.deletedImage);
+        
+        // 로컬 상태에서 즉시 제거
+        setMappedImages(prev => prev.filter(img => img.id !== imageId));
+        
+        // 선택된 이미지가 삭제된 이미지라면 선택 해제
+        if (selectedImage?.id === imageId) {
+          setSelectedImage(null);
+        }
+        
+        // 이미지 목록 새로고침 (백그라운드에서)
+        setTimeout(() => {
+          loadImages();
+        }, 1000);
+        
+        return true;
+      } else {
+        console.error('❌ 이미지 삭제 실패:', result.error);
+        setError(result.error || '이미지 삭제에 실패했습니다.');
+        return false;
+      }
+    } catch (error) {
+      console.error('❌ 이미지 삭제 요청 오류:', error);
+      setError(error instanceof Error ? error.message : '네트워크 오류가 발생했습니다.');
+      return false;
+    } finally {
+      setIsDeleting(false);
+    }
+  }, [selectedImage, setMappedImages]);
+
+  // 🗑️ 삭제 다이얼로그 열기
+  const openDeleteDialog = useCallback((image: ImageMapping) => {
+    console.log('🗑️ 삭제 다이얼로그 열기:', image.sourceFile);
+    setImageToDelete(image);
+    setDeleteDialogOpen(true);
+  }, []);
+
+  // 🗑️ 삭제 다이얼로그 닫기
+  const closeDeleteDialog = useCallback(() => {
+    if (!isDeleting) {
+      setDeleteDialogOpen(false);
+      setImageToDelete(null);
+    }
+  }, [isDeleting]);
+
+  // 🔄 이미지 순서 변경 핸들러
+  const handleImageReorder = useCallback(async (reorderedImages: ImageMapping[]): Promise<void> => {
+    console.log('🔄 이미지 순서 변경 시작:', reorderedImages.length, '개 이미지');
+    
+    try {
+      // 순서 정보 준비
+      const imageOrders = reorderedImages.map((image, index) => ({
+        id: image.id,
+        displayOrder: index,
+      }));
+
+      const response = await fetch('/api/reorder-images', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          imageOrders,
+          category: currentCategory, // 현재 카테고리 전달
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        console.log('✅ 이미지 순서 변경 성공:', result.updatedCount, '개 업데이트');
+        
+        // 로컬 상태 즉시 업데이트
+        setMappedImages(reorderedImages);
+        
+        // 백그라운드에서 전체 이미지 목록 새로고침
+        setTimeout(async () => {
+          try {
+            const syncResponse = await fetch('/api/sync-images', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ forceRepair: false, includeStats: true }),
+            });
+            if (syncResponse.ok) {
+              const syncResult = await syncResponse.json();
+              setMappedImages(syncResult.images || []);
+            }
+          } catch (error) {
+            console.warn('백그라운드 새로고침 실패:', error);
+          }
+        }, 500);
+      } else {
+        console.error('❌ 이미지 순서 변경 실패:', result.error);
+        throw new Error(result.error || '순서 변경에 실패했습니다.');
+      }
+    } catch (error) {
+      console.error('❌ 이미지 순서 변경 오류:', error);
+      setError(error instanceof Error ? error.message : '순서 변경 중 오류가 발생했습니다.');
+      throw error; // DraggableImageGrid에서 원래 순서로 복원할 수 있도록
+    }
+  }, [currentCategory, setMappedImages]);
 
   // 📊 카테고리별 통계 계산 (메모이제이션 + metadata 안전성 강화)
   const stats = useMemo(() => {
@@ -201,106 +329,58 @@ export default function AdminImagesPage() {
         }),
       });
 
-      // 타임아웃과 실제 요청을 경합시킴
       const response = await Promise.race([syncPromise, timeoutPromise]) as Response;
-
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`동기화 실패: ${response.status} - ${errorText}`);
-      }
-
-      const data = await response.json();
       
-      // 성공 응답 확인
-      if (data.success !== false) {
-        // mappedImages가 배열인지 확인하고 안전하게 처리
-        const images = data.mappedImages || data.stats || [];
-        const safeImages = Array.isArray(images) 
-          ? images.filter(img => 
-              img && 
-              typeof img === 'object' && 
-              (img.src || img.targetPath) && 
-              typeof (img.src || img.targetPath) === 'string' && 
-              (img.fileName || img.sourceFile) && 
-              typeof (img.fileName || img.sourceFile) === 'string'
-            ).map(img => ({
-              ...img,
-              src: img.src || img.targetPath, // targetPath를 src로 사용
-              fileName: img.fileName || img.sourceFile // sourceFile을 fileName으로 사용
-            }))
-          : [];
-        
-        console.log(`✅ 안전한 이미지 ${safeImages.length}개 로드 (전체: ${images?.length || 0}개)`);
-        
-        setMappedImages(safeImages);
-        setError(null);
-        return safeImages;
-      } else {
-        throw new Error(data.error || data.details || '동기화 실패');
+      if (!response.ok) {
+        throw new Error(`동기화 API 오류: ${response.status}`);
       }
+      
+      const result = await response.json();
+      
+      if (result.stats && Array.isArray(result.stats)) {
+        console.log('📈 동기화된 이미지 수:', result.stats.length);
+        setMappedImages(result.stats);
+        
+        // 에러 상태 클리어
+        if (error) {
+          setError(null);
+        }
+      }
+      
+      return result;
     } catch (error) {
-      console.error('❌ 동기화 에러:', error);
-      const errorMessage = error instanceof Error ? error.message : '동기화 실패';
-      setError(errorMessage);
+      console.error('❌ 이미지 동기화 실패:', error);
+      setError(error instanceof Error ? error.message : '동기화 중 오류 발생');
       throw error;
     }
-  }, []);
+  }, [error]);
 
-  // 🎬 초기 로딩 (최적화 + 재시도 로직)
-  useEffect(() => {
-    let mounted = true;
-    let retryCount = 0;
-    const MAX_RETRIES = 3;
+  // 📂 이미지 로드 함수 (초기 로딩 + 새로고침)
+  const loadImages = useCallback(async () => {
+    console.log('📂 이미지 로드 시작...');
+    setIsLoading(true);
+    setError(null);
     
-    const loadImages = async () => {
-      if (!mounted) return;
-      
-      console.log(`🚀 초기 로딩 시작 (시도 ${retryCount + 1}/${MAX_RETRIES})`);
-      setIsLoading(true);
-      
-      try {
-        await syncImages(true);
-        console.log('✅ 초기 로딩 성공');
-        
-        // 성공시 즉시 로딩 상태 해제
-        if (mounted) {
-          setIsLoading(false);
-        }
-      } catch (error) {
-        console.error(`❌ 초기 로딩 실패 (시도 ${retryCount + 1}):`, error);
-        
-        retryCount++;
-        if (retryCount < MAX_RETRIES && mounted) {
-          console.log(`🔄 ${3000}ms 후 재시도...`);
-          setTimeout(loadImages, 3000); // 3초 후 재시도
-          return; // setIsLoading(false) 호출하지 않음
-        } else {
-          console.error('❌ 최대 재시도 횟수 초과 또는 컴포넌트 언마운트');
-          // 최종 실패시에만 로딩 상태 해제
-          if (mounted) {
-            setIsLoading(false);
-          }
-        }
-      }
-    };
-
-    // 초기 로딩 시작
-    loadImages();
-    
-    // 안전장치: 30초 후 강제로 로딩 해제
-    const fallbackTimer = setTimeout(() => {
-      if (mounted) {
-        console.warn('⚠️ 30초 타임아웃 - 강제 로딩 해제');
-        setIsLoading(false);
-      }
-    }, 30000);
-    
-    return () => { 
-      console.log('🧹 AdminImagesPage 컴포넌트 정리');
-      mounted = false;
-      clearTimeout(fallbackTimer);
-    };
+    try {
+      await syncImages(true); // 강제 리페어로 무결성 보장
+    } catch (error) {
+      console.error('📂 이미지 로드 실패:', error);
+      // 동기화에서 이미 setError 처리됨
+    } finally {
+      setIsLoading(false);
+    }
   }, [syncImages]);
+
+  // 🎬 초기 로딩 (컴포넌트 마운트 시)
+  useEffect(() => {
+    loadImages();
+  }, [loadImages]);
+
+  // 🔄 이미지 업데이트 핸들러
+  const handleImagesUpdate = useCallback(() => {
+    console.log('🔄 이미지 업데이트 요청');
+    loadImages();
+  }, [loadImages]);
 
   // 🔄 네비게이션 핸들러들
   const handleCategorySelect = useCallback((categoryKey: string) => {
@@ -333,10 +413,6 @@ export default function AdminImagesPage() {
     setActiveView('categories');
     router.push('/ko/admin/images');
   }, [router]);
-
-  const handleImagesUpdate = useCallback(() => {
-    syncImages(false, currentCategory || undefined);
-  }, [syncImages, currentCategory]);
 
   // 로딩 스피너 컴포넌트
   const LoadingSpinner = () => (
@@ -544,11 +620,14 @@ export default function AdminImagesPage() {
                         })}
                         onImageSelect={setSelectedImage}
                         onImageEdit={setSelectedImage}
+                        onImageDelete={openDeleteDialog}
                         selectedImage={selectedImage}
                         onImagesUpdate={handleImagesUpdate}
                         uploadCategory={currentCategory}
                         uploadSubcategory={currentSubcategory}
                         categoryDisplayName={getCategoryDisplayName(currentCategory)}
+                        onImageReorder={handleImageReorder}
+                        enableDragReorder={true}
                       />
                     </Suspense>
 
@@ -579,6 +658,7 @@ export default function AdminImagesPage() {
                               handleImagesUpdate();
                             }}
                             onClose={() => setSelectedImage(null)}
+                            onDelete={() => openDeleteDialog(selectedImage)}
                             isOpen={true}
                           />
                         </Suspense>
@@ -611,6 +691,17 @@ export default function AdminImagesPage() {
             </>
           )}
         </div>
+
+        {/* 🗑️ 삭제 확인 다이얼로그 */}
+        <Suspense fallback={null}>
+          <DeleteImageDialog
+            isOpen={deleteDialogOpen}
+            image={imageToDelete}
+            onClose={closeDeleteDialog}
+            onConfirm={handleDeleteImage}
+            isDeleting={isDeleting}
+          />
+        </Suspense>
 
         {/* 푸터 정보 */}
         <div className="text-center text-sm text-gray-500 bg-white rounded-lg p-4 border border-gray-200">

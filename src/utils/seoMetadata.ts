@@ -1,304 +1,301 @@
 // ================================================================================
-// 🎨 KHAKISHOP SEO 메타데이터 관리 시스템
+// 🎨 KHAKISHOP SEO 메타데이터 관리 시스템 - RIGAS 스타일 통일
 // ================================================================================
-// 🎯 목적: RIGAS 모티브 + 일산 커튼 전문점 브랜딩 + 검색 최적화
-// 📊 기능: 페이지별 맞춤형 title/description + OpenGraph + 구조화 데이터
 
 import { Metadata } from 'next';
 
+// 🎯 통일된 Product 인터페이스 
+interface Product {
+  id: string;
+  slug: string;
+  title: string;
+  description: string;
+  image: string;
+  category: 'curtains' | 'blinds' | 'references' | 'motorized';
+  subcategory?: string;
+  displayOrder?: number;
+  bestseller?: boolean;
+  new?: boolean;
+  price?: {
+    from: number;
+    to?: number;
+    currency: string;
+    unit?: string;
+  };
+  // 시공사례 전용
+  location?: string;
+  clientType?: string;
+  projectDate?: string;
+}
+
 // 🎨 기본 브랜드 정보
 const BRAND = {
-  name: 'khaki shop',
-  tagline: '감성과 기능을 담은 일산 커튼 전문 브랜드',
+  name: 'KHAKISHOP',
+  tagline: '감성과 기능을 담은 프리미엄 커튼 & 블라인드',
   location: '일산',
-  specialty: '맞춤형 커튼 시공',
-  website: 'https://khakishop.kr',
-  description:
-    '일산에서 감성과 품질을 모두 갖춘 커튼 시공. khaki shop은 맞춤형 디자인과 고급 원단으로 공간에 새로운 무드를 제안합니다.',
+  specialty: '맞춤형 인테리어 솔루션',
+  website: 'https://khakishop.com',
+  description: '프리미엄 커튼과 블라인드로 공간을 특별하게 만들어보세요. 맞춤 제작, 전문 설치, 완벽한 A/S까지.',
 };
 
-// 🗺️ 페이지별 SEO 메타데이터 매핑
-export const seoPages = {
-  home: {
-    title: `${BRAND.name} | ${BRAND.tagline}`,
-    description: BRAND.description,
-    keywords: [
-      '일산 커튼',
-      '커튼 시공',
-      'khaki shop',
-      '맞춤형 커튼',
-      '인테리어 커튼',
-      '고양시 커튼',
-      '감성 인테리어',
-    ],
-    ogImage: '/images/midjourney/2.png',
-  },
+// 기본 메타데이터 설정
+const baseMetadata = {
+  siteName: BRAND.name,
+  siteUrl: BRAND.website,
+  defaultImage: '/images/hero/khakishop-hero.jpg',
+  locale: 'ko_KR',
+  type: 'website' as const
+};
 
-  curtain: {
-    title: `커튼 컬렉션 | ${BRAND.name} - 프리미엄 원단으로 완성하는 감성 공간`,
-    description:
-      '다양한 스타일의 프리미엄 커튼 컬렉션. 클래식부터 모던까지, khaki shop만의 감성적인 디자인으로 공간을 완성하세요.',
-    keywords: [
-      '커튼 종류',
-      '맞춤 커튼',
-      '리넨 커튼',
-      '모던 커튼',
-      '클래식 커튼',
-      '일산 커튼 전문점',
-    ],
-    ogImage: '/images/midjourney/7.png',
+// 카테고리별 기본 정보
+const categoryInfo = {
+  curtains: {
+    name: '커튼',
+    description: '프리미엄 커튼으로 공간을 품격 있게 연출하세요',
+    keywords: ['커튼', '맞춤 커튼', '인테리어 커튼', '리넨 커튼', '모던 커튼']
   },
-
-  blind: {
-    title: `블라인드 컬렉션 | ${BRAND.name} - 기능과 디자인의 완벽한 조화`,
-    description:
-      '우드, 알루미늄, 패브릭 블라인드까지. 실용성과 미학을 모두 만족하는 khaki shop의 블라인드 컬렉션을 만나보세요.',
-    keywords: [
-      '블라인드 종류',
-      '우드 블라인드',
-      '알루미늄 블라인드',
-      '패브릭 블라인드',
-      '맞춤 블라인드',
-      '일산 블라인드',
-    ],
-    ogImage: '/images/midjourney/9.png',
+  blinds: {
+    name: '블라인드',
+    description: '기능적이고 스타일리시한 블라인드 솔루션',
+    keywords: ['블라인드', '베네치안 블라인드', '롤러 블라인드', '버티컬 블라인드']
   },
-
-  motorized: {
-    title: `모터라이즈 시스템 | ${BRAND.name} - 스마트한 공간의 시작`,
-    description:
-      '무선 모터와 스마트 홈 연동으로 더욱 편리해진 커튼&블라인드. khaki shop의 미래형 자동화 시스템을 경험하세요.',
-    keywords: [
-      '자동 커튼',
-      '모터라이즈',
-      '스마트 홈',
-      '무선 모터',
-      '자동화 시스템',
-      '일산 스마트 인테리어',
-    ],
-    ogImage: '/images/midjourney/11.png',
-  },
-
-  collection: {
-    title: `컬렉션 | ${BRAND.name} - 계절과 트렌드를 담은 특별한 제안`,
-    description:
-      '에센셜 리넨부터 프리미엄 베네치안까지. 매 시즌 새롭게 선보이는 khaki shop의 큐레이션 컬렉션입니다.',
-    keywords: [
-      '시즌 컬렉션',
-      '에센셜 리넨',
-      '베네치안 블라인드',
-      '디자이너 하드웨어',
-      '럭셔리 타이백',
-    ],
-    ogImage: '/images/midjourney/8.png',
-  },
-
   references: {
-    title: `시공 사례 | ${BRAND.name} - 검증된 전문성과 완성도`,
-    description:
-      '분당 미니멀 레지던스부터 홍대 클래식 카페까지. 다양한 공간에서 증명된 khaki shop의 시공 전문성을 확인하세요.',
-    keywords: [
-      '커튼 시공 사례',
-      '인테리어 포트폴리오',
-      '상업공간 시공',
-      '주거공간 시공',
-      '일산 인테리어',
-    ],
-    ogImage: '/images/midjourney/15.png',
+    name: '시공사례',
+    description: '전문적인 설치와 완벽한 마감의 시공사례를 확인하세요',
+    keywords: ['시공사례', '인테리어 사례', '커튼 설치', '블라인드 설치']
   },
-
-  about: {
-    title: `브랜드 스토리 | ${BRAND.name} - 감성과 품질에 대한 우리의 약속`,
-    description:
-      'RIGAS 모티브에서 영감받은 미니멀 감성과 장인정신으로 완성하는 khaki shop의 브랜드 철학과 비전을 소개합니다.',
-    keywords: [
-      'khaki shop 소개',
-      '브랜드 스토리',
-      '일산 커튼 전문점',
-      '인테리어 철학',
-      '품질 관리',
-    ],
-    ogImage: '/images/midjourney/3.png',
-  },
-
-  blog: {
-    title: `인테리어 가이드 | ${BRAND.name} - 전문가가 알려주는 스타일링 팁`,
-    description:
-      '2024 디자인 트렌드부터 관리 팁까지. khaki shop 전문가가 제안하는 인테리어 가이드와 실용적인 정보를 만나보세요.',
-    keywords: [
-      '인테리어 팁',
-      '커튼 관리법',
-      '색상 매칭',
-      '룸 스타일링',
-      '2024 트렌드',
-      '설치 가이드',
-    ],
-    ogImage: '/images/midjourney/4.png',
-  },
+  motorized: {
+    name: '모터라이즈드',
+    description: '스마트한 자동화 시스템으로 편리함을 경험하세요',
+    keywords: ['모터라이즈드', '스마트 커튼', '자동 블라인드', 'IoT 인테리어']
+  }
 };
 
-// 🎯 메타데이터 생성 헬퍼 함수
-export function createSEOMetadata(pageKey: keyof typeof seoPages): Metadata {
-  const page = seoPages[pageKey];
-
+// 🎨 통일된 제품 메타데이터 생성
+export function createProductMetadata(product: Product, category: keyof typeof categoryInfo): Metadata {
+  const categoryData = categoryInfo[category];
+  const priceText = product.price ? 
+    `₩${new Intl.NumberFormat('ko-KR').format(product.price.from)}${product.price.to ? `~${new Intl.NumberFormat('ko-KR').format(product.price.to)}` : ''}` : '';
+  
+  const title = `${product.title} | ${categoryData.name} | ${baseMetadata.siteName}`;
+  const description = `${product.description} ${priceText ? `${priceText} 부터` : ''} ${categoryData.description}`;
+  
   return {
-    title: page.title,
-    description: page.description,
-    keywords: page.keywords,
-
-    // OpenGraph
+    title,
+    description,
+    keywords: [
+      ...categoryData.keywords,
+      product.title,
+      product.subcategory || '',
+      ...(product.bestseller ? ['베스트셀러'] : []),
+      ...(product.new ? ['신제품'] : [])
+    ].filter(Boolean).join(', '),
+    
     openGraph: {
-      title: page.title,
-      description: page.description,
-      url: `${BRAND.website}`,
-      siteName: BRAND.name,
+      title,
+      description,
+      url: `${baseMetadata.siteUrl}/${category}/${product.slug}`,
+      siteName: baseMetadata.siteName,
       images: [
         {
-          url: page.ogImage,
+          url: product.image,
           width: 1200,
           height: 630,
-          alt: page.title,
-        },
+          alt: product.title,
+        }
       ],
-      locale: 'ko_KR',
-      type: 'website',
+      locale: baseMetadata.locale,
+      type: 'article',
     },
-
-    // Twitter Card
+    
     twitter: {
       card: 'summary_large_image',
-      title: page.title,
-      description: page.description,
-      images: [page.ogImage],
+      title,
+      description,
+      images: [product.image],
     },
-
-    // 추가 메타태그
+    
+    // 구조화 데이터
     other: {
-      'theme-color': '#D4C4A8', // khaki beige
-      'color-scheme': 'light',
-      'format-detection': 'telephone=no',
-    },
-
-    // Robots
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
+      'product:price:amount': product.price?.from?.toString() || '',
+      'product:price:currency': product.price?.currency || 'KRW',
+      'product:availability': 'in stock',
+      'product:condition': 'new',
+      'product:brand': baseMetadata.siteName,
+      'product:category': categoryData.name,
+    }
   };
 }
 
-// 🏠 지역 SEO 구조화 데이터
-export const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: BRAND.name,
-  description: BRAND.description,
-  url: BRAND.website,
-  logo: `${BRAND.website}/images/logo.png`,
-  image: `${BRAND.website}/images/midjourney/2.png`,
-
-  // 지역 정보
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: '고양시',
-    addressRegion: '경기도',
-    addressCountry: 'KR',
-  },
-
-  // 서비스 영역
-  areaServed: ['일산', '고양시', '파주시', '김포시', '서울 서북부'],
-
-  // 서비스 카테고리
-  serviceType: ['커튼 시공', '블라인드 설치', '인테리어 컨설팅', '맞춤 제작'],
-
-  // 운영 시간
-  openingHours: 'Mo-Sa 09:00-18:00',
-
-  // 소셜 미디어
-  sameAs: [
-    'https://www.instagram.com/khakishop',
-    'https://blog.naver.com/khakishop',
-  ],
-};
-
-// 🎨 제품 구조화 데이터 생성기
-export function createProductSchema(
-  productName: string,
-  category: string,
-  imageUrl: string
-) {
+// 🎨 카테고리 메인 페이지 메타데이터 생성
+export function createCategoryMetadata(category: keyof typeof categoryInfo, productCount?: number): Metadata {
+  const categoryData = categoryInfo[category];
+  const title = `${categoryData.name} | ${baseMetadata.siteName}`;
+  const description = `${categoryData.description} ${productCount ? `${productCount}개의 제품을 만나보세요.` : ''}`;
+  
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: productName,
-    description: `${BRAND.name}에서 제공하는 프리미엄 ${productName}`,
-    brand: {
-      '@type': 'Brand',
-      name: BRAND.name,
+    title,
+    description,
+    keywords: categoryData.keywords.join(', '),
+    
+    openGraph: {
+      title,
+      description,
+      url: `${baseMetadata.siteUrl}/${category}`,
+      siteName: baseMetadata.siteName,
+      images: [
+        {
+          url: baseMetadata.defaultImage,
+          width: 1200,
+          height: 630,
+          alt: `${baseMetadata.siteName} ${categoryData.name}`,
+        }
+      ],
+      locale: baseMetadata.locale,
+      type: 'website',
     },
-    category: category,
-    image: imageUrl,
-    manufacturer: {
-      '@type': 'Organization',
-      name: BRAND.name,
-    },
-    offers: {
-      '@type': 'Offer',
-      availability: 'https://schema.org/InStock',
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        price: '상담 후 견적',
-        priceCurrency: 'KRW',
-      },
-    },
+    
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [baseMetadata.defaultImage],
+    }
   };
 }
 
-// 🏗️ 포트폴리오 구조화 데이터
-export function createPortfolioSchema(
-  projectName: string,
-  location: string,
-  imageUrl: string
-) {
+// 🏢 시공사례 전용 메타데이터 생성
+export function createReferenceMetadata(product: Product): Metadata {
+  const title = `${product.title} | 시공사례 | ${baseMetadata.siteName}`;
+  const description = `${product.description} ${product.location ? `위치: ${product.location}` : ''} ${product.clientType ? `클라이언트: ${product.clientType}` : ''}`;
+  
   return {
-    '@context': 'https://schema.org',
-    '@type': 'CreativeWork',
-    name: projectName,
-    description: `${BRAND.name}이 시공한 ${location}의 ${projectName} 프로젝트`,
-    creator: {
-      '@type': 'Organization',
-      name: BRAND.name,
+    title,
+    description,
+    keywords: [
+      '시공사례',
+      '인테리어 사례',
+      product.title,
+      product.location || '',
+      product.clientType || '',
+      product.projectDate || ''
+    ].filter(Boolean).join(', '),
+    
+    openGraph: {
+      title,
+      description,
+      url: `${baseMetadata.siteUrl}/references/${product.slug}`,
+      siteName: baseMetadata.siteName,
+      images: [
+        {
+          url: product.image,
+          width: 1200,
+          height: 630,
+          alt: product.title,
+        }
+      ],
+      locale: baseMetadata.locale,
+      type: 'article',
     },
-    image: imageUrl,
-    workExample: {
-      '@type': 'VisualArtwork',
-      artMedium: '인테리어 시공',
-      artworkSurface: location,
+    
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [product.image],
     },
+    
+    // 시공사례 구조화 데이터
+    other: {
+      'article:published_time': product.projectDate || '',
+      'article:section': '시공사례',
+      'article:tag': [product.location, product.clientType].filter(Boolean).join(','),
+      'business:contact_data:locality': product.location || '',
+    }
   };
 }
 
-// 🔍 검색 엔진 최적화 체크리스트
-export const seoChecklist = {
-  technical: [
-    '✅ 모든 이미지에 alt 속성 추가',
-    '✅ 페이지별 고유한 title/description',
-    '✅ OpenGraph 메타태그 완비',
-    '✅ 구조화 데이터 적용',
-    '✅ 모바일 친화적 반응형 디자인',
-  ],
-  content: [
-    '✅ 지역 키워드 최적화 (일산, 고양시)',
-    '✅ 브랜드 일관성 유지',
-    '✅ RIGAS 모티브 감성 반영',
-    '✅ 사용자 중심 콘텐츠 구성',
-    '✅ 전문성 강조 (시공 사례, 품질)',
-  ],
-};
+// 기존 함수들 유지
+export function createHomeMetadata(): Metadata {
+  return {
+    title: `${baseMetadata.siteName} - ${BRAND.tagline}`,
+    description: BRAND.description,
+    keywords: '커튼, 블라인드, 인테리어, 맞춤 제작, 시공, 설치',
+    
+    openGraph: {
+      title: `${baseMetadata.siteName} - ${BRAND.tagline}`,
+      description: BRAND.description,
+      url: baseMetadata.siteUrl,
+      siteName: baseMetadata.siteName,
+      images: [
+        {
+          url: baseMetadata.defaultImage,
+          width: 1200,
+          height: 630,
+          alt: baseMetadata.siteName,
+        }
+      ],
+      locale: baseMetadata.locale,
+      type: baseMetadata.type,
+    },
+    
+    twitter: {
+      card: 'summary_large_image',
+      title: `${baseMetadata.siteName} - ${BRAND.tagline}`,
+      description: BRAND.description,
+      images: [baseMetadata.defaultImage],
+    }
+  };
+}
+
+export function createAboutMetadata(): Metadata {
+  return {
+    title: `회사소개 | ${baseMetadata.siteName}`,
+    description: `${baseMetadata.siteName}의 철학과 가치, 그리고 고객을 위한 약속을 소개합니다.`,
+    
+    openGraph: {
+      title: `회사소개 | ${baseMetadata.siteName}`,
+      description: `${baseMetadata.siteName}의 철학과 가치를 소개합니다.`,
+      url: `${baseMetadata.siteUrl}/about`,
+      siteName: baseMetadata.siteName,
+      images: [
+        {
+          url: baseMetadata.defaultImage,
+          width: 1200,
+          height: 630,
+          alt: `${baseMetadata.siteName} 회사소개`,
+        }
+      ],
+      locale: baseMetadata.locale,
+      type: baseMetadata.type,
+    }
+  };
+}
+
+export function createContactMetadata(): Metadata {
+  return {
+    title: `문의하기 | ${baseMetadata.siteName}`,
+    description: `${baseMetadata.siteName}에 문의사항이 있으시면 언제든지 연락주세요. 친절하고 전문적인 상담을 제공합니다.`,
+    
+    openGraph: {
+      title: `문의하기 | ${baseMetadata.siteName}`,
+      description: `${baseMetadata.siteName}에 문의사항이 있으시면 언제든지 연락주세요.`,
+      url: `${baseMetadata.siteUrl}/contact`,
+      siteName: baseMetadata.siteName,
+      images: [
+        {
+          url: baseMetadata.defaultImage,
+          width: 1200,
+          height: 630,
+          alt: `${baseMetadata.siteName} 문의`,
+        }
+      ],
+      locale: baseMetadata.locale,
+      type: baseMetadata.type,
+    }
+  };
+}
+
+export function createReferencesMetadata(): Metadata {
+  return createCategoryMetadata('references');
+} 

@@ -7,6 +7,8 @@ import {
   getAllProjects,
   type Project,
 } from '../../../../data/projects';
+import { createReferencesMetadata } from '../../../../utils/seoMetadata';
+import { getReferenceImagePaths, getProjectMainImageUrl } from '../../../../utils/imageUtils';
 import { ImageGallery } from './ImageGallery';
 
 // 타입 정의
@@ -30,25 +32,18 @@ export async function generateMetadata({
     };
   }
 
-  return {
-    title: `${project.title} | khaki shop References`,
-    description: project.description,
-    keywords: `${project.title}, ${project.location}, ${project.category}, 레퍼런스, 프로젝트, 카키샵, khaki shop, 텍스타일, 인테리어`,
-    openGraph: {
-      title: `${project.title} | khaki shop References`,
-      description: project.description,
-      images: [
-        {
-          url: project.mainImage || '/placeholder-project.jpg',
-          width: 1200,
-          height: 630,
-          alt: project.title,
-        },
-      ],
-      type: 'website',
-      locale: 'ko_KR',
-    },
-  };
+  // 프로젝트 이미지 경로 가져오기
+  const imagePaths = getReferenceImagePaths(params.slug);
+  const mainImageUrl = getProjectMainImageUrl(params.slug);
+
+  return createReferencesMetadata({
+    projectTitle: project.title,
+    projectLocation: project.location,
+    projectCategory: project.category,
+    projectDescription: project.description,
+    projectSlug: params.slug,
+    projectImage: mainImageUrl, // 첫 번째 이미지를 OpenGraph 이미지로 사용
+  });
 }
 
 // 정적 경로 생성
@@ -68,8 +63,14 @@ export default function ReferenceDetailPage({ params }: ReferencePageProps) {
     notFound();
   }
 
-  // 모든 이미지 배열 (메인 이미지 + 갤러리 이미지)
-  const allImages = [project.mainImage, ...(project.galleryImages || [])];
+  // 최적화된 이미지 경로들 가져오기
+  const optimizedImages = getReferenceImagePaths(params.slug);
+  
+  // fallback으로 기존 이미지들도 사용
+  const fallbackImages = [project.mainImage, ...(project.galleryImages || [])].filter(Boolean);
+  
+  // 최종 이미지 배열 (최적화된 이미지 우선, fallback 이미지 보조)
+  const allImages = optimizedImages.length > 0 ? optimizedImages : fallbackImages;
 
   // 카테고리 한글 변환
   const getCategoryName = (category: string) => {
@@ -192,13 +193,29 @@ export default function ReferenceDetailPage({ params }: ReferencePageProps) {
                   </dd>
                 </div>
               </div>
+
+              {/* 이미지 품질 표시 - RIGAS 스타일 */}
+              <div className="pt-4 border-t border-gray-100">
+                <div className="flex items-center space-x-2 text-sm text-gray-600">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <span className="text-xs uppercase tracking-wider">
+                    High Quality • {allImages.length} Photos
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* 메인 이미지 갤러리 */}
+        {/* 메인 이미지 갤러리 - 최적화 적용 */}
         <div className="mb-16 lg:mb-20">
-          <ImageGallery images={allImages} projectTitle={project.title} />
+          <ImageGallery 
+            images={allImages} 
+            projectTitle={project.title}
+            projectSlug={params.slug}
+          />
         </div>
 
         {/* 프로젝트 설명 */}
@@ -208,73 +225,149 @@ export default function ReferenceDetailPage({ params }: ReferencePageProps) {
               <h2 className="text-2xl lg:text-3xl font-serif tracking-tight text-gray-900 mb-6">
                 프로젝트 소개
               </h2>
-              <p className="text-lg lg:text-xl text-gray-600 font-light leading-relaxed">
-                {project.description}
-              </p>
-            </div>
-
-            {project.client && (
-              <div>
-                <h3 className="text-xl font-serif tracking-tight text-gray-900 mb-4">
-                  클라이언트
-                </h3>
-                <p className="text-lg text-gray-600 font-light leading-relaxed">
-                  {project.client}
+              <div className="prose prose-lg prose-gray max-w-none">
+                <p className="text-gray-700 leading-relaxed font-light">
+                  {project.description}
                 </p>
               </div>
-            )}
-          </div>
+            </div>
 
-          <div className="space-y-8">
-            {/* 주요 특징 */}
+            {/* 프로젝트 특징 */}
             {project.features && project.features.length > 0 && (
               <div>
-                <h3 className="text-xl font-serif tracking-tight text-gray-900 mb-6">
+                <h3 className="text-xl font-serif tracking-tight text-gray-900 mb-4">
                   주요 특징
                 </h3>
                 <ul className="space-y-3">
                   {project.features.map((feature, index) => (
-                    <li key={index} className="flex items-start text-gray-700">
-                      <span className="w-2 h-2 bg-gray-400 rounded-full mr-4 mt-2 flex-shrink-0"></span>
-                      <span className="text-lg font-light">{feature}</span>
+                    <li key={index} className="flex items-start space-x-3">
+                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-700 font-light leading-relaxed">
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
             )}
           </div>
+
+          {/* 프로젝트 상세 정보 */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-serif tracking-tight text-gray-900 mb-6">
+                프로젝트 상세
+              </h3>
+              <dl className="space-y-4">
+                <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                  <dt className="text-sm uppercase tracking-wider text-gray-500 font-medium">
+                    클라이언트
+                  </dt>
+                  <dd className="text-gray-900 font-light">
+                    {project.client || 'Private Client'}
+                  </dd>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                  <dt className="text-sm uppercase tracking-wider text-gray-500 font-medium">
+                    위치
+                  </dt>
+                  <dd className="text-gray-900 font-light">
+                    {project.location}
+                  </dd>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                  <dt className="text-sm uppercase tracking-wider text-gray-500 font-medium">
+                    완공년도
+                  </dt>
+                  <dd className="text-gray-900 font-light">
+                    {project.year}
+                  </dd>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                  <dt className="text-sm uppercase tracking-wider text-gray-500 font-medium">
+                    면적
+                  </dt>
+                  <dd className="text-gray-900 font-light">
+                    {project.area || 'N/A'}
+                  </dd>
+                </div>
+                <div className="flex justify-between items-center py-3">
+                  <dt className="text-sm uppercase tracking-wider text-gray-500 font-medium">
+                    카테고리
+                  </dt>
+                  <dd className="text-gray-900 font-light">
+                    {getCategoryName(project.category)}
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            {/* 관련 서비스 */}
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <h3 className="text-xl font-serif tracking-tight text-gray-900 mb-4">
+                관련 서비스
+              </h3>
+              <div className="space-y-3">
+                <Link
+                  href="/ko/curtain"
+                  className="block text-gray-700 hover:text-gray-900 transition-colors duration-200 font-light"
+                >
+                  • 커튼 설계 및 시공
+                </Link>
+                <Link
+                  href="/ko/blind"
+                  className="block text-gray-700 hover:text-gray-900 transition-colors duration-200 font-light"
+                >
+                  • 블라인드 설치
+                </Link>
+                <Link
+                  href="/ko/motorized"
+                  className="block text-gray-700 hover:text-gray-900 transition-colors duration-200 font-light"
+                >
+                  • 전동 시스템
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* 네비게이션 */}
-        <div className="flex items-center justify-between pt-16 border-t border-gray-100">
-          <Link
-            href="/ko/references"
-            className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
-          >
-            <svg
-              className="w-5 h-5 mr-3 group-hover:-translate-x-1 transition-transform duration-300"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+        {/* 하단 네비게이션 */}
+        <div className="border-t border-gray-100 pt-16">
+          <div className="flex items-center justify-between">
+            <Link
+              href="/ko/references"
+              className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M7 16l-4-4m0 0l4-4m-4 4h18"
-              />
-            </svg>
-            <span className="text-sm uppercase tracking-wider font-medium">
-              모든 프로젝트 보기
-            </span>
-          </Link>
+              <svg
+                className="w-5 h-5 mr-3 group-hover:-translate-x-1 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M7 16l-4-4m0 0l4-4m-4 4h18"
+                />
+              </svg>
+              <span className="text-sm uppercase tracking-wider font-medium">
+                모든 시공 사례 보기
+              </span>
+            </Link>
 
-          <Link
-            href="/ko/contact"
-            className="inline-flex items-center px-6 py-3 bg-gray-900 text-white text-sm uppercase tracking-wider font-medium rounded-full hover:bg-gray-800 transition-colors duration-300"
-          >
-            문의하기
-          </Link>
+            <div className="text-right">
+              <p className="text-sm text-gray-600 font-light mb-1">
+                궁금한 점이 있으신가요?
+              </p>
+              <Link
+                href="/ko/contact"
+                className="text-gray-900 hover:text-gray-600 transition-colors duration-300 font-medium"
+              >
+                문의하기 →
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
