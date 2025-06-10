@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { memo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from '../lib/motion';
@@ -36,7 +36,7 @@ interface UnifiedProductCardProps {
 }
 
 // 🎨 RIGAS 스타일 통일 카드 컴포넌트
-export default function UnifiedProductCard({ product, index = 0 }: UnifiedProductCardProps) {
+const UnifiedProductCard = memo(function UnifiedProductCard({ product, index = 0 }: UnifiedProductCardProps) {
   const params = useParams();
   const locale = params?.locale as string || 'ko';
   
@@ -186,4 +186,6 @@ export default function UnifiedProductCard({ product, index = 0 }: UnifiedProduc
       </Link>
     </motion.div>
   );
-} 
+});
+
+export default UnifiedProductCard; 

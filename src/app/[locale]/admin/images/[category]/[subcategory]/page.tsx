@@ -1,17 +1,14 @@
 'use client';
 
-import React, { useState, useEffect, useCallback, useMemo, Suspense } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import Link from 'next/link';
-import { useParams, useRouter, useSearchParams } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import { motion } from "../../../../../../lib/motion";
 import type { ImageMapping } from '../../../../../../utils/imageMap';
 import AdminImagesBrowser from '../../../../../../components/admin/AdminImagesBrowser';
 import AdminImageEditPanel from '../../../../../../components/admin/AdminImageEditPanel';
 import ImageUploadZone from '../../../../../../components/admin/ImageUploadZone';
 import { 
-  MASTER_CATEGORIES, 
-  getCategoryIcon, 
-  getCategoryDisplayName,
   getCategoryByKey,
   getSubcategoryByKey,
   getCategoryBreadcrumb,

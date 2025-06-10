@@ -4,8 +4,18 @@
 // 🎨 디자인 모티브: https://www.rigas-furniture.gr/
 // 🔧 관리자 연동: /ko/admin/images
 
-import { isServer, ensureServerEnvironment } from '../lib/isServer';
-import { fs, path, fsSync, checkServerModules } from '../lib/serverUtils';
+import { isServerEnvironment, ensureServerEnvironment, fs, path, fsSync, checkServerModules, isServer } from '../lib/serverUtils';
+
+// ================================================================================
+// 🎨 KHAKISHOP 이미지 유틸리티 - RIGAS 스타일 통일
+// ================================================================================
+
+// 이미지 최적화 상수
+export const IMAGE_OPTIMIZATION = {
+  quality: 85,
+  placeholder: 'blur' as const,
+  blurDataURL: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAhEQACAQIHAQAAAAAAAAAAAAABAgMABAUGITFhkbHR/9oADAMBAAIRAxEAPwCdwLjU9IAEcLgb7jUWpyriaMqeAOzgB85B1BAAi9H9CXUAA/RAAIHfAA='
+} as const;
 
 // ================================================================================
 // 💾 서버 사이드 이미지 경로 정렬 함수들

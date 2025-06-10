@@ -297,5 +297,176 @@ export function createContactMetadata(): Metadata {
 }
 
 export function createReferencesMetadata(): Metadata {
-  return createCategoryMetadata('references');
+  const title = `시공사례 | ${baseMetadata.siteName}`;
+  const description = `${BRAND.tagline} ${baseMetadata.siteName}의 다양한 시공사례를 확인하세요.`;
+  
+  return {
+    title,
+    description,
+    keywords: '시공사례, 인테리어 사례, 커튼 설치, 블라인드 설치, 프리미엄 인테리어',
+    
+    openGraph: {
+      title,
+      description,
+      url: `${baseMetadata.siteUrl}/references`,
+      siteName: baseMetadata.siteName,
+      images: [
+        {
+          url: baseMetadata.defaultImage,
+          width: 1200,
+          height: 630,
+          alt: `${baseMetadata.siteName} 시공사례`,
+        }
+      ],
+      locale: baseMetadata.locale,
+      type: 'website',
+    },
+    
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [baseMetadata.defaultImage],
+    }
+  };
+}
+
+// 🎨 통합 SEO 메타데이터 함수 (기존 코드 호환성용)
+export function createSEOMetadata(type: 'home' | 'about' | 'contact' | 'references' | 'blog' | 'collection' | 'curtain' | 'project'): Metadata {
+  switch (type) {
+    case 'home':
+      return createHomeMetadata();
+    case 'about':
+      return createAboutMetadata();
+    case 'contact':
+      return createContactMetadata();
+    case 'references':
+      return createReferencesMetadata();
+    case 'blog':
+      return createBlogMetadata();
+    case 'collection':
+      return createCollectionMetadata();
+    case 'curtain':
+      return createCategoryMetadata('curtains');
+    case 'project':
+      return createProjectMetadata();
+    default:
+      return createHomeMetadata();
+  }
+}
+
+// 🎨 커튼 전용 메타데이터 (기존 코드 호환성용)
+export function createCurtainMetadata(product?: Product): Metadata {
+  if (product) {
+    return createProductMetadata(product, 'curtains');
+  }
+  return createCategoryMetadata('curtains');
+}
+
+// 🎨 블로그 메타데이터
+export function createBlogMetadata(): Metadata {
+  const title = `블로그 | ${baseMetadata.siteName}`;
+  const description = `${BRAND.tagline} 인테리어 팁과 트렌드를 확인하세요.`;
+  
+  return {
+    title,
+    description,
+    keywords: '블로그, 인테리어 팁, 커튼 가이드, 블라인드 선택법, 홈데코',
+    
+    openGraph: {
+      title,
+      description,
+      url: `${baseMetadata.siteUrl}/blog`,
+      siteName: baseMetadata.siteName,
+      images: [
+        {
+          url: baseMetadata.defaultImage,
+          width: 1200,
+          height: 630,
+          alt: `${baseMetadata.siteName} 블로그`,
+        }
+      ],
+      locale: baseMetadata.locale,
+      type: 'website',
+    },
+    
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [baseMetadata.defaultImage],
+    }
+  };
+}
+
+// 🎨 컬렉션 메타데이터
+export function createCollectionMetadata(): Metadata {
+  const title = `컬렉션 | ${baseMetadata.siteName}`;
+  const description = `${BRAND.tagline} 엄선된 프리미엄 컬렉션을 만나보세요.`;
+  
+  return {
+    title,
+    description,
+    keywords: '컬렉션, 프리미엄 커튼, 디자이너 블라인드, 인테리어 컬렉션',
+    
+    openGraph: {
+      title,
+      description,
+      url: `${baseMetadata.siteUrl}/collection`,
+      siteName: baseMetadata.siteName,
+      images: [
+        {
+          url: baseMetadata.defaultImage,
+          width: 1200,
+          height: 630,
+          alt: `${baseMetadata.siteName} 컬렉션`,
+        }
+      ],
+      locale: baseMetadata.locale,
+      type: 'website',
+    },
+    
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [baseMetadata.defaultImage],
+    }
+  };
+}
+
+// 🎨 프로젝트 메타데이터
+export function createProjectMetadata(): Metadata {
+  const title = `프로젝트 | ${baseMetadata.siteName}`;
+  const description = `${BRAND.tagline} 다양한 프로젝트와 사례를 확인하세요.`;
+  
+  return {
+    title,
+    description,
+    keywords: '프로젝트, 상업공간, 주거공간, 맞춤 인테리어, 전문 설치',
+    
+    openGraph: {
+      title,
+      description,
+      url: `${baseMetadata.siteUrl}/project`,
+      siteName: baseMetadata.siteName,
+      images: [
+        {
+          url: baseMetadata.defaultImage,
+          width: 1200,
+          height: 630,
+          alt: `${baseMetadata.siteName} 프로젝트`,
+        }
+      ],
+      locale: baseMetadata.locale,
+      type: 'website',
+    },
+    
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [baseMetadata.defaultImage],
+    }
+  };
 } 

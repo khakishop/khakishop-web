@@ -21,16 +21,16 @@ export async function POST(request: NextRequest) {
         console.log('🔧 시스템 무결성 검사 시작...');
         const repairResult = await validateAndRepairImageStore();
 
-        if (repairResult.success) {
+        if (repairResult.isHealthy) {
           console.log(
-            `✅ 무결성 검사 완료: 복원 ${repairResult.repaired.length}개, 누락 ${repairResult.missing.length}개`
+            `✅ 무결성 검사 완료: 복원 ${repairResult.repairedMappings}개, 누락 ${repairResult.missingFiles}개`
           );
 
           return NextResponse.json({
             success: true,
             message: '시스템 무결성 검사가 완료되었습니다.',
-            repaired: repairResult.repaired,
-            missing: repairResult.missing,
+            repairedMappings: repairResult.repairedMappings,
+            missingFiles: repairResult.missingFiles,
             stats: getStoreStats(),
           });
         } else {
@@ -120,8 +120,8 @@ export async function GET(request: NextRequest) {
       const healthCheck = await validateAndRepairImageStore();
 
       const isHealthy =
-        healthCheck.success &&
-        healthCheck.missing.length === 0 &&
+        healthCheck.isHealthy &&
+        healthCheck.missingFiles === 0 &&
         stats.totalImages > 0;
 
       return NextResponse.json({
@@ -129,8 +129,8 @@ export async function GET(request: NextRequest) {
         healthy: isHealthy,
         stats,
         issues: {
-          missingFiles: healthCheck.missing,
-          repairedMappings: healthCheck.repaired,
+          missingFiles: healthCheck.missingFiles,
+          repairedMappings: healthCheck.repairedMappings,
         },
         recommendations: getHealthRecommendations(healthCheck, stats),
       });
@@ -157,20 +157,20 @@ export async function GET(request: NextRequest) {
 
 // 🏥 건강 상태 기반 권장사항 생성
 function getHealthRecommendations(
-  healthCheck: { success: boolean; repaired: string[]; missing: string[] },
+  healthCheck: { repairedMappings: number; missingFiles: number; isHealthy: boolean },
   stats: any
 ): string[] {
   const recommendations: string[] = [];
 
-  if (healthCheck.missing.length > 0) {
+  if (healthCheck.missingFiles > 0) {
     recommendations.push(
-      `${healthCheck.missing.length}개의 파일이 누락되었습니다. 백업에서 복원하거나 매핑을 정리하세요.`
+      `${healthCheck.missingFiles}개의 파일이 누락되었습니다. 백업에서 복원하거나 매핑을 정리하세요.`
     );
   }
 
-  if (healthCheck.repaired.length > 0) {
+  if (healthCheck.repairedMappings > 0) {
     recommendations.push(
-      `${healthCheck.repaired.length}개의 매핑이 자동 복원되었습니다. 메타데이터를 확인하세요.`
+      `${healthCheck.repairedMappings}개의 매핑이 자동 복원되었습니다. 메타데이터를 확인하세요.`
     );
   }
 

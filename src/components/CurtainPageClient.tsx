@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { motion } from '../lib/motion';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { getAllCurtainProducts, getCurtainCategories, getCurtainProductsByCategory, CurtainProduct } from '../data/curtain';
+import { getAllCurtainProducts, getCurtainCategories, getCurtainProductsByCategory, Product } from '../data/curtain';
 import CurtainCard from './CurtainCard';
 
 export default function CurtainPageClient() {
@@ -17,7 +17,7 @@ export default function CurtainPageClient() {
   
   const filteredProducts = selectedCategory === 'all' 
     ? allProducts 
-    : getCurtainProductsByCategory(selectedCategory as CurtainProduct['category']);
+    : getCurtainProductsByCategory(selectedCategory as Product['category']);
 
   return (
     <div className="min-h-screen bg-white">

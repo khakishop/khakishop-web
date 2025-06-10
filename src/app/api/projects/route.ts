@@ -4,7 +4,7 @@ import { getAllProjects, getProjectsByCategory, type Project } from '../../../da
 // 🚀 프로젝트 API - 페이지네이션, 검색, 필터링 지원
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
+    const { searchParams } = request.nextUrl;
     
     // 📄 페이지네이션 파라미터
     const page = parseInt(searchParams.get('page') || '1', 10);

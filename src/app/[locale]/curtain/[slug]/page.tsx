@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: CurtainDetailPageProps): Prom
     };
   }
   
-  return createCurtainMetadata(product, params.locale);
+  return createCurtainMetadata(product);
 }
 
 export default function CurtainDetailPageRoute({ params }: CurtainDetailPageProps) {

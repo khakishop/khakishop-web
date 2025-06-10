@@ -4,11 +4,11 @@ import React from 'react';
 import { motion } from '../lib/motion';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { BlindProduct } from '../data/blind';
+import { Product } from '../data/blind';
 import BlindImageGallery from './BlindImageGallery';
 
 interface BlindDetailPageProps {
-  product: BlindProduct;
+  product: Product;
 }
 
 export default function BlindDetailPage({ product }: BlindDetailPageProps) {

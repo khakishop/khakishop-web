@@ -1,11 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import Image from 'next/image';
 import { 
   generateImageAlt, 
-  getImageSizes, 
-  IMAGE_OPTIMIZATION 
+  getImageSizes,
+  IMAGE_OPTIMIZATION
 } from '../../../../utils/imageUtils';
 
 interface ImageGalleryProps {
@@ -14,7 +14,7 @@ interface ImageGalleryProps {
   projectSlug: string;
 }
 
-export function ImageGallery({ images, projectTitle, projectSlug }: ImageGalleryProps) {
+const ImageGallery = memo(function ImageGallery({ images, projectTitle, projectSlug }: ImageGalleryProps) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isImageLoading, setIsImageLoading] = useState(false);
 
@@ -202,4 +202,9 @@ export function ImageGallery({ images, projectTitle, projectSlug }: ImageGallery
       </div>
     </div>
   );
-}
+});
+
+ImageGallery.displayName = 'ImageGallery';
+
+export { ImageGallery };
+export default ImageGallery;

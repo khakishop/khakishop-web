@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const baseUrl = 'https://khakishop.kr';
-  const imageUrl = `${baseUrl}${product.mainImage}`;
+  const imageUrl = `${baseUrl}${product.image}`;
 
   return {
     title: `${product.title} | 카키샵 블라인드`,

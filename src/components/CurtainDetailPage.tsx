@@ -4,11 +4,11 @@ import React from 'react';
 import { motion } from '../lib/motion';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { CurtainProduct } from '../data/curtain';
+import { Product } from '../data/curtain';
 import CurtainImageGallery from './CurtainImageGallery';
 
 interface CurtainDetailPageProps {
-  product: CurtainProduct;
+  product: Product;
 }
 
 export default function CurtainDetailPage({ product }: CurtainDetailPageProps) {
@@ -78,16 +78,11 @@ export default function CurtainDetailPage({ product }: CurtainDetailPageProps) {
                 )}
               </div>
 
-              {/* 제품명 & 부제목 */}
+              {/* 제품명 */}
               <div>
                 <h1 className="text-3xl lg:text-4xl font-serif text-gray-900 mb-3">
                   {product.title}
                 </h1>
-                {product.subtitle && (
-                  <p className="text-xl text-gray-600 font-medium">
-                    {product.subtitle}
-                  </p>
-                )}
               </div>
 
               {/* 가격 */}

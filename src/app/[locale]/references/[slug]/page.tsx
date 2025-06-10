@@ -7,7 +7,6 @@ import {
   getAllProjects,
   type Project,
 } from '../../../../data/projects';
-import { createReferencesMetadata } from '../../../../utils/seoMetadata';
 import { getReferenceImagePaths, getProjectMainImageUrl } from '../../../../utils/imageUtils';
 import { ImageGallery } from './ImageGallery';
 
@@ -36,14 +35,27 @@ export async function generateMetadata({
   const imagePaths = getReferenceImagePaths(params.slug);
   const mainImageUrl = getProjectMainImageUrl(params.slug);
 
-  return createReferencesMetadata({
-    projectTitle: project.title,
-    projectLocation: project.location,
-    projectCategory: project.category,
-    projectDescription: project.description,
-    projectSlug: params.slug,
-    projectImage: mainImageUrl, // 첫 번째 이미지를 OpenGraph 이미지로 사용
-  });
+  // 프로젝트별 메타데이터 수동 구성
+  return {
+    title: `${project.title} | 시공사례 | khaki shop`,
+    description: `${project.description} 위치: ${project.location}`,
+    openGraph: {
+      title: `${project.title} | 시공사례 | khaki shop`,
+      description: `${project.description} 위치: ${project.location}`,
+      url: `https://khakishop.kr/ko/references/${params.slug}`,
+      siteName: 'khaki shop',
+      images: [
+        {
+          url: mainImageUrl,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        }
+      ],
+      locale: 'ko_KR',
+      type: 'article',
+    },
+  };
 }
 
 // 정적 경로 생성

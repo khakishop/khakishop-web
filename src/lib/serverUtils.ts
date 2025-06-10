@@ -1,50 +1,55 @@
 // ================================================================================
-// 🎯 서버 전용 유틸리티 모듈
+// 🔧 KHAKISHOP 서버 전용 유틸리티 - 안전한 서버 모듈 로딩
 // ================================================================================
-// fs, path 등 Node.js 모듈들을 클라이언트에서 안전하게 처리
 
-import { isServer } from './isServer';
+// 서버 환경에서만 사용되는 모듈들을 안전하게 로드
+let serverModules: {
+  fs?: any;
+  path?: any;
+} = {};
 
-// 서버에서만 fs와 path 모듈 로드
-let fs: any = null;
-let path: any = null;
-
-if (isServer) {
+// 서버 환경 체크 및 모듈 로드
+if (typeof window === 'undefined') {
   try {
-    fs = require('fs').promises;
-    path = require('path');
+    serverModules.fs = require('fs');
+    serverModules.path = require('path');
   } catch (error) {
-    console.error('❌ Node.js 모듈 로드 실패:', error);
+    console.warn('⚠️ 서버 모듈 로드 실패:', error);
   }
 }
 
-// 동기 버전의 fs도 필요한 경우
-let fsSync: any = null;
-if (isServer) {
-  try {
-    fsSync = require('fs');
-  } catch (error) {
-    console.error('❌ fs 동기 모듈 로드 실패:', error);
-  }
+export function isServerEnvironment(): boolean {
+  return typeof window === 'undefined';
 }
 
-// 안전한 fs/path 사용을 위한 체크 함수
-export function checkServerModules(functionName?: string): boolean {
-  if (!isServer) {
-    if (functionName) {
-      console.warn(`⚠️ [${functionName}] 클라이언트에서는 fs/path 모듈을 사용할 수 없습니다.`);
-    }
+export function ensureServerEnvironment(functionName: string): boolean {
+  if (!isServerEnvironment()) {
+    console.warn(`⚠️ ${functionName}은 서버 환경에서만 사용 가능합니다.`);
     return false;
   }
-  
-  if (!fs || !path) {
-    if (functionName) {
-      console.warn(`⚠️ [${functionName}] fs/path 모듈이 로드되지 않았습니다.`);
-    }
-    return false;
-  }
-  
   return true;
 }
 
-export { fs, path, fsSync }; 
+// 안전한 fs 모듈 접근
+export function getServerFS() {
+  if (!ensureServerEnvironment('getServerFS')) return null;
+  return serverModules.fs;
+}
+
+// 안전한 path 모듈 접근
+export function getServerPath() {
+  if (!ensureServerEnvironment('getServerPath')) return null;
+  return serverModules.path;
+}
+
+// 기존 코드 호환성을 위한 exports
+export const fs = serverModules.fs;
+export const path = serverModules.path;
+export const fsSync = serverModules.fs;
+
+// 추가 호환성 함수들
+export function checkServerModules(functionName: string): boolean {
+  return ensureServerEnvironment(functionName) && !!serverModules.fs && !!serverModules.path;
+}
+
+export const isServer = isServerEnvironment; 

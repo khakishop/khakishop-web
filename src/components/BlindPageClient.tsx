@@ -4,7 +4,7 @@ import React, { useState, useMemo, useCallback, memo } from 'react';
 import { motion } from '../lib/motion';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { getAllBlindProducts, getBlindCategories, getBlindProductsByCategory, BlindProduct, blindCategories } from '../data/blind';
+import { getAllBlindProducts, getBlindCategories, getBlindProductsByCategory, Product, blindCategories } from '../data/blind';
 import BlindCard from './BlindCard';
 
 // ================================================================================
@@ -37,7 +37,7 @@ const CategoryButton = memo(({
 CategoryButton.displayName = 'CategoryButton';
 
 // 제품 그리드 컴포넌트 메모이제이션
-const ProductGrid = memo(({ products, locale }: { products: BlindProduct[], locale: string }) => (
+const ProductGrid = memo(({ products, locale }: { products: Product[], locale: string }) => (
   <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
@@ -76,13 +76,13 @@ export default function BlindPageClient() {
     if (selectedCategory === 'all') {
       return allProducts;
     }
-    return getBlindProductsByCategory(selectedCategory);
+    return allProducts.filter(product => product.subcategory === selectedCategory);
   }, [selectedCategory, allProducts]);
 
   // 카테고리 정보 메모이제이션
   const categoryInfo = useMemo(() => {
     if (selectedCategory === 'all') return null;
-    return blindCategories.find(cat => cat.id === selectedCategory);
+    return { id: selectedCategory, name: selectedCategory };
   }, [selectedCategory]);
 
   // ================================================================================
@@ -133,12 +133,12 @@ export default function BlindPageClient() {
             />
             
             {/* 카테고리 버튼들 */}
-            {blindCategories.map((category) => (
+            {blindCategories.map((categoryName) => (
               <CategoryButton
-                key={category.id}
-                category={category}
-                isSelected={selectedCategory === category.id}
-                onClick={() => handleCategoryFilter(category.id)}
+                key={categoryName}
+                category={{ id: categoryName, name: categoryName }}
+                isSelected={selectedCategory === categoryName}
+                onClick={() => handleCategoryFilter(categoryName)}
               />
             ))}
           </div>
@@ -158,9 +158,6 @@ export default function BlindPageClient() {
               <h2 className="text-2xl font-bold text-gray-900 mb-3">
                 {categoryInfo.name}
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                {categoryInfo.description}
-              </p>
             </motion.div>
           </div>
         </div>

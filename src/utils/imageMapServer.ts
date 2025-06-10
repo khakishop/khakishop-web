@@ -431,3 +431,130 @@ export function setImageProtection(imageId: string, isProtected: boolean): boole
     return false;
   }
 }
+
+// ================================================================================
+// 🔧 추가 Export 함수들 (기존 코드 호환성용)
+// ================================================================================
+
+/**
+ * 모든 이미지 정보 조회
+ * @returns 이미지 매핑 배열
+ */
+export function getAllImageInfo(): ImageMapping[] {
+  try {
+    const store = loadPersistentStore();
+    return Object.values(store.mappings);
+  } catch (error) {
+    console.error('❌ 이미지 정보 조회 실패:', error);
+    return [];
+  }
+}
+
+/**
+ * 보호된 이미지들 조회
+ * @returns 보호된 이미지 배열
+ */
+export function getProtectedImages(): ImageMapping[] {
+  try {
+    const store = loadPersistentStore();
+    return Object.values(store.mappings).filter(
+      mapping => mapping.metadata?.isProtected === true
+    );
+  } catch (error) {
+    console.error('❌ 보호된 이미지 조회 실패:', error);
+    return [];
+  }
+}
+
+/**
+ * 이미지 매핑에서 제거
+ * @param imageId 이미지 ID
+ * @returns 제거 성공 여부
+ */
+export function removeImageFromMap(imageId: string): boolean {
+  if (!checkServerModules('removeImageFromMap')) {
+    return false;
+  }
+
+  try {
+    const store = loadPersistentStore();
+    
+    if (store.mappings[imageId]) {
+      delete store.mappings[imageId];
+      savePersistentStore(store);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error('❌ 이미지 매핑 제거 실패:', error);
+    return false;
+  }
+}
+
+/**
+ * 저장소 통계 조회
+ * @returns 저장소 통계
+ */
+export function getStoreStats(): {
+  totalImages: number;
+  protectedImages: number;
+  categories: string[];
+  lastUpdated: string;
+} {
+  try {
+    const store = loadPersistentStore();
+    const mappings = Object.values(store.mappings);
+    
+    return {
+      totalImages: mappings.length,
+      protectedImages: mappings.filter(m => m.metadata?.isProtected).length,
+      categories: Array.from(new Set(mappings.map(m => m.metadata?.category).filter(Boolean))),
+      lastUpdated: store.lastUpdated,
+    };
+  } catch (error) {
+    console.error('❌ 저장소 통계 조회 실패:', error);
+    return {
+      totalImages: 0,
+      protectedImages: 0,
+      categories: [],
+      lastUpdated: new Date().toISOString(),
+    };
+  }
+}
+
+/**
+ * 보호된 이미지 추가
+ * @param imagePath 이미지 경로
+ * @param metadata 메타데이터
+ * @returns 추가 성공 여부
+ */
+export function addProtectedImage(imagePath: string, metadata: ImageMapping['metadata'] = {}): boolean {
+  if (!checkServerModules('addProtectedImage')) {
+    return false;
+  }
+
+  try {
+    const store = loadPersistentStore();
+    const id = generateImageId(imagePath);
+    
+    store.mappings[id] = {
+      id,
+      originalPath: imagePath,
+      targetPath: imagePath,
+      displayOrder: Object.keys(store.mappings).length,
+      metadata: {
+        ...metadata,
+        isProtected: true,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      },
+    };
+    
+    savePersistentStore(store);
+    return true;
+  } catch (error) {
+    console.error('❌ 보호된 이미지 추가 실패:', error);
+    return false;
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback, useState, useEffect } from 'react';
+import React, { useMemo, useCallback, useState, useEffect, memo } from 'react';
 import { FixedSizeGrid as Grid } from 'react-window';
 import type { ImageMapping } from '../../utils/imageMap';
 import ImageManagerCard from '../ImageManagerCard';
@@ -21,7 +21,7 @@ const CARD_WIDTH = 280;
 const CARD_HEIGHT = 280;
 const GAP = 24; // gap-6
 
-export default function VirtualizedImageGrid({
+const VirtualizedImageGrid = memo(function VirtualizedImageGrid({
   images,
   onImageSelect,
   onImageEdit,
@@ -154,4 +154,8 @@ export default function VirtualizedImageGrid({
       )}
     </div>
   );
-} 
+});
+
+VirtualizedImageGrid.displayName = 'VirtualizedImageGrid';
+
+export default VirtualizedImageGrid; 

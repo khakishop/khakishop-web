@@ -3,11 +3,11 @@
 import React, { memo, useCallback, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BlindProduct } from '../data/blind';
+import { Product } from '../data/blind';
 import { motion } from '../lib/motion';
 
 interface BlindCardProps {
-  product: BlindProduct;
+  product: Product;
   locale?: string;
 }
 
@@ -56,7 +56,7 @@ const BlindCard = memo(function BlindCard({ product, locale = 'ko' }: BlindCardP
       <Link href={productUrl} prefetch={false}>
         <div className="relative aspect-[4/3] overflow-hidden">
           <Image
-            src={product.mainImage}
+            src={product.image}
             alt={`${product.title} - 카키샵 블라인드`}
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-110"

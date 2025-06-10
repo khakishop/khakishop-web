@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from '../lib/motion';
 import { getCurtainImagePaths, generateImageAlt, getImageSizes } from '../utils/imageUtils';
@@ -11,7 +11,7 @@ interface CurtainImageGalleryProps {
   className?: string;
 }
 
-export default function CurtainImageGallery({ 
+const CurtainImageGallery = memo(function CurtainImageGallery({ 
   slug, 
   productTitle, 
   className = '' 
@@ -179,4 +179,8 @@ export default function CurtainImageGallery({
       )}
     </div>
   );
-} 
+});
+
+CurtainImageGallery.displayName = 'CurtainImageGallery';
+
+export default CurtainImageGallery; 

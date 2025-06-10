@@ -253,4 +253,22 @@ export const getNewCurtainProducts = (): Product[] => {
 
 export const getCurtainSubcategories = (): readonly string[] => {
   return curtainSubcategories;
+};
+
+// ================================================================================
+// 🔧 추가 Export 함수들 (기존 코드 호환성용)
+// ================================================================================
+
+/**
+ * 커튼 카테고리별 제품 조회 (기존 코드 호환성용)
+ */
+export const getCurtainProductsByCategory = (category: string): Product[] => {
+  return getCurtainProductsBySubcategory(category);
+};
+
+/**
+ * 커튼 카테고리 목록 조회 (기존 코드 호환성용)
+ */
+export const getCurtainCategories = (): readonly string[] => {
+  return curtainSubcategories;
 }; 

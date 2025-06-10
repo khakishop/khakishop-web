@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useCallback, memo } from 'react';
+import React, { memo } from 'react';
 import { motion, useScroll, useTransform, useSpring } from '../lib/motion';
 import { useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import HeroSection from '../components/HeroSection';
 import { useParams } from 'next/navigation';
 
@@ -131,12 +132,13 @@ const HomeClient = memo(function HomeClient() {
               <Link href={`/${locale}/curtain`} className="block">
                 <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
                   <div className="aspect-[16/9] relative">
-                    <img
+                    <Image
                       src="/images/references/curtain-modern-livingroom-1.png"
                       alt="Modern linen curtain in contemporary living room"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      loading="lazy"
-                      decoding="async"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      priority={false}
+                      quality={85}
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500"></div>
                   </div>
@@ -173,12 +175,13 @@ const HomeClient = memo(function HomeClient() {
               <Link href={`/${locale}/blind`} className="block">
                 <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
                   <div className="aspect-[16/9] relative">
-                    <img
+                    <Image
                       src="/images/references/blind-minimal-bedroom-1.png"
                       alt="Minimal blind design in serene bedroom"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      loading="lazy"
-                      decoding="async"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      priority={false}
+                      quality={85}
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500"></div>
                   </div>
@@ -215,12 +218,13 @@ const HomeClient = memo(function HomeClient() {
               <Link href={`/${locale}/motorized`} className="block">
                 <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
                   <div className="aspect-[16/9] relative">
-                    <img
+                    <Image
                       src="/images/references/motorized-luxury-office-1.png"
                       alt="Smart motorized system in modern office"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      loading="lazy"
-                      decoding="async"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      priority={false}
+                      quality={85}
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500"></div>
                   </div>

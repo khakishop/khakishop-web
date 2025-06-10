@@ -269,7 +269,7 @@ const Pagination = memo(({
 
 Pagination.displayName = 'Pagination';
 
-export default function AdminImagesBrowser({ 
+const AdminImagesBrowser = memo(function AdminImagesBrowser({ 
   images, 
   onImageSelect, 
   onImageEdit, 
@@ -497,4 +497,8 @@ export default function AdminImagesBrowser({
       {categoryHierarchy.length > 0 ? renderCategoryGrid() : renderImageGrid()}
     </div>
   );
-} 
+});
+
+AdminImagesBrowser.displayName = 'AdminImagesBrowser';
+
+export default AdminImagesBrowser; 

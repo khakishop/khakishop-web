@@ -170,7 +170,12 @@ const nextConfig = {
               },
               name(module) {
                 const hash = crypto.createHash('sha1');
-                hash.update(module.libIdent ? module.libIdent({ context: config.context }) : module.identifier());
+                const data = module.libIdent ? module.libIdent({ context: config.context }) : module.identifier();
+                if (data) {
+                  hash.update(data);
+                } else {
+                  hash.update('default');
+                }
                 return hash.digest('hex').substring(0, 8);
               },
               priority: 30,

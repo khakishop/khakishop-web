@@ -1,17 +1,17 @@
 'use client';
 
-import React from 'react';
+import React, { memo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { CurtainProduct } from '../data/curtain';
+import { Product } from '../data/curtain';
 import { motion } from '../lib/motion';
 
 interface CurtainCardProps {
-  product: CurtainProduct;
+  product: Product;
   locale?: string;
 }
 
-export default function CurtainCard({ product, locale = 'ko' }: CurtainCardProps) {
+const CurtainCard = memo(function CurtainCard({ product, locale = 'ko' }: CurtainCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ export default function CurtainCard({ product, locale = 'ko' }: CurtainCardProps
         {/* 🖼️ 제품 이미지 */}
         <div className="relative w-full h-64 overflow-hidden bg-gray-50">
           <Image
-            src={product.mainImage}
+            src={product.image}
             alt={product.title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -60,19 +60,13 @@ export default function CurtainCard({ product, locale = 'ko' }: CurtainCardProps
         <div className="p-6">
           {/* 카테고리 */}
           <div className="text-sm text-gray-500 mb-2 font-medium">
-            {product.category}
+            {product.subcategory || product.category}
           </div>
 
-          {/* 제목 및 부제목 */}
+          {/* 제목 */}
           <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors duration-300">
             {product.title}
           </h3>
-          
-          {product.subtitle && (
-            <p className="text-sm text-gray-600 mb-3 font-medium">
-              {product.subtitle}
-            </p>
-          )}
 
           {/* 설명 */}
           <p className="text-gray-700 text-sm leading-relaxed mb-4 line-clamp-3">
@@ -120,4 +114,6 @@ export default function CurtainCard({ product, locale = 'ko' }: CurtainCardProps
       </Link>
     </motion.div>
   );
-} 
+});
+
+export default CurtainCard; 

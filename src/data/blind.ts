@@ -278,4 +278,27 @@ export const getNewBlindProducts = (): Product[] => {
 
 export const getBlindSubcategories = (): readonly string[] => {
   return blindSubcategories;
+};
+
+// ================================================================================
+// 🔧 추가 Export 함수들 (기존 코드 호환성용)
+// ================================================================================
+
+/**
+ * 블라인드 카테고리 정보 조회 (기존 코드 호환성용)
+ */
+export const blindCategories = blindSubcategories;
+
+/**
+ * 카테고리별 블라인드 제품 조회 (기존 코드 호환성용)
+ */
+export const getBlindProductsByCategory = (category: string): Product[] => {
+  return getBlindProductsBySubcategory(category);
+};
+
+/**
+ * 블라인드 카테고리 목록 조회 (기존 코드 호환성용)
+ */
+export const getBlindCategories = (): readonly string[] => {
+  return blindSubcategories;
 }; 

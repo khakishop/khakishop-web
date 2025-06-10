@@ -204,7 +204,7 @@ export async function POST(request: NextRequest) {
     );
 
     try {
-      const imageId = addProtectedImage(uniqueFileName, relativePath, metadata);
+      const imageId = addProtectedImage(relativePath, metadata);
       console.log(`📷 이미지 매핑 추가: ${uniqueFileName} → ${relativePath}`);
 
       // 성공 응답

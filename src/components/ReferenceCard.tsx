@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { memo } from 'react';
 import { motion } from "../lib/motion";
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,10 +11,10 @@ export interface ReferenceCardProps {
   index?: number;
 }
 
-const ReferenceCard: React.FC<ReferenceCardProps> = ({
+const ReferenceCard = memo(function ReferenceCard({
   project,
   index = 0,
-}) => {
+}: ReferenceCardProps) {
   // 안전성 검사
   if (!project || !project.slug) {
     console.error(
@@ -86,6 +86,8 @@ const ReferenceCard: React.FC<ReferenceCardProps> = ({
       </Link>
     </motion.div>
   );
-};
+});
+
+ReferenceCard.displayName = 'ReferenceCard';
 
 export default ReferenceCard;

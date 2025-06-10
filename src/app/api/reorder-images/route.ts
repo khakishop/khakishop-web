@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
     }
 
     // 저장소 업데이트
-    store.lastSync = new Date().toISOString();
+    store.lastUpdated = new Date().toISOString();
     savePersistentStore(store);
 
     console.log(

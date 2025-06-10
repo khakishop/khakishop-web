@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { memo } from 'react';
 import Image from 'next/image';
 import { motion } from "../lib/motion";
 import Link from 'next/link';
@@ -12,7 +12,7 @@ export interface ProductCardProps {
   index?: number;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0 }) => {
+const ProductCard = memo(function ProductCard({ product, index = 0 }: ProductCardProps) {
   const params = useParams();
   const locale = params?.locale || 'ko'; // 기본값을 'ko'로 설정
 
@@ -94,6 +94,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0 }) => {
       </Link>
     </motion.div>
   );
-};
+});
+
+ProductCard.displayName = 'ProductCard';
 
 export default ProductCard;

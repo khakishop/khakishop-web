@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { memo } from 'react';
 import { motion } from '../lib/motion';
 import UnifiedProductCard from './UnifiedProductCard';
 
@@ -40,7 +40,7 @@ interface UnifiedProductGridProps {
 }
 
 // 🎨 RIGAS 스타일 통일 그리드 컴포넌트
-export default function UnifiedProductGrid({
+const UnifiedProductGrid = memo(function UnifiedProductGrid({
   products,
   loading = false,
   title,
@@ -195,4 +195,8 @@ export default function UnifiedProductGrid({
       </div>
     </section>
   );
-} 
+});
+
+UnifiedProductGrid.displayName = 'UnifiedProductGrid';
+
+export default UnifiedProductGrid; 

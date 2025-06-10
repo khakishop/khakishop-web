@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { AnimatePresence, motion } from '../../lib/motion';
 import type { ImageMapping } from '../../utils/imageMap';
 
@@ -92,9 +93,11 @@ export default function DeleteImageDialog({
             <div className="px-6 py-4 bg-gray-50">
               <div className="flex items-center space-x-4">
                 <div className="relative w-16 h-16 bg-gray-200 rounded-lg overflow-hidden">
-                  <img
+                  <Image
                     src={image.src}
                     alt={image.alt || image.sourceFile}
+                    width={64}
+                    height={64}
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;

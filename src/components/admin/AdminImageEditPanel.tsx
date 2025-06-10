@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from '../../lib/motion';
 import type { ImageMapping, ImageMetadata } from '../../utils/imageMap';
 import { MASTER_CATEGORIES, getCategoryIcon, getCategoryDisplayName } from '../../utils/constants/categories';
 import { LocalDateDisplay } from '../LocalTimeDisplay';
+import Image from 'next/image';
 
 interface AdminImageEditPanelProps {
   image: ImageMapping;
@@ -116,9 +117,11 @@ const AdminImageEditPanel = memo(function AdminImageEditPanel({
             {/* 이미지 미리보기 */}
             <div className="w-1/2 bg-gray-100 flex items-center justify-center">
               <div className="p-8">
-                <img
+                <Image
                   src={`/images/${image.metadata?.category}/${image.sourceFile}`}
                   alt={image.metadata?.alt || image.sourceFile}
+                  width={600}
+                  height={400}
                   className="max-w-full max-h-[60vh] object-contain rounded-lg shadow-lg"
                 />
               </div>
