@@ -1,0 +1,120 @@
+=== KHAKISHOP 이미지 프롬프트 ===
+생성일: 2025. 6. 14.
+총 High Priority 이미지: 약 100개
+
+[커튼 제품]
+
+-1 essential-linen-collection/main.jpg: "Elegant linen curtains in modern living room, natural fabric texture, soft lighting, Korean textile quality, architectural digest style, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-2 modern-sheer-series/main.jpg: "Modern sheer curtains with soft natural light filtering, contemporary interior design, minimalist aesthetic, clean lines, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-3 venetian-premium-line/main.jpg: "Premium venetian curtains in luxury living space, sophisticated fabric draping, warm ambient lighting, high-end interior, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-4 wood-texture-natural/main.jpg: "Natural wood texture curtains in Scandinavian style room, organic materials, cozy atmosphere, Nordic design, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-5 smart-automation-series/main.jpg: "Smart automated curtains with sleek motor system, modern technology integration, contemporary home automation, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-6 sheer-curtain/main.jpg: "Delicate sheer curtains with ethereal light diffusion, romantic ambiance, soft flowing fabric, elegant interior, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+[블라인드 제품]
+
+-7 premium-venetian-collection/main.jpg: "Premium venetian blinds in contemporary office, precise slat control, soft natural daylight, clean minimal decor, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-8 modern-vertical-system/main.jpg: "Modern vertical blinds in floor-to-ceiling windows, sleek linear design, professional workspace aesthetic, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-9 smart-roller-collection/main.jpg: "Smart roller blinds with motorized control, seamless integration, modern home automation, clean design, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-10 elegant-roman-style/main.jpg: "Elegant Roman style blinds with soft fabric folds, classic interior design, sophisticated window treatment, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-11 contemporary-panel-system/main.jpg: "Contemporary panel blinds in modern office space, geometric patterns, professional environment, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-12 wood-blind/main.jpg: "Natural wood blinds with warm grain texture, organic materials, cozy residential interior, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-13 aluminum-blind/main.jpg: "Sleek aluminum blinds in modern commercial space, industrial aesthetic, precise light control, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-14 fabric-blind/main.jpg: "Soft fabric blinds with textured weave, comfortable residential setting, warm natural lighting, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+[모터라이즈드 제품]
+
+-15 smart-curtain-system-pro/main.jpg: "Smart automated curtains with app control, wireless motor system, modern luxury living room, cinematic lighting, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-16 motorized-venetian-deluxe/main.jpg: "Motorized venetian blinds with precision control, high-tech home automation, sleek contemporary design, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-17 ai-home-integration-suite/main.jpg: "AI-powered smart window treatments, futuristic home automation, voice control interface, modern technology, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-18 voice-control-roller-system/main.jpg: "Voice-controlled roller blinds, smart home integration, seamless automation, contemporary interior, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-19 smartphone-vertical-elite/main.jpg: "Smartphone-controlled vertical blinds, modern office automation, professional workspace technology, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-20 solar-powered-eco-system/main.jpg: "Solar-powered automated window treatments, eco-friendly technology, sustainable home design, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-21 smart-home-integration/main.jpg: "Integrated smart home window system, comprehensive automation, modern luxury interior, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-22 motorized-curtain-system/main.jpg: "Motorized curtain system with remote control, convenient home automation, elegant operation, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-23 motorized-blind-system/main.jpg: "Motorized blind system with precise positioning, advanced window treatment technology, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+[레퍼런스 프로젝트]
+
+-24 modern-office-gangnam/main.jpg: "Modern office interior in Gangnam Seoul, professional curtain installation, natural lighting, Korean workspace design, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-25 minimal-residence-bundang/main.jpg: "Minimalist residential interior in Bundang, clean window treatments, Scandinavian influence, Korean modern home, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-26 classic-cafe-hongdae/main.jpg: "Classic cafe interior in Hongdae, vintage window treatments, warm atmospheric lighting, Korean coffee culture, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-27 contemporary-house-goyang/main.jpg: "Contemporary house interior in Goyang, modern window solutions, family-friendly design, Korean residential, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-28 scandinavian-apartment-mapo/main.jpg: "Scandinavian style apartment in Mapo, Nordic window treatments, natural materials, Korean urban living, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-29 industrial-lobby-yongsan/main.jpg: "Industrial style lobby in Yongsan, modern commercial window treatments, urban aesthetic, Korean architecture, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-30 luxury-penthouse-seocho/main.jpg: "Luxury penthouse interior in Seocho, premium window treatments, high-end design, Korean luxury living, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-31 modern-clinic-seongnam/main.jpg: "Modern medical clinic in Seongnam, professional window solutions, clean healthcare environment, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-32 art-gallery-jongno/main.jpg: "Contemporary art gallery in Jongno, museum-quality window treatments, cultural space design, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-33 luxury-residence-gangnam/main.jpg: "Luxury residential interior in Gangnam, premium curtain installation, sophisticated Korean home design, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-34 modern-office-seoul/main.jpg: "Modern corporate office in Seoul, professional window treatments, Korean business environment, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-35 boutique-hotel-busan/main.jpg: "Boutique hotel interior in Busan, hospitality window solutions, Korean coastal design aesthetic, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-36 medical-center-ilsan/main.jpg: "Medical center interior in Ilsan, healthcare window treatments, clean professional environment, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-37 university-library-daejeon/main.jpg: "University library in Daejeon, academic window solutions, study-friendly lighting control, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+-38 premium-apartment-songdo/main.jpg: "Premium apartment interior in Songdo, luxury window treatments, modern Korean residential design, 8K resolution, professional photography, architectural digest style, natural lighting, soft shadows, warm ambient light --ar 16:10, --style raw, --v 6"
+
+[홈페이지 핵심 이미지]
+
+-39 curtain-modern-livingroom-1.png: "Modern living room with elegant curtains, Korean interior design, natural lighting, contemporary furniture, 8K resolution, architectural photography --ar 16:10"
+
+-40 blind-minimal-bedroom-1.png: "Minimal bedroom with sleek blinds, Scandinavian influence, Korean modern home, soft morning light, clean aesthetic, 8K resolution --ar 16:10"
+
+-41 motorized-luxury-office-1/main.png: "Luxury office with motorized window treatments, smart automation, Korean corporate design, professional environment, 8K resolution --ar 16:10"
+
+
+=== 사용 가이드 ===
+
+1. 각 프롬프트를 Midjourney에 복사하여 사용
+2. 필요시 키워드 조정 가능 (색상, 스타일 등)
+3. --ar 16:10 비율로 통일 (웹사이트 최적화)
+4. --v 6 버전 사용 권장
+5. 생성 후 파일명에 맞게 저장
+
+=== 품질 기준 ===
+
+- 해상도: 8K 이상
+- 스타일: 건축 다이제스트 수준
+- 조명: 자연광 중심
+- 구도: 전문 인테리어 사진
+- 브랜드: 한국적 감성 + 모던 디자인
+
+=== 우선순위 ===
+
+1. 제품 메인 이미지 (커튼 6개 + 블라인드 8개 + 모터라이즈드 9개)
+2. 레퍼런스 프로젝트 메인 (15개)
+3. 홈페이지 핵심 이미지 (3개)
+
+총 41개 High Priority 이미지

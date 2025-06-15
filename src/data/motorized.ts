@@ -11,6 +11,8 @@ export interface MotorizedProduct {
   category: string;
   description: string;
   mainImage: string;
+  gallery?: string[];
+  image?: string;
   features: string[];
   materials: string[];
   sizes: string[];
@@ -24,6 +26,8 @@ export interface MotorizedProduct {
   warranty: string;
   bestseller?: boolean;
   new?: boolean;
+  specifications?: Record<string, string>;
+  detailDescription?: string;
 }
 
 // 🏷️ 모터라이즈드 카테고리 정의
@@ -62,14 +66,39 @@ export const motorizedProducts: MotorizedProduct[] = [
     title: '스마트 커튼 시스템 프로',
     category: 'smart-curtains',
     description: '최신 IoT 기술이 적용된 프리미엄 스마트 커튼 시스템입니다. 음성 제어, 앱 제어, 스케줄 설정 등 다양한 기능을 제공합니다.',
-    mainImage: '/images/motorized/smart-curtain-system-pro/motorized-smart-curtain-system-pro-1.jpg',
-    features: [
-      '음성 제어 (Alexa, Google)',
-      '스마트폰 앱 제어',
-      '스케줄 자동 개폐',
-      '일출/일몰 연동',
-      '무선 리모컨 제공',
+    mainImage: '/images/motorized/smart-curtain-system/main.jpg',
+    gallery: [
+      '/images/motorized/smart-curtain-system/main.jpg',
+      '/images/motorized/smart-curtain-system/detail-1.jpg',
+      '/images/motorized/smart-curtain-system/detail-2.jpg',
     ],
+    image: '/images/motorized/smart-curtain-system/main.jpg',
+    features: [
+      '음성 제어 (Alexa, Google Assistant)',
+      'AI 기반 자동 스케줄링',
+      '스마트폰 원격 제어',
+      '에너지 절약 센서',
+      '간편한 설치',
+    ],
+    specifications: {
+      '제어 방식': '스마트폰 앱, 음성 명령, 자동 센서',
+      '호환성': 'iOS, Android, Alexa, Google Home',
+      '전원': 'DC 24V (어댑터 포함)',
+      '설치': '브래킷 마운트 (DIY 가능)',
+      'A/S': '3년 품질보증',
+    },
+    detailDescription: `
+IoT 기술과 인공지능이 결합된 차세대 스마트 커튼 시스템입니다. 
+음성으로 간편하게 제어하고, AI가 당신의 라이프스타일을 학습하여 
+최적의 시간에 자동으로 커튼을 조절합니다.
+
+**주요 특징:**
+- 🎤 음성 제어: "알렉사, 커튼 열어줘" 
+- 🤖 AI 스케줄링: 생활 패턴 학습 후 자동 제어
+- 📱 스마트폰 앱: 어디서나 원격 제어 가능
+- ⚡ 에너지 절약: 빛 센서로 전력 효율 최적화
+- 🔧 간편 설치: 기존 레일에 쉽게 설치 가능
+    `,
     materials: ['프리미엄 모터', 'IoT 센서', '고급 원단', '스마트 컨트롤러'],
     sizes: ['120x200cm', '150x220cm', '180x240cm', '맞춤 제작'],
     colors: ['스마트 화이트', '테크 그레이', '미드나이트 블랙', '맞춤 색상'],
@@ -96,7 +125,7 @@ export const motorizedProducts: MotorizedProduct[] = [
     title: '모터라이즈드 베네치안 디럭스',
     category: 'smart-blinds',
     description: '정밀한 슬랫 각도 조절이 가능한 모터라이즈드 베네치안 블라인드로 완벽한 빛 조절을 제공합니다.',
-    mainImage: '/images/motorized/motorized-venetian-deluxe/motorized-motorized-venetian-deluxe-1.jpg',
+    mainImage: '/images/motorized/remote-venetian-blinds/main.jpg',
     features: [
       '정밀 슬랫 각도 제어',
       '무소음 모터 시스템',
@@ -129,7 +158,7 @@ export const motorizedProducts: MotorizedProduct[] = [
     title: 'AI 홈 통합 시스템',
     category: 'home-automation',
     description: '인공지능 기반 스마트홈 통합 솔루션으로 전체 주거 공간의 창호 시스템을 자동화합니다.',
-    mainImage: '/images/motorized/ai-home-integration-suite/motorized-ai-home-integration-suite-1.jpg',
+    mainImage: '/images/motorized/smart-home-automation/main.jpg',
     features: [
       'AI 학습 기반 자동화',
       '전체 집 통합 제어',
@@ -162,7 +191,7 @@ export const motorizedProducts: MotorizedProduct[] = [
     title: '보이스 컨트롤 롤러 시스템',
     category: 'voice-control',
     description: 'AI 음성 인식 기술로 핸즈프리 조작이 가능한 차세대 롤러 블라인드 시스템입니다.',
-    mainImage: '/images/motorized/voice-control-roller-system/motorized-voice-control-roller-system-1.jpg',
+    mainImage: '/images/motorized/voice-blind-control/main.jpg',
     features: [
       'AI 음성 인식',
       '다국어 명령 지원',
@@ -195,7 +224,7 @@ export const motorizedProducts: MotorizedProduct[] = [
     title: '스마트폰 버티컬 엘리트',
     category: 'app-control',
     description: '전용 모바일 앱으로 정밀 제어가 가능한 프리미엄 버티컬 블라인드 시스템입니다.',
-    mainImage: '/images/motorized/smartphone-vertical-elite/motorized-smartphone-vertical-elite-1.jpg',
+    mainImage: '/images/motorized/app-controlled-blinds/main.jpg',
     features: [
       '전용 모바일 앱',
       '실시간 상태 모니터링',
@@ -228,7 +257,7 @@ export const motorizedProducts: MotorizedProduct[] = [
     title: '솔라 파워드 에코 시스템',
     category: 'smart-curtains',
     description: '태양광 충전 시스템으로 친환경적이고 경제적인 스마트 커튼 솔루션입니다.',
-    mainImage: '/images/motorized/solar-powered-eco-system/motorized-solar-powered-eco-system-1.jpg',
+    mainImage: '/images/motorized/solar-powered-blinds/main.jpg',
     features: [
       '태양광 충전 패널',
       '에너지 절약 모드',

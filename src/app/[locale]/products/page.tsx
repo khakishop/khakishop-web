@@ -1,10 +1,10 @@
 'use client';
 
-import React from 'react';
-import { motion } from "../../../lib/motion";
-import { getAllProducts } from '../../../data/products';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
+import HomeButton from '../../../components/ui/HomeButton';
+import { getAllProducts } from '../../../data/products';
+import { motion } from "../../../lib/motion";
 
 export default function ProductsPage() {
   const allProducts = getAllProducts();
@@ -32,13 +32,13 @@ export default function ProductsPage() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: 'easeOut',
       },
     },
   };
 
   return (
     <div className="min-h-screen bg-white">
+      <HomeButton />
       <motion.div
         variants={containerVariants}
         initial="initial"
@@ -63,7 +63,15 @@ export default function ProductsPage() {
         >
           {allProducts.map((product, index) => (
             <motion.div key={product.slug} variants={itemVariants}>
-              <Link href={`/products/${product.slug}`} className="group block">
+              <Link
+                href={
+                  product.category === 'Curtain' ? `/ko/curtain/${product.slug}` :
+                    product.category === 'Blind' ? `/ko/blind/${product.slug}` :
+                      product.category === 'Motorized' ? `/ko/motorized/${product.slug}` :
+                        `/ko/products/${product.slug}`
+                }
+                className="group block"
+              >
                 {/* RIGAS 스타일 미니멀 제품 카드 */}
                 <div className="space-y-4">
                   {/* 제품 이미지 */}

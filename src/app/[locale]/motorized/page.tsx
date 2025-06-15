@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: '미래형 스마트홈을 위한 모터라이즈드 시스템',
     images: [
       {
-        url: '/images/motorized/smart-curtain-system-pro/motorized-smart-curtain-system-pro-1.jpg',
+        url: '/images/motorized/smart-curtain-system/main.jpg',
         width: 1200,
         height: 630,
         alt: '카키샵 모터라이즈드 컬렉션',

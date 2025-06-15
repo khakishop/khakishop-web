@@ -36,7 +36,7 @@ export interface Product {
 // 🏷️ 커튼 서브카테고리 정의
 export const curtainSubcategories = [
   'Essential Linen',
-  'Modern Sheer', 
+  'Modern Sheer',
   'Venetian Premium',
   'Wood Texture',
   'Custom Solution'
@@ -49,7 +49,7 @@ export const curtainProducts: Product[] = [
     slug: 'essential-linen-collection',
     title: 'Essential Linen Collection',
     description: '천연 리넨 소재로 제작된 에센셜 컬렉션입니다. 자연스러운 질감과 부드러운 드레이프가 공간에 편안함과 세련됨을 더해줍니다.',
-    image: '/images/curtains/essential-linen-collection/main.jpg',
+    image: '/images/curtain/essential-linen-collection/main.jpg',
     category: 'curtains',
     subcategory: 'Essential Linen',
     displayOrder: 1,
@@ -75,10 +75,10 @@ export const curtainProducts: Product[] = [
     warranty: '제품 하자 1년 보증',
     bestseller: true,
     gallery: [
-      '/images/curtains/essential-linen-collection/main.jpg',
-      '/images/curtains/essential-linen-collection/detail-1.jpg',
-      '/images/curtains/essential-linen-collection/detail-2.jpg',
-      '/images/curtains/essential-linen-collection/lifestyle.jpg'
+      '/images/curtain/essential-linen-collection/main.jpg',
+      '/images/curtain/essential-linen-collection/detail-1.jpg',
+      '/images/curtain/essential-linen-collection/detail-2.jpg',
+      '/images/curtain/essential-linen-collection/lifestyle.jpg'
     ]
   },
   {
@@ -86,7 +86,7 @@ export const curtainProducts: Product[] = [
     slug: 'modern-sheer-series',
     title: 'Modern Sheer Series',
     description: '현대적인 공간에 완벽한 모던 쉬어 커튼입니다. 부드러운 빛 투과로 프라이버시를 보호하면서도 자연광을 적절히 유입시켜 밝고 쾌적한 실내 환경을 만들어줍니다.',
-    image: '/images/curtains/modern-sheer-series/main.jpg',
+    image: '/images/curtain/modern-sheer-series/main.jpg',
     category: 'curtains',
     subcategory: 'Modern Sheer',
     displayOrder: 2,
@@ -112,10 +112,10 @@ export const curtainProducts: Product[] = [
     warranty: '6개월 품질보증',
     new: true,
     gallery: [
-      '/images/curtains/modern-sheer-series/main.jpg',
-      '/images/curtains/modern-sheer-series/detail-1.jpg',
-      '/images/curtains/modern-sheer-series/detail-2.jpg',
-      '/images/curtains/modern-sheer-series/lifestyle.jpg'
+      '/images/curtain/modern-sheer-series/main.jpg',
+      '/images/curtain/modern-sheer-series/detail-1.jpg',
+      '/images/curtain/modern-sheer-series/detail-2.jpg',
+      '/images/curtain/modern-sheer-series/lifestyle.jpg'
     ]
   },
   {
@@ -123,7 +123,7 @@ export const curtainProducts: Product[] = [
     slug: 'venetian-premium-line',
     title: 'Venetian Premium Line',
     description: '베네치안 스타일에서 영감을 받은 프리미엄 커튼 라인입니다. 풍부한 질감과 깊이 있는 색상으로 공간에 고급스러움과 우아함을 선사합니다.',
-    image: '/images/curtains/venetian-premium-line/main.jpg',
+    image: '/images/curtain/venetian-premium-line/main.jpg',
     category: 'curtains',
     subcategory: 'Venetian Premium',
     displayOrder: 3,
@@ -149,10 +149,10 @@ export const curtainProducts: Product[] = [
     warranty: '3년 품질보증 + 평생 A/S',
     bestseller: true,
     gallery: [
-      '/images/curtains/venetian-premium-line/main.jpg',
-      '/images/curtains/venetian-premium-line/detail-1.jpg',
-      '/images/curtains/venetian-premium-line/detail-2.jpg',
-      '/images/curtains/venetian-premium-line/lifestyle.jpg'
+      '/images/curtain/venetian-premium-line/main.jpg',
+      '/images/curtain/venetian-premium-line/detail-1.jpg',
+      '/images/curtain/venetian-premium-line/detail-2.jpg',
+      '/images/curtain/venetian-premium-line/lifestyle.jpg'
     ]
   },
   {
@@ -160,7 +160,7 @@ export const curtainProducts: Product[] = [
     slug: 'wood-texture-natural',
     title: 'Wood Texture Natural',
     description: '천연 나무의 질감을 모티브로 한 독특한 텍스처 커튼입니다. 자연친화적인 패턴과 부드러운 촉감으로 공간에 따뜻함과 안정감을 제공합니다.',
-    image: '/images/curtains/wood-texture-natural/main.jpg',
+    image: '/images/curtain/wood-texture-natural/main.jpg',
     category: 'curtains',
     subcategory: 'Wood Texture',
     displayOrder: 4,
@@ -185,10 +185,10 @@ export const curtainProducts: Product[] = [
     care: ['드라이클리닝 권장', '직사광선 피함', '습기 주의'],
     warranty: '1년 제품보증',
     gallery: [
-      '/images/curtains/wood-texture-natural/main.jpg',
-      '/images/curtains/wood-texture-natural/detail-1.jpg',
-      '/images/curtains/wood-texture-natural/detail-2.jpg',
-      '/images/curtains/wood-texture-natural/lifestyle.jpg'
+      '/images/curtain/wood-texture-natural/main.jpg',
+      '/images/curtain/wood-texture-natural/detail-1.jpg',
+      '/images/curtain/wood-texture-natural/detail-2.jpg',
+      '/images/curtain/wood-texture-natural/lifestyle.jpg'
     ]
   },
   {
@@ -196,7 +196,7 @@ export const curtainProducts: Product[] = [
     slug: 'smart-automation-series',
     title: 'Smart Automation Series',
     description: '최신 IoT 기술이 적용된 스마트 커튼 시스템입니다. 앱으로 제어하거나 음성 명령으로 조작할 수 있으며, 시간에 따른 자동 개폐 기능과 날씨 연동 기능을 제공합니다.',
-    image: '/images/curtains/smart-automation-series/main.jpg',
+    image: '/images/curtain/smart-automation-series/main.jpg',
     category: 'curtains',
     subcategory: 'Custom Solution',
     displayOrder: 5,
@@ -222,10 +222,10 @@ export const curtainProducts: Product[] = [
     warranty: '5년 품질보증 + 평생 기술지원',
     new: true,
     gallery: [
-      '/images/curtains/smart-automation-series/main.jpg',
-      '/images/curtains/smart-automation-series/detail-1.jpg',
-      '/images/curtains/smart-automation-series/detail-2.jpg',
-      '/images/curtains/smart-automation-series/lifestyle.jpg'
+      '/images/curtain/smart-automation-series/main.jpg',
+      '/images/curtain/smart-automation-series/detail-1.jpg',
+      '/images/curtain/smart-automation-series/detail-2.jpg',
+      '/images/curtain/smart-automation-series/lifestyle.jpg'
     ]
   }
 ];

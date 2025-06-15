@@ -28,7 +28,7 @@ export const projects: Project[] = [
     category: 'Commercial',
     description:
       '현대적 감각의 오피스 공간을 위한 맞춤형 블라인드 시공. 업무 효율성과 미적 완성도를 동시에 추구한 프로젝트입니다.',
-    mainImage: '/images/references/modern-office-gangnam/main.svg',
+    mainImage: '/images/references/modern-office-gangnam/main.png',
     galleryImages: [
       '/images/references/modern-office-gangnam/gallery-1.svg',
       '/images/references/modern-office-gangnam/gallery-2.svg',
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     category: 'Residential',
     description:
       '미니멀 주거 공간의 감성적 커튼 시공. 자연스러운 채광과 프라이버시를 균형 있게 조화시킨 작품입니다.',
-    mainImage: '/images/references/minimal-residence-bundang/main.svg',
+    mainImage: '/images/references/minimal-residence-bundang/main.png',
     galleryImages: [
       '/images/references/minimal-residence-bundang/gallery-1.svg',
       '/images/references/minimal-residence-bundang/gallery-2.svg',
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     category: 'F&B',
     description:
       '클래식한 감성의 카페 공간 커튼 시공. 따뜻하고 아늑한 분위기 연출로 고객들의 휴식 공간을 완성했습니다.',
-    mainImage: '/images/references/classic-cafe-hongdae/main.svg',
+    mainImage: '/images/references/classic-cafe-hongdae/main.png',
     galleryImages: [
       '/images/references/classic-cafe-hongdae/gallery-1.svg',
       '/images/references/classic-cafe-hongdae/gallery-2.svg',
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     category: 'Residential',
     description:
       '현대적 주택의 스마트 블라인드 시스템. IoT 기술을 활용한 지능형 조광 시스템으로 편의성을 극대화했습니다.',
-    mainImage: '/images/references/contemporary-house-goyang/main.svg',
+    mainImage: '/images/references/contemporary-house-goyang/main.png',
     galleryImages: [
       '/images/references/contemporary-house-goyang/gallery-1.svg',
       '/images/references/contemporary-house-goyang/gallery-2.svg',
@@ -113,7 +113,7 @@ export const projects: Project[] = [
     category: 'Residential',
     description:
       '스칸디나비아 스타일 아파트 커튼 시공. 북유럽의 자연스럽고 밝은 감성을 담아낸 따뜻한 공간입니다.',
-    mainImage: '/images/references/scandinavian-apartment-mapo/main.svg',
+    mainImage: '/images/references/scandinavian-apartment-mapo/main.png',
     galleryImages: [
       '/images/references/scandinavian-apartment-mapo/gallery-1.svg',
       '/images/references/scandinavian-apartment-mapo/gallery-2.svg',
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     category: 'Commercial',
     description:
       '인더스트리얼 스타일 로비 블라인드 시공. 모던하고 세련된 비즈니스 공간의 첫인상을 완성했습니다.',
-    mainImage: '/images/references/industrial-lobby-yongsan/main.svg',
+    mainImage: '/images/references/industrial-lobby-yongsan/main.png',
     galleryImages: [
       '/images/references/industrial-lobby-yongsan/gallery-1.svg',
       '/images/references/industrial-lobby-yongsan/gallery-2.svg',
@@ -153,7 +153,7 @@ export const projects: Project[] = [
     category: 'Residential',
     description:
       '럭셔리 펜트하우스 프리미엄 커튼 시공. 최고급 소재와 정교한 디테일로 완성한 품격 있는 공간입니다.',
-    mainImage: '/images/references/luxury-penthouse-seocho/main.svg',
+    mainImage: '/images/references/luxury-penthouse-seocho/main.png',
     galleryImages: [
       '/images/references/luxury-penthouse-seocho/gallery-1.svg',
       '/images/references/luxury-penthouse-seocho/gallery-2.svg',
@@ -173,7 +173,7 @@ export const projects: Project[] = [
     category: 'Healthcare',
     description:
       '모던 클리닉 항균 블라인드 시공. 의료 환경에 특화된 위생적이고 기능적인 솔루션을 제공했습니다.',
-    mainImage: '/images/references/modern-clinic-seongnam/main.svg',
+    mainImage: '/images/references/modern-clinic-seongnam/main.png',
     galleryImages: [
       '/images/references/modern-clinic-seongnam/gallery-1.svg',
       '/images/references/modern-clinic-seongnam/gallery-2.svg',
@@ -193,7 +193,7 @@ export const projects: Project[] = [
     category: 'Cultural',
     description:
       '아트 갤러리 조명 조절 블라인드 시공. 작품을 최적으로 보호하면서 관람 환경을 극대화한 전문적인 프로젝트입니다.',
-    mainImage: '/images/references/art-gallery-jongno/main.svg',
+    mainImage: '/images/references/art-gallery-jongno/main.png',
     galleryImages: [
       '/images/references/art-gallery-jongno/gallery-1.svg',
       '/images/references/art-gallery-jongno/gallery-2.svg',

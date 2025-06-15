@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { motion } from "../../../lib/motion";
 
 export default function ContactPage() {
@@ -27,7 +26,6 @@ export default function ContactPage() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: 'easeOut',
       },
     },
   };
@@ -42,7 +40,6 @@ export default function ContactPage() {
       x: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
       },
     },
   };
@@ -57,7 +54,6 @@ export default function ContactPage() {
       x: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
       },
     },
   };

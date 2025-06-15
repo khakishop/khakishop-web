@@ -3,10 +3,17 @@
 import React from 'react';
 import { motion } from "../lib/motion";
 import Image from 'next/image';
-import Link from 'next/link';
+import { LocalizedLink } from './ui/LocalizedLink';
+import { useRouter, usePathname } from 'next/navigation';
 import { projects, getAllProjects, getProjectsByCategory } from '../data/projects';
 
 export default function ProjectClientView() {
+  const router = useRouter();
+  const pathname = usePathname();
+  
+  // 현재 locale 추출 (예: /ko/project → ko)
+  const locale = pathname.split('/')[1] || 'ko';
+  
   const allProjects = getAllProjects();
   const categories = ['All', 'Residential', 'Commercial', 'F&B', 'Healthcare', 'Cultural'];
 
@@ -28,9 +35,9 @@ export default function ProjectClientView() {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-2 text-sm text-gray-500 mb-8"
           >
-            <Link href="/" className="hover:text-gray-700 transition-colors">
+            <LocalizedLink href="/" className="hover:text-gray-700 transition-colors">
               홈
-            </Link>
+            </LocalizedLink>
             <span>•</span>
             <span className="text-gray-700">프로젝트</span>
           </motion.div>
@@ -93,7 +100,7 @@ export default function ProjectClientView() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <Link href={`/project/${project.slug}`}>
+                <LocalizedLink href={`/project/${project.slug}`}>
                   <div className="aspect-[4/3] relative rounded-xl overflow-hidden mb-6 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                     <Image
                       src={project.mainImage}
@@ -146,7 +153,7 @@ export default function ProjectClientView() {
                       </div>
                     )}
                   </div>
-                </Link>
+                </LocalizedLink>
               </motion.div>
             ))}
           </div>
@@ -186,7 +193,7 @@ export default function ProjectClientView() {
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
               KHAKISHOP의 전문 컨설턴트가 귀하의 공간에 최적화된 솔루션을 제안해드립니다.
             </p>
-            <Link
+            <LocalizedLink
               href="/contact"
               className="inline-flex items-center bg-gray-900 text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all duration-300 text-lg font-medium"
             >
@@ -204,7 +211,7 @@ export default function ProjectClientView() {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </Link>
+            </LocalizedLink>
           </motion.div>
         </div>
       </section>

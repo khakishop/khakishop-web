@@ -34,6 +34,13 @@ jspm_packages/
 
 # TypeScript cache
 *.tsbuildinfo
+.next/cache/tsconfig.tsbuildinfo
+
+# Development server cache optimization
+.next/cache/
+node_modules/.cache/
+.turbo/
+.swc/
 
 # Optional npm cache directory
 .npm

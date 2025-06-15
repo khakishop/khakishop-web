@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
-import { motion } from "../../../lib/motion";
 import Link from 'next/link';
-import { getAllProjects, type Project } from '../../../data/projects';
+import { useMemo, useState } from 'react';
+import { getAllProjects } from '../../../data/projects';
+import { motion } from "../../../lib/motion";
 
 // 관리자 대시보드 페이지
 export default function AdminPage() {
@@ -111,11 +111,10 @@ export default function AdminPage() {
               <div className="flex items-center bg-gray-100 rounded-full p-1">
                 <button
                   onClick={() => setIsTableView(true)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    isTableView
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isTableView
                       ? 'bg-white text-gray-900 shadow-sm'
                       : 'text-gray-600 hover:text-gray-900'
-                  }`}
+                    }`}
                 >
                   <span className="flex items-center space-x-2">
                     <svg
@@ -136,11 +135,10 @@ export default function AdminPage() {
                 </button>
                 <button
                   onClick={() => setIsTableView(false)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    !isTableView
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${!isTableView
                       ? 'bg-white text-gray-900 shadow-sm'
                       : 'text-gray-600 hover:text-gray-900'
-                  }`}
+                    }`}
                 >
                   <span className="flex items-center space-x-2">
                     <svg

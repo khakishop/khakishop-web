@@ -1,8 +1,7 @@
-import React from 'react';
-import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Suspense } from 'react';
-import { getNotionPosts, getAllTags, NotionPost } from '../../../../lib/notion';
+import { getAllTags, getNotionPosts, NotionPost } from '../../../../lib/notion';
 import { createSEOMetadata } from '../../../utils/seoMetadata';
 
 // 🎨 SEO 메타데이터 - 인테리어 가이드
@@ -50,10 +49,10 @@ async function BlogPosts({
   // 태그 필터링
   const posts = searchParams?.tag
     ? allPosts.filter((post) =>
-        post.tags?.some(
-          (postTag) => postTag.toLowerCase() === searchParams.tag?.toLowerCase()
-        )
+      post.tags?.some(
+        (postTag) => postTag.toLowerCase() === searchParams.tag?.toLowerCase()
       )
+    )
     : allPosts;
 
   // 날짜 포맷팅 함수
@@ -169,10 +168,12 @@ async function BlogPosts({
               {/* 커버 이미지 */}
               {post.coverImage && (
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-gray-100">
-                  <img
+                  <Image
                     src={post.coverImage}
                     alt={post.title}
-                    className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     loading="lazy"
                   />
                 </div>

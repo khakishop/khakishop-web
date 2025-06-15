@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
-import { motion } from "../../../lib/motion";
+import { motion } from "framer-motion";
+import HomeButton from "../../../components/ui/HomeButton";
 
 export default function AboutPageClient() {
   // 페이지 애니메이션 variants
@@ -27,7 +27,6 @@ export default function AboutPageClient() {
       y: 0,
       transition: {
         duration: 1.2,
-        ease: 'easeOut',
       },
     },
   };
@@ -42,7 +41,6 @@ export default function AboutPageClient() {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
       },
     },
   };
@@ -70,6 +68,7 @@ export default function AboutPageClient() {
 
   return (
     <div className="min-h-screen bg-white">
+      <HomeButton />
       <motion.div
         variants={containerVariants}
         initial="initial"

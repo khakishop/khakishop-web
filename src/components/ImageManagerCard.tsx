@@ -1,18 +1,15 @@
 'use client';
 
-import React, { useState, useRef, useCallback, useEffect, memo } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from '../lib/motion';
-import { generateMetadataForUpload } from '../utils/imageMap';
-import {
-  validateImageFile,
-  getAllowedExtensions,
-  getAcceptMimeTypes,
-  getAcceptMimeTypesString,
-} from '../utils/validateImageFile';
+import React, { memo, useCallback, useRef, useState } from 'react';
 import type { ImageMapping } from '../utils/imageMap';
+import { generateMetadataForUpload } from '../utils/imageMap';
+import { ERROR_PLACEHOLDER_URL, PLACEHOLDER_CARD_URL } from '../utils/placeholder';
+import {
+  getAcceptMimeTypesString,
+  validateImageFile
+} from '../utils/validateImageFile';
 import { LocalTimeDisplay } from './LocalTimeDisplay';
-import { PLACEHOLDER_CARD_URL, ERROR_PLACEHOLDER_URL } from '../utils/placeholder';
 
 // Static placeholder - 성능 최적화: 동적 생성 방지
 const STATIC_PLACEHOLDER =
@@ -116,7 +113,7 @@ const ImageManagerCard = memo(function ImageManagerCard({
         imgElement.title = metadata.title;
         imgElement.setAttribute('data-style', metadata.dataStyle);
         imgElement.setAttribute('data-category', metadata.category);
-        imgElement.setAttribute('data-priority', metadata.priority.toString());
+        imgElement.setAttribute('data-priority', (metadata.priority || 0).toString());
 
         imgElement.classList.add('khaki-shop-image');
         imgElement.classList.add(`style-${metadata.dataStyle}`);
@@ -135,9 +132,9 @@ const ImageManagerCard = memo(function ImageManagerCard({
       if (!validationResult.isValid) {
         setValidationMessage(
           validationResult.message +
-            (validationResult.suggestedAction
-              ? ` ${validationResult.suggestedAction}`
-              : '')
+          (validationResult.suggestedAction
+            ? ` ${validationResult.suggestedAction}`
+            : '')
         );
         setUploadStatus('validation-error');
         setTimeout(() => {
@@ -436,10 +433,9 @@ const ImageManagerCard = memo(function ImageManagerCard({
                 onClick={() => setShowProtectionDialog(true)}
                 className={`
                   p-2 backdrop-blur-sm rounded-full shadow-lg transition-all duration-200
-                  ${
-                    imageData.isProtected
-                      ? 'bg-amber-200/90 hover:bg-amber-300/90'
-                      : 'bg-white/90 hover:bg-white'
+                  ${imageData.isProtected
+                    ? 'bg-amber-200/90 hover:bg-amber-300/90'
+                    : 'bg-white/90 hover:bg-white'
                   }
                 `}
                 title={imageData.isProtected ? '보호 해제' : '보호 설정'}
@@ -516,13 +512,12 @@ const ImageManagerCard = memo(function ImageManagerCard({
         <div
           className={`
           mt-3 p-2 rounded-lg text-sm text-center
-          ${
-            uploadStatus === 'success'
+          ${uploadStatus === 'success'
               ? 'bg-green-50 text-green-700 border border-green-200'
               : uploadStatus === 'error' || uploadStatus === 'validation-error'
                 ? 'bg-red-50 text-red-700 border border-red-200'
                 : 'bg-blue-50 text-blue-700 border border-blue-200'
-          }
+            }
         `}
         >
           {validationMessage}
@@ -578,11 +573,10 @@ const ImageManagerCard = memo(function ImageManagerCard({
               </button>
               <button
                 onClick={handleProtectionToggle}
-                className={`flex-1 px-4 py-2 text-white rounded-lg transition-colors ${
-                  imageData.isProtected
-                    ? 'bg-red-500 hover:bg-red-600'
-                    : 'bg-amber-500 hover:bg-amber-600'
-                }`}
+                className={`flex-1 px-4 py-2 text-white rounded-lg transition-colors ${imageData.isProtected
+                  ? 'bg-red-500 hover:bg-red-600'
+                  : 'bg-amber-500 hover:bg-amber-600'
+                  }`}
               >
                 {imageData.isProtected ? '보호 해제' : '보호 설정'}
               </button>

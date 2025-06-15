@@ -2,7 +2,7 @@
 // 🎯 KHAKISHOP 블라인드 제품 데이터 - RIGAS 스타일 통일
 // ================================================================================
 // 🎨 디자인 모티브: https://www.rigas-furniture.gr/
-// 📁 이미지 경로: /public/images/blinds/[slug]/
+// 📁 이미지 경로: /public/images/blind/[slug]/
 // 🔧 관리자 연동: displayOrder 드래그앤드롭 지원
 
 // 🎯 통일된 Product interface
@@ -49,7 +49,7 @@ export const blindProducts: Product[] = [
     slug: 'premium-venetian-collection',
     title: '프리미엄 베네치안 컬렉션',
     description: '고급 알루미늄 소재의 베네치안 블라인드로 정밀한 빛 조절과 내구성을 제공합니다.',
-    image: '/images/blinds/premium-venetian-collection/main.jpg',
+    image: '/images/blind/premium-venetian-collection/main.jpg',
     category: 'blinds',
     subcategory: 'Venetian Blinds',
     displayOrder: 1,
@@ -80,10 +80,10 @@ export const blindProducts: Product[] = [
     warranty: '2년 품질보증 (부품 교체 포함)',
     bestseller: true,
     gallery: [
-      '/images/blinds/premium-venetian-collection/main.jpg',
-      '/images/blinds/premium-venetian-collection/detail-1.jpg',
-      '/images/blinds/premium-venetian-collection/detail-2.jpg',
-      '/images/blinds/premium-venetian-collection/lifestyle.jpg'
+      '/images/blind/premium-venetian-collection/main.jpg',
+      '/images/blind/premium-venetian-collection/detail-1.jpg',
+      '/images/blind/premium-venetian-collection/detail-2.jpg',
+      '/images/blind/premium-venetian-collection/lifestyle.jpg'
     ]
   },
   {
@@ -91,7 +91,7 @@ export const blindProducts: Product[] = [
     slug: 'modern-vertical-system',
     title: '모던 버티컬 시스템',
     description: '세련된 수직 블라인드로 넓은 창문과 슬라이딩 도어에 완벽한 솔루션을 제공합니다.',
-    image: '/images/blinds/modern-vertical-system/main.jpg',
+    image: '/images/blind/modern-vertical-system/main.jpg',
     category: 'blinds',
     subcategory: 'Vertical Blinds',
     displayOrder: 2,
@@ -122,10 +122,10 @@ export const blindProducts: Product[] = [
     warranty: '3년 품질보증 (헤드레일 포함)',
     new: true,
     gallery: [
-      '/images/blinds/modern-vertical-system/main.jpg',
-      '/images/blinds/modern-vertical-system/detail-1.jpg',
-      '/images/blinds/modern-vertical-system/detail-2.jpg',
-      '/images/blinds/modern-vertical-system/lifestyle.jpg'
+      '/images/blind/modern-vertical-system/main.jpg',
+      '/images/blind/modern-vertical-system/detail-1.jpg',
+      '/images/blind/modern-vertical-system/detail-2.jpg',
+      '/images/blind/modern-vertical-system/lifestyle.jpg'
     ]
   },
   {
@@ -133,7 +133,7 @@ export const blindProducts: Product[] = [
     slug: 'smart-roller-collection',
     title: '스마트 롤러 컬렉션',
     description: '모터라이즈드 시스템과 다양한 원단 옵션을 제공하는 현대적인 롤러 블라인드입니다.',
-    image: '/images/blinds/smart-roller-collection/main.jpg',
+    image: '/images/blind/smart-roller-collection/main.jpg',
     category: 'blinds',
     subcategory: 'Roller Blinds',
     displayOrder: 3,
@@ -165,10 +165,10 @@ export const blindProducts: Product[] = [
     bestseller: true,
     new: true,
     gallery: [
-      '/images/blinds/smart-roller-collection/main.jpg',
-      '/images/blinds/smart-roller-collection/detail-1.jpg',
-      '/images/blinds/smart-roller-collection/detail-2.jpg',
-      '/images/blinds/smart-roller-collection/lifestyle.jpg'
+      '/images/blind/smart-roller-collection/main.jpg',
+      '/images/blind/smart-roller-collection/detail-1.jpg',
+      '/images/blind/smart-roller-collection/detail-2.jpg',
+      '/images/blind/smart-roller-collection/lifestyle.jpg'
     ]
   },
   {
@@ -176,7 +176,7 @@ export const blindProducts: Product[] = [
     slug: 'elegant-roman-style',
     title: '엘레강트 로만 스타일',
     description: '클래식한 로만 블라인드로 우아한 주름과 고급스러운 분위기를 연출합니다.',
-    image: '/images/blinds/elegant-roman-style/main.jpg',
+    image: '/images/blind/elegant-roman-style/main.jpg',
     category: 'blinds',
     subcategory: 'Roman Blinds',
     displayOrder: 4,
@@ -206,10 +206,10 @@ export const blindProducts: Product[] = [
     ],
     warranty: '2년 품질보증 (패브릭 포함)',
     gallery: [
-      '/images/blinds/elegant-roman-style/main.jpg',
-      '/images/blinds/elegant-roman-style/detail-1.jpg',
-      '/images/blinds/elegant-roman-style/detail-2.jpg',
-      '/images/blinds/elegant-roman-style/lifestyle.jpg'
+      '/images/blind/elegant-roman-style/main.jpg',
+      '/images/blind/elegant-roman-style/detail-1.jpg',
+      '/images/blind/elegant-roman-style/detail-2.jpg',
+      '/images/blind/elegant-roman-style/lifestyle.jpg'
     ]
   },
   {
@@ -217,7 +217,7 @@ export const blindProducts: Product[] = [
     slug: 'contemporary-panel-system',
     title: '컨템포러리 패널 시스템',
     description: '대형 창문과 공간 분할을 위한 모던한 패널 블라인드 시스템입니다.',
-    image: '/images/blinds/contemporary-panel-system/main.jpg',
+    image: '/images/blind/contemporary-panel-system/main.jpg',
     category: 'blinds',
     subcategory: 'Panel Blinds',
     displayOrder: 5,
@@ -247,10 +247,10 @@ export const blindProducts: Product[] = [
     ],
     warranty: '3년 품질보증 (트랙 시스템 포함)',
     gallery: [
-      '/images/blinds/contemporary-panel-system/main.jpg',
-      '/images/blinds/contemporary-panel-system/detail-1.jpg',
-      '/images/blinds/contemporary-panel-system/detail-2.jpg',
-      '/images/blinds/contemporary-panel-system/lifestyle.jpg'
+      '/images/blind/contemporary-panel-system/main.jpg',
+      '/images/blind/contemporary-panel-system/detail-1.jpg',
+      '/images/blind/contemporary-panel-system/detail-2.jpg',
+      '/images/blind/contemporary-panel-system/lifestyle.jpg'
     ]
   }
 ];

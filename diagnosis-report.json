@@ -1,0 +1,1743 @@
+{
+  "timestamp": "2025-06-14T04:49:05.814Z",
+  "projectName": "KHAKISHOP-WEB",
+  "version": "1.0.0",
+  "summary": {
+    "status": "CRITICAL",
+    "criticalIssues": 119,
+    "warnings": 0,
+    "suggestions": 1
+  },
+  "sections": {
+    "projectStructure": {
+      "totalFiles": 67208,
+      "directories": [
+        {
+          "name": "app",
+          "type": "directory",
+          "path": "src/app",
+          "children": [
+            {
+              "name": "[locale]",
+              "type": "directory",
+              "path": "src/app/[locale]",
+              "children": [
+                {
+                  "name": "about",
+                  "type": "directory",
+                  "path": "src/app/[locale]/about",
+                  "children": []
+                },
+                {
+                  "name": "admin",
+                  "type": "directory",
+                  "path": "src/app/[locale]/admin",
+                  "children": []
+                },
+                {
+                  "name": "blind",
+                  "type": "directory",
+                  "path": "src/app/[locale]/blind",
+                  "children": []
+                },
+                {
+                  "name": "blog",
+                  "type": "directory",
+                  "path": "src/app/[locale]/blog",
+                  "children": []
+                },
+                {
+                  "name": "collection",
+                  "type": "directory",
+                  "path": "src/app/[locale]/collection",
+                  "children": []
+                },
+                {
+                  "name": "contact",
+                  "type": "directory",
+                  "path": "src/app/[locale]/contact",
+                  "children": []
+                },
+                {
+                  "name": "curtain",
+                  "type": "directory",
+                  "path": "src/app/[locale]/curtain",
+                  "children": []
+                },
+                {
+                  "name": "error-test",
+                  "type": "directory",
+                  "path": "src/app/[locale]/error-test",
+                  "children": []
+                },
+                {
+                  "name": "landing",
+                  "type": "directory",
+                  "path": "src/app/[locale]/landing",
+                  "children": []
+                },
+                {
+                  "name": "motorized",
+                  "type": "directory",
+                  "path": "src/app/[locale]/motorized",
+                  "children": []
+                },
+                {
+                  "name": "posts",
+                  "type": "directory",
+                  "path": "src/app/[locale]/posts",
+                  "children": []
+                },
+                {
+                  "name": "products",
+                  "type": "directory",
+                  "path": "src/app/[locale]/products",
+                  "children": []
+                },
+                {
+                  "name": "project",
+                  "type": "directory",
+                  "path": "src/app/[locale]/project",
+                  "children": []
+                },
+                {
+                  "name": "references",
+                  "type": "directory",
+                  "path": "src/app/[locale]/references",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "api",
+              "type": "directory",
+              "path": "src/app/api",
+              "children": [
+                {
+                  "name": "delete-image",
+                  "type": "directory",
+                  "path": "src/app/api/delete-image",
+                  "children": []
+                },
+                {
+                  "name": "projects",
+                  "type": "directory",
+                  "path": "src/app/api/projects",
+                  "children": []
+                },
+                {
+                  "name": "reorder-images",
+                  "type": "directory",
+                  "path": "src/app/api/reorder-images",
+                  "children": []
+                },
+                {
+                  "name": "restore-images",
+                  "type": "directory",
+                  "path": "src/app/api/restore-images",
+                  "children": []
+                },
+                {
+                  "name": "sync-images",
+                  "type": "directory",
+                  "path": "src/app/api/sync-images",
+                  "children": []
+                },
+                {
+                  "name": "upload-image",
+                  "type": "directory",
+                  "path": "src/app/api/upload-image",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "test",
+              "type": "directory",
+              "path": "src/app/test",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "components",
+          "type": "directory",
+          "path": "src/components",
+          "children": [
+            {
+              "name": "admin",
+              "type": "directory",
+              "path": "src/components/admin",
+              "children": []
+            },
+            {
+              "name": "common",
+              "type": "directory",
+              "path": "src/components/common",
+              "children": []
+            },
+            {
+              "name": "layouts",
+              "type": "directory",
+              "path": "src/components/layouts",
+              "children": []
+            },
+            {
+              "name": "templates",
+              "type": "directory",
+              "path": "src/components/templates",
+              "children": []
+            },
+            {
+              "name": "ui",
+              "type": "directory",
+              "path": "src/components/ui",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "config",
+          "type": "directory",
+          "path": "src/config",
+          "children": []
+        },
+        {
+          "name": "data",
+          "type": "directory",
+          "path": "src/data",
+          "children": []
+        },
+        {
+          "name": "hooks",
+          "type": "directory",
+          "path": "src/hooks",
+          "children": []
+        },
+        {
+          "name": "lib",
+          "type": "directory",
+          "path": "src/lib",
+          "children": []
+        },
+        {
+          "name": "types",
+          "type": "directory",
+          "path": "src/types",
+          "children": []
+        },
+        {
+          "name": "utils",
+          "type": "directory",
+          "path": "src/utils",
+          "children": [
+            {
+              "name": "constants",
+              "type": "directory",
+              "path": "src/utils/constants",
+              "children": []
+            }
+          ]
+        }
+      ],
+      "keyFiles": {
+        "package.json": {
+          "exists": true,
+          "size": 9486,
+          "modified": "2025-06-14T04:04:30.726Z"
+        },
+        "next.config.js": {
+          "exists": true,
+          "size": 7399,
+          "modified": "2025-06-13T04:04:23.935Z"
+        },
+        "tsconfig.json": {
+          "exists": true,
+          "size": 1097,
+          "modified": "2025-06-12T07:10:58.817Z"
+        },
+        "tailwind.config.ts": {
+          "exists": true,
+          "size": 713,
+          "modified": "2025-06-04T09:16:45.822Z"
+        },
+        "eslint.config.mjs": {
+          "exists": true,
+          "size": 393,
+          "modified": "2025-06-04T09:16:20.432Z"
+        },
+        "src/app/layout.tsx": {
+          "exists": true,
+          "size": 5394,
+          "modified": "2025-06-09T11:28:24.739Z"
+        },
+        "src/app/globals.css": {
+          "exists": true,
+          "size": 59,
+          "modified": "2025-06-04T09:16:45.819Z"
+        },
+        "public/images": {
+          "exists": true,
+          "size": 608,
+          "modified": "2025-06-10T07:58:18.317Z"
+        }
+      },
+      "missingFiles": []
+    },
+    "packageAnalysis": {
+      "name": "khakishop",
+      "version": "0.1.0",
+      "scripts": [
+        "dev",
+        "dev:stable",
+        "dev:light",
+        "dev:safe",
+        "dev:debug",
+        "build",
+        "start",
+        "lint",
+        "test",
+        "test:types",
+        "prepare",
+        "clean",
+        "fresh",
+        "reset",
+        "postbuild",
+        "health-check",
+        "pre-deploy",
+        "safe-deploy",
+        "validate-imports",
+        "check-structure",
+        "a11y-test",
+        "lighthouse",
+        "lighthouse:pwa",
+        "test-pages",
+        "pwa-test",
+        "process-images",
+        "generate-prompts",
+        "generate-specific-prompts",
+        "process-single",
+        "process-bulk",
+        "smart-scan",
+        "assign-pending",
+        "check-images",
+        "image-status",
+        "clean-processed",
+        "backup-midjourney",
+        "image-help",
+        "generate-free-images",
+        "regenerate-image",
+        "generate-brand-graphics",
+        "create-fallback-images",
+        "image-complete-setup",
+        "free-image-help",
+        "auto-generate-all-images",
+        "regenerate-single-image",
+        "complete-image-automation",
+        "image-automation-help",
+        "replace-images",
+        "setup-images",
+        "batch-placement",
+        "curtain-batch",
+        "batch-help",
+        "test:e2e",
+        "test:e2e:ui",
+        "test:e2e:debug",
+        "test:e2e:headed",
+        "monitoring:start",
+        "web-vitals",
+        "quick-check",
+        "format",
+        "format:check",
+        "pre-commit-check",
+        "fix-all",
+        "process-reference-images",
+        "type-check",
+        "auto-diagnose"
+      ],
+      "dependencies": [
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@dnd-kit/utilities",
+        "@emotion/react",
+        "@emotion/styled",
+        "@next/third-parties",
+        "@notionhq/client",
+        "@sentry/nextjs",
+        "@types/react-window",
+        "@vercel/analytics",
+        "@vercel/speed-insights",
+        "critters",
+        "framer-motion",
+        "next",
+        "next-intl",
+        "next-pwa",
+        "next-sitemap",
+        "react",
+        "react-dom",
+        "react-window",
+        "react-window-infinite-loader",
+        "sharp",
+        "vercel",
+        "web-vitals",
+        "workbox-webpack-plugin"
+      ],
+      "devDependencies": [
+        "@axe-core/playwright",
+        "@emotion/is-prop-valid",
+        "@playwright/test",
+        "@types/node",
+        "@types/react",
+        "@types/react-dom",
+        "autoprefixer",
+        "eslint",
+        "eslint-config-next",
+        "husky",
+        "js-yaml",
+        "lighthouse",
+        "lint-staged",
+        "postcss",
+        "prettier",
+        "tailwindcss",
+        "typescript"
+      ],
+      "issues": [],
+      "nextVersion": "14.1.3"
+    },
+    "typeScriptConfig": {
+      "exists": true,
+      "valid": true,
+      "issues": [],
+      "config": {
+        "compilerOptions": {
+          "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+          ],
+          "allowJs": true,
+          "skipLibCheck": true,
+          "strict": false,
+          "noEmit": true,
+          "incremental": true,
+          "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo",
+          "esModuleInterop": true,
+          "module": "esnext",
+          "moduleResolution": "node",
+          "resolveJsonModule": true,
+          "isolatedModules": true,
+          "jsx": "preserve",
+          "plugins": [
+            {
+              "name": "next"
+            }
+          ]
+        },
+        "include": [
+          "next-env.d.ts",
+          ".next/types/**/*.ts",
+          "src/**/*.ts",
+          "src/**/*.tsx",
+          "pages/**/*.ts",
+          "pages/**/*.tsx",
+          "app/**/*.ts",
+          "app/**/*.tsx",
+          "components/**/*.ts",
+          "components/**/*.tsx",
+          "utils/**/*.ts",
+          "utils/**/*.tsx",
+          "lib/**/*.ts",
+          "lib/**/*.tsx"
+        ],
+        "exclude": [
+          "node_modules",
+          ".next",
+          "dist",
+          "out",
+          "build",
+          ".git",
+          "coverage",
+          "public/images/**/*",
+          "public/svg/**/*",
+          "**/*.generated.ts",
+          "**/*.test.ts",
+          "**/*.test.tsx",
+          "**/*.spec.ts",
+          "**/*.spec.tsx"
+        ]
+      },
+      "compilationStatus": "SUCCESS"
+    },
+    "sourceCodeAnalysis": {
+      "totalFiles": 134,
+      "components": [
+        "src/app/HomeClient.tsx",
+        "src/app/[locale]/about/AboutPageClient.tsx",
+        "src/app/[locale]/admin/layout.tsx",
+        "src/app/[locale]/admin-layout-provider.tsx",
+        "src/app/[locale]/blind/BlindPageClient.tsx",
+        "src/app/[locale]/blog/loading.tsx",
+        "src/app/[locale]/collection/CollectionPageClient.tsx",
+        "src/app/[locale]/collection/layout.tsx",
+        "src/app/[locale]/curtain/CurtainPageClient.tsx",
+        "src/app/[locale]/landing/LandingClient.tsx",
+        "src/app/[locale]/layout.tsx",
+        "src/app/[locale]/motorized/MotorizedPageClient.tsx",
+        "src/app/[locale]/references/ReferencesPageClient.tsx",
+        "src/app/[locale]/references/[slug]/ImageGallery.tsx",
+        "src/app/error.tsx",
+        "src/app/layout.tsx",
+        "src/app/not-found.tsx",
+        "src/components/AccordionItem.tsx",
+        "src/components/AnimatedText.tsx",
+        "src/components/BlindCard.tsx",
+        "src/components/BlindClientView.tsx",
+        "src/components/BlindDetailPage.tsx",
+        "src/components/BlindImageGallery.tsx",
+        "src/components/BlindPageClient.tsx",
+        "src/components/BlindProductView.tsx",
+        "src/components/Button.tsx",
+        "src/components/CollectionCard.tsx",
+        "src/components/ConditionalFooter.tsx",
+        "src/components/CurtainCard.tsx",
+        "src/components/CurtainClientView.tsx",
+        "src/components/CurtainDetailPage.tsx",
+        "src/components/CurtainImageGallery.tsx",
+        "src/components/CurtainPageClient.tsx",
+        "src/components/CurtainProductView.tsx",
+        "src/components/EmptyImageCard.tsx",
+        "src/components/ErrorBoundary.tsx",
+        "src/components/FullscreenMenu.tsx",
+        "src/components/HeroIntro.tsx",
+        "src/components/HeroSection.tsx",
+        "src/components/ImageManagerCard.tsx",
+        "src/components/KhakiImage.tsx",
+        "src/components/LanguageSwitcher.tsx",
+        "src/components/LocalTimeDisplay.tsx",
+        "src/components/MotorizedCard.tsx",
+        "src/components/MotorizedClientView.tsx",
+        "src/components/MotorizedDetailPage.tsx",
+        "src/components/MotorizedImageGallery.tsx",
+        "src/components/MotorizedPageClient.tsx",
+        "src/components/MotorizedProductView.tsx",
+        "src/components/ProductCard.tsx",
+        "src/components/ProjectClientView.tsx",
+        "src/components/ProjectSection.tsx",
+        "src/components/ReferenceCard.tsx",
+        "src/components/UnifiedProductCard.tsx",
+        "src/components/UnifiedProductGrid.tsx",
+        "src/components/VirtualizedProjectGrid.tsx",
+        "src/components/admin/AdminImageEditPanel.tsx",
+        "src/components/admin/AdminImagesBrowser.tsx",
+        "src/components/admin/DeleteImageDialog.tsx",
+        "src/components/admin/DraggableImageGrid.tsx",
+        "src/components/admin/ImageUploadZone.tsx",
+        "src/components/admin/VirtualizedImageGrid.tsx",
+        "src/components/common/SEOImage.tsx",
+        "src/components/layouts/CategoryPage.tsx",
+        "src/components/templates/ProductDetailTemplate.tsx",
+        "src/components/ui/LocalizedLink.tsx",
+        "src/components/ui/Pagination.tsx",
+        "src/components/ui/Skeleton.tsx",
+        "src/lib/performance.tsx"
+      ],
+      "pages": [
+        "src/app/[locale]/about/page.tsx",
+        "src/app/[locale]/admin/images/[category]/[subcategory]/page.tsx",
+        "src/app/[locale]/admin/images/[category]/page.tsx",
+        "src/app/[locale]/admin/images/blind/page.tsx",
+        "src/app/[locale]/admin/images/motorized/page.tsx",
+        "src/app/[locale]/admin/images/page.tsx",
+        "src/app/[locale]/admin/page.tsx",
+        "src/app/[locale]/blind/[slug]/page.tsx",
+        "src/app/[locale]/blind/page.tsx",
+        "src/app/[locale]/blog/page.tsx",
+        "src/app/[locale]/collection/[slug]/page.tsx",
+        "src/app/[locale]/collection/page.tsx",
+        "src/app/[locale]/contact/page.tsx",
+        "src/app/[locale]/curtain/[slug]/page.tsx",
+        "src/app/[locale]/curtain/page.tsx",
+        "src/app/[locale]/error-test/page.tsx",
+        "src/app/[locale]/landing/page.tsx",
+        "src/app/[locale]/motorized/[slug]/page.tsx",
+        "src/app/[locale]/motorized/page.tsx",
+        "src/app/[locale]/page.tsx",
+        "src/app/[locale]/posts/[slug]/page.tsx",
+        "src/app/[locale]/products/[slug]/page.tsx",
+        "src/app/[locale]/products/page.tsx",
+        "src/app/[locale]/project/[slug]/page.tsx",
+        "src/app/[locale]/project/page.tsx",
+        "src/app/[locale]/references/[slug]/page.tsx",
+        "src/app/[locale]/references/page.tsx",
+        "src/app/page.tsx",
+        "src/app/test/page.tsx"
+      ],
+      "hooks": [
+        "src/hooks/useImageManager.ts"
+      ],
+      "utils": [],
+      "issues": []
+    },
+    "imageAnalysis": {
+      "totalImages": 0,
+      "categories": {
+        "about": {
+          "count": 0,
+          "files": []
+        },
+        "blind": {
+          "count": 0,
+          "files": []
+        },
+        "blinds": {
+          "count": 20,
+          "files": [
+            "public/images/blinds/contemporary-panel-system/detail-1.jpg",
+            "public/images/blinds/contemporary-panel-system/detail-2.jpg",
+            "public/images/blinds/contemporary-panel-system/lifestyle.jpg",
+            "public/images/blinds/contemporary-panel-system/main.jpg",
+            "public/images/blinds/elegant-roman-style/detail-1.jpg",
+            "public/images/blinds/elegant-roman-style/detail-2.jpg",
+            "public/images/blinds/elegant-roman-style/lifestyle.jpg",
+            "public/images/blinds/elegant-roman-style/main.jpg",
+            "public/images/blinds/modern-vertical-system/detail-1.jpg",
+            "public/images/blinds/modern-vertical-system/detail-2.jpg",
+            "public/images/blinds/modern-vertical-system/lifestyle.jpg",
+            "public/images/blinds/modern-vertical-system/main.jpg",
+            "public/images/blinds/premium-venetian-collection/detail-1.jpg",
+            "public/images/blinds/premium-venetian-collection/detail-2.jpg",
+            "public/images/blinds/premium-venetian-collection/lifestyle.jpg",
+            "public/images/blinds/premium-venetian-collection/main.jpg",
+            "public/images/blinds/smart-roller-collection/detail-1.jpg",
+            "public/images/blinds/smart-roller-collection/detail-2.jpg",
+            "public/images/blinds/smart-roller-collection/lifestyle.jpg",
+            "public/images/blinds/smart-roller-collection/main.jpg"
+          ]
+        },
+        "blog": {
+          "count": 0,
+          "files": []
+        },
+        "collections": {
+          "count": 8,
+          "files": [
+            "public/images/collections/designer-hardware.png",
+            "public/images/collections/essential-linen.png",
+            "public/images/collections/luxury-tieback.png",
+            "public/images/collections/modern-sheer.png",
+            "public/images/collections/smart-automation.png",
+            "public/images/collections/venetian-premium.png",
+            "public/images/collections/wireless-motor.png",
+            "public/images/collections/wood-texture.png"
+          ]
+        },
+        "curtains": {
+          "count": 20,
+          "files": [
+            "public/images/curtains/essential-linen-collection/detail-1.jpg",
+            "public/images/curtains/essential-linen-collection/detail-2.jpg",
+            "public/images/curtains/essential-linen-collection/lifestyle.jpg",
+            "public/images/curtains/essential-linen-collection/main.jpg",
+            "public/images/curtains/modern-sheer-series/detail-1.jpg",
+            "public/images/curtains/modern-sheer-series/detail-2.jpg",
+            "public/images/curtains/modern-sheer-series/lifestyle.jpg",
+            "public/images/curtains/modern-sheer-series/main.jpg",
+            "public/images/curtains/smart-automation-series/detail-1.jpg",
+            "public/images/curtains/smart-automation-series/detail-2.jpg",
+            "public/images/curtains/smart-automation-series/lifestyle.jpg",
+            "public/images/curtains/smart-automation-series/main.jpg",
+            "public/images/curtains/venetian-premium-line/detail-1.jpg",
+            "public/images/curtains/venetian-premium-line/detail-2.jpg",
+            "public/images/curtains/venetian-premium-line/lifestyle.jpg",
+            "public/images/curtains/venetian-premium-line/main.jpg",
+            "public/images/curtains/wood-texture-natural/detail-1.jpg",
+            "public/images/curtains/wood-texture-natural/detail-2.jpg",
+            "public/images/curtains/wood-texture-natural/lifestyle.jpg",
+            "public/images/curtains/wood-texture-natural/main.jpg"
+          ]
+        },
+        "future": {
+          "count": 0,
+          "files": []
+        },
+        "gallery": {
+          "count": 0,
+          "files": []
+        },
+        "hero": {
+          "count": 2,
+          "files": [
+            "public/images/hero/hero-mobile.png",
+            "public/images/hero/hero.jpg"
+          ]
+        },
+        "landing": {
+          "count": 3,
+          "files": [
+            "public/images/landing/brand-lifestyle.png",
+            "public/images/landing/collection-overview.png",
+            "public/images/landing/hero-main.png"
+          ]
+        },
+        "midjourney": {
+          "count": 27,
+          "files": [
+            "public/images/midjourney/1.png",
+            "public/images/midjourney/10.png",
+            "public/images/midjourney/11.png",
+            "public/images/midjourney/12.png",
+            "public/images/midjourney/13.png",
+            "public/images/midjourney/15.png",
+            "public/images/midjourney/16.png",
+            "public/images/midjourney/17.png",
+            "public/images/midjourney/1749378835107yeubvb.png",
+            "public/images/midjourney/1749378850657h6d40e.png",
+            "public/images/midjourney/174937886604803zw6g.png",
+            "public/images/midjourney/18.png",
+            "public/images/midjourney/19.png",
+            "public/images/midjourney/2.png",
+            "public/images/midjourney/20.png",
+            "public/images/midjourney/21.png",
+            "public/images/midjourney/22.png",
+            "public/images/midjourney/23.png",
+            "public/images/midjourney/24.png",
+            "public/images/midjourney/25.png",
+            "public/images/midjourney/26.png",
+            "public/images/midjourney/3.png",
+            "public/images/midjourney/4.png",
+            "public/images/midjourney/6.png",
+            "public/images/midjourney/7.png",
+            "public/images/midjourney/8.png",
+            "public/images/midjourney/9.png"
+          ]
+        },
+        "motorized": {
+          "count": 45,
+          "files": [
+            "public/images/motorized/ai-curtain-scheduler/detail-1.jpg",
+            "public/images/motorized/ai-curtain-scheduler/detail-2.jpg",
+            "public/images/motorized/ai-curtain-scheduler/main.jpg",
+            "public/images/motorized/app-controlled-blinds/detail-1.jpg",
+            "public/images/motorized/app-controlled-blinds/detail-2.jpg",
+            "public/images/motorized/app-controlled-blinds/main.jpg",
+            "public/images/motorized/automated-room-darkening/detail-1.jpg",
+            "public/images/motorized/automated-room-darkening/detail-2.jpg",
+            "public/images/motorized/automated-room-darkening/main.jpg",
+            "public/images/motorized/energy-saving-automation/detail-1.jpg",
+            "public/images/motorized/energy-saving-automation/detail-2.jpg",
+            "public/images/motorized/energy-saving-automation/main.jpg",
+            "public/images/motorized/multi-room-control/detail-1.jpg",
+            "public/images/motorized/multi-room-control/detail-2.jpg",
+            "public/images/motorized/multi-room-control/main.jpg",
+            "public/images/motorized/premium-motor-system/detail-1.jpg",
+            "public/images/motorized/premium-motor-system/detail-2.jpg",
+            "public/images/motorized/premium-motor-system/main.jpg",
+            "public/images/motorized/professional-installation/detail-1.jpg",
+            "public/images/motorized/professional-installation/detail-2.jpg",
+            "public/images/motorized/professional-installation/main.jpg",
+            "public/images/motorized/remote-venetian-blinds/detail-1.jpg",
+            "public/images/motorized/remote-venetian-blinds/detail-2.jpg",
+            "public/images/motorized/remote-venetian-blinds/main.jpg",
+            "public/images/motorized/smart-curtain-system/detail-1.jpg",
+            "public/images/motorized/smart-curtain-system/detail-2.jpg",
+            "public/images/motorized/smart-curtain-system/main.jpg",
+            "public/images/motorized/smart-fabric-selection/detail-1.jpg",
+            "public/images/motorized/smart-fabric-selection/detail-2.jpg",
+            "public/images/motorized/smart-fabric-selection/main.jpg",
+            "public/images/motorized/smart-home-automation/detail-1.jpg",
+            "public/images/motorized/smart-home-automation/detail-2.jpg",
+            "public/images/motorized/smart-home-automation/main.jpg",
+            "public/images/motorized/solar-powered-blinds/detail-1.jpg",
+            "public/images/motorized/solar-powered-blinds/detail-2.jpg",
+            "public/images/motorized/solar-powered-blinds/main.jpg",
+            "public/images/motorized/timer-curtain-control/detail-1.jpg",
+            "public/images/motorized/timer-curtain-control/detail-2.jpg",
+            "public/images/motorized/timer-curtain-control/main.jpg",
+            "public/images/motorized/voice-blind-control/detail-1.jpg",
+            "public/images/motorized/voice-blind-control/detail-2.jpg",
+            "public/images/motorized/voice-blind-control/main.jpg",
+            "public/images/motorized/wireless-motor-kit/detail-1.jpg",
+            "public/images/motorized/wireless-motor-kit/detail-2.jpg",
+            "public/images/motorized/wireless-motor-kit/main.jpg"
+          ]
+        },
+        "products": {
+          "count": 2,
+          "files": [
+            "public/images/products/curtain/sheer-curtain/detail.jpg",
+            "public/images/products/curtain/sheer-curtain/lifestyle.jpg"
+          ]
+        },
+        "projects": {
+          "count": 2,
+          "files": [
+            "public/images/projects/our-projects-bg.jpg",
+            "public/images/projects/project-showcase.png"
+          ]
+        },
+        "references": {
+          "count": 15,
+          "files": [
+            "public/images/references/blind-minimal-bedroom-1.png",
+            "public/images/references/classic-cafe-hongdae/main.png",
+            "public/images/references/contemporary-house-goyang/main.png",
+            "public/images/references/curtain-modern-livingroom-1.png",
+            "public/images/references/industrial-lobby-yongsan/main.png",
+            "public/images/references/luxury-penthouse-seocho/main.png",
+            "public/images/references/minimal-residence-bundang/gallery-1.png",
+            "public/images/references/minimal-residence-bundang/main.png",
+            "public/images/references/modern-office-gangnam/gallery-1.jpg",
+            "public/images/references/modern-office-gangnam/gallery-2.jpg",
+            "public/images/references/modern-office-gangnam/main.jpg",
+            "public/images/references/modern-office-gangnam/main.png",
+            "public/images/references/motorized-luxury-office-1/main.png",
+            "public/images/references/motorized-smart-livingroom-1.png",
+            "public/images/references/scandinavian-apartment-mapo/main.png"
+          ]
+        },
+        "test-final": {
+          "count": 1,
+          "files": [
+            "public/images/test-final/hero.jpg"
+          ]
+        }
+      },
+      "missingImages": [
+        {
+          "reference": "/images/${categoryKey}`}",
+          "file": "src/app/[locale]/admin/images/[category]/[subcategory]/page.tsx"
+        },
+        {
+          "reference": "/images/${categoryKey}`}",
+          "file": "src/app/[locale]/admin/images/[category]/[subcategory]/page.tsx"
+        },
+        {
+          "reference": "/images/${categoryKey}/${subcategory.key}`}",
+          "file": "src/app/[locale]/admin/images/[category]/page.tsx"
+        },
+        {
+          "reference": "/images/${categoryKey}/manage`}",
+          "file": "src/app/[locale]/admin/images/[category]/page.tsx"
+        },
+        {
+          "reference": "/images/blind/premium-venetian-collection/blind-premium-venetian-collection-1.jpg",
+          "file": "src/app/[locale]/blind/page.tsx"
+        },
+        {
+          "reference": "/images/motorized/smart-curtain-system-pro/motorized-smart-curtain-system-pro-1.jpg",
+          "file": "src/app/[locale]/motorized/page.tsx"
+        },
+        {
+          "reference": "/images/references/${projectSlug}/main.jpg`}",
+          "file": "src/app/[locale]/references/[slug]/ImageGallery.tsx"
+        },
+        {
+          "reference": "/images/references/${projectSlug}/main.jpg`}",
+          "file": "src/app/[locale]/references/[slug]/ImageGallery.tsx"
+        },
+        {
+          "reference": "/images/category/filename.jpg",
+          "file": "src/app/api/delete-image/route.ts"
+        },
+        {
+          "reference": "/images/category/filename.jpg",
+          "file": "src/app/api/delete-image/route.ts"
+        },
+        {
+          "reference": "/images/${image.metadata?.category}/${image.sourceFile}`}",
+          "file": "src/components/admin/AdminImageEditPanel.tsx"
+        },
+        {
+          "reference": "/images/placeholder-dev.jpg",
+          "file": "src/config/environment.ts"
+        },
+        {
+          "reference": "/images/placeholder.jpg",
+          "file": "src/config/environment.ts"
+        },
+        {
+          "reference": "/images/placeholder-test.jpg",
+          "file": "src/config/environment.ts"
+        },
+        {
+          "reference": "/images/blinds/[slug]/",
+          "file": "src/data/blind.ts"
+        },
+        {
+          "reference": "/images/curtains/[slug]/",
+          "file": "src/data/curtain.ts"
+        },
+        {
+          "reference": "/images/motorized/[slug]/",
+          "file": "src/data/motorized.ts"
+        },
+        {
+          "reference": "/images/motorized/smart-curtain-system-pro/motorized-smart-curtain-system-pro-1.jpg",
+          "file": "src/data/motorized.ts"
+        },
+        {
+          "reference": "/images/motorized/motorized-venetian-deluxe/motorized-motorized-venetian-deluxe-1.jpg",
+          "file": "src/data/motorized.ts"
+        },
+        {
+          "reference": "/images/motorized/ai-home-integration-suite/motorized-ai-home-integration-suite-1.jpg",
+          "file": "src/data/motorized.ts"
+        },
+        {
+          "reference": "/images/motorized/voice-control-roller-system/motorized-voice-control-roller-system-1.jpg",
+          "file": "src/data/motorized.ts"
+        },
+        {
+          "reference": "/images/motorized/smartphone-vertical-elite/motorized-smartphone-vertical-elite-1.jpg",
+          "file": "src/data/motorized.ts"
+        },
+        {
+          "reference": "/images/motorized/solar-powered-eco-system/motorized-solar-powered-eco-system-1.jpg",
+          "file": "src/data/motorized.ts"
+        },
+        {
+          "reference": "/images/references/modern-office-gangnam/gallery-1.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/modern-office-gangnam/gallery-2.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/modern-office-gangnam/gallery-3.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/minimal-residence-bundang/gallery-1.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/minimal-residence-bundang/gallery-2.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/minimal-residence-bundang/gallery-3.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/classic-cafe-hongdae/gallery-1.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/classic-cafe-hongdae/gallery-2.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/classic-cafe-hongdae/gallery-3.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/contemporary-house-goyang/gallery-1.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/contemporary-house-goyang/gallery-2.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/contemporary-house-goyang/gallery-3.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/scandinavian-apartment-mapo/gallery-1.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/scandinavian-apartment-mapo/gallery-2.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/scandinavian-apartment-mapo/gallery-3.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/industrial-lobby-yongsan/gallery-1.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/industrial-lobby-yongsan/gallery-2.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/industrial-lobby-yongsan/gallery-3.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/luxury-penthouse-seocho/gallery-1.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/luxury-penthouse-seocho/gallery-2.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/luxury-penthouse-seocho/gallery-3.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/modern-clinic-seongnam/main.png",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/modern-clinic-seongnam/gallery-1.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/modern-clinic-seongnam/gallery-2.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/modern-clinic-seongnam/gallery-3.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/art-gallery-jongno/main.png",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/art-gallery-jongno/gallery-1.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/art-gallery-jongno/gallery-2.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/art-gallery-jongno/gallery-3.svg",
+          "file": "src/data/projects.ts"
+        },
+        {
+          "reference": "/images/references/[slug]/",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/luxury-residence-gangnam/main.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/luxury-residence-gangnam/main.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/luxury-residence-gangnam/detail-1.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/luxury-residence-gangnam/detail-2.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/luxury-residence-gangnam/before-after.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/modern-office-seoul/main.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/modern-office-seoul/main.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/modern-office-seoul/detail-1.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/modern-office-seoul/detail-2.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/modern-office-seoul/workspace.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/boutique-hotel-busan/main.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/boutique-hotel-busan/main.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/boutique-hotel-busan/detail-1.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/boutique-hotel-busan/detail-2.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/boutique-hotel-busan/suite-view.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/medical-center-ilsan/main.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/medical-center-ilsan/main.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/medical-center-ilsan/detail-1.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/medical-center-ilsan/detail-2.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/medical-center-ilsan/clinic-room.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/university-library-daejeon/main.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/university-library-daejeon/main.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/university-library-daejeon/detail-1.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/university-library-daejeon/detail-2.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/university-library-daejeon/reading-room.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/premium-apartment-songdo/main.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/premium-apartment-songdo/main.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/premium-apartment-songdo/detail-1.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/premium-apartment-songdo/detail-2.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/references/premium-apartment-songdo/complex-view.jpg",
+          "file": "src/data/references.ts"
+        },
+        {
+          "reference": "/images/category/subcategory/)",
+          "file": "src/utils/constants/categories.ts"
+        },
+        {
+          "reference": "/images/${category.key}`,",
+          "file": "src/utils/constants/categories.ts"
+        },
+        {
+          "reference": "/images/${category.key}/${subcategory.key}`,",
+          "file": "src/utils/constants/categories.ts"
+        },
+        {
+          "reference": "/images/hero/hero.jpg`",
+          "file": "src/utils/imageFallback.ts"
+        },
+        {
+          "reference": "/images/midjourney/${imageId}`;",
+          "file": "src/utils/imageMap.ts"
+        },
+        {
+          "reference": "/images/category/slug/",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/references/${slug}/main.jpg`]",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/references/${slug}/main.jpg`,",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/references/${slug}/gallery-1.jpg`]",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/references/${slug}/gallery-1.jpg`,",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/products/curtain/${slug}/main.jpg`]",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/products/curtain/${slug}/main.jpg`,",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/products/curtain/${slug}/detail.jpg`]",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/products/curtain/${slug}/detail.jpg`,",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/products/blind/${slug}/main.jpg`]",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/products/blind/${slug}/main.jpg`,",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/products/blind/${slug}/lifestyle.jpg`]",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/products/blind/${slug}/lifestyle.jpg`,",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/products/motorized/${slug}/main.jpg`]",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/products/motorized/${slug}/main.jpg`,",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/products/motorized/${slug}/tech.jpg`]",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/products/motorized/${slug}/tech.jpg`,",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/landing/hero-main.jpg",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/landing/hero-main.jpg",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/landing/hero-mobile.jpg",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/landing/hero-mobile.jpg",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/hero/brand-lifestyle.jpg",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/hero/brand-lifestyle.jpg",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/products/curtain/sheer-curtain/main.jpg",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/products/motorized/smart-home-integration/main.jpg",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/landing/hero-main.jpg",
+          "file": "src/utils/imagePromptGenerator.ts"
+        },
+        {
+          "reference": "/images/references/${slug}`;",
+          "file": "src/utils/imageUtils.ts"
+        },
+        {
+          "reference": "/images/curtain/${slug}`;",
+          "file": "src/utils/imageUtils.ts"
+        },
+        {
+          "reference": "/images/blind/${slug}`;",
+          "file": "src/utils/imageUtils.ts"
+        },
+        {
+          "reference": "/images/motorized/${slug}`;",
+          "file": "src/utils/imageUtils.ts"
+        },
+        {
+          "reference": "/images/hero/khakishop-hero.jpg",
+          "file": "src/utils/seoMetadata.ts"
+        }
+      ],
+      "brokenReferences": [],
+      "issues": []
+    },
+    "buildAnalysis": {
+      "nextConfigExists": true,
+      "buildStatus": "SUCCESS",
+      "buildErrors": [],
+      "buildWarnings": [],
+      "cacheStatus": "EXISTS",
+      "configSize": 6723,
+      "cacheSize": 592336188,
+      "buildOutput": "\n> khakishop@0.1.0 build\n> next build\n\n   ▲ Next.js 14.1.3\n   - Experiments (use at your own risk):\n     · optimizeCss\n\n   Creating an optimized production build ...\n ✓ Compiled successfully\n   Linting and checking validity of types ...\n\n./src/app/[locale]/admin/images/page.tsx\n177:6  Warning: React Hook useCallback has a missing dependency: 'loadImages'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps\n\n./src/lib/performance.tsx\n154:6  Warning: React Hook useMemo has a missing dependency: 'filterFn'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps\n154:20  Warning: React Hook useMemo has a spread element in its dependency array. This means we can't statically verify whether you've passed the correct dependencies.  react-hooks/exhaustive-deps\n\ninfo  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules\n   Collecting page data ...\n   Generating static pages (0/11) ...\n\r   Generating static pages (2/11) \r\n\r   Generating static pages (5/11) \r\n\r   Generating static pages (8/11) \r\nTime 5.326695\nTime 5.3799\n\r ✓ Generating static pages (11/11) \n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                                          Size     First Load JS\n┌ ○ /                                                134 B           186 kB\n├ ○ /_not-found                                      0 B                0 B\n├ λ /[locale]                                        133 B           186 kB\n├ λ /[locale]/about                                  1.93 kB         188 kB\n├ λ /[locale]/admin                                  2.73 kB         189 kB\n├ λ /[locale]/admin/images                           4.58 kB         191 kB\n├ λ /[locale]/admin/images/[category]                1.77 kB         188 kB\n├ λ /[locale]/admin/images/[category]/[subcategory]  2.36 kB         188 kB\n├ λ /[locale]/admin/images/blind                     544 B           187 kB\n├ λ /[locale]/admin/images/motorized                 555 B           187 kB\n├ λ /[locale]/blind                                  5.15 kB         191 kB\n├ ● /[locale]/blind/[slug]                           3.87 kB         190 kB\n├ λ /[locale]/blog                                   134 B           186 kB\n├ λ /[locale]/collection                             2.95 kB         189 kB\n├ ● /[locale]/collection/[slug]                      133 B           186 kB\n├ λ /[locale]/contact                                2.36 kB         188 kB\n├ λ /[locale]/curtain                                5.79 kB         192 kB\n├ ● /[locale]/curtain/[slug]                         3.69 kB         190 kB\n├ λ /[locale]/error-test                             1.06 kB         187 kB\n├ λ /[locale]/landing                                2.48 kB         189 kB\n├ λ /[locale]/motorized                              5.42 kB         192 kB\n├ ● /[locale]/motorized/[slug]                       4.02 kB         190 kB\n├ ● /[locale]/posts/[slug]                           134 B           186 kB\n├ λ /[locale]/products                               3.58 kB         190 kB\n├ ● /[locale]/products/[slug]                        134 B           186 kB\n├ λ /[locale]/project                                2.29 kB         188 kB\n├ ● /[locale]/project/[slug]                         134 B           186 kB\n├ λ /[locale]/references                             4.12 kB         190 kB\n├ ● /[locale]/references/[slug]                      1.8 kB          188 kB\n├ λ /api/delete-image                                0 B                0 B\n├ λ /api/projects                                    0 B                0 B\n├ λ /api/reorder-images                              0 B                0 B\n├ λ /api/restore-images                              0 B                0 B\n├ λ /api/sync-images                                 0 B                0 B\n├ λ /api/upload-image                                0 B                0 B\n└ ○ /test                                            134 B           186 kB\n+ First Load JS shared by all                        186 kB\n  ├ chunks/69-ba20eef3560f5697.js                    29 kB\n  ├ chunks/commons-c6ccd16a0dfb0db9.js               102 kB\n  ├ chunks/e346fb70-f29cb60112a53c43.js              53.4 kB\n  └ other shared chunks (total)                      2.09 kB\n\n\nƒ Middleware                                         26.9 kB\n\n○  (Static)   prerendered as static content\n●  (SSG)      prerendered as static HTML (uses getStaticProps)\nλ  (Dynamic)  server-rendered on demand using Node.js\n\n\n> khakishop@0.1.0 postbuild\n> next-sitemap\n\n✨ [next-sitemap] Loading next-sitemap config: file:///Users/kiholee/Projects/khakishop-web/next-sitemap.config.js\n✅ [next-sitemap] Generation completed\n┌───────────────┬────────┐\n│ (index)       │ Values │\n├───────────────┼────────┤\n│ indexSitemaps │ 0      │\n│ sitemaps      │ 1      │\n└───────────────┴────────┘\n-----------------------------------------------------\n SITEMAPS \n-----------------------------------------------------\n\n   ○ https://khakishop.kr/sitemap.xml\n\n\n"
+    },
+    "dependencyAnalysis": {
+      "nodeModulesExists": true,
+      "packageLockExists": true,
+      "vulnerabilities": [],
+      "outdatedPackages": [],
+      "auditError": "Command failed: npm audit --json"
+    },
+    "commonIssues": {
+      "portConflicts": [],
+      "environmentIssues": [],
+      "configurationIssues": []
+    },
+    "claudeReport": {
+      "executiveSummary": {
+        "overallStatus": "CRITICAL",
+        "totalIssues": 120,
+        "criticalIssues": 119,
+        "warnings": 0,
+        "suggestions": 1,
+        "recommendation": "즉시 조치가 필요한 심각한 문제가 있습니다. 빌드 및 실행이 불가능할 수 있습니다."
+      },
+      "quickFixes": [],
+      "detailedAnalysis": {
+        "fileStructure": {
+          "totalFiles": 67208,
+          "directories": [
+            {
+              "name": "app",
+              "type": "directory",
+              "path": "src/app",
+              "children": [
+                {
+                  "name": "[locale]",
+                  "type": "directory",
+                  "path": "src/app/[locale]",
+                  "children": [
+                    {
+                      "name": "about",
+                      "type": "directory",
+                      "path": "src/app/[locale]/about",
+                      "children": []
+                    },
+                    {
+                      "name": "admin",
+                      "type": "directory",
+                      "path": "src/app/[locale]/admin",
+                      "children": []
+                    },
+                    {
+                      "name": "blind",
+                      "type": "directory",
+                      "path": "src/app/[locale]/blind",
+                      "children": []
+                    },
+                    {
+                      "name": "blog",
+                      "type": "directory",
+                      "path": "src/app/[locale]/blog",
+                      "children": []
+                    },
+                    {
+                      "name": "collection",
+                      "type": "directory",
+                      "path": "src/app/[locale]/collection",
+                      "children": []
+                    },
+                    {
+                      "name": "contact",
+                      "type": "directory",
+                      "path": "src/app/[locale]/contact",
+                      "children": []
+                    },
+                    {
+                      "name": "curtain",
+                      "type": "directory",
+                      "path": "src/app/[locale]/curtain",
+                      "children": []
+                    },
+                    {
+                      "name": "error-test",
+                      "type": "directory",
+                      "path": "src/app/[locale]/error-test",
+                      "children": []
+                    },
+                    {
+                      "name": "landing",
+                      "type": "directory",
+                      "path": "src/app/[locale]/landing",
+                      "children": []
+                    },
+                    {
+                      "name": "motorized",
+                      "type": "directory",
+                      "path": "src/app/[locale]/motorized",
+                      "children": []
+                    },
+                    {
+                      "name": "posts",
+                      "type": "directory",
+                      "path": "src/app/[locale]/posts",
+                      "children": []
+                    },
+                    {
+                      "name": "products",
+                      "type": "directory",
+                      "path": "src/app/[locale]/products",
+                      "children": []
+                    },
+                    {
+                      "name": "project",
+                      "type": "directory",
+                      "path": "src/app/[locale]/project",
+                      "children": []
+                    },
+                    {
+                      "name": "references",
+                      "type": "directory",
+                      "path": "src/app/[locale]/references",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "api",
+                  "type": "directory",
+                  "path": "src/app/api",
+                  "children": [
+                    {
+                      "name": "delete-image",
+                      "type": "directory",
+                      "path": "src/app/api/delete-image",
+                      "children": []
+                    },
+                    {
+                      "name": "projects",
+                      "type": "directory",
+                      "path": "src/app/api/projects",
+                      "children": []
+                    },
+                    {
+                      "name": "reorder-images",
+                      "type": "directory",
+                      "path": "src/app/api/reorder-images",
+                      "children": []
+                    },
+                    {
+                      "name": "restore-images",
+                      "type": "directory",
+                      "path": "src/app/api/restore-images",
+                      "children": []
+                    },
+                    {
+                      "name": "sync-images",
+                      "type": "directory",
+                      "path": "src/app/api/sync-images",
+                      "children": []
+                    },
+                    {
+                      "name": "upload-image",
+                      "type": "directory",
+                      "path": "src/app/api/upload-image",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "test",
+                  "type": "directory",
+                  "path": "src/app/test",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "components",
+              "type": "directory",
+              "path": "src/components",
+              "children": [
+                {
+                  "name": "admin",
+                  "type": "directory",
+                  "path": "src/components/admin",
+                  "children": []
+                },
+                {
+                  "name": "common",
+                  "type": "directory",
+                  "path": "src/components/common",
+                  "children": []
+                },
+                {
+                  "name": "layouts",
+                  "type": "directory",
+                  "path": "src/components/layouts",
+                  "children": []
+                },
+                {
+                  "name": "templates",
+                  "type": "directory",
+                  "path": "src/components/templates",
+                  "children": []
+                },
+                {
+                  "name": "ui",
+                  "type": "directory",
+                  "path": "src/components/ui",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "config",
+              "type": "directory",
+              "path": "src/config",
+              "children": []
+            },
+            {
+              "name": "data",
+              "type": "directory",
+              "path": "src/data",
+              "children": []
+            },
+            {
+              "name": "hooks",
+              "type": "directory",
+              "path": "src/hooks",
+              "children": []
+            },
+            {
+              "name": "lib",
+              "type": "directory",
+              "path": "src/lib",
+              "children": []
+            },
+            {
+              "name": "types",
+              "type": "directory",
+              "path": "src/types",
+              "children": []
+            },
+            {
+              "name": "utils",
+              "type": "directory",
+              "path": "src/utils",
+              "children": [
+                {
+                  "name": "constants",
+                  "type": "directory",
+                  "path": "src/utils/constants",
+                  "children": []
+                }
+              ]
+            }
+          ],
+          "keyFiles": {
+            "package.json": {
+              "exists": true,
+              "size": 9486,
+              "modified": "2025-06-14T04:04:30.726Z"
+            },
+            "next.config.js": {
+              "exists": true,
+              "size": 7399,
+              "modified": "2025-06-13T04:04:23.935Z"
+            },
+            "tsconfig.json": {
+              "exists": true,
+              "size": 1097,
+              "modified": "2025-06-12T07:10:58.817Z"
+            },
+            "tailwind.config.ts": {
+              "exists": true,
+              "size": 713,
+              "modified": "2025-06-04T09:16:45.822Z"
+            },
+            "eslint.config.mjs": {
+              "exists": true,
+              "size": 393,
+              "modified": "2025-06-04T09:16:20.432Z"
+            },
+            "src/app/layout.tsx": {
+              "exists": true,
+              "size": 5394,
+              "modified": "2025-06-09T11:28:24.739Z"
+            },
+            "src/app/globals.css": {
+              "exists": true,
+              "size": 59,
+              "modified": "2025-06-04T09:16:45.819Z"
+            },
+            "public/images": {
+              "exists": true,
+              "size": 608,
+              "modified": "2025-06-10T07:58:18.317Z"
+            }
+          },
+          "missingFiles": []
+        },
+        "buildSystem": {
+          "nextConfigExists": true,
+          "buildStatus": "SUCCESS",
+          "buildErrors": [],
+          "buildWarnings": [],
+          "cacheStatus": "EXISTS",
+          "configSize": 6723,
+          "cacheSize": 592336188,
+          "buildOutput": "\n> khakishop@0.1.0 build\n> next build\n\n   ▲ Next.js 14.1.3\n   - Experiments (use at your own risk):\n     · optimizeCss\n\n   Creating an optimized production build ...\n ✓ Compiled successfully\n   Linting and checking validity of types ...\n\n./src/app/[locale]/admin/images/page.tsx\n177:6  Warning: React Hook useCallback has a missing dependency: 'loadImages'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps\n\n./src/lib/performance.tsx\n154:6  Warning: React Hook useMemo has a missing dependency: 'filterFn'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps\n154:20  Warning: React Hook useMemo has a spread element in its dependency array. This means we can't statically verify whether you've passed the correct dependencies.  react-hooks/exhaustive-deps\n\ninfo  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules\n   Collecting page data ...\n   Generating static pages (0/11) ...\n\r   Generating static pages (2/11) \r\n\r   Generating static pages (5/11) \r\n\r   Generating static pages (8/11) \r\nTime 5.326695\nTime 5.3799\n\r ✓ Generating static pages (11/11) \n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                                          Size     First Load JS\n┌ ○ /                                                134 B           186 kB\n├ ○ /_not-found                                      0 B                0 B\n├ λ /[locale]                                        133 B           186 kB\n├ λ /[locale]/about                                  1.93 kB         188 kB\n├ λ /[locale]/admin                                  2.73 kB         189 kB\n├ λ /[locale]/admin/images                           4.58 kB         191 kB\n├ λ /[locale]/admin/images/[category]                1.77 kB         188 kB\n├ λ /[locale]/admin/images/[category]/[subcategory]  2.36 kB         188 kB\n├ λ /[locale]/admin/images/blind                     544 B           187 kB\n├ λ /[locale]/admin/images/motorized                 555 B           187 kB\n├ λ /[locale]/blind                                  5.15 kB         191 kB\n├ ● /[locale]/blind/[slug]                           3.87 kB         190 kB\n├ λ /[locale]/blog                                   134 B           186 kB\n├ λ /[locale]/collection                             2.95 kB         189 kB\n├ ● /[locale]/collection/[slug]                      133 B           186 kB\n├ λ /[locale]/contact                                2.36 kB         188 kB\n├ λ /[locale]/curtain                                5.79 kB         192 kB\n├ ● /[locale]/curtain/[slug]                         3.69 kB         190 kB\n├ λ /[locale]/error-test                             1.06 kB         187 kB\n├ λ /[locale]/landing                                2.48 kB         189 kB\n├ λ /[locale]/motorized                              5.42 kB         192 kB\n├ ● /[locale]/motorized/[slug]                       4.02 kB         190 kB\n├ ● /[locale]/posts/[slug]                           134 B           186 kB\n├ λ /[locale]/products                               3.58 kB         190 kB\n├ ● /[locale]/products/[slug]                        134 B           186 kB\n├ λ /[locale]/project                                2.29 kB         188 kB\n├ ● /[locale]/project/[slug]                         134 B           186 kB\n├ λ /[locale]/references                             4.12 kB         190 kB\n├ ● /[locale]/references/[slug]                      1.8 kB          188 kB\n├ λ /api/delete-image                                0 B                0 B\n├ λ /api/projects                                    0 B                0 B\n├ λ /api/reorder-images                              0 B                0 B\n├ λ /api/restore-images                              0 B                0 B\n├ λ /api/sync-images                                 0 B                0 B\n├ λ /api/upload-image                                0 B                0 B\n└ ○ /test                                            134 B           186 kB\n+ First Load JS shared by all                        186 kB\n  ├ chunks/69-ba20eef3560f5697.js                    29 kB\n  ├ chunks/commons-c6ccd16a0dfb0db9.js               102 kB\n  ├ chunks/e346fb70-f29cb60112a53c43.js              53.4 kB\n  └ other shared chunks (total)                      2.09 kB\n\n\nƒ Middleware                                         26.9 kB\n\n○  (Static)   prerendered as static content\n●  (SSG)      prerendered as static HTML (uses getStaticProps)\nλ  (Dynamic)  server-rendered on demand using Node.js\n\n\n> khakishop@0.1.0 postbuild\n> next-sitemap\n\n✨ [next-sitemap] Loading next-sitemap config: file:///Users/kiholee/Projects/khakishop-web/next-sitemap.config.js\n✅ [next-sitemap] Generation completed\n┌───────────────┬────────┐\n│ (index)       │ Values │\n├───────────────┼────────┤\n│ indexSitemaps │ 0      │\n│ sitemaps      │ 1      │\n└───────────────┴────────┘\n-----------------------------------------------------\n SITEMAPS \n-----------------------------------------------------\n\n   ○ https://khakishop.kr/sitemap.xml\n\n\n"
+        },
+        "dependencies": {
+          "nodeModulesExists": true,
+          "packageLockExists": true,
+          "vulnerabilities": [],
+          "outdatedPackages": [],
+          "auditError": "Command failed: npm audit --json"
+        },
+        "codeQuality": {
+          "totalFiles": 134,
+          "components": [
+            "src/app/HomeClient.tsx",
+            "src/app/[locale]/about/AboutPageClient.tsx",
+            "src/app/[locale]/admin/layout.tsx",
+            "src/app/[locale]/admin-layout-provider.tsx",
+            "src/app/[locale]/blind/BlindPageClient.tsx",
+            "src/app/[locale]/blog/loading.tsx",
+            "src/app/[locale]/collection/CollectionPageClient.tsx",
+            "src/app/[locale]/collection/layout.tsx",
+            "src/app/[locale]/curtain/CurtainPageClient.tsx",
+            "src/app/[locale]/landing/LandingClient.tsx",
+            "src/app/[locale]/layout.tsx",
+            "src/app/[locale]/motorized/MotorizedPageClient.tsx",
+            "src/app/[locale]/references/ReferencesPageClient.tsx",
+            "src/app/[locale]/references/[slug]/ImageGallery.tsx",
+            "src/app/error.tsx",
+            "src/app/layout.tsx",
+            "src/app/not-found.tsx",
+            "src/components/AccordionItem.tsx",
+            "src/components/AnimatedText.tsx",
+            "src/components/BlindCard.tsx",
+            "src/components/BlindClientView.tsx",
+            "src/components/BlindDetailPage.tsx",
+            "src/components/BlindImageGallery.tsx",
+            "src/components/BlindPageClient.tsx",
+            "src/components/BlindProductView.tsx",
+            "src/components/Button.tsx",
+            "src/components/CollectionCard.tsx",
+            "src/components/ConditionalFooter.tsx",
+            "src/components/CurtainCard.tsx",
+            "src/components/CurtainClientView.tsx",
+            "src/components/CurtainDetailPage.tsx",
+            "src/components/CurtainImageGallery.tsx",
+            "src/components/CurtainPageClient.tsx",
+            "src/components/CurtainProductView.tsx",
+            "src/components/EmptyImageCard.tsx",
+            "src/components/ErrorBoundary.tsx",
+            "src/components/FullscreenMenu.tsx",
+            "src/components/HeroIntro.tsx",
+            "src/components/HeroSection.tsx",
+            "src/components/ImageManagerCard.tsx",
+            "src/components/KhakiImage.tsx",
+            "src/components/LanguageSwitcher.tsx",
+            "src/components/LocalTimeDisplay.tsx",
+            "src/components/MotorizedCard.tsx",
+            "src/components/MotorizedClientView.tsx",
+            "src/components/MotorizedDetailPage.tsx",
+            "src/components/MotorizedImageGallery.tsx",
+            "src/components/MotorizedPageClient.tsx",
+            "src/components/MotorizedProductView.tsx",
+            "src/components/ProductCard.tsx",
+            "src/components/ProjectClientView.tsx",
+            "src/components/ProjectSection.tsx",
+            "src/components/ReferenceCard.tsx",
+            "src/components/UnifiedProductCard.tsx",
+            "src/components/UnifiedProductGrid.tsx",
+            "src/components/VirtualizedProjectGrid.tsx",
+            "src/components/admin/AdminImageEditPanel.tsx",
+            "src/components/admin/AdminImagesBrowser.tsx",
+            "src/components/admin/DeleteImageDialog.tsx",
+            "src/components/admin/DraggableImageGrid.tsx",
+            "src/components/admin/ImageUploadZone.tsx",
+            "src/components/admin/VirtualizedImageGrid.tsx",
+            "src/components/common/SEOImage.tsx",
+            "src/components/layouts/CategoryPage.tsx",
+            "src/components/templates/ProductDetailTemplate.tsx",
+            "src/components/ui/LocalizedLink.tsx",
+            "src/components/ui/Pagination.tsx",
+            "src/components/ui/Skeleton.tsx",
+            "src/lib/performance.tsx"
+          ],
+          "pages": [
+            "src/app/[locale]/about/page.tsx",
+            "src/app/[locale]/admin/images/[category]/[subcategory]/page.tsx",
+            "src/app/[locale]/admin/images/[category]/page.tsx",
+            "src/app/[locale]/admin/images/blind/page.tsx",
+            "src/app/[locale]/admin/images/motorized/page.tsx",
+            "src/app/[locale]/admin/images/page.tsx",
+            "src/app/[locale]/admin/page.tsx",
+            "src/app/[locale]/blind/[slug]/page.tsx",
+            "src/app/[locale]/blind/page.tsx",
+            "src/app/[locale]/blog/page.tsx",
+            "src/app/[locale]/collection/[slug]/page.tsx",
+            "src/app/[locale]/collection/page.tsx",
+            "src/app/[locale]/contact/page.tsx",
+            "src/app/[locale]/curtain/[slug]/page.tsx",
+            "src/app/[locale]/curtain/page.tsx",
+            "src/app/[locale]/error-test/page.tsx",
+            "src/app/[locale]/landing/page.tsx",
+            "src/app/[locale]/motorized/[slug]/page.tsx",
+            "src/app/[locale]/motorized/page.tsx",
+            "src/app/[locale]/page.tsx",
+            "src/app/[locale]/posts/[slug]/page.tsx",
+            "src/app/[locale]/products/[slug]/page.tsx",
+            "src/app/[locale]/products/page.tsx",
+            "src/app/[locale]/project/[slug]/page.tsx",
+            "src/app/[locale]/project/page.tsx",
+            "src/app/[locale]/references/[slug]/page.tsx",
+            "src/app/[locale]/references/page.tsx",
+            "src/app/page.tsx",
+            "src/app/test/page.tsx"
+          ],
+          "hooks": [
+            "src/hooks/useImageManager.ts"
+          ],
+          "utils": [],
+          "issues": []
+        }
+      },
+      "actionPlan": [
+        {
+          "priority": "HIGH",
+          "title": "Critical Issues 해결",
+          "tasks": [
+            "이미지 파일 누락: /images/${categoryKey}`}",
+            "이미지 파일 누락: /images/${categoryKey}`}",
+            "이미지 파일 누락: /images/${categoryKey}/${subcategory.key}`}",
+            "이미지 파일 누락: /images/${categoryKey}/manage`}",
+            "이미지 파일 누락: /images/blind/premium-venetian-collection/blind-premium-venetian-collection-1.jpg"
+          ],
+          "estimatedTime": "30분"
+        }
+      ],
+      "codeSnippets": {
+        "package.json": "{\n  \"name\": \"khakishop\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"dev:stable\": \"NODE_OPTIONS='--max-old-space-size=4096' next dev --turbo\",\n    \"dev:light\": \"DISABLE_ESLINT_PLUGIN=true NODE_OPTIONS='--max-old-space-size=4096' next dev\",\n    \"dev:safe\": \"next dev\",\n    \"dev:debug\": \"NODE_OPTIONS='--max-old-space-size=4096 --inspect' next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint --max-warnings=100\",\n    \"test\": \"t...",
+        "next.config.js": "/** @type {import('next').NextConfig} */\nconst path = require('path');\n// const createNextIntlPlugin = require('next-intl/plugin');\n\n// const withNextIntl = createNextIntlPlugin('./src/i18n.ts');\n\nconst nextConfig = {\n  // ================================================================================\n  // 🚀 성능 최적화 설정 (Turbopack 호환)\n  // ================================================================================\n\n  // 실험적 기능 - 안정성 우선\n  experimental: {\n    // CSS 최적화\n    optimizeCss: true,...",
+        "tsconfig.json": "{\n  \"compilerOptions\": {\n    \"lib\": [\n      \"dom\",\n      \"dom.iterable\",\n      \"esnext\"\n    ],\n    \"allowJs\": true,\n    \"skipLibCheck\": true,\n    \"strict\": false,\n    \"noEmit\": true,\n    \"incremental\": true,\n    \"tsBuildInfoFile\": \".next/cache/tsconfig.tsbuildinfo\",\n    \"esModuleInterop\": true,\n    \"module\": \"esnext\",\n    \"moduleResolution\": \"node\",\n    \"resolveJsonModule\": true,\n    \"isolatedModules\": true,\n    \"jsx\": \"preserve\",\n    \"plugins\": [\n      {\n        \"name\": \"next\"\n      }\n    ]\n  }..."
+      }
+    }
+  }
+}

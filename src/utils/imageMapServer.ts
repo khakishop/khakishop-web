@@ -175,7 +175,7 @@ export async function syncImageMap(forceRepair: boolean = false): Promise<{
 
   try {
     const store = loadPersistentStore();
-    let newlyAdded = 0;
+    const newlyAdded = 0;
 
     // 다양한 이미지 디렉토리들 스캔
     const imageDirs = [

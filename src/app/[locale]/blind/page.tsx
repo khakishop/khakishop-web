@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: '정밀한 빛 조절과 공간의 미학을 완성하는 프리미엄 블라인드 컬렉션',
     images: [
       {
-        url: '/images/blind/premium-venetian-collection/blind-premium-venetian-collection-1.jpg',
+        url: '/images/blind/premium-venetian-collection/main.jpg',
         width: 1200,
         height: 630,
         alt: '카키샵 블라인드 컬렉션',

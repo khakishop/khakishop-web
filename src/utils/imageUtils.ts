@@ -4,7 +4,7 @@
 // 🎨 디자인 모티브: https://www.rigas-furniture.gr/
 // 🔧 관리자 연동: /ko/admin/images
 
-import { isServerEnvironment, ensureServerEnvironment, fs, path, fsSync, checkServerModules, isServer } from '../lib/serverUtils';
+import { checkServerModules, isServer } from '../lib/serverUtils';
 
 // ================================================================================
 // 🎨 KHAKISHOP 이미지 유틸리티 - RIGAS 스타일 통일
@@ -35,9 +35,9 @@ function getSortedReferenceImagePaths(slug: string): string[] {
     // 서버 사이드에서만 실행
     const { loadPersistentStore } = require('./imageMapServer');
     const store = loadPersistentStore();
-    
+
     const referenceImages = Object.values(store.mappings)
-      .filter((mapping: any) => 
+      .filter((mapping: any) =>
         mapping.targetPath.includes(`/references/${slug}/`) ||
         (mapping.metadata?.slug === slug && mapping.metadata?.category === 'references')
       )
@@ -65,9 +65,9 @@ function getSortedCurtainImagePaths(slug: string): string[] {
     // 서버 사이드에서만 실행
     const { loadPersistentStore } = require('./imageMapServer');
     const store = loadPersistentStore();
-    
+
     const curtainImages = Object.values(store.mappings)
-      .filter((mapping: any) => 
+      .filter((mapping: any) =>
         mapping.targetPath.includes(`/curtain/${slug}/`) ||
         (mapping.metadata?.slug === slug && mapping.metadata?.category === 'curtain')
       )
@@ -95,9 +95,9 @@ function getSortedBlindImagePaths(slug: string): string[] {
     // 서버 사이드에서만 실행
     const { loadPersistentStore } = require('./imageMapServer');
     const store = loadPersistentStore();
-    
+
     const blindImages = Object.values(store.mappings)
-      .filter((mapping: any) => 
+      .filter((mapping: any) =>
         mapping.targetPath.includes(`/blind/${slug}/`) ||
         (mapping.metadata?.slug === slug && mapping.metadata?.category === 'blind')
       )
@@ -125,9 +125,9 @@ function getSortedMotorizedImagePaths(slug: string): string[] {
     // 서버 사이드에서만 실행
     const { loadPersistentStore } = require('./imageMapServer');
     const store = loadPersistentStore();
-    
+
     const motorizedImages = Object.values(store.mappings)
-      .filter((mapping: any) => 
+      .filter((mapping: any) =>
         mapping.targetPath.includes(`/motorized/${slug}/`) ||
         (mapping.metadata?.slug === slug && mapping.metadata?.category === 'motorized')
       )
@@ -165,19 +165,16 @@ export function getReferenceImagePaths(slug: string): string[] {
 
   // 클라이언트 사이드나 실패 시 기존 로직 사용
   const basePath = `/images/references/${slug}`;
-  
+
   // SEO 최적화된 파일명 패턴들
   const possibleFileNames = [
-    `reference-${slug}-1.jpg`,
-    `reference-${slug}-2.jpg`,
-    `reference-${slug}-3.jpg`,
-    `reference-${slug}-4.jpg`,
-    `reference-${slug}-5.jpg`,
-    `reference-${slug}-6.jpg`,
-    `reference-${slug}-7.jpg`,
-    `reference-${slug}-8.jpg`,
-    `reference-${slug}-9.jpg`,
-    `reference-${slug}-10.jpg`,
+    'main.jpg',
+    'detail-1.jpg',
+    'detail-2.jpg',
+    'lifestyle.jpg',
+    'gallery-1.jpg',
+    'gallery-2.jpg',
+    'gallery-3.jpg',
     // 대체 파일명 패턴
     `${slug}-main.jpg`,
     `${slug}-1.jpg`,
@@ -185,12 +182,11 @@ export function getReferenceImagePaths(slug: string): string[] {
     `${slug}-3.jpg`,
     `${slug}-4.jpg`,
     `${slug}-5.jpg`,
-    'main.jpg',
     'image-1.jpg',
     'image-2.jpg',
     'image-3.jpg',
   ];
-  
+
   return possibleFileNames.map(fileName => `${basePath}/${fileName}`);
 }
 
@@ -276,19 +272,16 @@ export function getCurtainImagePaths(slug: string): string[] {
 
   // 클라이언트 사이드나 실패 시 기존 로직 사용
   const basePath = `/images/curtain/${slug}`;
-  
+
   // SEO 최적화된 파일명 패턴들
   const possibleFileNames = [
-    `curtain-${slug}-1.jpg`,
-    `curtain-${slug}-2.jpg`,
-    `curtain-${slug}-3.jpg`,
-    `curtain-${slug}-4.jpg`,
-    `curtain-${slug}-5.jpg`,
-    `curtain-${slug}-6.jpg`,
-    `curtain-${slug}-7.jpg`,
-    `curtain-${slug}-8.jpg`,
-    `curtain-${slug}-9.jpg`,
-    `curtain-${slug}-10.jpg`,
+    'main.jpg',
+    'detail-1.jpg',
+    'detail-2.jpg',
+    'lifestyle.jpg',
+    'gallery-1.jpg',
+    'gallery-2.jpg',
+    'gallery-3.jpg',
     // 대체 파일명 패턴
     `${slug}-main.jpg`,
     `${slug}-1.jpg`,
@@ -296,12 +289,11 @@ export function getCurtainImagePaths(slug: string): string[] {
     `${slug}-3.jpg`,
     `${slug}-4.jpg`,
     `${slug}-5.jpg`,
-    'main.jpg',
     'image-1.jpg',
     'image-2.jpg',
     'image-3.jpg',
   ];
-  
+
   return possibleFileNames.map(fileName => `${basePath}/${fileName}`);
 }
 
@@ -325,19 +317,16 @@ export function getBlindImagePaths(slug: string): string[] {
 
   // 클라이언트 사이드나 실패 시 기존 로직 사용
   const basePath = `/images/blind/${slug}`;
-  
+
   // SEO 최적화된 파일명 패턴들
   const possibleFileNames = [
-    `blind-${slug}-1.jpg`,
-    `blind-${slug}-2.jpg`,
-    `blind-${slug}-3.jpg`,
-    `blind-${slug}-4.jpg`,
-    `blind-${slug}-5.jpg`,
-    `blind-${slug}-6.jpg`,
-    `blind-${slug}-7.jpg`,
-    `blind-${slug}-8.jpg`,
-    `blind-${slug}-9.jpg`,
-    `blind-${slug}-10.jpg`,
+    'main.jpg',
+    'detail-1.jpg',
+    'detail-2.jpg',
+    'lifestyle.jpg',
+    'gallery-1.jpg',
+    'gallery-2.jpg',
+    'gallery-3.jpg',
     // 대체 파일명 패턴
     `${slug}-main.jpg`,
     `${slug}-1.jpg`,
@@ -345,12 +334,11 @@ export function getBlindImagePaths(slug: string): string[] {
     `${slug}-3.jpg`,
     `${slug}-4.jpg`,
     `${slug}-5.jpg`,
-    'main.jpg',
     'image-1.jpg',
     'image-2.jpg',
     'image-3.jpg',
   ];
-  
+
   return possibleFileNames.map(fileName => `${basePath}/${fileName}`);
 }
 
@@ -374,19 +362,16 @@ export function getMotorizedImagePaths(slug: string): string[] {
 
   // 클라이언트 사이드나 실패 시 기존 로직 사용
   const basePath = `/images/motorized/${slug}`;
-  
+
   // SEO 최적화된 파일명 패턴들
   const possibleFileNames = [
-    `motorized-${slug}-1.jpg`,
-    `motorized-${slug}-2.jpg`,
-    `motorized-${slug}-3.jpg`,
-    `motorized-${slug}-4.jpg`,
-    `motorized-${slug}-5.jpg`,
-    `motorized-${slug}-6.jpg`,
-    `motorized-${slug}-7.jpg`,
-    `motorized-${slug}-8.jpg`,
-    `motorized-${slug}-9.jpg`,
-    `motorized-${slug}-10.jpg`,
+    'main.jpg',
+    'detail-1.jpg',
+    'detail-2.jpg',
+    'lifestyle.jpg',
+    'gallery-1.jpg',
+    'gallery-2.jpg',
+    'gallery-3.jpg',
     // 대체 파일명 패턴
     `${slug}-main.jpg`,
     `${slug}-1.jpg`,
@@ -394,11 +379,10 @@ export function getMotorizedImagePaths(slug: string): string[] {
     `${slug}-3.jpg`,
     `${slug}-4.jpg`,
     `${slug}-5.jpg`,
-    'main.jpg',
     'image-1.jpg',
     'image-2.jpg',
     'image-3.jpg',
   ];
-  
+
   return possibleFileNames.map(fileName => `${basePath}/${fileName}`);
 } 

@@ -36,8 +36,8 @@ const fallbackImages: Record<string, string> = {
   'smart.jpg': '/images/hero/hero.jpg',
 
   // 제품별 세부 이미지들 (존재하는 이미지로 매핑)
-  'linen-white.jpg': '/images/products/curtain/sheer-curtain/lifestyle.jpg',
-  'pleats-ivory.jpg': '/images/products/curtain/sheer-curtain/detail.jpg',
+  'linen-white.jpg': '/images/curtain/essential-linen-collection/main.jpg',
+  'pleats-ivory.jpg': '/images/curtain/essential-linen-collection/detail-1.jpg',
 
   // 프로젝트 이미지들
   'project-showcase.jpg': '/images/projects/project-showcase.png',
@@ -55,6 +55,8 @@ const fallbackImages: Record<string, string> = {
   // 기본 플레이스홀더
   'placeholder.jpg': '/images/hero/hero.jpg',
   'default.jpg': '/images/hero/hero.jpg',
+
+  products: '/images/curtain/essential-linen-collection/main.jpg',
 };
 
 // 🔄 이미지 경로 변환 함수
@@ -101,7 +103,7 @@ export const getCategoryFallback = (category: string): string => {
     projects: '/images/projects/our-projects-bg.jpg',
     collections: '/images/collections/essential-linen.png',
     references: '/images/references/modern-office-gangnam/main.jpg',
-    products: '/images/products/curtain/sheer-curtain/lifestyle.jpg',
+    products: '/images/curtain/essential-linen-collection/main.jpg',
     gallery: '/images/midjourney/1.png',
     blog: '/images/landing/collection-overview.png',
     about: '/images/landing/brand-lifestyle.png',

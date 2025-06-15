@@ -1,12 +1,12 @@
 'use client';
 
-import React, { memo } from 'react';
-import { motion, useScroll, useTransform, useSpring } from '../lib/motion';
-import { useRef } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import HeroSection from '../components/HeroSection';
 import { useParams } from 'next/navigation';
+import { memo, useEffect, useRef, useState } from 'react';
+import { AnimatedText } from '../components/AnimatedText';
+import HeroSection from '../components/HeroSection';
+import { LocalizedLink } from '../components/ui/LocalizedLink';
+import { motion, useScroll, useSpring, useTransform } from '../lib/motion';
 
 const HomeClient = memo(function HomeClient() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -17,6 +17,33 @@ const HomeClient = memo(function HomeClient() {
 
   const params = useParams();
   const locale = params?.locale as string || 'ko';
+
+  // 이미지 상태 관리 (실시간 업데이트를 위해)
+  const [images, setImages] = useState({
+    hero: '/images/hero/hero.jpg',
+    curtain: '/images/references/curtain-modern-livingroom-1.png',
+    blind: '/images/references/blind-minimal-bedroom-1.png',
+    motorized: '/images/references/motorized-smart-livingroom-1.png'
+  });
+
+  // 실시간 이미지 업데이트 감지
+  useEffect(() => {
+    const handleImageUpdate = (event: CustomEvent) => {
+      const { imageKey, newPath } = event.detail;
+      console.log(`🔄 홈페이지 이미지 실시간 업데이트: ${imageKey} -> ${newPath}`);
+
+      setImages(prev => ({
+        ...prev,
+        [imageKey]: newPath
+      }));
+    };
+
+    window.addEventListener('imageUpdated', handleImageUpdate as EventListener);
+
+    return () => {
+      window.removeEventListener('imageUpdated', handleImageUpdate as EventListener);
+    };
+  }, []);
 
   // Transform values for the "Design Beyond Time" text animation with organic feel
   const rawY = useTransform(scrollYProgress, [0.1, 0.4], [0, -150]);
@@ -69,9 +96,9 @@ const HomeClient = memo(function HomeClient() {
 
   return (
     <div className="bg-white">
-      {/* Fixed Logo in Top-Left */}
+      {/* Fixed Logo in Top-Left - 모바일에서 20% 작게 */}
       <div className="fixed top-8 left-8 z-50">
-        <div className="text-black text-4xl md:text-5xl lg:text-6xl flex items-baseline">
+        <div className="text-black text-3xl md:text-4xl lg:text-5xl xl:text-6xl flex items-baseline">
           <span className="font-montserrat font-bold">khaki</span>
           <span className="font-dm-serif italic ml-2">shop</span>
         </div>
@@ -79,18 +106,18 @@ const HomeClient = memo(function HomeClient() {
 
       {/* 첫 번째: 풀스크린 이미지 섹션 - Full Screen, No Top Offset */}
       <section ref={heroRef} className="relative h-screen">
-        {/* Background Image */}
+        {/* Background Image - 실시간 업데이트 */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url("/images/hero/hero.jpg")',
+            backgroundImage: `url("${images.hero}")`,
           }}
         ></div>
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        {/* Overlay - 밝게 수정 */}
+        <div className="absolute inset-0 bg-black/20"></div>
 
-        {/* Animated "Design Beyond Time" Headline with Organic Motion */}
+        {/* Animated "Design Beyond Time" Headline with Letter-by-Letter Animation - 모바일에서 화면 중앙으로 */}
         <motion.div
           style={{
             y: finalY,
@@ -99,11 +126,13 @@ const HomeClient = memo(function HomeClient() {
             skewY,
             transformOrigin: 'bottom center',
           }}
-          className="absolute bottom-0 left-0 w-full flex justify-center z-10 pb-12"
+          className="absolute bottom-[60vh] md:bottom-12 left-0 w-full flex justify-center z-10"
         >
-          <h1 className="text-white text-[8vw] font-bold tracking-tight leading-none whitespace-nowrap">
-            Design Beyond Time
-          </h1>
+          <AnimatedText
+            text="Design Beyond Time"
+            className="text-white text-[8vw] font-bold tracking-tight leading-none whitespace-nowrap"
+            delay={0.5}
+          />
         </motion.div>
       </section>
 
@@ -111,14 +140,14 @@ const HomeClient = memo(function HomeClient() {
       <HeroSection />
 
       {/* Today's Space Suggestions */}
-      <section className="py-20">
+      <section className="py-20 relative z-10">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-light text-center mb-20 tracking-tight text-gray-800">
             오늘의 공간을 위한 제안
           </h2>
 
           <div className="space-y-32">
-            {/* Curtain Section */}
+            {/* Curtain Section - 실시간 업데이트 */}
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -127,18 +156,20 @@ const HomeClient = memo(function HomeClient() {
                 ease: [0.25, 0.1, 0.25, 1],
               }}
               viewport={{ once: true, amount: 0.3 }}
-              className="group cursor-pointer"
+              className="group cursor-pointer relative z-20"
+              style={{ pointerEvents: 'auto' }}
             >
-              <Link href={`/${locale}/curtain`} className="block">
+              <LocalizedLink href="/curtain" className="block relative z-30">
                 <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
                   <div className="aspect-[16/9] relative">
                     <Image
-                      src="/images/references/curtain-modern-livingroom-1.png"
+                      src={images.curtain}
                       alt="Modern linen curtain in contemporary living room"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                       priority={false}
                       quality={85}
+                      key={images.curtain} // 강제 리렌더링을 위한 key
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500"></div>
                   </div>
@@ -157,10 +188,10 @@ const HomeClient = memo(function HomeClient() {
                     </span>
                   </div>
                 </div>
-              </Link>
+              </LocalizedLink>
             </motion.div>
 
-            {/* Blind Section */}
+            {/* Blind Section - 실시간 업데이트 */}
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -170,18 +201,20 @@ const HomeClient = memo(function HomeClient() {
                 delay: 0.1,
               }}
               viewport={{ once: true, amount: 0.3 }}
-              className="group cursor-pointer"
+              className="group cursor-pointer relative z-20"
+              style={{ pointerEvents: 'auto' }}
             >
-              <Link href={`/${locale}/blind`} className="block">
+              <LocalizedLink href="/blind" className="block relative z-30">
                 <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
                   <div className="aspect-[16/9] relative">
                     <Image
-                      src="/images/references/blind-minimal-bedroom-1.png"
+                      src={images.blind}
                       alt="Minimal blind design in serene bedroom"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                       priority={false}
                       quality={85}
+                      key={images.blind} // 강제 리렌더링을 위한 key
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500"></div>
                   </div>
@@ -200,10 +233,10 @@ const HomeClient = memo(function HomeClient() {
                     </span>
                   </div>
                 </div>
-              </Link>
+              </LocalizedLink>
             </motion.div>
 
-            {/* Motorized System Section */}
+            {/* Motorized System Section - 실시간 업데이트 */}
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -213,18 +246,20 @@ const HomeClient = memo(function HomeClient() {
                 delay: 0.2,
               }}
               viewport={{ once: true, amount: 0.3 }}
-              className="group cursor-pointer"
+              className="group cursor-pointer relative z-20"
+              style={{ pointerEvents: 'auto' }}
             >
-              <Link href={`/${locale}/motorized`} className="block">
+              <LocalizedLink href="/motorized" className="block relative z-30">
                 <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-500">
                   <div className="aspect-[16/9] relative">
                     <Image
-                      src="/images/references/motorized-luxury-office-1.png"
-                      alt="Smart motorized system in modern office"
+                      src={images.motorized}
+                      alt="Smart motorized system in modern living room"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                       priority={false}
                       quality={85}
+                      key={images.motorized} // 강제 리렌더링을 위한 key
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500"></div>
                   </div>
@@ -243,7 +278,7 @@ const HomeClient = memo(function HomeClient() {
                     </span>
                   </div>
                 </div>
-              </Link>
+              </LocalizedLink>
             </motion.div>
           </div>
         </div>
@@ -263,7 +298,7 @@ const HomeClient = memo(function HomeClient() {
         <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Content */}
-        <div className="relative h-full flex items-center justify-center z-10">
+        <div className="relative h-full flex items-center justify-center z-20">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -273,13 +308,14 @@ const HomeClient = memo(function HomeClient() {
             }}
             viewport={{ once: true, amount: 0.3 }}
             className="text-center"
+            style={{ pointerEvents: 'auto' }}
           >
-            <Link href={`/${locale}/references`} className="inline-block">
+            <LocalizedLink href="/project" className="inline-block relative z-30">
               <div className="border-[1px] border-white text-white rounded-full px-8 py-4 text-sm sm:text-base font-light tracking-wide uppercase transition-all duration-300 ease-in-out hover:bg-white hover:text-black flex justify-between items-center gap-4">
                 <span>OUR PROJECTS</span>
                 <div className="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
               </div>
-            </Link>
+            </LocalizedLink>
           </motion.div>
         </div>
       </section>

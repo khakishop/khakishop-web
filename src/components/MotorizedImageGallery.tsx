@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from '../lib/motion';
-import { getMotorizedImagePaths, generateImageAlt, getImageSizes } from '../utils/imageUtils';
+import { useCallback, useEffect, useState } from 'react';
+import { AnimatePresence, motion } from '../lib/motion';
+import { generateImageAlt, getImageSizes, getMotorizedImagePaths } from '../utils/imageUtils';
 
 interface MotorizedImageGalleryProps {
   slug: string;
@@ -24,19 +24,19 @@ export default function MotorizedImageGallery({ slug, title }: MotorizedImageGal
   }, [slug]);
 
   // 이미지 로딩 완료 처리
-  const handleImageLoad = (index: number) => {
+  const handleImageLoad = useCallback((index: number) => {
     setLoadedImages(prev => new Set(Array.from(prev).concat([index])));
-  };
+  }, []);
 
   // 다음 이미지
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
-  };
+  }, [images.length]);
 
   // 이전 이미지
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
+  }, [images.length]);
 
   // 키보드 네비게이션
   useEffect(() => {
@@ -50,7 +50,7 @@ export default function MotorizedImageGallery({ slug, title }: MotorizedImageGal
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [images.length]);
+  }, [nextImage, prevImage]);
 
   if (isLoading) {
     return (
@@ -99,7 +99,7 @@ export default function MotorizedImageGallery({ slug, title }: MotorizedImageGal
               priority={currentIndex === 0}
               onLoad={() => handleImageLoad(currentIndex)}
             />
-            
+
             {/* 로딩 오버레이 */}
             {!loadedImages.has(currentIndex) && (
               <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 animate-pulse flex items-center justify-center">
@@ -125,7 +125,7 @@ export default function MotorizedImageGallery({ slug, title }: MotorizedImageGal
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            
+
             <button
               onClick={nextImage}
               className="absolute right-4 top-1/2 -translate-y-1/2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white p-2 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 shadow-lg"
@@ -155,11 +155,10 @@ export default function MotorizedImageGallery({ slug, title }: MotorizedImageGal
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setCurrentIndex(index)}
-              className={`relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                index === currentIndex
-                  ? 'border-blue-600 shadow-lg'
-                  : 'border-gray-200 hover:border-blue-400'
-              }`}
+              className={`relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ${index === currentIndex
+                ? 'border-blue-600 shadow-lg'
+                : 'border-gray-200 hover:border-blue-400'
+                }`}
             >
               <Image
                 src={image}
@@ -168,7 +167,7 @@ export default function MotorizedImageGallery({ slug, title }: MotorizedImageGal
                 className="object-cover"
                 sizes="80px"
               />
-              
+
               {/* 선택된 썸네일 오버레이 */}
               {index === currentIndex && (
                 <div className="absolute inset-0 bg-blue-600 bg-opacity-20" />

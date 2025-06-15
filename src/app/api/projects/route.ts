@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAllProjects, getProjectsByCategory, type Project } from '../../../data/projects';
 
+// 동적 라우트로 설정
+export const dynamic = 'force-dynamic';
+
 // 🚀 프로젝트 API - 페이지네이션, 검색, 필터링 지원
 export async function GET(request: NextRequest) {
   try {

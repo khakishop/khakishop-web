@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #f4f4f4; }
+      .text { 
+        fill: #6b7280; 
+        font-family: 'Montserrat', 'Arial', sans-serif; 
+        font-weight: bold; 
+        font-size: 80px;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .subtitle {
+        fill: #9ca3af;
+        font-family: 'Montserrat', 'Arial', sans-serif;
+        font-weight: normal;
+        font-size: 48px;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" class="bg"/>
+  
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e5e7eb" stroke-width="1" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  
+  <!-- Main text -->
+  <text x="960" y="580" class="text">KHAKI SHOP</text>
+  
+  <!-- Subtitle -->
+  <text x="960" y="620" class="subtitle">1920 × 1200</text>
+  
+  <!-- Corner info -->
+  <text x="20" y="30" class="subtitle">PLACEHOLDER</text>
+  <text x="1900" y="1180" class="subtitle" text-anchor="end">khakishop-hero.jpg</text>
+</svg>

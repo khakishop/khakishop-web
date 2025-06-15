@@ -1,8 +1,8 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from "../lib/motion";
-import Link from 'next/link';
-import { useRouter, useParams } from 'next/navigation';
+import { useParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from "../lib/motion";
+import { LocalizedLink } from './ui/LocalizedLink';
 
 const menuItems = [
   {
@@ -21,7 +21,7 @@ const menuItems = [
     path: '/products',
   },
   {
-    english: 'PROJECT',
+    english: 'OUR PROJECTS',
     korean: '시공 사례',
     path: '/project',
   },
@@ -60,11 +60,6 @@ export default function FullscreenMenu() {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  // locale이 포함된 경로를 생성하는 함수
-  const getLocalizedPath = (path: string) => {
-    return `/${locale}${path}`;
-  };
-
   // Disable scroll when menu is open
   useEffect(() => {
     if (isOpen) {
@@ -84,14 +79,12 @@ export default function FullscreenMenu() {
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: 'easeOut',
       },
     },
     exit: {
       opacity: 0,
       transition: {
         duration: 0.3,
-        ease: 'easeIn',
         delay: 0.4,
       },
     },
@@ -108,7 +101,6 @@ export default function FullscreenMenu() {
       x: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
         delay: 0.3,
       },
     },
@@ -117,7 +109,6 @@ export default function FullscreenMenu() {
       x: -30,
       transition: {
         duration: 0.3,
-        ease: 'easeIn',
       },
     },
   };
@@ -132,7 +123,6 @@ export default function FullscreenMenu() {
       x: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
         delay: 0.4,
       },
     },
@@ -141,7 +131,6 @@ export default function FullscreenMenu() {
       x: 30,
       transition: {
         duration: 0.3,
-        ease: 'easeIn',
       },
     },
   };
@@ -159,7 +148,6 @@ export default function FullscreenMenu() {
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: 'easeOut',
         delay: 0.2,
       },
     },
@@ -169,7 +157,6 @@ export default function FullscreenMenu() {
       scale: 0.95,
       transition: {
         duration: 0.25,
-        ease: 'easeIn',
       },
     },
   };
@@ -184,7 +171,6 @@ export default function FullscreenMenu() {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: 'easeOut',
         delay: 0.6,
       },
     },
@@ -193,7 +179,6 @@ export default function FullscreenMenu() {
       y: 20,
       transition: {
         duration: 0.2,
-        ease: 'easeIn',
       },
     },
   };
@@ -212,7 +197,6 @@ export default function FullscreenMenu() {
       transition: {
         duration: 0.4,
         delay: 0.3,
-        ease: 'easeOut',
       },
     },
     exit: {
@@ -221,7 +205,6 @@ export default function FullscreenMenu() {
       rotate: 90,
       transition: {
         duration: 0.2,
-        ease: 'easeIn',
       },
     },
   };
@@ -271,7 +254,6 @@ export default function FullscreenMenu() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: 'easeOut',
       },
     },
     exit: {
@@ -279,7 +261,6 @@ export default function FullscreenMenu() {
       y: -20,
       transition: {
         duration: 0.3,
-        ease: 'easeIn',
       },
     },
   };
@@ -288,16 +269,13 @@ export default function FullscreenMenu() {
   const mobileMenuItemVariants = {
     initial: {
       opacity: 0,
-      y: 20,
-      x: -10,
+      y: 30,
     },
     animate: {
       opacity: 1,
       y: 0,
-      x: 0,
       transition: {
         duration: 0.5,
-        ease: 'easeOut',
       },
     },
     exit: {
@@ -306,50 +284,21 @@ export default function FullscreenMenu() {
       x: 5,
       transition: {
         duration: 0.2,
-        ease: 'easeIn',
       },
     },
   };
 
   return (
     <>
-      {/* Menu Button */}
-      <div className="fixed top-6 right-6 z-50 flex items-center space-x-4">
-        {/* MENU/CLOSE Text */}
+      {/* Menu Button - PC와 모바일 모두 표시 - 원형 버튼들 제거 */}
+      <div className="fixed top-8 right-4 sm:top-6 sm:right-6 z-[60]">
+        {/* MENU/CLOSE Text만 유지 */}
         <span
           onClick={toggleMenu}
-          className="text-sm sm:text-base font-medium tracking-wide uppercase cursor-pointer text-black hover:opacity-70 transition-opacity"
-          style={{
-            WebkitTextStroke: '1px white',
-            textShadow: 'none',
-          }}
+          className="text-sm sm:text-base font-medium tracking-wide uppercase cursor-pointer text-white bg-black/90 px-3 py-2 sm:px-3 sm:py-1 rounded-md hover:bg-black transition-all duration-300 backdrop-blur-sm shadow-xl border border-white/20"
         >
           {isOpen ? 'CLOSE' : 'MENU'}
         </span>
-
-        {/* Black Circle Toggle */}
-        <div
-          onClick={toggleMenu}
-          className="w-3.5 h-3.5 bg-black border border-white rounded-full cursor-pointer hover:opacity-70 transition-opacity"
-        />
-
-        {/* Search Icon */}
-        <div className="cursor-pointer hover:opacity-70 transition-opacity">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="white"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="border border-white rounded-sm p-0.5"
-          >
-            <circle cx="11" cy="11" r="8" />
-            <path d="21 21l-4.35-4.35" />
-          </svg>
-        </div>
       </div>
 
       {/* Fullscreen Overlay Menu */}
@@ -376,15 +325,15 @@ export default function FullscreenMenu() {
             </motion.button>
 
             {/* Mobile Layout */}
-            <div className="block lg:hidden h-full">
-              <div className="flex flex-col h-full">
+            <div className="block lg:hidden h-full overflow-y-auto">
+              <div className="flex flex-col min-h-full">
                 {/* Mobile Logo Section - 상단 */}
                 <motion.div
                   variants={mobileLogoVariants}
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  className="flex items-center justify-center pt-20 pb-8"
+                  className="flex items-center justify-center pt-20 pb-6 flex-shrink-0"
                 >
                   <div className="text-center">
                     <div className="text-white text-4xl sm:text-5xl flex flex-col items-center">
@@ -396,8 +345,8 @@ export default function FullscreenMenu() {
                   </div>
                 </motion.div>
 
-                {/* Mobile Menu Items - 중앙 */}
-                <div className="flex-1 flex items-center justify-center px-6">
+                {/* Mobile Menu Items - 중앙, 스크롤 가능 */}
+                <div className="flex-1 flex items-start justify-center px-6 py-4 overflow-y-auto">
                   <motion.nav
                     variants={mobileMenuContainerVariants}
                     initial="initial"
@@ -405,24 +354,24 @@ export default function FullscreenMenu() {
                     exit="exit"
                     className="w-full text-center"
                   >
-                    <ul className="space-y-6 sm:space-y-8">
+                    <ul className="space-y-4 sm:space-y-6">
                       {menuItems.map((item, index) => (
                         <motion.li
                           key={index}
                           variants={mobileMenuItemVariants}
                         >
-                          <Link
-                            href={getLocalizedPath(item.path)}
+                          <LocalizedLink
+                            href={item.path}
                             onClick={closeMenu}
                             className="block group"
                           >
-                            <div className="text-white text-2xl sm:text-3xl font-serif font-medium uppercase tracking-wider mb-1 group-hover:opacity-70 transition-opacity duration-300 leading-tight">
+                            <div className="text-white text-xl sm:text-2xl font-serif font-medium uppercase tracking-wider mb-1 group-hover:opacity-70 transition-opacity duration-300 leading-tight">
                               {item.english}
                             </div>
                             <div className="text-xs sm:text-sm text-white/60 font-light tracking-wide leading-relaxed">
                               {item.korean}
                             </div>
-                          </Link>
+                          </LocalizedLink>
                         </motion.li>
                       ))}
                     </ul>
@@ -435,7 +384,7 @@ export default function FullscreenMenu() {
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  className="pb-8 px-6"
+                  className="pb-8 px-6 flex-shrink-0"
                 >
                   <div className="text-center space-y-6">
                     {/* Contact */}
@@ -504,8 +453,8 @@ export default function FullscreenMenu() {
                   <ul className="space-y-8 lg:space-y-10">
                     {menuItems.map((item, index) => (
                       <motion.li key={index} variants={desktopMenuItemVariants}>
-                        <Link
-                          href={getLocalizedPath(item.path)}
+                        <LocalizedLink
+                          href={item.path}
                           onClick={closeMenu}
                           className="block group"
                         >
@@ -515,7 +464,7 @@ export default function FullscreenMenu() {
                           <div className="text-sm text-white/60 font-light tracking-wider">
                             {item.korean}
                           </div>
-                        </Link>
+                        </LocalizedLink>
                       </motion.li>
                     ))}
                   </ul>

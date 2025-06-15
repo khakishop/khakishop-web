@@ -24,6 +24,18 @@ export { useRouter, usePathname, useSearchParams } from 'next/navigation';
 export { default as Image } from 'next/image';
 export type { ImageProps } from 'next/image';
 
+// 🎭 Animation Library Standardization  
+export { motion, AnimatePresence } from './motion';
+export { 
+  useAnimation, 
+  useScroll, 
+  useTransform, 
+  useSpring, 
+  useMotionValue, 
+  useInView 
+} from './motion';
+export type { Variants, Transition, MotionProps } from './motion';
+
 // 📊 Data Fetching Standards
 export type { ApiResponse, ErrorResponse } from '../types/api';
 
