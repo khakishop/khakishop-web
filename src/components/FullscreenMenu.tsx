@@ -290,12 +290,12 @@ export default function FullscreenMenu() {
 
   return (
     <>
-      {/* Menu Button - PC와 모바일 모두 표시 - 원형 버튼들 제거 */}
-      <div className="fixed top-8 right-4 sm:top-6 sm:right-6 z-[60]">
-        {/* MENU/CLOSE Text만 유지 */}
+      {/* Menu Button - PC와 모바일 모두 표시 - z-index 증가 */}
+      <div className="fixed top-8 right-4 sm:top-6 sm:right-6 z-[9998]">
+        {/* MENU/CLOSE Text만 유지 - 모바일에서 더 잘 보이도록 개선 */}
         <span
           onClick={toggleMenu}
-          className="text-sm sm:text-base font-medium tracking-wide uppercase cursor-pointer text-white bg-black/90 px-3 py-2 sm:px-3 sm:py-1 rounded-md hover:bg-black transition-all duration-300 backdrop-blur-sm shadow-xl border border-white/20"
+          className="text-sm sm:text-base font-medium tracking-wide uppercase cursor-pointer text-white bg-black/95 px-4 py-3 sm:px-3 sm:py-1 rounded-md hover:bg-black transition-all duration-300 backdrop-blur-sm shadow-xl border border-white/30 min-w-[60px] text-center inline-block"
         >
           {isOpen ? 'CLOSE' : 'MENU'}
         </span>
@@ -311,21 +311,21 @@ export default function FullscreenMenu() {
             exit="exit"
             className="fixed top-0 left-0 w-full h-screen bg-black z-[9999] overflow-hidden"
           >
-            {/* Close Button */}
+            {/* Close Button - z-index 추가 */}
             <motion.button
               variants={closeButtonVariants}
               initial="initial"
               animate="animate"
               exit="exit"
               onClick={closeMenu}
-              className="absolute top-6 right-6 sm:top-8 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-2xl sm:text-3xl text-white font-light hover:opacity-60 transition-opacity z-10"
+              className="absolute top-6 right-6 sm:top-8 sm:right-8 w-12 h-12 sm:w-12 sm:h-12 flex items-center justify-center text-3xl sm:text-3xl text-white font-light hover:opacity-60 transition-opacity z-[10000]"
               aria-label="메뉴 닫기"
             >
               ×
             </motion.button>
 
-            {/* Mobile Layout */}
-            <div className="block lg:hidden h-full overflow-y-auto">
+            {/* Mobile Layout - 터치 이벤트 개선 */}
+            <div className="block lg:hidden h-full overflow-y-auto touch-pan-y">
               <div className="flex flex-col min-h-full">
                 {/* Mobile Logo Section - 상단 */}
                 <motion.div
