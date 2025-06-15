@@ -88,7 +88,7 @@ export default function AboutPageClient() {
 
               {/* 서브 타이틀 */}
               <p className="text-xl lg:text-2xl text-gray-600 font-light tracking-wide">
-                Creative Fabrics for Inspired Living
+                Design Beyond Time
               </p>
             </motion.div>
           </div>
