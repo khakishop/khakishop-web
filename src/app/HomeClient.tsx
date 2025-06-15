@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { memo, useEffect, useRef, useState } from 'react';
 import { AnimatedText } from '../components/AnimatedText';
-import HeroSection from '../components/HeroSection';
 import { LocalizedLink } from '../components/ui/LocalizedLink';
 import { motion, useScroll, useSpring, useTransform } from '../lib/motion';
 
@@ -134,10 +133,47 @@ const HomeClient = memo(function HomeClient() {
             delay={0.5}
           />
         </motion.div>
-      </section>
 
-      {/* 두 번째: 브랜드 소개 Hero 섹션 */}
-      <HeroSection />
+        {/* 브랜드 소개 및 CTA 버튼 - 하단 중앙 */}
+        <div className="absolute bottom-8 left-0 right-0 z-20">
+          <div className="max-w-screen-xl mx-auto px-6 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.5 }}
+              className="space-y-6"
+            >
+              {/* 부제목 */}
+              <p className="text-lg lg:text-xl text-white/90 font-light leading-relaxed max-w-lg mx-auto">
+                시간을 초월한 디자인, 공간을 완성하는 텍스타일의 예술
+              </p>
+
+              {/* CTA 버튼 */}
+              <div className="pt-4">
+                <LocalizedLink
+                  href="/references"
+                  className="group inline-flex items-center bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full hover:bg-white/20 transition-all duration-300 text-sm uppercase tracking-wider font-medium border border-white/20"
+                >
+                  <span>시공 포트폴리오 보기</span>
+                  <svg
+                    className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </LocalizedLink>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* Today's Space Suggestions */}
       <section className="py-20 relative z-10">
