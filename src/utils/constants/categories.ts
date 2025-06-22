@@ -10,6 +10,7 @@ export interface CategoryConfig {
   folderName: string;
   displayName: string;
   description: string;
+  active?: boolean; // 카테고리 활성화 상태
   children?: CategoryConfig[]; // 하위 분류 추가
 }
 
@@ -732,3 +733,21 @@ export const getCategoryBreadcrumb = (categoryKey: string, subcategoryKey?: stri
 
   return breadcrumb;
 };
+
+// 새로 추가된 헬퍼 함수들
+export function isCategoryActive(key: string): boolean {
+  const category = getCategoryByKey(key);
+  return category ? category.active !== false : true;
+}
+
+export function getActiveCategoriesOnly() {
+  return MASTER_CATEGORIES.filter(cat => cat.active !== false);
+}
+
+
+export function getActiveSubcategories(key: string): CategoryConfig[] {
+  if (!isCategoryActive(key)) {
+    return [];
+  }
+  return getSubcategories(key);
+}

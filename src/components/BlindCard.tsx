@@ -22,8 +22,8 @@ const BlindCard = memo(function BlindCard({ product, locale = 'ko' }: BlindCardP
   
   // 가격 포맷팅 메모이제이션
   const formattedPrice = useMemo(() => {
-    return new Intl.NumberFormat('ko-KR').format(product.price.from);
-  }, [product.price.from]);
+    return new Intl.NumberFormat('ko-KR').format(product.price?.from || 0);
+  }, [product.price?.from || 0]);
 
   // 카테고리명 정규화 메모이제이션
   const categoryName = useMemo(() => {
@@ -42,7 +42,7 @@ const BlindCard = memo(function BlindCard({ product, locale = 'ko' }: BlindCardP
 
   // 주요 특징 슬라이스 메모이제이션
   const displayFeatures = useMemo(() => {
-    return product.features.slice(0, 3);
+    return product.features?.slice(0, 3) || [];
   }, [product.features]);
 
   return (

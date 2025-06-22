@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>드래그 앤 드롭 테스트 도구</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    .test-section {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .test-button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .test-button:hover {
+      background: #0056b3;
+    }
+
+    .test-button.success {
+      background: #28a745;
+    }
+
+    .test-button.danger {
+      background: #dc3545;
+    }
+
+    .test-button.warning {
+      background: #ffc107;
+      color: #212529;
+    }
+
+    .log-container {
+      background: #000;
+      color: #00ff00;
+      padding: 15px;
+      border-radius: 5px;
+      font-family: monospace;
+      font-size: 12px;
+      max-height: 300px;
+      overflow-y: auto;
+      margin-top: 10px;
+    }
+
+    .category-section {
+      border-left: 4px solid #007bff;
+      padding-left: 15px;
+    }
+
+    .status-indicator {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .status-success {
+      background: #28a745;
+    }
+
+    .status-warning {
+      background: #ffc107;
+    }
+
+    .status-danger {
+      background: #dc3545;
+    }
+
+    .status-info {
+      background: #17a2b8;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>🧪 드래그 앤 드롭 기능 종합 테스트</h1>
+
+  <div class="test-section">
+    <h2>📋 테스트 체크리스트</h2>
+    <div id="checklist">
+      <div id="check-console-log">
+        <span class="status-indicator status-info"></span>
+        1. 콘솔 로그 출력 확인 - <span id="log-status">대기 중</span>
+      </div>
+      <div id="check-ui-reflection">
+        <span class="status-indicator status-info"></span>
+        2. 카드 UI 반영 확인 - <span id="ui-status">대기 중</span>
+      </div>
+      <div id="check-persistence">
+        <span class="status-indicator status-info"></span>
+        3. 새로고침 후 상태 유지 - <span id="persistence-status">대기 중</span>
+      </div>
+      <div id="check-test-tools">
+        <span class="status-indicator status-info"></span>
+        4. 테스트 도구 작동 - <span id="tools-status">대기 중</span>
+      </div>
+      <div id="check-cross-category">
+        <span class="status-indicator status-info"></span>
+        5. 다른 카테고리 교차 테스트 - <span id="cross-status">대기 중</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="test-section category-section">
+    <h2>🎯 References 페이지 테스트</h2>
+    <button class="test-button" onclick="openPage('/ko/references')">References 페이지 열기</button>
+    <button class="test-button success" onclick="testReferences()">자동 테스트 실행</button>
+    <button class="test-button warning" onclick="simulateReferencesTest()">시뮬레이션 테스트</button>
+    <button class="test-button danger" onclick="clearReferencesStorage()">저장 데이터 삭제</button>
+
+    <div class="log-container" id="references-log"></div>
+  </div>
+
+  <div class="test-section category-section">
+    <h2>🎨 Curtain 페이지 테스트</h2>
+    <button class="test-button" onclick="openPage('/ko/curtain')">Curtain 페이지 열기</button>
+    <button class="test-button success" onclick="testCurtain()">자동 테스트 실행</button>
+    <button class="test-button warning" onclick="simulateCurtainTest()">시뮬레이션 테스트</button>
+    <button class="test-button danger" onclick="clearCurtainStorage()">저장 데이터 삭제</button>
+
+    <div class="log-container" id="curtain-log"></div>
+  </div>
+
+  <div class="test-section category-section">
+    <h2>🎯 Blind 페이지 테스트</h2>
+    <button class="test-button" onclick="openPage('/ko/blind')">Blind 페이지 열기</button>
+    <button class="test-button success" onclick="testBlind()">자동 테스트 실행</button>
+    <button class="test-button warning" onclick="simulateBlindTest()">시뮬레이션 테스트</button>
+    <button class="test-button danger" onclick="clearBlindStorage()">저장 데이터 삭제</button>
+
+    <div class="log-container" id="blind-log"></div>
+  </div>
+
+  <div class="test-section category-section">
+    <h2>🤖 Motorized 페이지 테스트</h2>
+    <button class="test-button" onclick="openPage('/ko/motorized')">Motorized 페이지 열기</button>
+    <button class="test-button success" onclick="testMotorized()">자동 테스트 실행</button>
+    <button class="test-button warning" onclick="simulateMotorizedTest()">시뮬레이션 테스트</button>
+    <button class="test-button danger" onclick="clearMotorizedStorage()">저장 데이터 삭제</button>
+
+    <div class="log-container" id="motorized-log"></div>
+  </div>
+
+  <div class="test-section">
+    <h2>🔧 전체 시스템 관리</h2>
+    <button class="test-button success" onclick="runFullTest()">🚀 전체 자동 테스트</button>
+    <button class="test-button warning" onclick="checkAllStorage()">💾 모든 저장소 확인</button>
+    <button class="test-button danger" onclick="clearAllStorage()">🗑️ 모든 저장 데이터 삭제</button>
+    <button class="test-button" onclick="exportTestResults()">📊 테스트 결과 내보내기</button>
+
+    <div class="log-container" id="system-log"></div>
+  </div>
+
+  <script>
+    // 로그 출력 함수
+    function log(category, message, type = 'info') {
+      const container = document.getElementById(`${category}-log`);
+      const timestamp = new Date().toLocaleTimeString();
+      const typeColor = {
+        'info': '#00ff00',
+        'warn': '#ffff00',
+        'error': '#ff0000',
+        'success': '#00ff88'
+      };
+
+      if (container) {
+        container.innerHTML += `<div style="color: ${typeColor[type] || '#00ff00'}">
+                    [${timestamp}] ${message}
+                </div>`;
+        container.scrollTop = container.scrollHeight;
+      }
+    }
+
+    // 페이지 열기
+    function openPage(path) {
+      const url = `http://localhost:3003${path}`;
+      log('system', `페이지 열기: ${url}`, 'info');
+      window.open(url, '_blank');
+    }
+
+    // References 테스트
+    function testReferences() {
+      log('references', '🧪 References 테스트 시작', 'info');
+
+      // 새 창에서 References 페이지 열기
+      const testWindow = window.open('http://localhost:3003/ko/references', 'references-test');
+
+      // 페이지 로드 대기 후 테스트 실행
+      setTimeout(() => {
+        if (testWindow && !testWindow.closed) {
+          try {
+            // 테스트 함수 실행
+            if (testWindow.testReferencesDragDrop) {
+              testWindow.testReferencesDragDrop();
+              log('references', '✅ testReferencesDragDrop() 실행 완료', 'success');
+            } else {
+              log('references', '❌ testReferencesDragDrop() 함수를 찾을 수 없음', 'error');
+            }
+          } catch (error) {
+            log('references', `❌ 테스트 실행 오류: ${error.message}`, 'error');
+          }
+        } else {
+          log('references', '❌ 테스트 창을 열 수 없음', 'error');
+        }
+      }, 3000);
+    }
+
+    // References 시뮬레이션 테스트
+    function simulateReferencesTest() {
+      log('references', '🎭 References 시뮬레이션 테스트 시작', 'info');
+
+      const testWindow = window.open('http://localhost:3003/ko/references', 'references-simulate');
+
+      setTimeout(() => {
+        if (testWindow && !testWindow.closed) {
+          try {
+            if (testWindow.simulateReferencesImageDrop) {
+              testWindow.simulateReferencesImageDrop(0);
+              log('references', '✅ simulateReferencesImageDrop(0) 실행 완료', 'success');
+
+              // 3초 후 결과 확인
+              setTimeout(() => {
+                if (testWindow.manageReferencesStorage) {
+                  const storage = testWindow.manageReferencesStorage.list();
+                  log('references', `💾 저장된 이미지: ${Object.keys(storage).length}개`, 'info');
+                }
+              }, 3000);
+            } else {
+              log('references', '❌ simulateReferencesImageDrop() 함수를 찾을 수 없음', 'error');
+            }
+          } catch (error) {
+            log('references', `❌ 시뮬레이션 오류: ${error.message}`, 'error');
+          }
+        }
+      }, 3000);
+    }
+
+    // References 저장소 삭제
+    function clearReferencesStorage() {
+      try {
+        localStorage.removeItem('dragdrop_references_images');
+        log('references', '🗑️ References 저장 데이터 삭제 완료', 'success');
+      } catch (error) {
+        log('references', `❌ 저장소 삭제 오류: ${error.message}`, 'error');
+      }
+    }
+
+    // Curtain 테스트 (References와 동일한 패턴)
+    function testCurtain() {
+      log('curtain', '🧪 Curtain 테스트 시작', 'info');
+      const testWindow = window.open('http://localhost:3003/ko/curtain', 'curtain-test');
+      setTimeout(() => {
+        if (testWindow && !testWindow.closed) {
+          try {
+            if (testWindow.testCurtainDragDrop) {
+              testWindow.testCurtainDragDrop();
+              log('curtain', '✅ testCurtainDragDrop() 실행 완료', 'success');
+            } else {
+              log('curtain', '❌ testCurtainDragDrop() 함수를 찾을 수 없음', 'error');
+            }
+          } catch (error) {
+            log('curtain', `❌ 테스트 실행 오류: ${error.message}`, 'error');
+          }
+        }
+      }, 3000);
+    }
+
+    function simulateCurtainTest() {
+      log('curtain', '🎭 Curtain 시뮬레이션 테스트 시작', 'info');
+      const testWindow = window.open('http://localhost:3003/ko/curtain', 'curtain-simulate');
+      setTimeout(() => {
+        if (testWindow && !testWindow.closed) {
+          try {
+            if (testWindow.simulateCurtainImageDrop) {
+              testWindow.simulateCurtainImageDrop(0);
+              log('curtain', '✅ simulateCurtainImageDrop(0) 실행 완료', 'success');
+            } else {
+              log('curtain', '❌ simulateCurtainImageDrop() 함수를 찾을 수 없음', 'error');
+            }
+          } catch (error) {
+            log('curtain', `❌ 시뮬레이션 오류: ${error.message}`, 'error');
+          }
+        }
+      }, 3000);
+    }
+
+    function clearCurtainStorage() {
+      try {
+        localStorage.removeItem('dragdrop_curtain_images');
+        log('curtain', '🗑️ Curtain 저장 데이터 삭제 완료', 'success');
+      } catch (error) {
+        log('curtain', `❌ 저장소 삭제 오류: ${error.message}`, 'error');
+      }
+    }
+
+    // Blind 테스트
+    function testBlind() {
+      log('blind', '🧪 Blind 테스트 시작', 'info');
+      const testWindow = window.open('http://localhost:3003/ko/blind', 'blind-test');
+      setTimeout(() => {
+        if (testWindow && !testWindow.closed) {
+          try {
+            if (testWindow.testBlindDragDrop) {
+              testWindow.testBlindDragDrop();
+              log('blind', '✅ testBlindDragDrop() 실행 완료', 'success');
+            } else {
+              log('blind', '❌ testBlindDragDrop() 함수를 찾을 수 없음', 'error');
+            }
+          } catch (error) {
+            log('blind', `❌ 테스트 실행 오류: ${error.message}`, 'error');
+          }
+        }
+      }, 3000);
+    }
+
+    function simulateBlindTest() {
+      log('blind', '🎭 Blind 시뮬레이션 테스트 시작', 'info');
+      const testWindow = window.open('http://localhost:3003/ko/blind', 'blind-simulate');
+      setTimeout(() => {
+        if (testWindow && !testWindow.closed) {
+          try {
+            if (testWindow.simulateBlindImageDrop) {
+              testWindow.simulateBlindImageDrop(0);
+              log('blind', '✅ simulateBlindImageDrop(0) 실행 완료', 'success');
+            } else {
+              log('blind', '❌ simulateBlindImageDrop() 함수를 찾을 수 없음', 'error');
+            }
+          } catch (error) {
+            log('blind', `❌ 시뮬레이션 오류: ${error.message}`, 'error');
+          }
+        }
+      }, 3000);
+    }
+
+    function clearBlindStorage() {
+      try {
+        localStorage.removeItem('dragdrop_blind_images');
+        log('blind', '🗑️ Blind 저장 데이터 삭제 완료', 'success');
+      } catch (error) {
+        log('blind', `❌ 저장소 삭제 오류: ${error.message}`, 'error');
+      }
+    }
+
+    // Motorized 테스트
+    function testMotorized() {
+      log('motorized', '🧪 Motorized 테스트 시작', 'info');
+      const testWindow = window.open('http://localhost:3003/ko/motorized', 'motorized-test');
+      setTimeout(() => {
+        if (testWindow && !testWindow.closed) {
+          try {
+            if (testWindow.testMotorizedDragDrop) {
+              testWindow.testMotorizedDragDrop();
+              log('motorized', '✅ testMotorizedDragDrop() 실행 완료', 'success');
+            } else {
+              log('motorized', '❌ testMotorizedDragDrop() 함수를 찾을 수 없음', 'error');
+            }
+          } catch (error) {
+            log('motorized', `❌ 테스트 실행 오류: ${error.message}`, 'error');
+          }
+        }
+      }, 3000);
+    }
+
+    function simulateMotorizedTest() {
+      log('motorized', '🎭 Motorized 시뮬레이션 테스트 시작', 'info');
+      const testWindow = window.open('http://localhost:3003/ko/motorized', 'motorized-simulate');
+      setTimeout(() => {
+        if (testWindow && !testWindow.closed) {
+          try {
+            if (testWindow.simulateMotorizedImageDrop) {
+              testWindow.simulateMotorizedImageDrop(0);
+              log('motorized', '✅ simulateMotorizedImageDrop(0) 실행 완료', 'success');
+            } else {
+              log('motorized', '❌ simulateMotorizedImageDrop() 함수를 찾을 수 없음', 'error');
+            }
+          } catch (error) {
+            log('motorized', `❌ 시뮬레이션 오류: ${error.message}`, 'error');
+          }
+        }
+      }, 3000);
+    }
+
+    function clearMotorizedStorage() {
+      try {
+        localStorage.removeItem('dragdrop_motorized_images');
+        log('motorized', '🗑️ Motorized 저장 데이터 삭제 완료', 'success');
+      } catch (error) {
+        log('motorized', `❌ 저장소 삭제 오류: ${error.message}`, 'error');
+      }
+    }
+
+    // 전체 시스템 관리
+    function runFullTest() {
+      log('system', '🚀 전체 자동 테스트 시작', 'info');
+
+      // 순차적으로 모든 카테고리 테스트
+      setTimeout(() => testReferences(), 1000);
+      setTimeout(() => testCurtain(), 3000);
+      setTimeout(() => testBlind(), 5000);
+      setTimeout(() => testMotorized(), 7000);
+
+      setTimeout(() => {
+        log('system', '✅ 전체 테스트 완료', 'success');
+      }, 10000);
+    }
+
+    function checkAllStorage() {
+      log('system', '💾 모든 저장소 확인 중...', 'info');
+
+      const categories = ['references', 'curtain', 'blind', 'motorized'];
+      let totalImages = 0;
+
+      categories.forEach(category => {
+        try {
+          const storageKey = `dragdrop_${category}_images`;
+          const data = localStorage.getItem(storageKey);
+          if (data) {
+            const parsed = JSON.parse(data);
+            const count = Object.keys(parsed).length;
+            totalImages += count;
+            log('system', `📦 ${category}: ${count}개 이미지 저장됨`, 'info');
+          } else {
+            log('system', `📦 ${category}: 저장된 이미지 없음`, 'info');
+          }
+        } catch (error) {
+          log('system', `❌ ${category} 저장소 확인 오류: ${error.message}`, 'error');
+        }
+      });
+
+      log('system', `📊 총 저장된 이미지: ${totalImages}개`, 'success');
+    }
+
+    function clearAllStorage() {
+      if (confirm('모든 카테고리의 저장된 이미지를 삭제하시겠습니까?')) {
+        const categories = ['references', 'curtain', 'blind', 'motorized'];
+
+        categories.forEach(category => {
+          try {
+            localStorage.removeItem(`dragdrop_${category}_images`);
+            log('system', `🗑️ ${category} 저장 데이터 삭제 완료`, 'success');
+          } catch (error) {
+            log('system', `❌ ${category} 삭제 오류: ${error.message}`, 'error');
+          }
+        });
+
+        log('system', '✅ 모든 저장 데이터 삭제 완료', 'success');
+      }
+    }
+
+    function exportTestResults() {
+      const results = {
+        timestamp: new Date().toISOString(),
+        localStorage: {},
+        testStatus: {
+          consoleLog: document.getElementById('log-status').textContent,
+          uiReflection: document.getElementById('ui-status').textContent,
+          persistence: document.getElementById('persistence-status').textContent,
+          testTools: document.getElementById('tools-status').textContent,
+          crossCategory: document.getElementById('cross-status').textContent
+        }
+      };
+
+      // localStorage 데이터 수집
+      const categories = ['references', 'curtain', 'blind', 'motorized'];
+      categories.forEach(category => {
+        try {
+          const data = localStorage.getItem(`dragdrop_${category}_images`);
+          results.localStorage[category] = data ? JSON.parse(data) : null;
+        } catch (error) {
+          results.localStorage[category] = { error: error.message };
+        }
+      });
+
+      // JSON 파일로 다운로드
+      const blob = new Blob([JSON.stringify(results, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `dragdrop-test-results-${Date.now()}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+      log('system', '📊 테스트 결과 내보내기 완료', 'success');
+    }
+
+    // 페이지 로드 시 초기 상태 확인
+    window.addEventListener('load', () => {
+      log('system', '🔧 드래그 앤 드롭 테스트 도구 초기화 완료', 'success');
+      checkAllStorage();
+    });
+  </script>
+</body>
+
+</html>

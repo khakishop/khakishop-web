@@ -113,7 +113,7 @@ export default function CurtainDetailPage({ product }: CurtainDetailPageProps) {
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">주요 특징</h3>
                 <div className="grid grid-cols-2 gap-3">
-                  {product.features.map((feature, index) => (
+                  {product.features?.map((feature, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <svg className="w-4 h-4 text-orange-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -162,7 +162,7 @@ export default function CurtainDetailPage({ product }: CurtainDetailPageProps) {
                 사용 소재
               </h3>
               <ul className="space-y-2">
-                {product.materials.map((material, index) => (
+                {product.materials?.map((material, index) => (
                   <li key={index} className="text-gray-700 text-sm">
                     • {material}
                   </li>

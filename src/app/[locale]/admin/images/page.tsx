@@ -437,8 +437,8 @@ export default function AdminImagesPage() {
                 setDeleteDialogOpen(true);
               }}
               onImageReorder={handleImageReorder}
-              uploadCategory={currentCategory}
-              uploadSubcategory={currentSubcategory}
+              uploadCategory={currentCategory || undefined}
+              uploadSubcategory={currentSubcategory || undefined}
               categoryDisplayName={currentCategory ? getCategoryDisplayName(currentCategory) : undefined}
               enableDragReorder={true}
             />

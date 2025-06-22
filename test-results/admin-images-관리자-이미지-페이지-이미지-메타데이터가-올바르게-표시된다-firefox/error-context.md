@@ -1,0 +1,220 @@
+# Page snapshot
+
+```yaml
+- main:
+  - link "KHAKI SHOP":
+    - /url: /ko
+    - heading "KHAKI SHOP" [level=1]
+  - text: Admin Panel
+  - navigation:
+    - link "🎨 이미지 관리":
+      - /url: /ko/admin/images
+    - link "🏠 홈페이지로":
+      - /url: /ko
+  - main:
+    - heading "🏛️ 이미지 관리 시스템 (완성)" [level=1]
+    - text: "4단계: 전체 완료 2025. 6. 20. 오후 6:20:19 📷 27개 이미지"
+    - 'heading "✅ 4단계: 전체 완료 + 상세 모달!" [level=2]'
+    - paragraph: 모든 기능이 완성되었습니다. 카테고리 선택, 이미지 업로드, 관리, 상세보기가 가능합니다.
+    - text: CategoryList 완료 ImageGrid 완료 DragDrop 완료 Hook 완료 상세모달 추가 💡
+    - strong: "새 기능:"
+    - text: 이미지를 더블클릭하면 상세 정보 모달이 열립니다! (URL 복사, 다운로드, 편집, 삭제 가능) 🎉 전체 완료! 시스템 활성화
+    - heading "📂 카테고리 관리" [level=3]
+    - text: ✅ 활성화
+    - button "🔄 전체보기"
+    - heading "📂 카테고리 리스트" [level=3]
+    - text: 총 10개 카테고리 🌟
+    - heading "Hero" [level=4]
+    - paragraph: 메인 히어로 이미지
+    - text: 📷 0개 이미지 3개 하위분류
+    - img
+    - text: 🏠
+    - heading "Landing" [level=4]
+    - paragraph: 랜딩 페이지 이미지
+    - text: 📷 0개 이미지 5개 하위분류
+    - img
+    - text: 🏗️
+    - heading "Projects" [level=4]
+    - paragraph: 프로젝트 쇼케이스
+    - text: 📷 0개 이미지 3개 하위분류
+    - img
+    - text: 🎨
+    - heading "Collections" [level=4]
+    - paragraph: 감성 컬렉션
+    - text: 📷 0개 이미지 7개 하위분류
+    - img
+    - text: 🏢
+    - heading "References" [level=4]
+    - paragraph: 시공 사례
+    - text: 📷 0개 이미지 3개 하위분류
+    - img
+    - text: 🛍️
+    - heading "Products" [level=4]
+    - paragraph: 제품 이미지
+    - text: 📷 0개 이미지 4개 하위분류
+    - img
+    - text: 🖼️
+    - heading "Gallery" [level=4]
+    - paragraph: 갤러리 이미지
+    - text: 📷 0개 이미지 5개 하위분류
+    - img
+    - text: 📝
+    - heading "Blog" [level=4]
+    - paragraph: 블로그 이미지
+    - text: 📷 0개 이미지 2개 하위분류
+    - img
+    - text: 👥
+    - heading "About" [level=4]
+    - paragraph: 회사 소개
+    - text: 📷 0개 이미지 3개 하위분류
+    - img
+    - text: 🚀
+    - heading "Future" [level=4]
+    - paragraph: 미래 계획
+    - text: 📷 0개 이미지 2개 하위분류
+    - img
+    - heading "🔍 상태 디버깅" [level=4]
+    - paragraph: "📂 확장된 카테고리: 없음"
+    - paragraph: "🎯 선택된 카테고리: 없음"
+    - paragraph: "🎯 선택된 하위카테고리: 없음"
+    - paragraph: "📊 로드된 카테고리 수: 10"
+    - heading "카테고리 구조:" [level=5]
+    - strong: "hero:"
+    - text: 3개 하위[mobile, main-banner, intro-visual]
+    - strong: "landing:"
+    - text: 5개 하위[hero, lifestyle, showcase, section-hero, feature-showcase]
+    - strong: "projects:"
+    - text: 3개 하위[residential, commercial, hospitality]
+    - strong: "collections:"
+    - text: 7개 하위[curtain, blind, motorized, smart, hardware, fabric, test]
+    - heading "🖼️ 이미지 관리" [level=3]
+    - text: ✅ 활성화
+    - img "essential-linen.png"
+    - text: curtain 4.85 MB
+    - heading "essential-linen" [level=3]
+    - text: "2024. 1. 15. #essential-linen #collections #curtain #linen +1 클릭하여 상세보기 →"
+    - img "modern-sheer.png"
+    - text: curtain 5.62 MB
+    - heading "modern-sheer" [level=3]
+    - text: "2024. 1. 14. #modern-sheer #collections #curtain #modern +1 클릭하여 상세보기 →"
+    - img "luxury-tieback.png"
+    - text: curtain 6.33 MB
+    - heading "luxury-tieback" [level=3]
+    - text: "2024. 1. 13. #luxury-tieback #collections #curtain #luxury +1 클릭하여 상세보기 →"
+    - img "premium-venetian-collection_main.png"
+    - text: curtain 4.71 MB
+    - heading "premium-venetian-collection_main" [level=3]
+    - text: "2024. 1. 12. #curtain-premium-venetian #collections #curtain #premium +1 클릭하여 상세보기 →"
+    - img "11.png"
+    - text: curtain 6.18 MB
+    - heading "11" [level=3]
+    - text: "2024. 1. 11. #curtain-sample-11 #collections #curtain #sample 클릭하여 상세보기 →"
+    - img "main.jpg"
+    - text: curtain 2.67 MB
+    - heading "main" [level=3]
+    - text: "2024. 1. 10. #curtain-smart-automation-main #collections #curtain #smart +1 클릭하여 상세보기 →"
+    - img "detail-1.jpg"
+    - text: curtain 2.10 MB
+    - heading "detail-1" [level=3]
+    - text: "2024. 1. 9. #curtain-smart-automation-detail1 #collections #curtain #smart +1 클릭하여 상세보기 →"
+    - img "venetian-premium.png"
+    - text: blind 4.92 MB
+    - heading "venetian-premium" [level=3]
+    - text: "2024. 1. 10. #venetian-premium #collections #blind #venetian +1 클릭하여 상세보기 →"
+    - img "wood-texture.png"
+    - text: blind 5.62 MB
+    - heading "wood-texture" [level=3]
+    - text: "2024. 1. 9. #wood-texture #collections #blind #wood +1 클릭하여 상세보기 →"
+    - img "main.jpg"
+    - text: blind 3.05 MB
+    - heading "main" [level=3]
+    - text: "2024. 1. 8. #blind-contemporary-panel-main #collections #blind #contemporary +1 클릭하여 상세보기 →"
+    - img "main.jpg"
+    - text: blind 2.96 MB
+    - heading "main" [level=3]
+    - text: "2024. 1. 7. #blind-smart-roller-main #collections #blind #smart +1 클릭하여 상세보기 →"
+    - img "main.jpg"
+    - text: blind 2.77 MB
+    - heading "main" [level=3]
+    - text: "2024. 1. 6. #blind-premium-venetian-main #collections #blind #premium +1 클릭하여 상세보기 →"
+    - img "main.jpg"
+    - text: blind 2.57 MB
+    - heading "main" [level=3]
+    - text: "2024. 1. 5. #blind-elegant-roman-main #collections #blind #elegant +1 클릭하여 상세보기 →"
+    - img "smart-automation.png"
+    - text: smart 4.40 MB
+    - heading "smart-automation" [level=3]
+    - text: "2024. 1. 8. #smart-automation #collections #smart #automation +1 클릭하여 상세보기 →"
+    - img "wireless-motor.png"
+    - text: motorized 4.81 MB
+    - heading "wireless-motor" [level=3]
+    - text: "2024. 1. 7. #wireless-motor #collections #motorized #wireless +1 클릭하여 상세보기 →"
+    - img "designer-hardware.png"
+    - text: hardware 5.70 MB
+    - heading "designer-hardware" [level=3]
+    - text: "2024. 1. 6. #designer-hardware #collections #hardware #designer 클릭하여 상세보기 →"
+    - img "hero.jpg"
+    - text: main-banner 2.00 MB
+    - heading "hero" [level=3]
+    - text: "2024. 1. 5. #hero-main #hero #main #banner 클릭하여 상세보기 →"
+    - img "hero-mobile.png"
+    - text: mobile 1.72 MB
+    - heading "hero-mobile" [level=3]
+    - text: "2024. 1. 4. #hero-mobile #hero #mobile #responsive 클릭하여 상세보기 →"
+    - img "khakishop-hero.jpg"
+    - text: main-banner 2.19 MB
+    - heading "khakishop-hero" [level=3]
+    - text: "2024. 1. 3. #hero-khakishop #hero #khakishop #brand 클릭하여 상세보기 →"
+    - img "hero-main.png"
+    - text: hero 2.38 MB
+    - heading "hero-main" [level=3]
+    - text: "2024. 1. 3. #landing-hero-main #landing #hero #background 클릭하여 상세보기 →"
+    - img "brand-lifestyle.png"
+    - text: lifestyle 2.19 MB
+    - heading "brand-lifestyle" [level=3]
+    - text: "2024. 1. 2. #landing-brand-lifestyle #landing #brand #lifestyle 클릭하여 상세보기 →"
+    - img "collection-overview.png"
+    - text: showcase 2.29 MB
+    - heading "collection-overview" [level=3]
+    - text: "2024. 1. 1. #landing-collection-overview #landing #collection #showcase 클릭하여 상세보기 →"
+    - img "main.jpg"
+    - text: hero 1.81 MB
+    - heading "main" [level=3]
+    - text: "2023. 12. 31. #landing-hero-mobile-main #landing #hero #mobile 클릭하여 상세보기 →"
+    - img "lifestyle.jpg"
+    - text: curtain-products 2.48 MB
+    - heading "lifestyle" [level=3]
+    - text: "2023. 12. 30. #product-curtain-sheer-lifestyle #products #curtain #sheer +1 클릭하여 상세보기 →"
+    - img "detail.jpg"
+    - text: curtain-products 2.00 MB
+    - heading "detail" [level=3]
+    - text: "2023. 12. 29. #product-curtain-sheer-detail #products #curtain #sheer +1 클릭하여 상세보기 →"
+    - img "test1.jpg"
+    - text: test 0.00 MB
+    - heading "test1" [level=3]
+    - text: "2023. 12. 30. #test1 #collections #test 클릭하여 상세보기 →"
+    - img "test2.png"
+    - text: test 0.00 MB
+    - heading "test2" [level=3]
+    - text: "2023. 12. 29. #test2 #collections #test 클릭하여 상세보기 →"
+    - heading "🔍 시스템 상태" [level=4]
+    - strong: "카테고리:"
+    - text: "선택된 카테고리: 없음 확장된 카테고리: 없음 선택된 하위: 없음"
+    - strong: "이미지:"
+    - text: "전체 이미지: 27개 선택된 이미지: 0개 로딩 상태: 완료"
+    - strong: "기능:"
+    - text: "업로드: 활성화 삭제: 활성화 드래그앤드롭: 활성화"
+    - button "🧪 Collections 강제확장"
+    - button "🧪 Curtain 강제 선택 (7개)"
+    - button "🧪 Blind 강제 선택 (6개)"
+    - button "🧪 Smart 강제 선택 (1개)"
+    - button "🧪 Hero 강제확장 (3개)"
+    - button "🧪 Landing 강제확장 (4개)"
+    - button "🧪 Gallery 강제확장 (2개)"
+    - button "🔄 상태 초기화"
+    - button "📊 상태 출력"
+    - button "🧪 전체 이미지 (29개)"
+    - button "이미지 업로드"
+  - text: © 2024 KHAKI SHOP Admin Panel 🔒 보안 모드 ⚡ Development
+- alert
+```

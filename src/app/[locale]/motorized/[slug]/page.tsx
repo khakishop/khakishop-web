@@ -39,8 +39,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       product.title,
       '모터라이즈드',
       product.category.replace('-', ' '),
-      ...product.features.slice(0, 3),
-      ...product.materials.slice(0, 2),
+      ...(product.features?.slice(0, 3) || []),
+      ...(product.materials?.slice(0, 2) || []),
     ].join(', '),
     openGraph: {
       title: `${product.title} | 카키샵 모터라이즈드`,

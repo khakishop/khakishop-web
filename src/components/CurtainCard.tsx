@@ -75,7 +75,7 @@ const CurtainCard = memo(function CurtainCard({ product, locale = 'ko' }: Curtai
 
           {/* 주요 특징 */}
           <div className="flex flex-wrap gap-2 mb-4">
-            {product.features.slice(0, 3).map((feature, index) => (
+            {product.features?.slice(0, 3) || [].map((feature, index) => (
               <span 
                 key={index}
                 className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-md"
@@ -83,9 +83,9 @@ const CurtainCard = memo(function CurtainCard({ product, locale = 'ko' }: Curtai
                 {feature}
               </span>
             ))}
-            {product.features.length > 3 && (
+            {product.features?.length || 0 > 3 && (
               <span className="text-xs text-gray-500">
-                +{product.features.length - 3}개 더
+                +{product.features?.length || 0 - 3}개 더
               </span>
             )}
           </div>

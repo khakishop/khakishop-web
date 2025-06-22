@@ -42,7 +42,7 @@ const MotorizedCard = memo(function MotorizedCard({ product, locale = 'ko' }: Mo
 
   // 주요 특징 슬라이스 메모이제이션
   const displayFeatures = useMemo(() => {
-    return product.features.slice(0, 3);
+    return product.features?.slice(0, 3) || [];
   }, [product.features]);
 
   return (

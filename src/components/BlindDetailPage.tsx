@@ -116,7 +116,7 @@ export default function BlindDetailPage({ product }: BlindDetailPageProps) {
                   <div>
                     <span className="text-sm text-gray-500">시작가</span>
                     <div className="text-3xl font-bold text-gray-900">
-                      ₩{formatPrice(product.price.from)}
+                      ₩{formatPrice(product.price?.from || 0)}
                     </div>
                     <span className="text-sm text-gray-500">* 설치비 별도</span>
                   </div>
@@ -134,7 +134,7 @@ export default function BlindDetailPage({ product }: BlindDetailPageProps) {
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">주요 특징</h3>
                 <div className="grid gap-3">
-                  {product.features.map((feature, index) => (
+                  {product.features?.map((feature, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
@@ -153,7 +153,7 @@ export default function BlindDetailPage({ product }: BlindDetailPageProps) {
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">사용 소재</h3>
                 <div className="flex flex-wrap gap-2">
-                  {product.materials.map((material, index) => (
+                  {product.materials?.map((material, index) => (
                     <span
                       key={index}
                       className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
@@ -168,7 +168,7 @@ export default function BlindDetailPage({ product }: BlindDetailPageProps) {
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">사이즈 옵션</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {product.sizes.map((size, index) => (
+                  {product.sizes?.map((size, index) => (
                     <div
                       key={index}
                       className="bg-white border border-gray-200 rounded-lg p-3 text-center hover:border-gray-400 transition-colors duration-300"
@@ -183,7 +183,7 @@ export default function BlindDetailPage({ product }: BlindDetailPageProps) {
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">컬러 옵션</h3>
                 <div className="flex flex-wrap gap-2">
-                  {product.colors.map((color, index) => (
+                  {product.colors?.map((color, index) => (
                     <div
                       key={index}
                       className="bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 hover:border-gray-400 transition-colors duration-300"
@@ -213,7 +213,7 @@ export default function BlindDetailPage({ product }: BlindDetailPageProps) {
               설치 안내
             </h3>
             <ul className="space-y-2">
-              {product.installation.map((item, index) => (
+              {product.installation?.map((item, index) => (
                 <li key={index} className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
                   <span className="text-gray-600 text-sm">{item}</span>
@@ -236,7 +236,7 @@ export default function BlindDetailPage({ product }: BlindDetailPageProps) {
               관리 방법
             </h3>
             <ul className="space-y-2">
-              {product.care.map((item, index) => (
+              {product.care?.map((item, index) => (
                 <li key={index} className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
                   <span className="text-gray-600 text-sm">{item}</span>

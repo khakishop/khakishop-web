@@ -156,7 +156,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                 주요 특징
               </h3>
               <ul className="space-y-4">
-                {product.features.map((feature, index) => (
+                {product.features?.map((feature, index) => (
                   <li key={index} className="flex items-start text-gray-700">
                     <span className="w-2 h-2 bg-gray-400 rounded-full mr-4 mt-2 flex-shrink-0"></span>
                     <span className="text-lg font-light leading-relaxed">
