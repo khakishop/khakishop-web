@@ -2,6 +2,15 @@
 // 🎨 KHAKISHOP 프로젝트 데이터
 // ================================================================================
 
+export interface ProjectStage {
+  title: string;
+  description: string;
+  images: string[];
+  details?: string[];
+  challenges?: string[];
+  solutions?: string[];
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -17,6 +26,24 @@ export interface Project {
   concept?: string;
   materials?: string[];
   size?: string;
+
+  // Phase 4: Multi-stage project content
+  stages?: {
+    before?: ProjectStage;
+    during?: ProjectStage;
+    after?: ProjectStage;
+  };
+
+  // Enhanced project metadata
+  timeline?: string;
+  budget?: string;
+  projectManager?: string;
+  tags?: string[];
+  testimonial?: {
+    quote: string;
+    author: string;
+    role: string;
+  };
 }
 
 export const projects: Project[] = [
