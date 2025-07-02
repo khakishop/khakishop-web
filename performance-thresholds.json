@@ -1,0 +1,40 @@
+{
+  "build": {
+    "buildTime": {
+      "good": 60000,
+      "warning": 120000
+    },
+    "buildSize": {
+      "good": 50,
+      "warning": 100
+    }
+  },
+  "lighthouse": {
+    "performance": {
+      "good": 90,
+      "warning": 75
+    },
+    "accessibility": {
+      "good": 95,
+      "warning": 85
+    },
+    "bestPractices": {
+      "good": 90,
+      "warning": 80
+    },
+    "seo": {
+      "good": 95,
+      "warning": 85
+    }
+  },
+  "resources": {
+    "nodeModulesSize": {
+      "good": 500,
+      "warning": 1000
+    },
+    "sourceCodeSize": {
+      "good": 50,
+      "warning": 100
+    }
+  }
+}

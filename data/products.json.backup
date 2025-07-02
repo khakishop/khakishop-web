@@ -1,0 +1,149 @@
+{
+  "curtain": [
+    {
+      "id": "1",
+      "name": "Essential Linen Collection",
+      "description": "천연 리넨 소재로 제작된 프리미엄 컬렉션입니다.",
+      "price": "69,000원~",
+      "image": "/images/curtain/essential-linen-collection/main.jpg",
+      "badge": "BEST"
+    },
+    {
+      "id": "2", 
+      "name": "Modern Sheer Series",
+      "description": "현대적인 쉬어 원단을 이용한 세련된 컬렉션입니다.",
+      "price": "89,000원~",
+      "image": "/images/curtain/modern-sheer-series/main.jpg",
+      "badge": "NEW"
+    },
+    {
+      "id": "3",
+      "name": "Venetian Premium Line",
+      "description": "베네치안 스타일의 명품 라인으로 뛰어난 품질을 자랑합니다.",
+      "price": "189,000원~",
+      "image": "/images/curtain/venetian-premium-line/main.jpg", 
+      "badge": "BEST"
+    },
+    {
+      "id": "4",
+      "name": "Wood Texture Natural",
+      "description": "천연 나무의 질감을 모티브로 한 독특한 디자인의 커튼입니다.",
+      "price": "99,000원~",
+      "image": "/images/curtain/wood-texture-natural/main.jpg",
+      "badge": "HOT"
+    },
+    {
+      "id": "5",
+      "name": "Smart Automation Series", 
+      "description": "최신 IoT 기술이 적용된 스마트 커튼 시스템입니다.",
+      "price": "299,000원~",
+      "image": "/images/curtain/smart-automation-series/main.jpg",
+      "badge": "NEW"
+    }
+  ],
+  "blind": [
+    {
+      "id": "1",
+      "name": "Contemporary Panel System",
+      "description": "현대적인 패널 시스템으로 심플하고 세련된 디자인을 자랑합니다.",
+      "price": "89,000원~",
+      "image": "/images/blind/contemporary-panel-system/main.jpg",
+      "badge": "NEW"
+    },
+    {
+      "id": "2",
+      "name": "Elegant Roman Style", 
+      "description": "우아한 로만 스타일 블라인드로 클래식한 매력을 선사합니다.",
+      "price": "159,000원~",
+      "image": "/images/blind/elegant-roman-style/main.jpg",
+      "badge": "BEST"
+    },
+    {
+      "id": "3",
+      "name": "Modern Vertical System",
+      "description": "현대적인 수직 블라인드 시스템으로 넓은 창문에 최적화되어 있습니다.",
+      "price": "129,000원~", 
+      "image": "/images/blind/modern-vertical-system/main.jpg",
+      "badge": "HOT"
+    },
+    {
+      "id": "4",
+      "name": "Premium Venetian Collection",
+      "description": "프리미엄 베네치안 블라인드 컬렉션으로 최고급 원목을 사용하여 제작되었습니다.",
+      "price": "199,000원~",
+      "image": "/images/blind/premium-venetian-collection/main.jpg",
+      "badge": "BEST"
+    }
+  ],
+  "motorized": [
+    {
+      "id": "1",
+      "name": "Smart Automation Pro",
+      "description": "최신 IoT 기술이 적용된 프리미엄 전동 시스템입니다.",
+      "price": "399,000원~",
+      "image": "/images/motorized/smart-automation-pro/main.jpg",
+      "badge": "NEW"
+    },
+    {
+      "id": "2",
+      "name": "Silent Operation Series",
+      "description": "소음 없는 조용한 작동이 특징인 전동 블라인드입니다.",
+      "price": "299,000원~",
+      "image": "/images/motorized/silent-operation-series/main.jpg",
+      "badge": "HOT"
+    },
+    {
+      "id": "3",
+      "name": "Luxury Wood Venetian",
+      "description": "고급 원목 소재의 전동 베네치안 블라인드입니다.",
+      "price": "599,000원~",
+      "image": "/images/motorized/luxury-wood-venetian/main.jpg",
+      "badge": "PREMIUM"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "name": "강남구 펜트하우스 프로젝트",
+      "description": "200평 규모의 대형 펜트하우스에 프리미엄 커튼 및 블라인드 시스템을 설치한 프로젝트입니다.",
+      "image": "/images/projects/gangnam-penthouse/main.jpg",
+      "category": "펜트하우스",
+      "location": "서울 강남구",
+      "date": "2024.03",
+      "area": "200평",
+      "client": "강남구 펜트하우스"
+    }
+  ],
+  "references": [
+    {
+      "id": "1", 
+      "name": "모던 하우스 레퍼런스 1",
+      "description": "현대적인 주택에 설치된 커튼 시스템의 레퍼런스입니다.",
+      "image": "/images/references/modern-house-1/main.jpg",
+      "category": "주택",
+      "style": "모던"
+    },
+    {
+      "id": "2",
+      "name": "클래식 아파트 레퍼런스",
+      "description": "클래식한 스타일의 아파트에 설치된 블라인드 시스템입니다.",
+      "image": "/images/references/classic-apartment/main.jpg", 
+      "category": "아파트",
+      "style": "클래식"
+    },
+    {
+      "id": "3",
+      "name": "오피스 빌딩 레퍼런스",
+      "description": "오피스 빌딩에 설치된 전동 블라인드 시스템의 레퍼런스입니다.",
+      "image": "/images/references/office-building/main.jpg",
+      "category": "오피스", 
+      "style": "비즈니스"
+    }
+  ],
+  "hero": [],
+  "landing": [],
+  "collection": [],
+  "about": [],
+  "contact": [],
+  "gallery": []
+}

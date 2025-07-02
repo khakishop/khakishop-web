@@ -2,14 +2,46 @@
   "extends": [
     "next/core-web-vitals"
   ],
+  "plugins": [
+    "tailwindcss"
+  ],
   "rules": {
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
-    "@next/next/no-img-element": "warn",
+    "@next/next/no-img-element": "off",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "prefer-const": "warn",
     "no-var": "warn",
-    "import/no-anonymous-default-export": "off"
+    "import/no-anonymous-default-export": "off",
+    "tailwindcss/classnames-order": "off",
+    "tailwindcss/enforces-negative-arbitrary-values": "off",
+    "tailwindcss/enforces-shorthand": "off",
+    "tailwindcss/migration-from-tailwind-2": "off",
+    "tailwindcss/no-arbitrary-value": "off",
+    "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/no-contradicting-classname": "warn"
+  },
+  "settings": {
+    "tailwindcss": {
+      "config": "./tailwind.config.ts",
+      "cssFiles": [
+        "**/*.css",
+        "!**/node_modules",
+        "!**/.git",
+        "!**/.next",
+        "!**/dist"
+      ],
+      "whitelist": [
+        "scrollbar-.*",
+        "aspect-.*",
+        "text-md",
+        "scale-102",
+        "bg-white/.*",
+        "from-white/.*",
+        "to-white/.*",
+        "opacity-.*"
+      ]
+    }
   }
 }

@@ -1,16 +1,16 @@
 {
-  "timestamp": "2025-06-14T04:49:05.814Z",
+  "timestamp": "2025-06-30T08:54:48.627Z",
   "projectName": "KHAKISHOP-WEB",
   "version": "1.0.0",
   "summary": {
     "status": "CRITICAL",
-    "criticalIssues": 119,
-    "warnings": 0,
+    "criticalIssues": 47,
+    "warnings": 1,
     "suggestions": 1
   },
   "sections": {
     "projectStructure": {
-      "totalFiles": 67208,
+      "totalFiles": 72396,
       "directories": [
         {
           "name": "app",
@@ -22,6 +22,12 @@
               "type": "directory",
               "path": "src/app/[locale]",
               "children": [
+                {
+                  "name": "(auth)",
+                  "type": "directory",
+                  "path": "src/app/[locale]/(auth)",
+                  "children": []
+                },
                 {
                   "name": "about",
                   "type": "directory",
@@ -71,6 +77,12 @@
                   "children": []
                 },
                 {
+                  "name": "gallery",
+                  "type": "directory",
+                  "path": "src/app/[locale]/gallery",
+                  "children": []
+                },
+                {
                   "name": "landing",
                   "type": "directory",
                   "path": "src/app/[locale]/landing",
@@ -101,6 +113,18 @@
                   "children": []
                 },
                 {
+                  "name": "projects",
+                  "type": "directory",
+                  "path": "src/app/[locale]/projects",
+                  "children": []
+                },
+                {
+                  "name": "reference",
+                  "type": "directory",
+                  "path": "src/app/[locale]/reference",
+                  "children": []
+                },
+                {
                   "name": "references",
                   "type": "directory",
                   "path": "src/app/[locale]/references",
@@ -114,9 +138,27 @@
               "path": "src/app/api",
               "children": [
                 {
+                  "name": "admin",
+                  "type": "directory",
+                  "path": "src/app/api/admin",
+                  "children": []
+                },
+                {
+                  "name": "auth",
+                  "type": "directory",
+                  "path": "src/app/api/auth",
+                  "children": []
+                },
+                {
                   "name": "delete-image",
                   "type": "directory",
                   "path": "src/app/api/delete-image",
+                  "children": []
+                },
+                {
+                  "name": "products",
+                  "type": "directory",
+                  "path": "src/app/api/products",
                   "children": []
                 },
                 {
@@ -144,6 +186,12 @@
                   "children": []
                 },
                 {
+                  "name": "unified-data",
+                  "type": "directory",
+                  "path": "src/app/api/unified-data",
+                  "children": []
+                },
+                {
                   "name": "upload-image",
                   "type": "directory",
                   "path": "src/app/api/upload-image",
@@ -155,6 +203,12 @@
               "name": "test",
               "type": "directory",
               "path": "src/app/test",
+              "children": []
+            },
+            {
+              "name": "test-sync",
+              "type": "directory",
+              "path": "src/app/test-sync",
               "children": []
             }
           ]
@@ -206,7 +260,27 @@
           "name": "data",
           "type": "directory",
           "path": "src/data",
-          "children": []
+          "children": [
+            {
+              "name": "project-metadata",
+              "type": "directory",
+              "path": "src/data/project-metadata",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "data.backup",
+          "type": "directory",
+          "path": "src/data.backup",
+          "children": [
+            {
+              "name": "project-metadata",
+              "type": "directory",
+              "path": "src/data.backup/project-metadata",
+              "children": []
+            }
+          ]
         },
         {
           "name": "hooks",
@@ -243,43 +317,43 @@
       "keyFiles": {
         "package.json": {
           "exists": true,
-          "size": 9486,
-          "modified": "2025-06-14T04:04:30.726Z"
+          "size": 11628,
+          "modified": "2025-06-30T05:31:07.492Z"
         },
         "next.config.js": {
           "exists": true,
-          "size": 7399,
-          "modified": "2025-06-13T04:04:23.935Z"
+          "size": 8134,
+          "modified": "2025-06-30T05:29:57.352Z"
         },
         "tsconfig.json": {
           "exists": true,
           "size": 1097,
-          "modified": "2025-06-12T07:10:58.817Z"
+          "modified": "2025-06-30T05:31:07.555Z"
         },
         "tailwind.config.ts": {
           "exists": true,
           "size": 713,
-          "modified": "2025-06-04T09:16:45.822Z"
+          "modified": "2025-06-30T05:31:06.138Z"
         },
         "eslint.config.mjs": {
           "exists": true,
           "size": 393,
-          "modified": "2025-06-04T09:16:20.432Z"
+          "modified": "2025-06-30T05:31:10.411Z"
         },
         "src/app/layout.tsx": {
           "exists": true,
           "size": 5394,
-          "modified": "2025-06-09T11:28:24.739Z"
+          "modified": "2025-06-30T05:31:10.558Z"
         },
         "src/app/globals.css": {
           "exists": true,
-          "size": 59,
-          "modified": "2025-06-04T09:16:45.819Z"
+          "size": 1801,
+          "modified": "2025-06-30T05:31:10.584Z"
         },
         "public/images": {
           "exists": true,
-          "size": 608,
-          "modified": "2025-06-10T07:58:18.317Z"
+          "size": 896,
+          "modified": "2025-06-30T05:31:07.424Z"
         }
       },
       "missingFiles": []
@@ -353,7 +427,24 @@
         "fix-all",
         "process-reference-images",
         "type-check",
-        "auto-diagnose"
+        "auto-diagnose",
+        "generate-placeholder-images",
+        "generate-midjourney-prompts",
+        "status",
+        "status:dashboard",
+        "status:monitor",
+        "status:health",
+        "status:update",
+        "status:resolve",
+        "status:help",
+        "test:e2e:report",
+        "test:performance",
+        "perf:quick",
+        "perf:full",
+        "perf:health",
+        "perf:lighthouse",
+        "perf:report",
+        "perf:thresholds"
       ],
       "dependencies": [
         "@dnd-kit/core",
@@ -367,14 +458,20 @@
         "@types/react-window",
         "@vercel/analytics",
         "@vercel/speed-insights",
+        "bcryptjs",
         "critters",
         "framer-motion",
+        "jose",
+        "jsonwebtoken",
+        "lucide-react",
         "next",
         "next-intl",
         "next-pwa",
         "next-sitemap",
+        "quill",
         "react",
         "react-dom",
+        "react-quill",
         "react-window",
         "react-window-infinite-loader",
         "sharp",
@@ -386,12 +483,15 @@
         "@axe-core/playwright",
         "@emotion/is-prop-valid",
         "@playwright/test",
+        "@types/bcryptjs",
+        "@types/jsonwebtoken",
         "@types/node",
         "@types/react",
         "@types/react-dom",
         "autoprefixer",
         "eslint",
         "eslint-config-next",
+        "eslint-plugin-tailwindcss",
         "husky",
         "js-yaml",
         "lighthouse",
@@ -466,13 +566,21 @@
           "**/*.spec.tsx"
         ]
       },
-      "compilationStatus": "SUCCESS"
+      "compilationStatus": "FAILED",
+      "compilationErrors": "src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx(13,3): error TS2724: '\"../../../../../../../../utils/constants/categories\"' has no exported member named 'getSubcategoryByKey'. Did you mean 'getCategoryByKey'?\nsrc/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx(14,3): error TS2614: Module '\"../../../../../../../../utils/constants/categories\"' has no exported member 'getCategoryBreadcrumb'. Did you mean to use 'import getCategoryBreadcrumb from \"../../../../../../../../utils/constants/categories\"' instead?\nsrc/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx(15,3): error TS2614: Module '\"../../../../../../../../utils/constants/categories\"' has no exported member 'getCategoryFolderPath'. Did you mean to use 'import getCategoryFolderPath from \"../../../../../../../../utils/constants/categories\"' instead?\nsrc/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx(16,3): error TS2724: '\"../../../../../../../../utils/constants/categories\"' has no exported member named 'getCategoryPathDisplayName'. Did you mean 'getCategoryDisplayName'?\nsrc/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx(274,45): error TS2339: Property 'displayName' does not exist on type 'CategoryInfo'.\nsrc/app/[locale]/admin/page.tsx(7,24): error TS2307: Cannot find module '@/i18n/config' or its corresponding type declarations.\nsrc/app/api/unified-data/route.ts(50,19): error TS2339: Property 'lastUpdated' does not exist on type '{ categories: {}; }'.\nsrc/components/admin/AdminImageEditPanel.tsx(179,45): error TS2339: Property 'key' does not exist on type 'string'.\nsrc/components/admin/AdminImageEditPanel.tsx(179,66): error TS2339: Property 'key' does not exist on type 'string'.\nsrc/components/admin/AdminImageEditPanel.tsx(180,35): error TS2339: Property 'icon' does not exist on type 'string'.\nsrc/components/admin/AdminImageEditPanel.tsx(180,51): error TS2339: Property 'displayName' does not exist on type 'string'.\nsrc/utils/imageMap.ts(8,3): error TS2614: Module '\"./constants/categories\"' has no exported member 'getCategoryPriority'. Did you mean to use 'import getCategoryPriority from \"./constants/categories\"' instead?\nsrc/utils/imageMap.ts(10,3): error TS2614: Module '\"./constants/categories\"' has no exported member 'CATEGORY_METADATA_TEMPLATES'. Did you mean to use 'import CATEGORY_METADATA_TEMPLATES from \"./constants/categories\"' instead?\n"
     },
     "sourceCodeAnalysis": {
-      "totalFiles": 134,
+      "totalFiles": 188,
       "components": [
         "src/app/HomeClient.tsx",
+        "src/app/[locale]/(auth)/layout.tsx",
         "src/app/[locale]/about/AboutPageClient.tsx",
+        "src/app/[locale]/admin/images/components/CategoryList.tsx",
+        "src/app/[locale]/admin/images/components/DragDropProvider.tsx",
+        "src/app/[locale]/admin/images/components/ImageDetailModal.tsx",
+        "src/app/[locale]/admin/images/components/ImageGrid.tsx",
+        "src/app/[locale]/admin/images/hooks/useImageManager.tsx",
+        "src/app/[locale]/admin/images/manage/category/[category]/ProjectCard.tsx",
         "src/app/[locale]/admin/layout.tsx",
         "src/app/[locale]/admin-layout-provider.tsx",
         "src/app/[locale]/blind/BlindPageClient.tsx",
@@ -483,6 +591,8 @@
         "src/app/[locale]/landing/LandingClient.tsx",
         "src/app/[locale]/layout.tsx",
         "src/app/[locale]/motorized/MotorizedPageClient.tsx",
+        "src/app/[locale]/reference/ReferencesPageClient.tsx",
+        "src/app/[locale]/reference/[slug]/ImageGallery.tsx",
         "src/app/[locale]/references/ReferencesPageClient.tsx",
         "src/app/[locale]/references/[slug]/ImageGallery.tsx",
         "src/app/error.tsx",
@@ -505,9 +615,11 @@
         "src/components/CurtainImageGallery.tsx",
         "src/components/CurtainPageClient.tsx",
         "src/components/CurtainProductView.tsx",
+        "src/components/DataSyncProvider.tsx",
         "src/components/EmptyImageCard.tsx",
         "src/components/ErrorBoundary.tsx",
         "src/components/FullscreenMenu.tsx",
+        "src/components/GalleryPageClient.tsx",
         "src/components/HeroIntro.tsx",
         "src/components/HeroSection.tsx",
         "src/components/ImageManagerCard.tsx",
@@ -527,28 +639,37 @@
         "src/components/UnifiedProductCard.tsx",
         "src/components/UnifiedProductGrid.tsx",
         "src/components/VirtualizedProjectGrid.tsx",
+        "src/components/admin/AdminHomePreview.tsx",
         "src/components/admin/AdminImageEditPanel.tsx",
         "src/components/admin/AdminImagesBrowser.tsx",
+        "src/components/admin/AdminProductEditor.tsx",
         "src/components/admin/DeleteImageDialog.tsx",
         "src/components/admin/DraggableImageGrid.tsx",
         "src/components/admin/ImageUploadZone.tsx",
+        "src/components/admin/MultiStageProjectEditor.tsx",
+        "src/components/admin/ProductImageManager.tsx",
         "src/components/admin/VirtualizedImageGrid.tsx",
         "src/components/common/SEOImage.tsx",
         "src/components/layouts/CategoryPage.tsx",
         "src/components/templates/ProductDetailTemplate.tsx",
+        "src/components/ui/HomeButton.tsx",
         "src/components/ui/LocalizedLink.tsx",
+        "src/components/ui/MenuButton.tsx",
         "src/components/ui/Pagination.tsx",
         "src/components/ui/Skeleton.tsx",
         "src/lib/performance.tsx"
       ],
       "pages": [
+        "src/app/[locale]/(auth)/admin/login/page.tsx",
         "src/app/[locale]/about/page.tsx",
-        "src/app/[locale]/admin/images/[category]/[subcategory]/page.tsx",
-        "src/app/[locale]/admin/images/[category]/page.tsx",
-        "src/app/[locale]/admin/images/blind/page.tsx",
-        "src/app/[locale]/admin/images/motorized/page.tsx",
+        "src/app/[locale]/admin/demo/page.tsx",
+        "src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx",
+        "src/app/[locale]/admin/images/manage/category/[category]/page.tsx",
         "src/app/[locale]/admin/images/page.tsx",
         "src/app/[locale]/admin/page.tsx",
+        "src/app/[locale]/admin/projects/[slug]/edit/page.tsx",
+        "src/app/[locale]/admin/projects/[slug]/preview/page.tsx",
+        "src/app/[locale]/admin/projects/page.tsx",
         "src/app/[locale]/blind/[slug]/page.tsx",
         "src/app/[locale]/blind/page.tsx",
         "src/app/[locale]/blog/page.tsx",
@@ -558,6 +679,8 @@
         "src/app/[locale]/curtain/[slug]/page.tsx",
         "src/app/[locale]/curtain/page.tsx",
         "src/app/[locale]/error-test/page.tsx",
+        "src/app/[locale]/gallery/[slug]/page.tsx",
+        "src/app/[locale]/gallery/page.tsx",
         "src/app/[locale]/landing/page.tsx",
         "src/app/[locale]/motorized/[slug]/page.tsx",
         "src/app/[locale]/motorized/page.tsx",
@@ -567,120 +690,347 @@
         "src/app/[locale]/products/page.tsx",
         "src/app/[locale]/project/[slug]/page.tsx",
         "src/app/[locale]/project/page.tsx",
+        "src/app/[locale]/projects/[slug]/page.tsx",
+        "src/app/[locale]/projects/page.tsx",
+        "src/app/[locale]/reference/[slug]/page.tsx",
+        "src/app/[locale]/reference/page.tsx",
         "src/app/[locale]/references/[slug]/page.tsx",
         "src/app/[locale]/references/page.tsx",
         "src/app/page.tsx",
-        "src/app/test/page.tsx"
+        "src/app/test/page.tsx",
+        "src/app/test-sync/page.tsx"
       ],
       "hooks": [
-        "src/hooks/useImageManager.ts"
+        "src/hooks/useDragAndDrop.ts",
+        "src/hooks/useImageData.ts",
+        "src/hooks/useImageManager.ts",
+        "src/hooks/useUnifiedData.ts"
       ],
-      "utils": [],
+      "utils": [
+        "src/lib/auth-utils.ts"
+      ],
       "issues": []
     },
     "imageAnalysis": {
-      "totalImages": 0,
+      "totalImages": 7,
       "categories": {
         "about": {
-          "count": 0,
-          "files": []
+          "count": 12,
+          "files": [
+            "public/images/about/about-1.jpg",
+            "public/images/about/about-2.jpg",
+            "public/images/about/about-3.jpg",
+            "public/images/about/certifications.svg",
+            "public/images/about/company-story.svg",
+            "public/images/about/main.jpg",
+            "public/images/about/manage.jpg",
+            "public/images/about/manufacturing.jpg",
+            "public/images/about/manufacturing.svg",
+            "public/images/about/quality-control.svg",
+            "public/images/about/team-workspace.jpg",
+            "public/images/about/team-workspace.svg"
+          ]
         },
         "blind": {
-          "count": 0,
-          "files": []
-        },
-        "blinds": {
-          "count": 20,
+          "count": 21,
           "files": [
-            "public/images/blinds/contemporary-panel-system/detail-1.jpg",
-            "public/images/blinds/contemporary-panel-system/detail-2.jpg",
-            "public/images/blinds/contemporary-panel-system/lifestyle.jpg",
-            "public/images/blinds/contemporary-panel-system/main.jpg",
-            "public/images/blinds/elegant-roman-style/detail-1.jpg",
-            "public/images/blinds/elegant-roman-style/detail-2.jpg",
-            "public/images/blinds/elegant-roman-style/lifestyle.jpg",
-            "public/images/blinds/elegant-roman-style/main.jpg",
-            "public/images/blinds/modern-vertical-system/detail-1.jpg",
-            "public/images/blinds/modern-vertical-system/detail-2.jpg",
-            "public/images/blinds/modern-vertical-system/lifestyle.jpg",
-            "public/images/blinds/modern-vertical-system/main.jpg",
-            "public/images/blinds/premium-venetian-collection/detail-1.jpg",
-            "public/images/blinds/premium-venetian-collection/detail-2.jpg",
-            "public/images/blinds/premium-venetian-collection/lifestyle.jpg",
-            "public/images/blinds/premium-venetian-collection/main.jpg",
-            "public/images/blinds/smart-roller-collection/detail-1.jpg",
-            "public/images/blinds/smart-roller-collection/detail-2.jpg",
-            "public/images/blinds/smart-roller-collection/lifestyle.jpg",
-            "public/images/blinds/smart-roller-collection/main.jpg"
+            "public/images/blind/contemporary-panel-system/detail-1.jpg",
+            "public/images/blind/contemporary-panel-system/detail-2.jpg",
+            "public/images/blind/contemporary-panel-system/lifestyle.jpg",
+            "public/images/blind/contemporary-panel-system/main.jpg",
+            "public/images/blind/elegant-roman-style/detail-1.jpg",
+            "public/images/blind/elegant-roman-style/detail-2.jpg",
+            "public/images/blind/elegant-roman-style/lifestyle.jpg",
+            "public/images/blind/elegant-roman-style/main.jpg",
+            "public/images/blind/main.jpg",
+            "public/images/blind/modern-vertical-system/detail-1.jpg",
+            "public/images/blind/modern-vertical-system/detail-2.jpg",
+            "public/images/blind/modern-vertical-system/lifestyle.jpg",
+            "public/images/blind/modern-vertical-system/main.jpg",
+            "public/images/blind/premium-venetian-collection/detail-1.jpg",
+            "public/images/blind/premium-venetian-collection/detail-2.jpg",
+            "public/images/blind/premium-venetian-collection/lifestyle.jpg",
+            "public/images/blind/premium-venetian-collection/main.jpg",
+            "public/images/blind/smart-roller-collection/detail-1.jpg",
+            "public/images/blind/smart-roller-collection/detail-2.jpg",
+            "public/images/blind/smart-roller-collection/lifestyle.jpg",
+            "public/images/blind/smart-roller-collection/main.jpg"
           ]
         },
         "blog": {
-          "count": 0,
-          "files": []
-        },
-        "collections": {
-          "count": 8,
+          "count": 13,
           "files": [
-            "public/images/collections/designer-hardware.png",
-            "public/images/collections/essential-linen.png",
-            "public/images/collections/luxury-tieback.png",
-            "public/images/collections/modern-sheer.png",
-            "public/images/collections/smart-automation.png",
-            "public/images/collections/venetian-premium.png",
-            "public/images/collections/wireless-motor.png",
-            "public/images/collections/wood-texture.png"
+            "public/images/blog/blog-1.jpg",
+            "public/images/blog/blog-2.jpg",
+            "public/images/blog/blog-3.jpg",
+            "public/images/blog/color-matching.svg",
+            "public/images/blog/design-trends-2024.jpg",
+            "public/images/blog/design-trends-2024.svg",
+            "public/images/blog/installation-guide.jpg",
+            "public/images/blog/installation-guide.svg",
+            "public/images/blog/main.jpg",
+            "public/images/blog/maintenance-tips.jpg",
+            "public/images/blog/maintenance-tips.svg",
+            "public/images/blog/manage.jpg",
+            "public/images/blog/room-styling.svg"
           ]
         },
-        "curtains": {
-          "count": 20,
+        "category": {
+          "count": 3,
           "files": [
-            "public/images/curtains/essential-linen-collection/detail-1.jpg",
-            "public/images/curtains/essential-linen-collection/detail-2.jpg",
-            "public/images/curtains/essential-linen-collection/lifestyle.jpg",
-            "public/images/curtains/essential-linen-collection/main.jpg",
-            "public/images/curtains/modern-sheer-series/detail-1.jpg",
-            "public/images/curtains/modern-sheer-series/detail-2.jpg",
-            "public/images/curtains/modern-sheer-series/lifestyle.jpg",
-            "public/images/curtains/modern-sheer-series/main.jpg",
-            "public/images/curtains/smart-automation-series/detail-1.jpg",
-            "public/images/curtains/smart-automation-series/detail-2.jpg",
-            "public/images/curtains/smart-automation-series/lifestyle.jpg",
-            "public/images/curtains/smart-automation-series/main.jpg",
-            "public/images/curtains/venetian-premium-line/detail-1.jpg",
-            "public/images/curtains/venetian-premium-line/detail-2.jpg",
-            "public/images/curtains/venetian-premium-line/lifestyle.jpg",
-            "public/images/curtains/venetian-premium-line/main.jpg",
-            "public/images/curtains/wood-texture-natural/detail-1.jpg",
-            "public/images/curtains/wood-texture-natural/detail-2.jpg",
-            "public/images/curtains/wood-texture-natural/lifestyle.jpg",
-            "public/images/curtains/wood-texture-natural/main.jpg"
+            "public/images/category/filename.jpg",
+            "public/images/category/slug/main.jpg",
+            "public/images/category/subcategory/main.jpg"
+          ]
+        },
+        "collections": {
+          "count": 37,
+          "files": [
+            "public/images/collections/collections-1.jpg",
+            "public/images/collections/collections-2.jpg",
+            "public/images/collections/collections-3.jpg",
+            "public/images/collections/curtain/11.png",
+            "public/images/collections/curtain/premium-venetian-collection_main.png",
+            "public/images/collections/designer-hardware.jpg",
+            "public/images/collections/designer-hardware.png",
+            "public/images/collections/designer-hardware.svg",
+            "public/images/collections/essential-linen.jpg",
+            "public/images/collections/essential-linen.png",
+            "public/images/collections/essential-linen.svg",
+            "public/images/collections/luxury-tieback.jpg",
+            "public/images/collections/luxury-tieback.png",
+            "public/images/collections/luxury-tieback.svg",
+            "public/images/collections/main.jpg",
+            "public/images/collections/manage.jpg",
+            "public/images/collections/modern-sheer.jpg",
+            "public/images/collections/modern-sheer.png",
+            "public/images/collections/modern-sheer.svg",
+            "public/images/collections/seasonal-autumn.jpg",
+            "public/images/collections/seasonal-spring.jpg",
+            "public/images/collections/seasonal-summer.jpg",
+            "public/images/collections/seasonal-winter.jpg",
+            "public/images/collections/smart-automation.jpg",
+            "public/images/collections/smart-automation.png",
+            "public/images/collections/smart-automation.svg",
+            "public/images/collections/test/test1.jpg",
+            "public/images/collections/test/test2.png",
+            "public/images/collections/venetian-premium.jpg",
+            "public/images/collections/venetian-premium.png",
+            "public/images/collections/venetian-premium.svg",
+            "public/images/collections/wireless-motor.jpg",
+            "public/images/collections/wireless-motor.png",
+            "public/images/collections/wireless-motor.svg",
+            "public/images/collections/wood-texture.jpg",
+            "public/images/collections/wood-texture.png",
+            "public/images/collections/wood-texture.svg"
+          ]
+        },
+        "collections_test": {
+          "count": 1,
+          "files": [
+            "public/images/collections_test/11.png"
+          ]
+        },
+        "curtain": {
+          "count": 25,
+          "files": [
+            "public/images/curtain/essential-linen-collection/detail-1.jpg",
+            "public/images/curtain/essential-linen-collection/detail-2.jpg",
+            "public/images/curtain/essential-linen-collection/lifestyle.jpg",
+            "public/images/curtain/essential-linen-collection/main.jpg",
+            "public/images/curtain/main.jpg",
+            "public/images/curtain/modern-sheer-series/curtain-modern-sheer-series-1.jpg",
+            "public/images/curtain/modern-sheer-series/curtain-modern-sheer-series-2.jpg",
+            "public/images/curtain/modern-sheer-series/curtain-modern-sheer-series-3.jpg",
+            "public/images/curtain/modern-sheer-series/curtain-modern-sheer-series-4.jpg",
+            "public/images/curtain/modern-sheer-series/detail-1.jpg",
+            "public/images/curtain/modern-sheer-series/detail-2.jpg",
+            "public/images/curtain/modern-sheer-series/lifestyle.jpg",
+            "public/images/curtain/modern-sheer-series/main.jpg",
+            "public/images/curtain/smart-automation-series/detail-1.jpg",
+            "public/images/curtain/smart-automation-series/detail-2.jpg",
+            "public/images/curtain/smart-automation-series/lifestyle.jpg",
+            "public/images/curtain/smart-automation-series/main.jpg",
+            "public/images/curtain/venetian-premium-line/detail-1.jpg",
+            "public/images/curtain/venetian-premium-line/detail-2.jpg",
+            "public/images/curtain/venetian-premium-line/lifestyle.jpg",
+            "public/images/curtain/venetian-premium-line/main.jpg",
+            "public/images/curtain/wood-texture-natural/detail-1.jpg",
+            "public/images/curtain/wood-texture-natural/detail-2.jpg",
+            "public/images/curtain/wood-texture-natural/lifestyle.jpg",
+            "public/images/curtain/wood-texture-natural/main.jpg"
           ]
         },
         "future": {
-          "count": 0,
-          "files": []
+          "count": 8,
+          "files": [
+            "public/images/future/concept-designs.svg",
+            "public/images/future/future-1.jpg",
+            "public/images/future/future-2.jpg",
+            "public/images/future/future-3.jpg",
+            "public/images/future/innovation-lab.svg",
+            "public/images/future/main.jpg",
+            "public/images/future/manage.jpg",
+            "public/images/future/next-generation.svg"
+          ]
         },
         "gallery": {
-          "count": 0,
-          "files": []
+          "count": 99,
+          "files": [
+            "public/images/gallery/11.png",
+            "public/images/gallery/2.png",
+            "public/images/gallery/award-winning.jpg",
+            "public/images/gallery/best-of-year.jpg",
+            "public/images/gallery/customer-favorites.jpg",
+            "public/images/gallery/gallery-1.jpg",
+            "public/images/gallery/gallery-1.svg",
+            "public/images/gallery/gallery-2.jpg",
+            "public/images/gallery/gallery-2.svg",
+            "public/images/gallery/gallery-3.jpg",
+            "public/images/gallery/gallery-3.svg",
+            "public/images/gallery/gallery-4.svg",
+            "public/images/gallery/gallery-grid-1.jpg",
+            "public/images/gallery/gallery-grid-10.jpg",
+            "public/images/gallery/gallery-grid-11.jpg",
+            "public/images/gallery/gallery-grid-12.jpg",
+            "public/images/gallery/gallery-grid-2.jpg",
+            "public/images/gallery/gallery-grid-3.jpg",
+            "public/images/gallery/gallery-grid-4.jpg",
+            "public/images/gallery/gallery-grid-5.jpg",
+            "public/images/gallery/gallery-grid-6.jpg",
+            "public/images/gallery/gallery-grid-7.jpg",
+            "public/images/gallery/gallery-grid-8.jpg",
+            "public/images/gallery/gallery-grid-9.jpg",
+            "public/images/gallery/lifestyle-moments/app-interface.jpg",
+            "public/images/gallery/lifestyle-moments/bedroom.jpg",
+            "public/images/gallery/lifestyle-moments/control-panel.jpg",
+            "public/images/gallery/lifestyle-moments/detail-1.jpg",
+            "public/images/gallery/lifestyle-moments/detail-2.jpg",
+            "public/images/gallery/lifestyle-moments/detail-3.jpg",
+            "public/images/gallery/lifestyle-moments/details.jpg",
+            "public/images/gallery/lifestyle-moments/evening-mood.jpg",
+            "public/images/gallery/lifestyle-moments/family-time.jpg",
+            "public/images/gallery/lifestyle-moments/installation.jpg",
+            "public/images/gallery/lifestyle-moments/lifestyle.jpg",
+            "public/images/gallery/lifestyle-moments/living-room.jpg",
+            "public/images/gallery/lifestyle-moments/main.jpg",
+            "public/images/gallery/lifestyle-moments/morning-light.jpg",
+            "public/images/gallery/luxury-collection.jpg",
+            "public/images/gallery/main.jpg",
+            "public/images/gallery/manage.jpg",
+            "public/images/gallery/modern-curtain-collection/app-interface.jpg",
+            "public/images/gallery/modern-curtain-collection/bedroom.jpg",
+            "public/images/gallery/modern-curtain-collection/control-panel.jpg",
+            "public/images/gallery/modern-curtain-collection/detail-1.jpg",
+            "public/images/gallery/modern-curtain-collection/detail-2.jpg",
+            "public/images/gallery/modern-curtain-collection/detail-3.jpg",
+            "public/images/gallery/modern-curtain-collection/details.jpg",
+            "public/images/gallery/modern-curtain-collection/evening-mood.jpg",
+            "public/images/gallery/modern-curtain-collection/family-time.jpg",
+            "public/images/gallery/modern-curtain-collection/installation.jpg",
+            "public/images/gallery/modern-curtain-collection/lifestyle.jpg",
+            "public/images/gallery/modern-curtain-collection/living-room.jpg",
+            "public/images/gallery/modern-curtain-collection/main.jpg",
+            "public/images/gallery/modern-curtain-collection/morning-light.jpg",
+            "public/images/gallery/natural-interior-harmony/app-interface.jpg",
+            "public/images/gallery/natural-interior-harmony/bedroom.jpg",
+            "public/images/gallery/natural-interior-harmony/control-panel.jpg",
+            "public/images/gallery/natural-interior-harmony/detail-1.jpg",
+            "public/images/gallery/natural-interior-harmony/detail-2.jpg",
+            "public/images/gallery/natural-interior-harmony/detail-3.jpg",
+            "public/images/gallery/natural-interior-harmony/details.jpg",
+            "public/images/gallery/natural-interior-harmony/evening-mood.jpg",
+            "public/images/gallery/natural-interior-harmony/family-time.jpg",
+            "public/images/gallery/natural-interior-harmony/installation.jpg",
+            "public/images/gallery/natural-interior-harmony/lifestyle.jpg",
+            "public/images/gallery/natural-interior-harmony/living-room.jpg",
+            "public/images/gallery/natural-interior-harmony/main.jpg",
+            "public/images/gallery/natural-interior-harmony/morning-light.jpg",
+            "public/images/gallery/neutral-living-room/main.jpg",
+            "public/images/gallery/smart-automation-showcase/app-interface.jpg",
+            "public/images/gallery/smart-automation-showcase/bedroom.jpg",
+            "public/images/gallery/smart-automation-showcase/control-panel.jpg",
+            "public/images/gallery/smart-automation-showcase/detail-1.jpg",
+            "public/images/gallery/smart-automation-showcase/detail-2.jpg",
+            "public/images/gallery/smart-automation-showcase/detail-3.jpg",
+            "public/images/gallery/smart-automation-showcase/details.jpg",
+            "public/images/gallery/smart-automation-showcase/evening-mood.jpg",
+            "public/images/gallery/smart-automation-showcase/family-time.jpg",
+            "public/images/gallery/smart-automation-showcase/installation.jpg",
+            "public/images/gallery/smart-automation-showcase/lifestyle.jpg",
+            "public/images/gallery/smart-automation-showcase/living-room.jpg",
+            "public/images/gallery/smart-automation-showcase/main.jpg",
+            "public/images/gallery/smart-automation-showcase/morning-light.jpg",
+            "public/images/gallery/trending-styles.jpg",
+            "public/images/gallery/venetian-blind-series/app-interface.jpg",
+            "public/images/gallery/venetian-blind-series/bedroom.jpg",
+            "public/images/gallery/venetian-blind-series/control-panel.jpg",
+            "public/images/gallery/venetian-blind-series/detail-1.jpg",
+            "public/images/gallery/venetian-blind-series/detail-2.jpg",
+            "public/images/gallery/venetian-blind-series/detail-3.jpg",
+            "public/images/gallery/venetian-blind-series/details.jpg",
+            "public/images/gallery/venetian-blind-series/evening-mood.jpg",
+            "public/images/gallery/venetian-blind-series/family-time.jpg",
+            "public/images/gallery/venetian-blind-series/installation.jpg",
+            "public/images/gallery/venetian-blind-series/lifestyle.jpg",
+            "public/images/gallery/venetian-blind-series/living-room.jpg",
+            "public/images/gallery/venetian-blind-series/main.jpg",
+            "public/images/gallery/venetian-blind-series/morning-light.jpg"
+          ]
         },
         "hero": {
-          "count": 2,
+          "count": 18,
           "files": [
+            "public/images/hero/brand-lifestyle/main.jpg",
+            "public/images/hero/brand-lifestyle.svg",
+            "public/images/hero/hero-1.jpg",
+            "public/images/hero/hero-2.jpg",
+            "public/images/hero/hero-3.jpg",
+            "public/images/hero/hero-desktop-alt.jpg",
+            "public/images/hero/hero-desktop.jpg",
+            "public/images/hero/hero-desktop.svg",
+            "public/images/hero/hero-mobile.jpg",
             "public/images/hero/hero-mobile.png",
-            "public/images/hero/hero.jpg"
+            "public/images/hero/hero-mobile.svg",
+            "public/images/hero/hero.jpg",
+            "public/images/hero/hero.svg",
+            "public/images/hero/khakishop-hero/main.jpg",
+            "public/images/hero/khakishop-hero.jpg",
+            "public/images/hero/khakishop-hero.svg",
+            "public/images/hero/main.jpg",
+            "public/images/hero/manage.jpg"
           ]
         },
         "landing": {
-          "count": 3,
+          "count": 23,
           "files": [
+            "public/images/landing/10.png",
+            "public/images/landing/8.png",
+            "public/images/landing/8_1.png",
+            "public/images/landing/8_2.png",
+            "public/images/landing/a29e2258-7f99-47ab-bdc4-effe520f79fb_1_105_c.jpeg",
+            "public/images/landing/a29e2258-7f99-47ab-bdc4-effe520f79fb_1_105_c_1.jpeg",
+            "public/images/landing/about-section.jpg",
+            "public/images/landing/brand-lifestyle.jpg",
             "public/images/landing/brand-lifestyle.png",
+            "public/images/landing/collection-overview.jpg",
             "public/images/landing/collection-overview.png",
-            "public/images/landing/hero-main.png"
+            "public/images/landing/contact-background.jpg",
+            "public/images/landing/hero-main/main.jpg",
+            "public/images/landing/hero-main.jpg",
+            "public/images/landing/hero-main.png",
+            "public/images/landing/hero-main.svg",
+            "public/images/landing/hero-mobile/main.jpg",
+            "public/images/landing/hero-mobile.svg",
+            "public/images/landing/landing-1.jpg",
+            "public/images/landing/landing-2.jpg",
+            "public/images/landing/landing-3.jpg",
+            "public/images/landing/main.jpg",
+            "public/images/landing/manage.jpg"
           ]
         },
         "midjourney": {
-          "count": 27,
+          "count": 15,
           "files": [
             "public/images/midjourney/1.png",
             "public/images/midjourney/10.png",
@@ -689,30 +1039,18 @@
             "public/images/midjourney/13.png",
             "public/images/midjourney/15.png",
             "public/images/midjourney/16.png",
-            "public/images/midjourney/17.png",
-            "public/images/midjourney/1749378835107yeubvb.png",
-            "public/images/midjourney/1749378850657h6d40e.png",
-            "public/images/midjourney/174937886604803zw6g.png",
-            "public/images/midjourney/18.png",
-            "public/images/midjourney/19.png",
             "public/images/midjourney/2.png",
-            "public/images/midjourney/20.png",
-            "public/images/midjourney/21.png",
-            "public/images/midjourney/22.png",
-            "public/images/midjourney/23.png",
-            "public/images/midjourney/24.png",
-            "public/images/midjourney/25.png",
-            "public/images/midjourney/26.png",
             "public/images/midjourney/3.png",
             "public/images/midjourney/4.png",
             "public/images/midjourney/6.png",
             "public/images/midjourney/7.png",
             "public/images/midjourney/8.png",
-            "public/images/midjourney/9.png"
+            "public/images/midjourney/9.png",
+            "public/images/midjourney/sample.jpg"
           ]
         },
         "motorized": {
-          "count": 45,
+          "count": 46,
           "files": [
             "public/images/motorized/ai-curtain-scheduler/detail-1.jpg",
             "public/images/motorized/ai-curtain-scheduler/detail-2.jpg",
@@ -726,6 +1064,7 @@
             "public/images/motorized/energy-saving-automation/detail-1.jpg",
             "public/images/motorized/energy-saving-automation/detail-2.jpg",
             "public/images/motorized/energy-saving-automation/main.jpg",
+            "public/images/motorized/main.jpg",
             "public/images/motorized/multi-room-control/detail-1.jpg",
             "public/images/motorized/multi-room-control/detail-2.jpg",
             "public/images/motorized/multi-room-control/main.jpg",
@@ -762,37 +1101,328 @@
           ]
         },
         "products": {
-          "count": 2,
+          "count": 109,
           "files": [
+            "public/images/products/accessories/curtain-rings.svg",
+            "public/images/products/accessories/holdbacks.svg",
+            "public/images/products/accessories/tiebacks.svg",
+            "public/images/products/accessories/tracks-rails.svg",
+            "public/images/products/accessories/valances.svg",
+            "public/images/products/aluminum-blind-main.svg",
+            "public/images/products/blind/aluminum-blind/detail.jpg",
+            "public/images/products/blind/aluminum-blind/detail.svg",
+            "public/images/products/blind/aluminum-blind/gallery-1.svg",
+            "public/images/products/blind/aluminum-blind/gallery-2.svg",
+            "public/images/products/blind/aluminum-blind/lifestyle.jpg",
+            "public/images/products/blind/aluminum-blind/lifestyle.svg",
+            "public/images/products/blind/aluminum-blind/main.jpg",
+            "public/images/products/blind/aluminum-blind/main.svg",
+            "public/images/products/blind/aluminum-blind/tech.jpg",
+            "public/images/products/blind/fabric-blind/detail.jpg",
+            "public/images/products/blind/fabric-blind/detail.svg",
+            "public/images/products/blind/fabric-blind/gallery-1.svg",
+            "public/images/products/blind/fabric-blind/gallery-2.svg",
+            "public/images/products/blind/fabric-blind/lifestyle.jpg",
+            "public/images/products/blind/fabric-blind/lifestyle.svg",
+            "public/images/products/blind/fabric-blind/main.jpg",
+            "public/images/products/blind/fabric-blind/main.svg",
+            "public/images/products/blind/fabric-blind/tech.jpg",
+            "public/images/products/blind/motorized-blind-system/detail.jpg",
+            "public/images/products/blind/motorized-blind-system/lifestyle.jpg",
+            "public/images/products/blind/motorized-blind-system/main.jpg",
+            "public/images/products/blind/motorized-blind-system/tech.jpg",
+            "public/images/products/blind/wood-blind/detail.jpg",
+            "public/images/products/blind/wood-blind/detail.svg",
+            "public/images/products/blind/wood-blind/gallery-1.svg",
+            "public/images/products/blind/wood-blind/gallery-2.svg",
+            "public/images/products/blind/wood-blind/lifestyle.jpg",
+            "public/images/products/blind/wood-blind/lifestyle.svg",
+            "public/images/products/blind/wood-blind/main.jpg",
+            "public/images/products/blind/wood-blind/main.svg",
+            "public/images/products/blind/wood-blind/tech.jpg",
+            "public/images/products/classic-curtain-main.svg",
+            "public/images/products/curtain/classic-curtain/detail.jpg",
+            "public/images/products/curtain/classic-curtain/detail.svg",
+            "public/images/products/curtain/classic-curtain/gallery-1.svg",
+            "public/images/products/curtain/classic-curtain/gallery-2.svg",
+            "public/images/products/curtain/classic-curtain/lifestyle.jpg",
+            "public/images/products/curtain/classic-curtain/lifestyle.svg",
+            "public/images/products/curtain/classic-curtain/main.jpg",
+            "public/images/products/curtain/classic-curtain/main.svg",
+            "public/images/products/curtain/classic-curtain/tech.jpg",
+            "public/images/products/curtain/linen-white/detail.svg",
+            "public/images/products/curtain/linen-white/gallery-1.svg",
+            "public/images/products/curtain/linen-white/gallery-2.svg",
+            "public/images/products/curtain/linen-white/lifestyle.svg",
+            "public/images/products/curtain/linen-white/main.svg",
+            "public/images/products/curtain/modern-curtain/detail.jpg",
+            "public/images/products/curtain/modern-curtain/detail.svg",
+            "public/images/products/curtain/modern-curtain/gallery-1.svg",
+            "public/images/products/curtain/modern-curtain/gallery-2.svg",
+            "public/images/products/curtain/modern-curtain/lifestyle.jpg",
+            "public/images/products/curtain/modern-curtain/lifestyle.svg",
+            "public/images/products/curtain/modern-curtain/main.jpg",
+            "public/images/products/curtain/modern-curtain/main.svg",
+            "public/images/products/curtain/modern-curtain/tech.jpg",
+            "public/images/products/curtain/motorized-curtain-system/detail.jpg",
+            "public/images/products/curtain/motorized-curtain-system/lifestyle.jpg",
+            "public/images/products/curtain/motorized-curtain-system/main.jpg",
+            "public/images/products/curtain/motorized-curtain-system/tech.jpg",
+            "public/images/products/curtain/pleats-ivory/detail.svg",
+            "public/images/products/curtain/pleats-ivory/gallery-1.svg",
+            "public/images/products/curtain/pleats-ivory/gallery-2.svg",
+            "public/images/products/curtain/pleats-ivory/lifestyle.svg",
+            "public/images/products/curtain/pleats-ivory/main.svg",
             "public/images/products/curtain/sheer-curtain/detail.jpg",
-            "public/images/products/curtain/sheer-curtain/lifestyle.jpg"
+            "public/images/products/curtain/sheer-curtain/gallery-1.svg",
+            "public/images/products/curtain/sheer-curtain/gallery-2.svg",
+            "public/images/products/curtain/sheer-curtain/lifestyle.jpg",
+            "public/images/products/curtain/sheer-curtain/main.jpg",
+            "public/images/products/curtain/sheer-curtain/main.svg",
+            "public/images/products/curtain/sheer-curtain/tech.jpg",
+            "public/images/products/eco-sheer/main.jpg",
+            "public/images/products/linen-elegance/main.jpg",
+            "public/images/products/main.jpg",
+            "public/images/products/manage.jpg",
+            "public/images/products/motorized/motorized-blind-system/detail.jpg",
+            "public/images/products/motorized/motorized-blind-system/detail.svg",
+            "public/images/products/motorized/motorized-blind-system/gallery-1.svg",
+            "public/images/products/motorized/motorized-blind-system/gallery-2.svg",
+            "public/images/products/motorized/motorized-blind-system/lifestyle.jpg",
+            "public/images/products/motorized/motorized-blind-system/lifestyle.svg",
+            "public/images/products/motorized/motorized-blind-system/main.jpg",
+            "public/images/products/motorized/motorized-blind-system/main.svg",
+            "public/images/products/motorized/motorized-blind-system/tech.jpg",
+            "public/images/products/motorized/motorized-curtain-system/detail.jpg",
+            "public/images/products/motorized/motorized-curtain-system/detail.svg",
+            "public/images/products/motorized/motorized-curtain-system/gallery-1.svg",
+            "public/images/products/motorized/motorized-curtain-system/gallery-2.svg",
+            "public/images/products/motorized/motorized-curtain-system/lifestyle.jpg",
+            "public/images/products/motorized/motorized-curtain-system/lifestyle.svg",
+            "public/images/products/motorized/motorized-curtain-system/main.jpg",
+            "public/images/products/motorized/motorized-curtain-system/main.svg",
+            "public/images/products/motorized/motorized-curtain-system/tech.jpg",
+            "public/images/products/motorized/smart-home-integration/detail.svg",
+            "public/images/products/motorized/smart-home-integration/gallery-1.svg",
+            "public/images/products/motorized/smart-home-integration/gallery-2.svg",
+            "public/images/products/motorized/smart-home-integration/lifestyle.svg",
+            "public/images/products/motorized/smart-home-integration/main.svg",
+            "public/images/products/products-1.jpg",
+            "public/images/products/products-2.jpg",
+            "public/images/products/products-3.jpg",
+            "public/images/products/sheer-curtain-main.svg",
+            "public/images/products/wood-blind-main.svg"
           ]
         },
         "projects": {
-          "count": 2,
+          "count": 12,
           "files": [
+            "public/images/projects/consultation-bg.svg",
+            "public/images/projects/main.jpg",
+            "public/images/projects/manage.jpg",
             "public/images/projects/our-projects-bg.jpg",
-            "public/images/projects/project-showcase.png"
+            "public/images/projects/our-projects-bg.svg",
+            "public/images/projects/portfolio-header.svg",
+            "public/images/projects/project-showcase.png",
+            "public/images/projects/project-showcase.svg",
+            "public/images/projects/projects-1.jpg",
+            "public/images/projects/projects-2.jpg",
+            "public/images/projects/projects-3.jpg",
+            "public/images/projects/residential-hanam-hillstate/main.jpg"
           ]
         },
         "references": {
-          "count": 15,
+          "count": 171,
           "files": [
+            "public/images/references/1.png",
+            "public/images/references/10.png",
+            "public/images/references/10_1.png",
+            "public/images/references/11.png",
+            "public/images/references/11_1.png",
+            "public/images/references/12.png",
+            "public/images/references/12_1.png",
+            "public/images/references/13.png",
+            "public/images/references/14.png",
+            "public/images/references/14_1.png",
+            "public/images/references/3.png",
+            "public/images/references/7.png",
+            "public/images/references/7_1.png",
+            "public/images/references/8.png",
+            "public/images/references/8_1.png",
+            "public/images/references/8_2.png",
+            "public/images/references/8_3.png",
+            "public/images/references/99.png",
+            "public/images/references/art-gallery-jongno/gallery-1.jpg",
+            "public/images/references/art-gallery-jongno/gallery-1.svg",
+            "public/images/references/art-gallery-jongno/gallery-2.jpg",
+            "public/images/references/art-gallery-jongno/gallery-2.svg",
+            "public/images/references/art-gallery-jongno/gallery-3.jpg",
+            "public/images/references/art-gallery-jongno/gallery-3.svg",
+            "public/images/references/art-gallery-jongno/main.jpg",
+            "public/images/references/art-gallery-jongno/main.png",
+            "public/images/references/blind-minimal-bedroom-1.jpg",
             "public/images/references/blind-minimal-bedroom-1.png",
+            "public/images/references/boutique-hotel-busan/before-after.jpg",
+            "public/images/references/boutique-hotel-busan/clinic-room.jpg",
+            "public/images/references/boutique-hotel-busan/complex-view.jpg",
+            "public/images/references/boutique-hotel-busan/detail-1.jpg",
+            "public/images/references/boutique-hotel-busan/detail-2.jpg",
+            "public/images/references/boutique-hotel-busan/main.jpg",
+            "public/images/references/boutique-hotel-busan/reading-room.jpg",
+            "public/images/references/boutique-hotel-busan/suite-view.jpg",
+            "public/images/references/boutique-hotel-busan/workspace.jpg",
+            "public/images/references/classic-cafe-hongdae/gallery-1.jpg",
+            "public/images/references/classic-cafe-hongdae/gallery-1.svg",
+            "public/images/references/classic-cafe-hongdae/gallery-2.jpg",
+            "public/images/references/classic-cafe-hongdae/gallery-2.svg",
+            "public/images/references/classic-cafe-hongdae/gallery-3.jpg",
+            "public/images/references/classic-cafe-hongdae/gallery-3.svg",
+            "public/images/references/classic-cafe-hongdae/main.jpg",
             "public/images/references/classic-cafe-hongdae/main.png",
+            "public/images/references/classic-cafe-main.svg",
+            "public/images/references/contemporary-house-goyang/gallery-1.jpg",
+            "public/images/references/contemporary-house-goyang/gallery-1.svg",
+            "public/images/references/contemporary-house-goyang/gallery-2.jpg",
+            "public/images/references/contemporary-house-goyang/gallery-2.svg",
+            "public/images/references/contemporary-house-goyang/gallery-3.jpg",
+            "public/images/references/contemporary-house-goyang/gallery-3.svg",
+            "public/images/references/contemporary-house-goyang/main.jpg",
             "public/images/references/contemporary-house-goyang/main.png",
+            "public/images/references/curtain-modern-livingroom-1.jpg",
             "public/images/references/curtain-modern-livingroom-1.png",
+            "public/images/references/curtain-modern-livingroom-2.jpg",
+            "public/images/references/curtain-modern-livingroom-3.jpg",
+            "public/images/references/hotel-lobby-seoul.jpg",
+            "public/images/references/industrial-lobby-yongsan/gallery-1.jpg",
+            "public/images/references/industrial-lobby-yongsan/gallery-1.svg",
+            "public/images/references/industrial-lobby-yongsan/gallery-2.jpg",
+            "public/images/references/industrial-lobby-yongsan/gallery-2.svg",
+            "public/images/references/industrial-lobby-yongsan/gallery-3.jpg",
+            "public/images/references/industrial-lobby-yongsan/gallery-3.svg",
+            "public/images/references/industrial-lobby-yongsan/main.jpg",
             "public/images/references/industrial-lobby-yongsan/main.png",
+            "public/images/references/luxury-penthouse-seocho/gallery-1.jpg",
+            "public/images/references/luxury-penthouse-seocho/gallery-1.svg",
+            "public/images/references/luxury-penthouse-seocho/gallery-2.jpg",
+            "public/images/references/luxury-penthouse-seocho/gallery-2.svg",
+            "public/images/references/luxury-penthouse-seocho/gallery-3.jpg",
+            "public/images/references/luxury-penthouse-seocho/gallery-3.svg",
+            "public/images/references/luxury-penthouse-seocho/main.jpg",
             "public/images/references/luxury-penthouse-seocho/main.png",
-            "public/images/references/minimal-residence-bundang/gallery-1.png",
+            "public/images/references/luxury-residence-gangnam/before-after.jpg",
+            "public/images/references/luxury-residence-gangnam/clinic-room.jpg",
+            "public/images/references/luxury-residence-gangnam/complex-view.jpg",
+            "public/images/references/luxury-residence-gangnam/detail-1.jpg",
+            "public/images/references/luxury-residence-gangnam/detail-2.jpg",
+            "public/images/references/luxury-residence-gangnam/main.jpg",
+            "public/images/references/luxury-residence-gangnam/reading-room.jpg",
+            "public/images/references/luxury-residence-gangnam/suite-view.jpg",
+            "public/images/references/luxury-residence-gangnam/workspace.jpg",
+            "public/images/references/main.jpg",
+            "public/images/references/manage.jpg",
+            "public/images/references/medical-center-ilsan/before-after.jpg",
+            "public/images/references/medical-center-ilsan/clinic-room.jpg",
+            "public/images/references/medical-center-ilsan/complex-view.jpg",
+            "public/images/references/medical-center-ilsan/detail-1.jpg",
+            "public/images/references/medical-center-ilsan/detail-2.jpg",
+            "public/images/references/medical-center-ilsan/main.jpg",
+            "public/images/references/medical-center-ilsan/reading-room.jpg",
+            "public/images/references/medical-center-ilsan/suite-view.jpg",
+            "public/images/references/medical-center-ilsan/workspace.jpg",
+            "public/images/references/minimal-residence-bundang/gallery-1.jpg",
+            "public/images/references/minimal-residence-bundang/gallery-1.svg",
+            "public/images/references/minimal-residence-bundang/gallery-2.jpg",
+            "public/images/references/minimal-residence-bundang/gallery-2.svg",
+            "public/images/references/minimal-residence-bundang/gallery-3.jpg",
+            "public/images/references/minimal-residence-bundang/gallery-3.svg",
+            "public/images/references/minimal-residence-bundang/main.jpg",
             "public/images/references/minimal-residence-bundang/main.png",
+            "public/images/references/minimal-residence-main.svg",
+            "public/images/references/modern-clinic-seongnam/gallery-1.jpg",
+            "public/images/references/modern-clinic-seongnam/gallery-1.svg",
+            "public/images/references/modern-clinic-seongnam/gallery-2.jpg",
+            "public/images/references/modern-clinic-seongnam/gallery-2.svg",
+            "public/images/references/modern-clinic-seongnam/gallery-3.jpg",
+            "public/images/references/modern-clinic-seongnam/gallery-3.svg",
+            "public/images/references/modern-clinic-seongnam/main.jpg",
+            "public/images/references/modern-clinic-seongnam/main.png",
             "public/images/references/modern-office-gangnam/gallery-1.jpg",
+            "public/images/references/modern-office-gangnam/gallery-1.svg",
             "public/images/references/modern-office-gangnam/gallery-2.jpg",
+            "public/images/references/modern-office-gangnam/gallery-2.svg",
+            "public/images/references/modern-office-gangnam/gallery-3.jpg",
+            "public/images/references/modern-office-gangnam/gallery-3.svg",
             "public/images/references/modern-office-gangnam/main.jpg",
             "public/images/references/modern-office-gangnam/main.png",
+            "public/images/references/modern-office-main.svg",
+            "public/images/references/modern-office-seoul/before-after.jpg",
+            "public/images/references/modern-office-seoul/clinic-room.jpg",
+            "public/images/references/modern-office-seoul/complex-view.jpg",
+            "public/images/references/modern-office-seoul/detail-1.jpg",
+            "public/images/references/modern-office-seoul/detail-2.jpg",
+            "public/images/references/modern-office-seoul/main.jpg",
+            "public/images/references/modern-office-seoul/reading-room.jpg",
+            "public/images/references/modern-office-seoul/suite-view.jpg",
+            "public/images/references/modern-office-seoul/workspace.jpg",
             "public/images/references/motorized-luxury-office-1/main.png",
+            "public/images/references/motorized-smart-livingroom-1.jpg",
             "public/images/references/motorized-smart-livingroom-1.png",
-            "public/images/references/scandinavian-apartment-mapo/main.png"
+            "public/images/references/office-tower-incheon.jpg",
+            "public/images/references/premium-apartment-songdo/before-after.jpg",
+            "public/images/references/premium-apartment-songdo/clinic-room.jpg",
+            "public/images/references/premium-apartment-songdo/complex-view.jpg",
+            "public/images/references/premium-apartment-songdo/detail-1.jpg",
+            "public/images/references/premium-apartment-songdo/detail-2.jpg",
+            "public/images/references/premium-apartment-songdo/main.jpg",
+            "public/images/references/premium-apartment-songdo/reading-room.jpg",
+            "public/images/references/premium-apartment-songdo/suite-view.jpg",
+            "public/images/references/premium-apartment-songdo/workspace.jpg",
+            "public/images/references/references-1.jpg",
+            "public/images/references/references-2.jpg",
+            "public/images/references/references-3.jpg",
+            "public/images/references/residential-complex.jpg",
+            "public/images/references/restaurant-busan.jpg",
+            "public/images/references/scandinavian-apartment-mapo/gallery-1.jpg",
+            "public/images/references/scandinavian-apartment-mapo/gallery-1.svg",
+            "public/images/references/scandinavian-apartment-mapo/gallery-2.jpg",
+            "public/images/references/scandinavian-apartment-mapo/gallery-2.svg",
+            "public/images/references/scandinavian-apartment-mapo/gallery-3.jpg",
+            "public/images/references/scandinavian-apartment-mapo/gallery-3.svg",
+            "public/images/references/scandinavian-apartment-mapo/main.jpg",
+            "public/images/references/scandinavian-apartment-mapo/main.png",
+            "public/images/references/showroom-display.jpg",
+            "public/images/references/test/5.png",
+            "public/images/references/test/8.png",
+            "public/images/references/test/9.png",
+            "public/images/references/test/98.png",
+            "public/images/references/test/9_1.png",
+            "public/images/references/university-library-daejeon/before-after.jpg",
+            "public/images/references/university-library-daejeon/clinic-room.jpg",
+            "public/images/references/university-library-daejeon/complex-view.jpg",
+            "public/images/references/university-library-daejeon/detail-1.jpg",
+            "public/images/references/university-library-daejeon/detail-2.jpg",
+            "public/images/references/university-library-daejeon/main.jpg",
+            "public/images/references/university-library-daejeon/reading-room.jpg",
+            "public/images/references/university-library-daejeon/suite-view.jpg",
+            "public/images/references/university-library-daejeon/workspace.jpg"
+          ]
+        },
+        "test": {
+          "count": 13,
+          "files": [
+            "public/images/test/test/11.png",
+            "public/images/test/test/11_1.png",
+            "public/images/test/test/6.png",
+            "public/images/test/test/test1.jpg",
+            "public/images/test/test/test1_1.jpg",
+            "public/images/test/test/test1_2.jpg",
+            "public/images/test/test/test1_3.jpg",
+            "public/images/test/test/test1_4.jpg",
+            "public/images/test/test/test2.png",
+            "public/images/test/test/test2_1.png",
+            "public/images/test/test/test2_2.png",
+            "public/images/test/test/test2_3.png",
+            "public/images/test/test/test2_4.png"
           ]
         },
         "test-final": {
@@ -804,28 +1434,32 @@
       },
       "missingImages": [
         {
-          "reference": "/images/${categoryKey}`}",
-          "file": "src/app/[locale]/admin/images/[category]/[subcategory]/page.tsx"
+          "reference": "/images/${category}/${file.name}`,",
+          "file": "src/app/[locale]/admin/images/hooks/useImageManager.tsx"
         },
         {
-          "reference": "/images/${categoryKey}`}",
-          "file": "src/app/[locale]/admin/images/[category]/[subcategory]/page.tsx"
+          "reference": "/images/[type]/[name]/[subcategory]",
+          "file": "src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx"
         },
         {
-          "reference": "/images/${categoryKey}/${subcategory.key}`}",
-          "file": "src/app/[locale]/admin/images/[category]/page.tsx"
+          "reference": "/images/manage/${routeType}/${categoryKey}`}",
+          "file": "src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx"
         },
         {
-          "reference": "/images/${categoryKey}/manage`}",
-          "file": "src/app/[locale]/admin/images/[category]/page.tsx"
+          "reference": "/images/manage/${routeType}/${categoryKey}`}",
+          "file": "src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx"
         },
         {
-          "reference": "/images/blind/premium-venetian-collection/blind-premium-venetian-collection-1.jpg",
-          "file": "src/app/[locale]/blind/page.tsx"
+          "reference": "/images/manage/category/${categoryKey}`);",
+          "file": "src/app/[locale]/admin/images/page.tsx"
         },
         {
-          "reference": "/images/motorized/smart-curtain-system-pro/motorized-smart-curtain-system-pro-1.jpg",
-          "file": "src/app/[locale]/motorized/page.tsx"
+          "reference": "/images/reference/${projectSlug}/main.jpg`}",
+          "file": "src/app/[locale]/reference/[slug]/ImageGallery.tsx"
+        },
+        {
+          "reference": "/images/reference/${projectSlug}/main.jpg`}",
+          "file": "src/app/[locale]/reference/[slug]/ImageGallery.tsx"
         },
         {
           "reference": "/images/references/${projectSlug}/main.jpg`}",
@@ -834,33 +1468,13 @@
         {
           "reference": "/images/references/${projectSlug}/main.jpg`}",
           "file": "src/app/[locale]/references/[slug]/ImageGallery.tsx"
-        },
-        {
-          "reference": "/images/category/filename.jpg",
-          "file": "src/app/api/delete-image/route.ts"
-        },
-        {
-          "reference": "/images/category/filename.jpg",
-          "file": "src/app/api/delete-image/route.ts"
         },
         {
           "reference": "/images/${image.metadata?.category}/${image.sourceFile}`}",
           "file": "src/components/admin/AdminImageEditPanel.tsx"
         },
         {
-          "reference": "/images/placeholder-dev.jpg",
-          "file": "src/config/environment.ts"
-        },
-        {
-          "reference": "/images/placeholder.jpg",
-          "file": "src/config/environment.ts"
-        },
-        {
-          "reference": "/images/placeholder-test.jpg",
-          "file": "src/config/environment.ts"
-        },
-        {
-          "reference": "/images/blinds/[slug]/",
+          "reference": "/images/blind/[slug]/",
           "file": "src/data/blind.ts"
         },
         {
@@ -872,280 +1486,24 @@
           "file": "src/data/motorized.ts"
         },
         {
-          "reference": "/images/motorized/smart-curtain-system-pro/motorized-smart-curtain-system-pro-1.jpg",
-          "file": "src/data/motorized.ts"
-        },
-        {
-          "reference": "/images/motorized/motorized-venetian-deluxe/motorized-motorized-venetian-deluxe-1.jpg",
-          "file": "src/data/motorized.ts"
-        },
-        {
-          "reference": "/images/motorized/ai-home-integration-suite/motorized-ai-home-integration-suite-1.jpg",
-          "file": "src/data/motorized.ts"
-        },
-        {
-          "reference": "/images/motorized/voice-control-roller-system/motorized-voice-control-roller-system-1.jpg",
-          "file": "src/data/motorized.ts"
-        },
-        {
-          "reference": "/images/motorized/smartphone-vertical-elite/motorized-smartphone-vertical-elite-1.jpg",
-          "file": "src/data/motorized.ts"
-        },
-        {
-          "reference": "/images/motorized/solar-powered-eco-system/motorized-solar-powered-eco-system-1.jpg",
-          "file": "src/data/motorized.ts"
-        },
-        {
-          "reference": "/images/references/modern-office-gangnam/gallery-1.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/modern-office-gangnam/gallery-2.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/modern-office-gangnam/gallery-3.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/minimal-residence-bundang/gallery-1.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/minimal-residence-bundang/gallery-2.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/minimal-residence-bundang/gallery-3.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/classic-cafe-hongdae/gallery-1.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/classic-cafe-hongdae/gallery-2.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/classic-cafe-hongdae/gallery-3.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/contemporary-house-goyang/gallery-1.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/contemporary-house-goyang/gallery-2.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/contemporary-house-goyang/gallery-3.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/scandinavian-apartment-mapo/gallery-1.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/scandinavian-apartment-mapo/gallery-2.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/scandinavian-apartment-mapo/gallery-3.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/industrial-lobby-yongsan/gallery-1.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/industrial-lobby-yongsan/gallery-2.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/industrial-lobby-yongsan/gallery-3.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/luxury-penthouse-seocho/gallery-1.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/luxury-penthouse-seocho/gallery-2.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/luxury-penthouse-seocho/gallery-3.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/modern-clinic-seongnam/main.png",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/modern-clinic-seongnam/gallery-1.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/modern-clinic-seongnam/gallery-2.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/modern-clinic-seongnam/gallery-3.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/art-gallery-jongno/main.png",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/art-gallery-jongno/gallery-1.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/art-gallery-jongno/gallery-2.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
-          "reference": "/images/references/art-gallery-jongno/gallery-3.svg",
-          "file": "src/data/projects.ts"
-        },
-        {
           "reference": "/images/references/[slug]/",
           "file": "src/data/references.ts"
         },
         {
-          "reference": "/images/references/luxury-residence-gangnam/main.jpg",
-          "file": "src/data/references.ts"
+          "reference": "/images/blind/[slug]/",
+          "file": "src/data.backup/blind.ts"
         },
         {
-          "reference": "/images/references/luxury-residence-gangnam/main.jpg",
-          "file": "src/data/references.ts"
+          "reference": "/images/curtains/[slug]/",
+          "file": "src/data.backup/curtain.ts"
         },
         {
-          "reference": "/images/references/luxury-residence-gangnam/detail-1.jpg",
-          "file": "src/data/references.ts"
+          "reference": "/images/motorized/[slug]/",
+          "file": "src/data.backup/motorized.ts"
         },
         {
-          "reference": "/images/references/luxury-residence-gangnam/detail-2.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/luxury-residence-gangnam/before-after.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/modern-office-seoul/main.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/modern-office-seoul/main.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/modern-office-seoul/detail-1.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/modern-office-seoul/detail-2.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/modern-office-seoul/workspace.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/boutique-hotel-busan/main.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/boutique-hotel-busan/main.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/boutique-hotel-busan/detail-1.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/boutique-hotel-busan/detail-2.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/boutique-hotel-busan/suite-view.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/medical-center-ilsan/main.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/medical-center-ilsan/main.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/medical-center-ilsan/detail-1.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/medical-center-ilsan/detail-2.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/medical-center-ilsan/clinic-room.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/university-library-daejeon/main.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/university-library-daejeon/main.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/university-library-daejeon/detail-1.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/university-library-daejeon/detail-2.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/university-library-daejeon/reading-room.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/premium-apartment-songdo/main.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/premium-apartment-songdo/main.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/premium-apartment-songdo/detail-1.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/premium-apartment-songdo/detail-2.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/references/premium-apartment-songdo/complex-view.jpg",
-          "file": "src/data/references.ts"
-        },
-        {
-          "reference": "/images/category/subcategory/)",
-          "file": "src/utils/constants/categories.ts"
-        },
-        {
-          "reference": "/images/${category.key}`,",
-          "file": "src/utils/constants/categories.ts"
-        },
-        {
-          "reference": "/images/${category.key}/${subcategory.key}`,",
-          "file": "src/utils/constants/categories.ts"
+          "reference": "/images/references/[slug]/",
+          "file": "src/data.backup/references.ts"
         },
         {
           "reference": "/images/hero/hero.jpg`",
@@ -1154,10 +1512,6 @@
         {
           "reference": "/images/midjourney/${imageId}`;",
           "file": "src/utils/imageMap.ts"
-        },
-        {
-          "reference": "/images/category/slug/",
-          "file": "src/utils/imagePromptGenerator.ts"
         },
         {
           "reference": "/images/references/${slug}/main.jpg`]",
@@ -1224,14 +1578,6 @@
           "file": "src/utils/imagePromptGenerator.ts"
         },
         {
-          "reference": "/images/landing/hero-main.jpg",
-          "file": "src/utils/imagePromptGenerator.ts"
-        },
-        {
-          "reference": "/images/landing/hero-main.jpg",
-          "file": "src/utils/imagePromptGenerator.ts"
-        },
-        {
           "reference": "/images/landing/hero-mobile.jpg",
           "file": "src/utils/imagePromptGenerator.ts"
         },
@@ -1245,18 +1591,10 @@
         },
         {
           "reference": "/images/hero/brand-lifestyle.jpg",
-          "file": "src/utils/imagePromptGenerator.ts"
-        },
-        {
-          "reference": "/images/products/curtain/sheer-curtain/main.jpg",
           "file": "src/utils/imagePromptGenerator.ts"
         },
         {
           "reference": "/images/products/motorized/smart-home-integration/main.jpg",
-          "file": "src/utils/imagePromptGenerator.ts"
-        },
-        {
-          "reference": "/images/landing/hero-main.jpg",
           "file": "src/utils/imagePromptGenerator.ts"
         },
         {
@@ -1274,10 +1612,6 @@
         {
           "reference": "/images/motorized/${slug}`;",
           "file": "src/utils/imageUtils.ts"
-        },
-        {
-          "reference": "/images/hero/khakishop-hero.jpg",
-          "file": "src/utils/seoMetadata.ts"
         }
       ],
       "brokenReferences": [],
@@ -1285,13 +1619,14 @@
     },
     "buildAnalysis": {
       "nextConfigExists": true,
-      "buildStatus": "SUCCESS",
-      "buildErrors": [],
+      "buildStatus": "FAILED",
+      "buildErrors": [
+        "Command failed: npm run build\n ⚠ Compiled with warnings\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getSubcategoryByKey' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getSubcategoryByKey').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getCategoryBreadcrumb' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getCategoryBreadcrumb').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getCategoryFolderPath' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getCategoryFolderPath').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getCategoryPathDisplayName' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getCategoryPathDisplayName').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/utils/imageMap.ts\nAttempted import error: 'CATEGORY_METADATA_TEMPLATES' is not exported from './constants/categories' (imported as 'CATEGORY_METADATA_TEMPLATES').\n\nImport trace for requested module:\n./src/utils/imageMap.ts\n./src/components/ImageManagerCard.tsx\n./src/components/admin/DraggableImageGrid.tsx\n./src/components/admin/AdminImagesBrowser.tsx\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/utils/imageMap.ts\nAttempted import error: 'CATEGORY_METADATA_TEMPLATES' is not exported from './constants/categories' (imported as 'CATEGORY_METADATA_TEMPLATES').\n\nImport trace for requested module:\n./src/utils/imageMap.ts\n./src/components/ImageManagerCard.tsx\n./src/components/admin/DraggableImageGrid.tsx\n./src/components/admin/AdminImagesBrowser.tsx\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/utils/imageMap.ts\nAttempted import error: 'getCategoryPriority' is not exported from './constants/categories' (imported as 'getGlobalCategoryPriority').\n\nImport trace for requested module:\n./src/utils/imageMap.ts\n./src/components/ImageManagerCard.tsx\n./src/components/admin/DraggableImageGrid.tsx\n./src/components/admin/AdminImagesBrowser.tsx\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getSubcategoryByKey' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getSubcategoryByKey').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getCategoryBreadcrumb' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getCategoryBreadcrumb').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getCategoryFolderPath' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getCategoryFolderPath').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getCategoryPathDisplayName' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getCategoryPathDisplayName').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/utils/imageMap.ts\nAttempted import error: 'CATEGORY_METADATA_TEMPLATES' is not exported from './constants/categories' (imported as 'CATEGORY_METADATA_TEMPLATES').\n\nImport trace for requested module:\n./src/utils/imageMap.ts\n./src/components/ImageManagerCard.tsx\n./src/components/admin/DraggableImageGrid.tsx\n./src/components/admin/AdminImagesBrowser.tsx\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/utils/imageMap.ts\nAttempted import error: 'CATEGORY_METADATA_TEMPLATES' is not exported from './constants/categories' (imported as 'CATEGORY_METADATA_TEMPLATES').\n\nImport trace for requested module:\n./src/utils/imageMap.ts\n./src/components/ImageManagerCard.tsx\n./src/components/admin/DraggableImageGrid.tsx\n./src/components/admin/AdminImagesBrowser.tsx\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/utils/imageMap.ts\nAttempted import error: 'getCategoryPriority' is not exported from './constants/categories' (imported as 'getGlobalCategoryPriority').\n\nImport trace for requested module:\n./src/utils/imageMap.ts\n./src/components/ImageManagerCard.tsx\n./src/components/admin/DraggableImageGrid.tsx\n./src/components/admin/AdminImagesBrowser.tsx\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\nFailed to compile.\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx:13:3\nType error: '\"../../../../../../../../utils/constants/categories\"' has no exported member named 'getSubcategoryByKey'. Did you mean 'getCategoryByKey'?\n\n\u001b[0m \u001b[90m 11 |\u001b[39m \u001b[36mimport\u001b[39m { \u001b[0m\n\u001b[0m \u001b[90m 12 |\u001b[39m   getCategoryByKey\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   getSubcategoryByKey\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 14 |\u001b[39m   getCategoryBreadcrumb\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 15 |\u001b[39m   getCategoryFolderPath\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   getCategoryPathDisplayName \u001b[0m\n"
+      ],
       "buildWarnings": [],
       "cacheStatus": "EXISTS",
-      "configSize": 6723,
-      "cacheSize": 592336188,
-      "buildOutput": "\n> khakishop@0.1.0 build\n> next build\n\n   ▲ Next.js 14.1.3\n   - Experiments (use at your own risk):\n     · optimizeCss\n\n   Creating an optimized production build ...\n ✓ Compiled successfully\n   Linting and checking validity of types ...\n\n./src/app/[locale]/admin/images/page.tsx\n177:6  Warning: React Hook useCallback has a missing dependency: 'loadImages'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps\n\n./src/lib/performance.tsx\n154:6  Warning: React Hook useMemo has a missing dependency: 'filterFn'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps\n154:20  Warning: React Hook useMemo has a spread element in its dependency array. This means we can't statically verify whether you've passed the correct dependencies.  react-hooks/exhaustive-deps\n\ninfo  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules\n   Collecting page data ...\n   Generating static pages (0/11) ...\n\r   Generating static pages (2/11) \r\n\r   Generating static pages (5/11) \r\n\r   Generating static pages (8/11) \r\nTime 5.326695\nTime 5.3799\n\r ✓ Generating static pages (11/11) \n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                                          Size     First Load JS\n┌ ○ /                                                134 B           186 kB\n├ ○ /_not-found                                      0 B                0 B\n├ λ /[locale]                                        133 B           186 kB\n├ λ /[locale]/about                                  1.93 kB         188 kB\n├ λ /[locale]/admin                                  2.73 kB         189 kB\n├ λ /[locale]/admin/images                           4.58 kB         191 kB\n├ λ /[locale]/admin/images/[category]                1.77 kB         188 kB\n├ λ /[locale]/admin/images/[category]/[subcategory]  2.36 kB         188 kB\n├ λ /[locale]/admin/images/blind                     544 B           187 kB\n├ λ /[locale]/admin/images/motorized                 555 B           187 kB\n├ λ /[locale]/blind                                  5.15 kB         191 kB\n├ ● /[locale]/blind/[slug]                           3.87 kB         190 kB\n├ λ /[locale]/blog                                   134 B           186 kB\n├ λ /[locale]/collection                             2.95 kB         189 kB\n├ ● /[locale]/collection/[slug]                      133 B           186 kB\n├ λ /[locale]/contact                                2.36 kB         188 kB\n├ λ /[locale]/curtain                                5.79 kB         192 kB\n├ ● /[locale]/curtain/[slug]                         3.69 kB         190 kB\n├ λ /[locale]/error-test                             1.06 kB         187 kB\n├ λ /[locale]/landing                                2.48 kB         189 kB\n├ λ /[locale]/motorized                              5.42 kB         192 kB\n├ ● /[locale]/motorized/[slug]                       4.02 kB         190 kB\n├ ● /[locale]/posts/[slug]                           134 B           186 kB\n├ λ /[locale]/products                               3.58 kB         190 kB\n├ ● /[locale]/products/[slug]                        134 B           186 kB\n├ λ /[locale]/project                                2.29 kB         188 kB\n├ ● /[locale]/project/[slug]                         134 B           186 kB\n├ λ /[locale]/references                             4.12 kB         190 kB\n├ ● /[locale]/references/[slug]                      1.8 kB          188 kB\n├ λ /api/delete-image                                0 B                0 B\n├ λ /api/projects                                    0 B                0 B\n├ λ /api/reorder-images                              0 B                0 B\n├ λ /api/restore-images                              0 B                0 B\n├ λ /api/sync-images                                 0 B                0 B\n├ λ /api/upload-image                                0 B                0 B\n└ ○ /test                                            134 B           186 kB\n+ First Load JS shared by all                        186 kB\n  ├ chunks/69-ba20eef3560f5697.js                    29 kB\n  ├ chunks/commons-c6ccd16a0dfb0db9.js               102 kB\n  ├ chunks/e346fb70-f29cb60112a53c43.js              53.4 kB\n  └ other shared chunks (total)                      2.09 kB\n\n\nƒ Middleware                                         26.9 kB\n\n○  (Static)   prerendered as static content\n●  (SSG)      prerendered as static HTML (uses getStaticProps)\nλ  (Dynamic)  server-rendered on demand using Node.js\n\n\n> khakishop@0.1.0 postbuild\n> next-sitemap\n\n✨ [next-sitemap] Loading next-sitemap config: file:///Users/kiholee/Projects/khakishop-web/next-sitemap.config.js\n✅ [next-sitemap] Generation completed\n┌───────────────┬────────┐\n│ (index)       │ Values │\n├───────────────┼────────┤\n│ indexSitemaps │ 0      │\n│ sitemaps      │ 1      │\n└───────────────┴────────┘\n-----------------------------------------------------\n SITEMAPS \n-----------------------------------------------------\n\n   ○ https://khakishop.kr/sitemap.xml\n\n\n"
+      "configSize": 7410,
+      "cacheSize": 412159447
     },
     "dependencyAnalysis": {
       "nodeModulesExists": true,
@@ -1301,23 +1636,33 @@
       "auditError": "Command failed: npm audit --json"
     },
     "commonIssues": {
-      "portConflicts": [],
-      "environmentIssues": [],
+      "portConflicts": [
+        "포트 3000이 사용 중입니다"
+      ],
+      "environmentIssues": [
+        ".env.local 파일 존재"
+      ],
       "configurationIssues": []
     },
     "claudeReport": {
       "executiveSummary": {
         "overallStatus": "CRITICAL",
-        "totalIssues": 120,
-        "criticalIssues": 119,
-        "warnings": 0,
+        "totalIssues": 49,
+        "criticalIssues": 47,
+        "warnings": 1,
         "suggestions": 1,
         "recommendation": "즉시 조치가 필요한 심각한 문제가 있습니다. 빌드 및 실행이 불가능할 수 있습니다."
       },
-      "quickFixes": [],
+      "quickFixes": [
+        {
+          "issue": "Build failure",
+          "command": "rm -rf .next && npm run build",
+          "description": "빌드 캐시 정리 후 재빌드"
+        }
+      ],
       "detailedAnalysis": {
         "fileStructure": {
-          "totalFiles": 67208,
+          "totalFiles": 72396,
           "directories": [
             {
               "name": "app",
@@ -1329,6 +1674,12 @@
                   "type": "directory",
                   "path": "src/app/[locale]",
                   "children": [
+                    {
+                      "name": "(auth)",
+                      "type": "directory",
+                      "path": "src/app/[locale]/(auth)",
+                      "children": []
+                    },
                     {
                       "name": "about",
                       "type": "directory",
@@ -1378,6 +1729,12 @@
                       "children": []
                     },
                     {
+                      "name": "gallery",
+                      "type": "directory",
+                      "path": "src/app/[locale]/gallery",
+                      "children": []
+                    },
+                    {
                       "name": "landing",
                       "type": "directory",
                       "path": "src/app/[locale]/landing",
@@ -1408,6 +1765,18 @@
                       "children": []
                     },
                     {
+                      "name": "projects",
+                      "type": "directory",
+                      "path": "src/app/[locale]/projects",
+                      "children": []
+                    },
+                    {
+                      "name": "reference",
+                      "type": "directory",
+                      "path": "src/app/[locale]/reference",
+                      "children": []
+                    },
+                    {
                       "name": "references",
                       "type": "directory",
                       "path": "src/app/[locale]/references",
@@ -1421,9 +1790,27 @@
                   "path": "src/app/api",
                   "children": [
                     {
+                      "name": "admin",
+                      "type": "directory",
+                      "path": "src/app/api/admin",
+                      "children": []
+                    },
+                    {
+                      "name": "auth",
+                      "type": "directory",
+                      "path": "src/app/api/auth",
+                      "children": []
+                    },
+                    {
                       "name": "delete-image",
                       "type": "directory",
                       "path": "src/app/api/delete-image",
+                      "children": []
+                    },
+                    {
+                      "name": "products",
+                      "type": "directory",
+                      "path": "src/app/api/products",
                       "children": []
                     },
                     {
@@ -1451,6 +1838,12 @@
                       "children": []
                     },
                     {
+                      "name": "unified-data",
+                      "type": "directory",
+                      "path": "src/app/api/unified-data",
+                      "children": []
+                    },
+                    {
                       "name": "upload-image",
                       "type": "directory",
                       "path": "src/app/api/upload-image",
@@ -1462,6 +1855,12 @@
                   "name": "test",
                   "type": "directory",
                   "path": "src/app/test",
+                  "children": []
+                },
+                {
+                  "name": "test-sync",
+                  "type": "directory",
+                  "path": "src/app/test-sync",
                   "children": []
                 }
               ]
@@ -1513,7 +1912,27 @@
               "name": "data",
               "type": "directory",
               "path": "src/data",
-              "children": []
+              "children": [
+                {
+                  "name": "project-metadata",
+                  "type": "directory",
+                  "path": "src/data/project-metadata",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "data.backup",
+              "type": "directory",
+              "path": "src/data.backup",
+              "children": [
+                {
+                  "name": "project-metadata",
+                  "type": "directory",
+                  "path": "src/data.backup/project-metadata",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "hooks",
@@ -1550,56 +1969,57 @@
           "keyFiles": {
             "package.json": {
               "exists": true,
-              "size": 9486,
-              "modified": "2025-06-14T04:04:30.726Z"
+              "size": 11628,
+              "modified": "2025-06-30T05:31:07.492Z"
             },
             "next.config.js": {
               "exists": true,
-              "size": 7399,
-              "modified": "2025-06-13T04:04:23.935Z"
+              "size": 8134,
+              "modified": "2025-06-30T05:29:57.352Z"
             },
             "tsconfig.json": {
               "exists": true,
               "size": 1097,
-              "modified": "2025-06-12T07:10:58.817Z"
+              "modified": "2025-06-30T05:31:07.555Z"
             },
             "tailwind.config.ts": {
               "exists": true,
               "size": 713,
-              "modified": "2025-06-04T09:16:45.822Z"
+              "modified": "2025-06-30T05:31:06.138Z"
             },
             "eslint.config.mjs": {
               "exists": true,
               "size": 393,
-              "modified": "2025-06-04T09:16:20.432Z"
+              "modified": "2025-06-30T05:31:10.411Z"
             },
             "src/app/layout.tsx": {
               "exists": true,
               "size": 5394,
-              "modified": "2025-06-09T11:28:24.739Z"
+              "modified": "2025-06-30T05:31:10.558Z"
             },
             "src/app/globals.css": {
               "exists": true,
-              "size": 59,
-              "modified": "2025-06-04T09:16:45.819Z"
+              "size": 1801,
+              "modified": "2025-06-30T05:31:10.584Z"
             },
             "public/images": {
               "exists": true,
-              "size": 608,
-              "modified": "2025-06-10T07:58:18.317Z"
+              "size": 896,
+              "modified": "2025-06-30T05:31:07.424Z"
             }
           },
           "missingFiles": []
         },
         "buildSystem": {
           "nextConfigExists": true,
-          "buildStatus": "SUCCESS",
-          "buildErrors": [],
+          "buildStatus": "FAILED",
+          "buildErrors": [
+            "Command failed: npm run build\n ⚠ Compiled with warnings\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getSubcategoryByKey' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getSubcategoryByKey').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getCategoryBreadcrumb' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getCategoryBreadcrumb').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getCategoryFolderPath' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getCategoryFolderPath').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getCategoryPathDisplayName' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getCategoryPathDisplayName').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/utils/imageMap.ts\nAttempted import error: 'CATEGORY_METADATA_TEMPLATES' is not exported from './constants/categories' (imported as 'CATEGORY_METADATA_TEMPLATES').\n\nImport trace for requested module:\n./src/utils/imageMap.ts\n./src/components/ImageManagerCard.tsx\n./src/components/admin/DraggableImageGrid.tsx\n./src/components/admin/AdminImagesBrowser.tsx\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/utils/imageMap.ts\nAttempted import error: 'CATEGORY_METADATA_TEMPLATES' is not exported from './constants/categories' (imported as 'CATEGORY_METADATA_TEMPLATES').\n\nImport trace for requested module:\n./src/utils/imageMap.ts\n./src/components/ImageManagerCard.tsx\n./src/components/admin/DraggableImageGrid.tsx\n./src/components/admin/AdminImagesBrowser.tsx\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/utils/imageMap.ts\nAttempted import error: 'getCategoryPriority' is not exported from './constants/categories' (imported as 'getGlobalCategoryPriority').\n\nImport trace for requested module:\n./src/utils/imageMap.ts\n./src/components/ImageManagerCard.tsx\n./src/components/admin/DraggableImageGrid.tsx\n./src/components/admin/AdminImagesBrowser.tsx\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getSubcategoryByKey' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getSubcategoryByKey').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getCategoryBreadcrumb' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getCategoryBreadcrumb').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getCategoryFolderPath' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getCategoryFolderPath').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\nAttempted import error: 'getCategoryPathDisplayName' is not exported from '../../../../../../../../utils/constants/categories' (imported as 'getCategoryPathDisplayName').\n\nImport trace for requested module:\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/utils/imageMap.ts\nAttempted import error: 'CATEGORY_METADATA_TEMPLATES' is not exported from './constants/categories' (imported as 'CATEGORY_METADATA_TEMPLATES').\n\nImport trace for requested module:\n./src/utils/imageMap.ts\n./src/components/ImageManagerCard.tsx\n./src/components/admin/DraggableImageGrid.tsx\n./src/components/admin/AdminImagesBrowser.tsx\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/utils/imageMap.ts\nAttempted import error: 'CATEGORY_METADATA_TEMPLATES' is not exported from './constants/categories' (imported as 'CATEGORY_METADATA_TEMPLATES').\n\nImport trace for requested module:\n./src/utils/imageMap.ts\n./src/components/ImageManagerCard.tsx\n./src/components/admin/DraggableImageGrid.tsx\n./src/components/admin/AdminImagesBrowser.tsx\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\n./src/utils/imageMap.ts\nAttempted import error: 'getCategoryPriority' is not exported from './constants/categories' (imported as 'getGlobalCategoryPriority').\n\nImport trace for requested module:\n./src/utils/imageMap.ts\n./src/components/ImageManagerCard.tsx\n./src/components/admin/DraggableImageGrid.tsx\n./src/components/admin/AdminImagesBrowser.tsx\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx\n\nFailed to compile.\n\n./src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx:13:3\nType error: '\"../../../../../../../../utils/constants/categories\"' has no exported member named 'getSubcategoryByKey'. Did you mean 'getCategoryByKey'?\n\n\u001b[0m \u001b[90m 11 |\u001b[39m \u001b[36mimport\u001b[39m { \u001b[0m\n\u001b[0m \u001b[90m 12 |\u001b[39m   getCategoryByKey\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   getSubcategoryByKey\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 14 |\u001b[39m   getCategoryBreadcrumb\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 15 |\u001b[39m   getCategoryFolderPath\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   getCategoryPathDisplayName \u001b[0m\n"
+          ],
           "buildWarnings": [],
           "cacheStatus": "EXISTS",
-          "configSize": 6723,
-          "cacheSize": 592336188,
-          "buildOutput": "\n> khakishop@0.1.0 build\n> next build\n\n   ▲ Next.js 14.1.3\n   - Experiments (use at your own risk):\n     · optimizeCss\n\n   Creating an optimized production build ...\n ✓ Compiled successfully\n   Linting and checking validity of types ...\n\n./src/app/[locale]/admin/images/page.tsx\n177:6  Warning: React Hook useCallback has a missing dependency: 'loadImages'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps\n\n./src/lib/performance.tsx\n154:6  Warning: React Hook useMemo has a missing dependency: 'filterFn'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps\n154:20  Warning: React Hook useMemo has a spread element in its dependency array. This means we can't statically verify whether you've passed the correct dependencies.  react-hooks/exhaustive-deps\n\ninfo  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules\n   Collecting page data ...\n   Generating static pages (0/11) ...\n\r   Generating static pages (2/11) \r\n\r   Generating static pages (5/11) \r\n\r   Generating static pages (8/11) \r\nTime 5.326695\nTime 5.3799\n\r ✓ Generating static pages (11/11) \n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                                          Size     First Load JS\n┌ ○ /                                                134 B           186 kB\n├ ○ /_not-found                                      0 B                0 B\n├ λ /[locale]                                        133 B           186 kB\n├ λ /[locale]/about                                  1.93 kB         188 kB\n├ λ /[locale]/admin                                  2.73 kB         189 kB\n├ λ /[locale]/admin/images                           4.58 kB         191 kB\n├ λ /[locale]/admin/images/[category]                1.77 kB         188 kB\n├ λ /[locale]/admin/images/[category]/[subcategory]  2.36 kB         188 kB\n├ λ /[locale]/admin/images/blind                     544 B           187 kB\n├ λ /[locale]/admin/images/motorized                 555 B           187 kB\n├ λ /[locale]/blind                                  5.15 kB         191 kB\n├ ● /[locale]/blind/[slug]                           3.87 kB         190 kB\n├ λ /[locale]/blog                                   134 B           186 kB\n├ λ /[locale]/collection                             2.95 kB         189 kB\n├ ● /[locale]/collection/[slug]                      133 B           186 kB\n├ λ /[locale]/contact                                2.36 kB         188 kB\n├ λ /[locale]/curtain                                5.79 kB         192 kB\n├ ● /[locale]/curtain/[slug]                         3.69 kB         190 kB\n├ λ /[locale]/error-test                             1.06 kB         187 kB\n├ λ /[locale]/landing                                2.48 kB         189 kB\n├ λ /[locale]/motorized                              5.42 kB         192 kB\n├ ● /[locale]/motorized/[slug]                       4.02 kB         190 kB\n├ ● /[locale]/posts/[slug]                           134 B           186 kB\n├ λ /[locale]/products                               3.58 kB         190 kB\n├ ● /[locale]/products/[slug]                        134 B           186 kB\n├ λ /[locale]/project                                2.29 kB         188 kB\n├ ● /[locale]/project/[slug]                         134 B           186 kB\n├ λ /[locale]/references                             4.12 kB         190 kB\n├ ● /[locale]/references/[slug]                      1.8 kB          188 kB\n├ λ /api/delete-image                                0 B                0 B\n├ λ /api/projects                                    0 B                0 B\n├ λ /api/reorder-images                              0 B                0 B\n├ λ /api/restore-images                              0 B                0 B\n├ λ /api/sync-images                                 0 B                0 B\n├ λ /api/upload-image                                0 B                0 B\n└ ○ /test                                            134 B           186 kB\n+ First Load JS shared by all                        186 kB\n  ├ chunks/69-ba20eef3560f5697.js                    29 kB\n  ├ chunks/commons-c6ccd16a0dfb0db9.js               102 kB\n  ├ chunks/e346fb70-f29cb60112a53c43.js              53.4 kB\n  └ other shared chunks (total)                      2.09 kB\n\n\nƒ Middleware                                         26.9 kB\n\n○  (Static)   prerendered as static content\n●  (SSG)      prerendered as static HTML (uses getStaticProps)\nλ  (Dynamic)  server-rendered on demand using Node.js\n\n\n> khakishop@0.1.0 postbuild\n> next-sitemap\n\n✨ [next-sitemap] Loading next-sitemap config: file:///Users/kiholee/Projects/khakishop-web/next-sitemap.config.js\n✅ [next-sitemap] Generation completed\n┌───────────────┬────────┐\n│ (index)       │ Values │\n├───────────────┼────────┤\n│ indexSitemaps │ 0      │\n│ sitemaps      │ 1      │\n└───────────────┴────────┘\n-----------------------------------------------------\n SITEMAPS \n-----------------------------------------------------\n\n   ○ https://khakishop.kr/sitemap.xml\n\n\n"
+          "configSize": 7410,
+          "cacheSize": 412159447
         },
         "dependencies": {
           "nodeModulesExists": true,
@@ -1609,10 +2029,17 @@
           "auditError": "Command failed: npm audit --json"
         },
         "codeQuality": {
-          "totalFiles": 134,
+          "totalFiles": 188,
           "components": [
             "src/app/HomeClient.tsx",
+            "src/app/[locale]/(auth)/layout.tsx",
             "src/app/[locale]/about/AboutPageClient.tsx",
+            "src/app/[locale]/admin/images/components/CategoryList.tsx",
+            "src/app/[locale]/admin/images/components/DragDropProvider.tsx",
+            "src/app/[locale]/admin/images/components/ImageDetailModal.tsx",
+            "src/app/[locale]/admin/images/components/ImageGrid.tsx",
+            "src/app/[locale]/admin/images/hooks/useImageManager.tsx",
+            "src/app/[locale]/admin/images/manage/category/[category]/ProjectCard.tsx",
             "src/app/[locale]/admin/layout.tsx",
             "src/app/[locale]/admin-layout-provider.tsx",
             "src/app/[locale]/blind/BlindPageClient.tsx",
@@ -1623,6 +2050,8 @@
             "src/app/[locale]/landing/LandingClient.tsx",
             "src/app/[locale]/layout.tsx",
             "src/app/[locale]/motorized/MotorizedPageClient.tsx",
+            "src/app/[locale]/reference/ReferencesPageClient.tsx",
+            "src/app/[locale]/reference/[slug]/ImageGallery.tsx",
             "src/app/[locale]/references/ReferencesPageClient.tsx",
             "src/app/[locale]/references/[slug]/ImageGallery.tsx",
             "src/app/error.tsx",
@@ -1645,9 +2074,11 @@
             "src/components/CurtainImageGallery.tsx",
             "src/components/CurtainPageClient.tsx",
             "src/components/CurtainProductView.tsx",
+            "src/components/DataSyncProvider.tsx",
             "src/components/EmptyImageCard.tsx",
             "src/components/ErrorBoundary.tsx",
             "src/components/FullscreenMenu.tsx",
+            "src/components/GalleryPageClient.tsx",
             "src/components/HeroIntro.tsx",
             "src/components/HeroSection.tsx",
             "src/components/ImageManagerCard.tsx",
@@ -1667,28 +2098,37 @@
             "src/components/UnifiedProductCard.tsx",
             "src/components/UnifiedProductGrid.tsx",
             "src/components/VirtualizedProjectGrid.tsx",
+            "src/components/admin/AdminHomePreview.tsx",
             "src/components/admin/AdminImageEditPanel.tsx",
             "src/components/admin/AdminImagesBrowser.tsx",
+            "src/components/admin/AdminProductEditor.tsx",
             "src/components/admin/DeleteImageDialog.tsx",
             "src/components/admin/DraggableImageGrid.tsx",
             "src/components/admin/ImageUploadZone.tsx",
+            "src/components/admin/MultiStageProjectEditor.tsx",
+            "src/components/admin/ProductImageManager.tsx",
             "src/components/admin/VirtualizedImageGrid.tsx",
             "src/components/common/SEOImage.tsx",
             "src/components/layouts/CategoryPage.tsx",
             "src/components/templates/ProductDetailTemplate.tsx",
+            "src/components/ui/HomeButton.tsx",
             "src/components/ui/LocalizedLink.tsx",
+            "src/components/ui/MenuButton.tsx",
             "src/components/ui/Pagination.tsx",
             "src/components/ui/Skeleton.tsx",
             "src/lib/performance.tsx"
           ],
           "pages": [
+            "src/app/[locale]/(auth)/admin/login/page.tsx",
             "src/app/[locale]/about/page.tsx",
-            "src/app/[locale]/admin/images/[category]/[subcategory]/page.tsx",
-            "src/app/[locale]/admin/images/[category]/page.tsx",
-            "src/app/[locale]/admin/images/blind/page.tsx",
-            "src/app/[locale]/admin/images/motorized/page.tsx",
+            "src/app/[locale]/admin/demo/page.tsx",
+            "src/app/[locale]/admin/images/manage/category/[category]/[subcategory]/page.tsx",
+            "src/app/[locale]/admin/images/manage/category/[category]/page.tsx",
             "src/app/[locale]/admin/images/page.tsx",
             "src/app/[locale]/admin/page.tsx",
+            "src/app/[locale]/admin/projects/[slug]/edit/page.tsx",
+            "src/app/[locale]/admin/projects/[slug]/preview/page.tsx",
+            "src/app/[locale]/admin/projects/page.tsx",
             "src/app/[locale]/blind/[slug]/page.tsx",
             "src/app/[locale]/blind/page.tsx",
             "src/app/[locale]/blog/page.tsx",
@@ -1698,6 +2138,8 @@
             "src/app/[locale]/curtain/[slug]/page.tsx",
             "src/app/[locale]/curtain/page.tsx",
             "src/app/[locale]/error-test/page.tsx",
+            "src/app/[locale]/gallery/[slug]/page.tsx",
+            "src/app/[locale]/gallery/page.tsx",
             "src/app/[locale]/landing/page.tsx",
             "src/app/[locale]/motorized/[slug]/page.tsx",
             "src/app/[locale]/motorized/page.tsx",
@@ -1707,15 +2149,25 @@
             "src/app/[locale]/products/page.tsx",
             "src/app/[locale]/project/[slug]/page.tsx",
             "src/app/[locale]/project/page.tsx",
+            "src/app/[locale]/projects/[slug]/page.tsx",
+            "src/app/[locale]/projects/page.tsx",
+            "src/app/[locale]/reference/[slug]/page.tsx",
+            "src/app/[locale]/reference/page.tsx",
             "src/app/[locale]/references/[slug]/page.tsx",
             "src/app/[locale]/references/page.tsx",
             "src/app/page.tsx",
-            "src/app/test/page.tsx"
+            "src/app/test/page.tsx",
+            "src/app/test-sync/page.tsx"
           ],
           "hooks": [
-            "src/hooks/useImageManager.ts"
+            "src/hooks/useDragAndDrop.ts",
+            "src/hooks/useImageData.ts",
+            "src/hooks/useImageManager.ts",
+            "src/hooks/useUnifiedData.ts"
           ],
-          "utils": [],
+          "utils": [
+            "src/lib/auth-utils.ts"
+          ],
           "issues": []
         }
       },
@@ -1724,18 +2176,26 @@
           "priority": "HIGH",
           "title": "Critical Issues 해결",
           "tasks": [
-            "이미지 파일 누락: /images/${categoryKey}`}",
-            "이미지 파일 누락: /images/${categoryKey}`}",
-            "이미지 파일 누락: /images/${categoryKey}/${subcategory.key}`}",
-            "이미지 파일 누락: /images/${categoryKey}/manage`}",
-            "이미지 파일 누락: /images/blind/premium-venetian-collection/blind-premium-venetian-collection-1.jpg"
+            "TypeScript 컴파일 에러 발생",
+            "이미지 파일 누락: /images/${category}/${file.name}`,",
+            "이미지 파일 누락: /images/[type]/[name]/[subcategory]",
+            "이미지 파일 누락: /images/manage/${routeType}/${categoryKey}`}",
+            "이미지 파일 누락: /images/manage/${routeType}/${categoryKey}`}"
           ],
           "estimatedTime": "30분"
+        },
+        {
+          "priority": "MEDIUM",
+          "title": "Warning Issues 해결",
+          "tasks": [
+            "포트 3000이 사용 중입니다"
+          ],
+          "estimatedTime": "1시간"
         }
       ],
       "codeSnippets": {
-        "package.json": "{\n  \"name\": \"khakishop\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"dev:stable\": \"NODE_OPTIONS='--max-old-space-size=4096' next dev --turbo\",\n    \"dev:light\": \"DISABLE_ESLINT_PLUGIN=true NODE_OPTIONS='--max-old-space-size=4096' next dev\",\n    \"dev:safe\": \"next dev\",\n    \"dev:debug\": \"NODE_OPTIONS='--max-old-space-size=4096 --inspect' next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint --max-warnings=100\",\n    \"test\": \"t...",
-        "next.config.js": "/** @type {import('next').NextConfig} */\nconst path = require('path');\n// const createNextIntlPlugin = require('next-intl/plugin');\n\n// const withNextIntl = createNextIntlPlugin('./src/i18n.ts');\n\nconst nextConfig = {\n  // ================================================================================\n  // 🚀 성능 최적화 설정 (Turbopack 호환)\n  // ================================================================================\n\n  // 실험적 기능 - 안정성 우선\n  experimental: {\n    // CSS 최적화\n    optimizeCss: true,...",
+        "package.json": "{\n  \"name\": \"khakishop\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev -p 3000\",\n    \"dev:stable\": \"NODE_OPTIONS='--max-old-space-size=4096' next dev -p 3000 --turbo\",\n    \"dev:light\": \"DISABLE_ESLINT_PLUGIN=true NODE_OPTIONS='--max-old-space-size=4096' next dev -p 3000\",\n    \"dev:safe\": \"next dev -p 3000\",\n    \"dev:debug\": \"NODE_OPTIONS='--max-old-space-size=4096 --inspect' next dev -p 3000\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next ...",
+        "next.config.js": "/** @type {import('next').NextConfig} */\nconst path = require('path');\n// const createNextIntlPlugin = require('next-intl/plugin');\nconst withPWA = require('next-pwa')({\n  dest: 'public',\n  register: true,\n  skipWaiting: true,\n  runtimeCaching: [\n    {\n      urlPattern: /^https?.*/,\n      handler: 'NetworkFirst',\n      options: {\n        cacheName: 'offlineCache',\n        expiration: {\n          maxEntries: 200,\n        },\n      },\n    },\n  ],\n  buildExcludes: [/middleware-manifest.json$/],\n  di...",
         "tsconfig.json": "{\n  \"compilerOptions\": {\n    \"lib\": [\n      \"dom\",\n      \"dom.iterable\",\n      \"esnext\"\n    ],\n    \"allowJs\": true,\n    \"skipLibCheck\": true,\n    \"strict\": false,\n    \"noEmit\": true,\n    \"incremental\": true,\n    \"tsBuildInfoFile\": \".next/cache/tsconfig.tsbuildinfo\",\n    \"esModuleInterop\": true,\n    \"module\": \"esnext\",\n    \"moduleResolution\": \"node\",\n    \"resolveJsonModule\": true,\n    \"isolatedModules\": true,\n    \"jsx\": \"preserve\",\n    \"plugins\": [\n      {\n        \"name\": \"next\"\n      }\n    ]\n  }..."
       }
     }

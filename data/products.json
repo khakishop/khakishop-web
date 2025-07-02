@@ -1,0 +1,734 @@
+{
+  "version": "3.0",
+  "lastUpdated": "2025-06-30T04:30:00.000Z",
+  "curtain": [
+    {
+      "id": "cur-001",
+      "name": "Essential Linen Collection",
+      "slug": "essential-linen-collection",
+      "description": "천연 리넨 소재로 제작된 에센셜 컬렉션입니다. 자연스러운 질감과 부드러운 드레이프가 공간에 편안함과 세련됨을 더해줍니다.",
+      "price": "89000-189000원/평",
+      "image": "/images/curtain/essential-linen-collection/main.jpg",
+      "category": "curtains",
+      "subcategory": "Essential Linen",
+      "bestseller": true,
+      "features": [
+        "100% 천연 리넨 소재",
+        "자연스러운 드레이프",
+        "우수한 통기성",
+        "친환경 염료 사용",
+        "세탁 가능",
+        "다양한 컬러 옵션"
+      ],
+      "materials": ["프리미엄 벨기에 리넨", "천연 염료", "무소음 레일 시스템", "스테인리스 고리"],
+      "colors": ["Natural Beige", "Soft Grey", "Warm White", "Sage Green", "Dusty Pink"],
+      "gallery": [
+        "/images/curtain/essential-linen-collection/main.jpg",
+        "/images/curtain/essential-linen-collection/detail-1.jpg",
+        "/images/curtain/essential-linen-collection/detail-2.jpg",
+        "/images/curtain/essential-linen-collection/lifestyle.jpg"
+      ]
+    },
+    {
+      "id": "cur-002",
+      "name": "Modern Sheer Series",
+      "slug": "modern-sheer-series",
+      "description": "현대적인 공간에 완벽한 모던 쉬어 커튼입니다. 부드러운 빛 투과로 프라이버시를 보호하면서도 자연광을 적절히 유입시켜 밝고 쾌적한 실내 환경을 만들어줍니다.",
+      "price": "69000-149000원/평",
+      "image": "/images/curtain/modern-sheer-series/main.jpg",
+      "category": "curtains",
+      "subcategory": "Modern Sheer",
+      "new": true,
+      "features": [
+        "고급 쉬어 원단",
+        "우아한 빛 투과",
+        "프라이버시 보호",
+        "모던 디자인",
+        "쉬운 관리",
+        "내구성 우수"
+      ],
+      "materials": ["폴리에스터 쉬어 원단", "은사 라인", "메탈 레일", "소음 방지 링"],
+      "colors": ["Pure White", "Ivory", "Light Grey", "Champagne", "Pearl"],
+      "gallery": [
+        "/images/curtain/modern-sheer-series/main.jpg",
+        "/images/curtain/modern-sheer-series/detail-1.jpg",
+        "/images/curtain/modern-sheer-series/detail-2.jpg",
+        "/images/curtain/modern-sheer-series/lifestyle.jpg"
+      ]
+    },
+    {
+      "id": "cur-003",
+      "name": "Venetian Premium Line",
+      "slug": "venetian-premium-line",
+      "description": "베네치안 스타일에서 영감을 받은 프리미엄 커튼 라인입니다. 풍부한 질감과 깊이 있는 색상으로 공간에 고급스러움과 우아함을 선사합니다.",
+      "price": "189000-389000원/평",
+      "image": "/images/curtain/venetian-premium-line/main.jpg",
+      "category": "curtains",
+      "subcategory": "Venetian Premium",
+      "bestseller": true,
+      "features": [
+        "베네치안 스타일 디자인",
+        "프리미엄 원단",
+        "수작업 마감",
+        "풍부한 색감",
+        "완벽한 차광",
+        "럭셔리 피니시"
+      ],
+      "materials": ["이탈리아 수입 원단", "24K 금사 장식", "수작업 태슬", "프리미엄 브라스 액세서리"],
+      "colors": ["Deep Burgundy", "Royal Navy", "Forest Green", "Antique Gold", "Midnight Black"],
+      "gallery": [
+        "/images/curtain/venetian-premium-line/main.jpg",
+        "/images/curtain/venetian-premium-line/detail-1.jpg",
+        "/images/curtain/venetian-premium-line/detail-2.jpg",
+        "/images/curtain/venetian-premium-line/lifestyle.jpg"
+      ]
+    },
+    {
+      "id": "cur-004",
+      "name": "Wood Texture Natural",
+      "slug": "wood-texture-natural",
+      "description": "천연 나무의 질감을 모티브로 한 독특한 텍스처 커튼입니다. 자연친화적인 패턴과 부드러운 촉감으로 공간에 따뜻함과 안정감을 제공합니다.",
+      "price": "99000-199000원/평",
+      "image": "/images/curtain/wood-texture-natural/main.jpg",
+      "category": "curtains",
+      "subcategory": "Wood Texture",
+      "features": [
+        "우드 텍스처 패턴",
+        "자연친화적 디자인",
+        "부드러운 촉감",
+        "북유럽 스타일",
+        "따뜻한 색감",
+        "친환경 소재"
+      ],
+      "materials": ["텍스처 가공 원단", "천연 목재 패턴", "친환경 염료", "우드 액세서리"],
+      "colors": ["Natural Oak", "Walnut Brown", "Pine Light", "Cherry Red", "Ash Grey"],
+      "gallery": [
+        "/images/curtain/wood-texture-natural/main.jpg",
+        "/images/curtain/wood-texture-natural/detail-1.jpg",
+        "/images/curtain/wood-texture-natural/detail-2.jpg",
+        "/images/curtain/wood-texture-natural/lifestyle.jpg"
+      ]
+    }
+  ],
+  "blind": [
+    {
+      "id": "bld-001",
+      "name": "프리미엄 베네치안 컬렉션",
+      "slug": "premium-venetian-collection",
+      "description": "고급 알루미늄 소재의 베네치안 블라인드로 정밀한 빛 조절과 내구성을 제공합니다.",
+      "price": "89000원부터",
+      "image": "/images/blind/premium-venetian-collection/main.jpg",
+      "category": "blinds",
+      "subcategory": "Venetian Blinds",
+      "bestseller": true,
+      "features": [
+        "25mm 고급 알루미늄 슬랫",
+        "정밀 틸트 조절 시스템",
+        "무소음 코드 시스템",
+        "자외선 차단 코팅",
+        "정전기 방지 처리"
+      ],
+      "materials": ["프리미엄 알루미늄", "스테인리스 스틸", "내구성 플라스틱"],
+      "colors": ["실버", "화이트", "그레이", "베이지", "블랙"],
+      "gallery": [
+        "/images/blind/premium-venetian-collection/main.jpg",
+        "/images/blind/premium-venetian-collection/detail-1.jpg",
+        "/images/blind/premium-venetian-collection/detail-2.jpg",
+        "/images/blind/premium-venetian-collection/lifestyle.jpg"
+      ]
+    },
+    {
+      "id": "bld-002",
+      "name": "모던 버티컬 시스템",
+      "slug": "modern-vertical-system",
+      "description": "세련된 수직 블라인드로 넓은 창문과 슬라이딩 도어에 완벽한 솔루션을 제공합니다.",
+      "price": "125000원부터",
+      "image": "/images/blind/modern-vertical-system/main.jpg",
+      "category": "blinds",
+      "subcategory": "Vertical Blinds",
+      "new": true,
+      "features": [
+        "127mm 와이드 루버",
+        "매끄러운 슬라이딩 시스템",
+        "원터치 회전 조절",
+        "체인 또는 완드 조작",
+        "바닥 고정 체인 포함"
+      ],
+      "materials": ["폴리에스터 패브릭", "PVC 루버", "알루미늄 헤드레일"],
+      "colors": ["아이보리", "베이지", "그레이", "네이비", "브라운"],
+      "gallery": [
+        "/images/blind/modern-vertical-system/main.jpg",
+        "/images/blind/modern-vertical-system/detail-1.jpg",
+        "/images/blind/modern-vertical-system/detail-2.jpg",
+        "/images/blind/modern-vertical-system/lifestyle.jpg"
+      ]
+    },
+    {
+      "id": "bld-003",
+      "name": "스마트 롤러 컬렉션",
+      "slug": "smart-roller-collection",
+      "description": "모터라이즈드 시스템과 다양한 원단 옵션을 제공하는 현대적인 롤러 블라인드입니다.",
+      "price": "195000원부터",
+      "image": "/images/blind/smart-roller-collection/main.jpg",
+      "category": "blinds",
+      "subcategory": "Roller Blinds",
+      "bestseller": true,
+      "new": true,
+      "features": [
+        "모터라이즈드 시스템",
+        "리모컨 및 앱 제어",
+        "다양한 투과도 원단",
+        "채광 조절 기능",
+        "타이머 설정 가능"
+      ],
+      "materials": ["폴리에스터 원단", "알루미늄 튜브", "스마트 모터"],
+      "colors": ["화이트", "크림", "그레이", "블루", "그린"],
+      "gallery": [
+        "/images/blind/smart-roller-collection/main.jpg",
+        "/images/blind/smart-roller-collection/detail-1.jpg",
+        "/images/blind/smart-roller-collection/detail-2.jpg",
+        "/images/blind/smart-roller-collection/lifestyle.jpg"
+      ]
+    },
+    {
+      "id": "bld-004",
+      "name": "엘레강트 로만 스타일",
+      "slug": "elegant-roman-style",
+      "description": "클래식한 로만 블라인드로 우아한 주름과 고급스러운 분위기를 연출합니다.",
+      "price": "145000원부터",
+      "image": "/images/blind/elegant-roman-style/main.jpg",
+      "category": "blinds",
+      "subcategory": "Roman Blinds",
+      "features": [
+        "자연스러운 주름 라인",
+        "고급 패브릭 소재",
+        "코드락 시스템",
+        "맞춤 패턴 제작",
+        "내측 차광 라이닝"
+      ],
+      "materials": ["린넨 블렌드", "코튼 패브릭", "차광 라이닝"],
+      "colors": ["내추럴", "베이지", "그레이", "네이비", "와인"],
+      "gallery": [
+        "/images/blind/elegant-roman-style/main.jpg",
+        "/images/blind/elegant-roman-style/detail-1.jpg",
+        "/images/blind/elegant-roman-style/detail-2.jpg",
+        "/images/blind/elegant-roman-style/lifestyle.jpg"
+      ]
+    }
+  ],
+  "motorized": [
+    {
+      "id": "mot-001",
+      "name": "스마트 커튼 시스템 프로",
+      "slug": "smart-curtain-system-pro",
+      "description": "최신 IoT 기술이 적용된 프리미엄 스마트 커튼 시스템입니다. 음성 제어, 앱 제어, 스케줄 설정 등 다양한 기능을 제공합니다.",
+      "price": "395000원부터",
+      "image": "/images/motorized/smart-curtain-system/main.jpg",
+      "category": "smart-curtains",
+      "bestseller": true,
+      "new": true,
+      "features": [
+        "음성 제어 (Alexa, Google Assistant)",
+        "AI 기반 자동 스케줄링",
+        "스마트폰 원격 제어",
+        "에너지 절약 센서",
+        "간편한 설치"
+      ],
+      "materials": ["프리미엄 모터", "IoT 센서", "고급 원단", "스마트 컨트롤러"],
+      "colors": ["스마트 화이트", "테크 그레이", "미드나이트 블랙", "맞춤 색상"],
+      "specifications": {
+        "제어 방식": "스마트폰 앱, 음성 명령, 자동 센서",
+        "호환성": "iOS, Android, Alexa, Google Home",
+        "전원": "DC 24V (어댑터 포함)",
+        "설치": "브래킷 마운트 (DIY 가능)",
+        "A/S": "3년 품질보증"
+      },
+      "gallery": [
+        "/images/motorized/smart-curtain-system/main.jpg",
+        "/images/motorized/smart-curtain-system/detail-1.jpg",
+        "/images/motorized/smart-curtain-system/detail-2.jpg"
+      ]
+    },
+    {
+      "id": "mot-002",
+      "name": "모터라이즈드 베네치안 디럭스",
+      "slug": "motorized-venetian-deluxe",
+      "description": "정밀한 슬랫 각도 조절이 가능한 모터라이즈드 베네치안 블라인드로 완벽한 빛 조절을 제공합니다.",
+      "price": "285000원부터",
+      "image": "/images/motorized/remote-venetian-blinds/main.jpg",
+      "category": "smart-blinds",
+      "bestseller": true,
+      "features": [
+        "정밀 슬랫 각도 제어",
+        "무소음 모터 시스템",
+        "배터리 백업 기능",
+        "그룹 제어 가능",
+        "장애물 감지 센서"
+      ],
+      "materials": ["프리미엄 알루미늄", "독일산 모터", "리튬 배터리", "스마트 센서"],
+      "colors": ["실버", "화이트", "그레이", "골드", "블랙"],
+      "gallery": [
+        "/images/motorized/motorized-venetian-deluxe/main.jpg",
+        "/images/motorized/motorized-venetian-deluxe/detail-1.jpg",
+        "/images/motorized/motorized-venetian-deluxe/detail-2.jpg"
+      ]
+    },
+    {
+      "id": "mot-003",
+      "name": "AI 홈 통합 시스템",
+      "slug": "ai-home-integration-suite",
+      "description": "인공지능 기반 스마트홈 통합 솔루션으로 전체 주거 공간의 창호 시스템을 자동화합니다.",
+      "price": "795000원부터",
+      "image": "/images/motorized/smart-home-automation/main.jpg",
+      "category": "home-automation",
+      "new": true,
+      "features": [
+        "AI 학습 기반 자동화",
+        "전체 집 통합 제어",
+        "에너지 효율 최적화",
+        "날씨 연동 자동 조절",
+        "보안 시스템 연동"
+      ],
+      "materials": ["AI 허브", "무선 모터", "환경 센서", "스마트 스위치"],
+      "colors": ["시스템 통합형 (원단별 선택)"],
+      "gallery": [
+        "/images/motorized/ai-home-integration-suite/main.jpg",
+        "/images/motorized/ai-home-integration-suite/detail-1.jpg",
+        "/images/motorized/ai-home-integration-suite/detail-2.jpg"
+      ]
+    },
+    {
+      "id": "mot-004",
+      "name": "보이스 컨트롤 롤러 시스템",
+      "slug": "voice-control-roller-system",
+      "description": "AI 음성 인식 기술로 핸즈프리 조작이 가능한 차세대 롤러 블라인드 시스템입니다.",
+      "price": "245000원부터",
+      "image": "/images/motorized/voice-blind-control/main.jpg",
+      "category": "voice-control",
+      "features": [
+        "AI 음성 인식",
+        "다국어 명령 지원",
+        "음성 학습 기능",
+        "소음 차단 마이크",
+        "응답 피드백"
+      ],
+      "materials": ["음성 인식 모듈", "고감도 마이크", "스마트 모터", "롤러 원단"],
+      "colors": ["보이스 화이트", "스마트 그레이", "테크 블랙"],
+      "gallery": [
+        "/images/motorized/voice-control-roller-system/main.jpg",
+        "/images/motorized/voice-control-roller-system/detail-1.jpg",
+        "/images/motorized/voice-control-roller-system/detail-2.jpg"
+      ]
+    }
+  ],
+  "collection": [
+    {
+      "id": "col-001",
+      "name": "Essential Linen",
+      "slug": "essential-linen",
+      "description": "자연스러운 린넨 소재의 기본 컬렉션",
+      "price": "150000-200000원/평방미터",
+      "image": "/images/collections/essential-linen.png",
+      "category": "Curtain",
+      "subcategory": "Essential Collection",
+      "featured": true,
+      "bestseller": true,
+      "features": [
+        "차광 기능",
+        "방염 처리",
+        "세탁 가능",
+        "맞춤 제작"
+      ],
+      "materials": ["린넨", "실크", "코튼", "폴리에스터"],
+      "colors": ["화이트", "베이지", "그레이", "브라운"],
+      "season": "All Season"
+    },
+    {
+      "id": "col-002",
+      "name": "Modern Sheer",
+      "slug": "modern-sheer",
+      "description": "현대적 감각의 쉬어 커튼 컬렉션",
+      "price": "150000-200000원/평방미터",
+      "image": "/images/collections/modern-sheer.png",
+      "category": "Curtain",
+      "subcategory": "Essential Collection",
+      "featured": true,
+      "features": [
+        "차광 기능",
+        "방염 처리",
+        "세탁 가능",
+        "맞춤 제작"
+      ],
+      "materials": ["린넨", "실크", "코튼", "폴리에스터"],
+      "colors": ["화이트", "베이지", "그레이", "브라운"],
+      "season": "Spring/Summer"
+    },
+    {
+      "id": "col-003",
+      "name": "Venetian Premium",
+      "slug": "venetian-premium",
+      "description": "프리미엄 베네치안 블라인드",
+      "price": "200000-250000원/평방미터",
+      "image": "/images/collections/venetian-premium.png",
+      "category": "Blind",
+      "subcategory": "Premium Collection",
+      "featured": true,
+      "bestseller": true,
+      "features": [
+        "정밀 조절",
+        "내구성",
+        "먼지 방지",
+        "쉬운 청소"
+      ],
+      "materials": ["우드", "알루미늄", "PVC", "패브릭"],
+      "colors": ["화이트", "베이지", "그레이", "브라운"],
+      "season": "All Season"
+    },
+    {
+      "id": "col-004",
+      "name": "Smart Automation",
+      "slug": "smart-automation",
+      "description": "스마트 자동화 시스템 컬렉션",
+      "price": "350000-400000원/평방미터",
+      "image": "/images/collections/smart-automation.png",
+      "category": "Motorized",
+      "subcategory": "Smart Collection",
+      "featured": true,
+      "new": true,
+      "features": [
+        "원격 제어",
+        "타이머 설정",
+        "스마트홈 연동",
+        "조용한 작동"
+      ],
+      "materials": ["프리미엄 소재", "모터 시스템", "스마트 컨트롤"],
+      "colors": ["화이트", "베이지", "그레이", "브라운"],
+      "season": "All Season"
+    }
+  ],
+  "projects": [
+    {
+      "id": "prj-001",
+      "name": "Modern Office Gangnam",
+      "slug": "modern-office-gangnam",
+      "description": "현대적 감각의 오피스 공간을 위한 맞춤형 블라인드 시공. 업무 효율성과 미적 완성도를 동시에 추구한 프로젝트입니다.",
+      "price": "완료",
+      "image": "/images/references/modern-office-gangnam/main.png",
+      "category": "Commercial",
+      "location": "강남구",
+      "year": "2024",
+      "client": "테크 스타트업",
+      "area": "200㎡",
+      "features": [
+        "알루미늄 블라인드",
+        "자동화 시스템",
+        "에너지 효율",
+        "소음 차단"
+      ],
+      "materials": ["고급 알루미늄", "자동화 모터", "UV 차단 코팅"],
+      "gallery": [
+        "/images/references/modern-office-gangnam/gallery-1.svg",
+        "/images/references/modern-office-gangnam/gallery-2.svg",
+        "/images/references/modern-office-gangnam/gallery-3.svg"
+      ]
+    },
+    {
+      "id": "prj-002",
+      "name": "Minimal Residence Bundang",
+      "slug": "minimal-residence-bundang",
+      "description": "미니멀 주거 공간의 감성적 커튼 시공. 자연스러운 채광과 프라이버시를 균형 있게 조화시킨 작품입니다.",
+      "price": "완료",
+      "image": "/images/references/minimal-residence-bundang/main.png",
+      "category": "Residential",
+      "location": "분당구",
+      "year": "2024",
+      "client": "개인 주택",
+      "area": "150㎡",
+      "features": [
+        "리넨 커튼",
+        "자연광 조절",
+        "미니멀 디자인",
+        "친환경 소재"
+      ],
+      "materials": ["고급 리넨", "천연 염료", "무소음 레일"],
+      "gallery": [
+        "/images/references/minimal-residence-bundang/gallery-1.svg",
+        "/images/references/minimal-residence-bundang/gallery-2.svg",
+        "/images/references/minimal-residence-bundang/gallery-3.svg"
+      ]
+    },
+    {
+      "id": "prj-003",
+      "name": "Classic Cafe Hongdae",
+      "slug": "classic-cafe-hongdae",
+      "description": "클래식한 감성의 카페 공간 커튼 시공. 따뜻하고 아늑한 분위기 연출로 고객들의 휴식 공간을 완성했습니다.",
+      "price": "완료",
+      "image": "/images/references/classic-cafe-hongdae/main.png",
+      "category": "F&B",
+      "location": "홍대",
+      "year": "2023",
+      "client": "카페",
+      "area": "80㎡",
+      "features": [
+        "클래식 커튼",
+        "따뜻한 분위기",
+        "아늑한 공간",
+        "고급 원단"
+      ],
+      "materials": ["클래식 패브릭", "앤틱 하드웨어", "차광 라이닝"],
+      "gallery": [
+        "/images/references/classic-cafe-hongdae/gallery-1.svg",
+        "/images/references/classic-cafe-hongdae/gallery-2.svg",
+        "/images/references/classic-cafe-hongdae/gallery-3.svg"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "ref-001",
+      "name": "강남 고급 주택 시공사례",
+      "slug": "luxury-residence-gangnam",
+      "description": "강남 고급 주택에 설치된 프리미엄 커튼과 블라인드 시공사례입니다. 모던한 인테리어와 완벽하게 조화를 이루는 맞춤형 솔루션을 제공했습니다.",
+      "price": "시공완료",
+      "image": "/images/references/luxury-residence-gangnam/main.jpg",
+      "category": "references",
+      "subcategory": "Residential",
+      "location": "서울 강남구",
+      "clientType": "개인 주택",
+      "projectDate": "2024년 3월",
+      "duration": "3일",
+      "bestseller": true,
+      "features": [
+        "맞춤형 리넨 커튼",
+        "자동화 블라인드 시스템",
+        "스마트 조명 연동",
+        "프리미엄 하드웨어",
+        "완벽한 채광 조절"
+      ],
+      "materials": ["벨기에 리넨", "알루미늄 프레임", "스마트 모터", "황동 액세서리"],
+      "gallery": [
+        "/images/references/luxury-residence-gangnam/main.jpg",
+        "/images/references/luxury-residence-gangnam/detail-1.jpg",
+        "/images/references/luxury-residence-gangnam/detail-2.jpg",
+        "/images/references/luxury-residence-gangnam/before-after.jpg"
+      ]
+    },
+    {
+      "id": "ref-002",
+      "name": "서울 모던 오피스 프로젝트",
+      "slug": "modern-office-seoul",
+      "description": "서울 시내 모던 오피스 빌딩의 대규모 블라인드 설치 프로젝트입니다. 효율적인 업무 환경을 위한 최적의 채광 솔루션을 구현했습니다.",
+      "price": "시공완료",
+      "image": "/images/references/modern-office-seoul/main.jpg",
+      "category": "references",
+      "subcategory": "Office",
+      "location": "서울 중구",
+      "clientType": "대기업 본사",
+      "projectDate": "2024년 2월",
+      "duration": "5일",
+      "new": true,
+      "features": [
+        "대형 버티컬 블라인드",
+        "자외선 차단 원단",
+        "그룹 제어 시스템",
+        "에너지 절약형",
+        "소음 방지 설계"
+      ],
+      "materials": ["상업용 패브릭", "알루미늄 헤드레일", "스테인리스 액세서리"],
+      "gallery": [
+        "/images/references/modern-office-seoul/main.jpg",
+        "/images/references/modern-office-seoul/detail-1.jpg",
+        "/images/references/modern-office-seoul/detail-2.jpg",
+        "/images/references/modern-office-seoul/workspace.jpg"
+      ]
+    },
+    {
+      "id": "ref-003",
+      "name": "부산 부티크 호텔 인테리어",
+      "slug": "boutique-hotel-busan",
+      "description": "부산 해운대의 부티크 호텔 전 객실에 설치된 럭셔리 커튼 시공사례입니다. 바다 뷰와 조화로운 우아한 디자인으로 완성했습니다.",
+      "price": "시공완료",
+      "image": "/images/references/boutique-hotel-busan/main.jpg",
+      "category": "references",
+      "subcategory": "Hotel & Restaurant",
+      "location": "부산 해운대구",
+      "clientType": "부티크 호텔",
+      "projectDate": "2024년 1월",
+      "duration": "7일",
+      "bestseller": true,
+      "features": [
+        "블랙아웃 커튼",
+        "쉬어 레이어링",
+        "해풍 대응 소재",
+        "호텔급 마감",
+        "유지보수 편의성"
+      ],
+      "materials": ["호텔급 패브릭", "해염 방지 코팅", "고급 브라스 하드웨어"],
+      "gallery": [
+        "/images/references/boutique-hotel-busan/main.jpg",
+        "/images/references/boutique-hotel-busan/detail-1.jpg",
+        "/images/references/boutique-hotel-busan/detail-2.jpg",
+        "/images/references/boutique-hotel-busan/suite-view.jpg"
+      ]
+    }
+  ],
+  "about": [
+    {
+      "id": "about-001",
+      "name": "About Khaki Shop",
+      "slug": "about-hero",
+      "description": "시간을 초월한 디자인, 공간을 완성하는 텍스타일의 예술",
+      "price": "브랜드 스토리",
+      "image": "/images/about/hero.jpg",
+      "category": "about",
+      "type": "hero",
+      "content": "<h1>About Khaki Shop</h1><p>시간을 초월한 디자인, 공간을 완성하는 텍스타일의 예술</p>",
+      "features": [
+        "시간을 초월한 디자인",
+        "공간을 완성하는 텍스타일",
+        "감성과 기능의 조화",
+        "프리미엄 품질"
+      ]
+    },
+    {
+      "id": "about-002",
+      "name": "Our Story",
+      "slug": "about-story",
+      "description": "우리는 단순한 창을 넘어 하루의 분위기를 바꾸는 커튼과 패브릭을 고민해왔습니다.",
+      "price": "브랜드 히스토리",
+      "image": "/images/about/story.jpg",
+      "category": "about",
+      "type": "text",
+      "content": "<h2>Our Story</h2><p>우리는 단순한 창을 넘어 하루의 분위기를 바꾸는 커튼과 패브릭을 고민해왔습니다. 전통적인 기술과 현대적인 감각을 조화롭게 담아, 빛과 공간의 흐름에 어울리는 직물만을 세심히 제안합니다.</p>",
+      "features": [
+        "전통적인 기술",
+        "현대적인 감각",
+        "빛과 공간의 조화",
+        "세심한 제안"
+      ]
+    },
+    {
+      "id": "about-003",
+      "name": "Our Philosophy",
+      "slug": "about-philosophy",
+      "description": "khaki shop은 일상 속에 자연스럽게 스며드는 조용한 변화와 감각적인 여백을 만들어갑니다.",
+      "price": "브랜드 철학",
+      "image": "/images/about/philosophy.jpg",
+      "category": "about",
+      "type": "text",
+      "content": "<h2>Our Philosophy</h2><p>khaki shop은 일상 속에 자연스럽게 스며드는 조용한 변화와 감각적인 여백을 만들어갑니다.</p>",
+      "features": [
+        "조용한 변화",
+        "감각적인 여백",
+        "일상 속 자연스러운 스며듦",
+        "공간의 완성"
+      ]
+    }
+  ],
+  "contact": [
+    {
+      "id": "contact-001",
+      "name": "매장 정보",
+      "slug": "store-info",
+      "description": "카키샵 일산 본점 - 호수로 430번길 24 1층",
+      "price": "방문 상담",
+      "image": "/images/contact/store.jpg",
+      "category": "contact",
+      "type": "store",
+      "features": [
+        "전문 상담 서비스",
+        "실물 샘플 확인",
+        "맞춤 측정",
+        "무료 견적"
+      ],
+      "address": "경기도 고양시 일산동구 호수로 430번길 24 1층",
+      "phone": "0507-1372-0358",
+      "email": "lskshsrl@naver.com",
+      "hours": "월-토 10:00-20:00"
+    },
+    {
+      "id": "contact-002",
+      "name": "온라인 상담",
+      "slug": "online-consultation",
+      "description": "온라인으로 편리하게 상담받으세요",
+      "price": "무료 상담",
+      "image": "/images/contact/online.jpg",
+      "category": "contact",
+      "type": "online",
+      "features": [
+        "화상 상담",
+        "실시간 채팅",
+        "이메일 상담",
+        "카카오톡 상담"
+      ]
+    },
+    {
+      "id": "contact-003",
+      "name": "방문 서비스",
+      "slug": "visit-service",
+      "description": "전문가가 직접 방문하여 맞춤 상담을 진행합니다",
+      "price": "방문 상담",
+      "image": "/images/contact/visit.jpg",
+      "category": "contact",
+      "type": "visit",
+      "features": [
+        "현장 측정",
+        "맞춤 상담",
+        "샘플 제공",
+        "전문 설치"
+      ],
+      "areas": [
+        "서울 전 지역",
+        "경기 북부",
+        "일산/파주/김포",
+        "기타 지역 협의"
+      ]
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gallery-001",
+      "name": "시공 갤러리",
+      "slug": "installation-gallery",
+      "description": "카키샵의 다양한 시공 사례를 확인해보세요",
+      "price": "갤러리",
+      "image": "/images/gallery/main.jpg",
+      "category": "gallery",
+      "type": "installation",
+      "features": [
+        "주거 시공 사례",
+        "상업 시공 사례",
+        "호텔 시공 사례",
+        "오피스 시공 사례"
+      ],
+      "gallery": [
+        "/images/gallery/residential-1.jpg",
+        "/images/gallery/commercial-1.jpg",
+        "/images/gallery/hotel-1.jpg",
+        "/images/gallery/office-1.jpg"
+      ]
+    },
+    {
+      "id": "gallery-002",
+      "name": "제품 갤러리",
+      "slug": "product-gallery",
+      "description": "카키샵의 프리미엄 제품들을 만나보세요",
+      "price": "갤러리",
+      "image": "/images/gallery/products.jpg",
+      "category": "gallery",
+      "type": "products",
+      "features": [
+        "커튼 컬렉션",
+        "블라인드 컬렉션",
+        "모터라이즈드 시스템",
+        "액세서리"
+      ],
+      "gallery": [
+        "/images/gallery/curtain-collection.jpg",
+        "/images/gallery/blind-collection.jpg",
+        "/images/gallery/motorized-collection.jpg",
+        "/images/gallery/accessories-collection.jpg"
+      ]
+    }
+  ]
+}

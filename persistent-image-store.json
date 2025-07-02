@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-06-15T06:35:23.829Z",
+  "lastUpdated": "2025-07-01T04:51:51.657Z",
   "mappings": {
     "_images_midjourney_1_png": {
       "id": "_images_midjourney_1_png",
@@ -2339,6 +2339,2802 @@
         "createdAt": "2025-06-15T03:14:44.816Z",
         "updatedAt": "2025-06-15T03:14:44.816Z"
       }
+    },
+    "_images_midjourney_sample_jpg": {
+      "id": "_images_midjourney_sample_jpg",
+      "originalPath": "/images/midjourney/sample.jpg",
+      "targetPath": "/images/midjourney/sample.jpg",
+      "displayOrder": 167,
+      "metadata": {
+        "category": "gallery",
+        "slug": "midjourney",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.299Z",
+        "updatedAt": "2025-06-22T04:42:54.299Z"
+      }
+    },
+    "_images_curtain_main_jpg": {
+      "id": "_images_curtain_main_jpg",
+      "originalPath": "/images/curtain/main.jpg",
+      "targetPath": "/images/curtain/main.jpg",
+      "displayOrder": 168,
+      "metadata": {
+        "category": "curtain",
+        "slug": "curtain",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.304Z",
+        "updatedAt": "2025-06-22T04:42:54.304Z"
+      }
+    },
+    "_images_curtain_modern_sheer_series_curtain_modern_sheer_series_1_jpg": {
+      "id": "_images_curtain_modern_sheer_series_curtain_modern_sheer_series_1_jpg",
+      "originalPath": "/images/curtain/modern-sheer-series/curtain-modern-sheer-series-1.jpg",
+      "targetPath": "/images/curtain/modern-sheer-series/curtain-modern-sheer-series-1.jpg",
+      "displayOrder": 169,
+      "metadata": {
+        "category": "curtain",
+        "slug": "modern-sheer-series",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.304Z",
+        "updatedAt": "2025-06-22T04:42:54.304Z"
+      }
+    },
+    "_images_curtain_modern_sheer_series_curtain_modern_sheer_series_2_jpg": {
+      "id": "_images_curtain_modern_sheer_series_curtain_modern_sheer_series_2_jpg",
+      "originalPath": "/images/curtain/modern-sheer-series/curtain-modern-sheer-series-2.jpg",
+      "targetPath": "/images/curtain/modern-sheer-series/curtain-modern-sheer-series-2.jpg",
+      "displayOrder": 170,
+      "metadata": {
+        "category": "curtain",
+        "slug": "modern-sheer-series",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.304Z",
+        "updatedAt": "2025-06-22T04:42:54.304Z"
+      }
+    },
+    "_images_curtain_modern_sheer_series_curtain_modern_sheer_series_3_jpg": {
+      "id": "_images_curtain_modern_sheer_series_curtain_modern_sheer_series_3_jpg",
+      "originalPath": "/images/curtain/modern-sheer-series/curtain-modern-sheer-series-3.jpg",
+      "targetPath": "/images/curtain/modern-sheer-series/curtain-modern-sheer-series-3.jpg",
+      "displayOrder": 171,
+      "metadata": {
+        "category": "curtain",
+        "slug": "modern-sheer-series",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.304Z",
+        "updatedAt": "2025-06-22T04:42:54.304Z"
+      }
+    },
+    "_images_curtain_modern_sheer_series_curtain_modern_sheer_series_4_jpg": {
+      "id": "_images_curtain_modern_sheer_series_curtain_modern_sheer_series_4_jpg",
+      "originalPath": "/images/curtain/modern-sheer-series/curtain-modern-sheer-series-4.jpg",
+      "targetPath": "/images/curtain/modern-sheer-series/curtain-modern-sheer-series-4.jpg",
+      "displayOrder": 172,
+      "metadata": {
+        "category": "curtain",
+        "slug": "modern-sheer-series",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.304Z",
+        "updatedAt": "2025-06-22T04:42:54.304Z"
+      }
+    },
+    "_images_blind_main_jpg": {
+      "id": "_images_blind_main_jpg",
+      "originalPath": "/images/blind/main.jpg",
+      "targetPath": "/images/blind/main.jpg",
+      "displayOrder": 173,
+      "metadata": {
+        "category": "blind",
+        "slug": "blind",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.308Z",
+        "updatedAt": "2025-06-22T04:42:54.308Z"
+      }
+    },
+    "_images_references_1_png": {
+      "id": "_images_references_1_png",
+      "originalPath": "/images/references/1.png",
+      "targetPath": "/images/references/1.png",
+      "displayOrder": 174,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_10_png": {
+      "id": "_images_references_10_png",
+      "originalPath": "/images/references/10.png",
+      "targetPath": "/images/references/10.png",
+      "displayOrder": 175,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_10_1_png": {
+      "id": "_images_references_10_1_png",
+      "originalPath": "/images/references/10_1.png",
+      "targetPath": "/images/references/10_1.png",
+      "displayOrder": 176,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_11_png": {
+      "id": "_images_references_11_png",
+      "originalPath": "/images/references/11.png",
+      "targetPath": "/images/references/11.png",
+      "displayOrder": 177,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_11_1_png": {
+      "id": "_images_references_11_1_png",
+      "originalPath": "/images/references/11_1.png",
+      "targetPath": "/images/references/11_1.png",
+      "displayOrder": 178,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_12_png": {
+      "id": "_images_references_12_png",
+      "originalPath": "/images/references/12.png",
+      "targetPath": "/images/references/12.png",
+      "displayOrder": 179,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_12_1_png": {
+      "id": "_images_references_12_1_png",
+      "originalPath": "/images/references/12_1.png",
+      "targetPath": "/images/references/12_1.png",
+      "displayOrder": 180,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_13_png": {
+      "id": "_images_references_13_png",
+      "originalPath": "/images/references/13.png",
+      "targetPath": "/images/references/13.png",
+      "displayOrder": 181,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_14_png": {
+      "id": "_images_references_14_png",
+      "originalPath": "/images/references/14.png",
+      "targetPath": "/images/references/14.png",
+      "displayOrder": 182,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_14_1_png": {
+      "id": "_images_references_14_1_png",
+      "originalPath": "/images/references/14_1.png",
+      "targetPath": "/images/references/14_1.png",
+      "displayOrder": 183,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_3_png": {
+      "id": "_images_references_3_png",
+      "originalPath": "/images/references/3.png",
+      "targetPath": "/images/references/3.png",
+      "displayOrder": 184,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_7_png": {
+      "id": "_images_references_7_png",
+      "originalPath": "/images/references/7.png",
+      "targetPath": "/images/references/7.png",
+      "displayOrder": 185,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_7_1_png": {
+      "id": "_images_references_7_1_png",
+      "originalPath": "/images/references/7_1.png",
+      "targetPath": "/images/references/7_1.png",
+      "displayOrder": 186,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_8_png": {
+      "id": "_images_references_8_png",
+      "originalPath": "/images/references/8.png",
+      "targetPath": "/images/references/8.png",
+      "displayOrder": 187,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_8_1_png": {
+      "id": "_images_references_8_1_png",
+      "originalPath": "/images/references/8_1.png",
+      "targetPath": "/images/references/8_1.png",
+      "displayOrder": 188,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_8_2_png": {
+      "id": "_images_references_8_2_png",
+      "originalPath": "/images/references/8_2.png",
+      "targetPath": "/images/references/8_2.png",
+      "displayOrder": 189,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_8_3_png": {
+      "id": "_images_references_8_3_png",
+      "originalPath": "/images/references/8_3.png",
+      "targetPath": "/images/references/8_3.png",
+      "displayOrder": 190,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_99_png": {
+      "id": "_images_references_99_png",
+      "originalPath": "/images/references/99.png",
+      "targetPath": "/images/references/99.png",
+      "displayOrder": 191,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_art_gallery_jongno_gallery_1_jpg": {
+      "id": "_images_references_art_gallery_jongno_gallery_1_jpg",
+      "originalPath": "/images/references/art-gallery-jongno/gallery-1.jpg",
+      "targetPath": "/images/references/art-gallery-jongno/gallery-1.jpg",
+      "displayOrder": 192,
+      "metadata": {
+        "category": "references",
+        "slug": "art-gallery-jongno",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_art_gallery_jongno_gallery_1_svg": {
+      "id": "_images_references_art_gallery_jongno_gallery_1_svg",
+      "originalPath": "/images/references/art-gallery-jongno/gallery-1.svg",
+      "targetPath": "/images/references/art-gallery-jongno/gallery-1.svg",
+      "displayOrder": 193,
+      "metadata": {
+        "category": "references",
+        "slug": "art-gallery-jongno",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_art_gallery_jongno_gallery_2_jpg": {
+      "id": "_images_references_art_gallery_jongno_gallery_2_jpg",
+      "originalPath": "/images/references/art-gallery-jongno/gallery-2.jpg",
+      "targetPath": "/images/references/art-gallery-jongno/gallery-2.jpg",
+      "displayOrder": 194,
+      "metadata": {
+        "category": "references",
+        "slug": "art-gallery-jongno",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_art_gallery_jongno_gallery_2_svg": {
+      "id": "_images_references_art_gallery_jongno_gallery_2_svg",
+      "originalPath": "/images/references/art-gallery-jongno/gallery-2.svg",
+      "targetPath": "/images/references/art-gallery-jongno/gallery-2.svg",
+      "displayOrder": 195,
+      "metadata": {
+        "category": "references",
+        "slug": "art-gallery-jongno",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_art_gallery_jongno_gallery_3_jpg": {
+      "id": "_images_references_art_gallery_jongno_gallery_3_jpg",
+      "originalPath": "/images/references/art-gallery-jongno/gallery-3.jpg",
+      "targetPath": "/images/references/art-gallery-jongno/gallery-3.jpg",
+      "displayOrder": 196,
+      "metadata": {
+        "category": "references",
+        "slug": "art-gallery-jongno",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_art_gallery_jongno_gallery_3_svg": {
+      "id": "_images_references_art_gallery_jongno_gallery_3_svg",
+      "originalPath": "/images/references/art-gallery-jongno/gallery-3.svg",
+      "targetPath": "/images/references/art-gallery-jongno/gallery-3.svg",
+      "displayOrder": 197,
+      "metadata": {
+        "category": "references",
+        "slug": "art-gallery-jongno",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_art_gallery_jongno_main_png": {
+      "id": "_images_references_art_gallery_jongno_main_png",
+      "originalPath": "/images/references/art-gallery-jongno/main.png",
+      "targetPath": "/images/references/art-gallery-jongno/main.png",
+      "displayOrder": 198,
+      "metadata": {
+        "category": "references",
+        "slug": "art-gallery-jongno",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.311Z",
+        "updatedAt": "2025-06-22T04:42:54.311Z"
+      }
+    },
+    "_images_references_blind_minimal_bedroom_1_jpg": {
+      "id": "_images_references_blind_minimal_bedroom_1_jpg",
+      "originalPath": "/images/references/blind-minimal-bedroom-1.jpg",
+      "targetPath": "/images/references/blind-minimal-bedroom-1.jpg",
+      "displayOrder": 199,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.312Z",
+        "updatedAt": "2025-06-22T04:42:54.312Z"
+      }
+    },
+    "_images_references_boutique_hotel_busan_clinic_room_jpg": {
+      "id": "_images_references_boutique_hotel_busan_clinic_room_jpg",
+      "originalPath": "/images/references/boutique-hotel-busan/clinic-room.jpg",
+      "targetPath": "/images/references/boutique-hotel-busan/clinic-room.jpg",
+      "displayOrder": 200,
+      "metadata": {
+        "category": "references",
+        "slug": "boutique-hotel-busan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.313Z",
+        "updatedAt": "2025-06-22T04:42:54.313Z"
+      }
+    },
+    "_images_references_boutique_hotel_busan_complex_view_jpg": {
+      "id": "_images_references_boutique_hotel_busan_complex_view_jpg",
+      "originalPath": "/images/references/boutique-hotel-busan/complex-view.jpg",
+      "targetPath": "/images/references/boutique-hotel-busan/complex-view.jpg",
+      "displayOrder": 201,
+      "metadata": {
+        "category": "references",
+        "slug": "boutique-hotel-busan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.313Z",
+        "updatedAt": "2025-06-22T04:42:54.313Z"
+      }
+    },
+    "_images_references_boutique_hotel_busan_reading_room_jpg": {
+      "id": "_images_references_boutique_hotel_busan_reading_room_jpg",
+      "originalPath": "/images/references/boutique-hotel-busan/reading-room.jpg",
+      "targetPath": "/images/references/boutique-hotel-busan/reading-room.jpg",
+      "displayOrder": 202,
+      "metadata": {
+        "category": "references",
+        "slug": "boutique-hotel-busan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.313Z",
+        "updatedAt": "2025-06-22T04:42:54.313Z"
+      }
+    },
+    "_images_references_boutique_hotel_busan_suite_view_jpg": {
+      "id": "_images_references_boutique_hotel_busan_suite_view_jpg",
+      "originalPath": "/images/references/boutique-hotel-busan/suite-view.jpg",
+      "targetPath": "/images/references/boutique-hotel-busan/suite-view.jpg",
+      "displayOrder": 203,
+      "metadata": {
+        "category": "references",
+        "slug": "boutique-hotel-busan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.313Z",
+        "updatedAt": "2025-06-22T04:42:54.313Z"
+      }
+    },
+    "_images_references_boutique_hotel_busan_workspace_jpg": {
+      "id": "_images_references_boutique_hotel_busan_workspace_jpg",
+      "originalPath": "/images/references/boutique-hotel-busan/workspace.jpg",
+      "targetPath": "/images/references/boutique-hotel-busan/workspace.jpg",
+      "displayOrder": 204,
+      "metadata": {
+        "category": "references",
+        "slug": "boutique-hotel-busan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.313Z",
+        "updatedAt": "2025-06-22T04:42:54.313Z"
+      }
+    },
+    "_images_references_classic_cafe_hongdae_gallery_1_jpg": {
+      "id": "_images_references_classic_cafe_hongdae_gallery_1_jpg",
+      "originalPath": "/images/references/classic-cafe-hongdae/gallery-1.jpg",
+      "targetPath": "/images/references/classic-cafe-hongdae/gallery-1.jpg",
+      "displayOrder": 205,
+      "metadata": {
+        "category": "references",
+        "slug": "classic-cafe-hongdae",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.314Z",
+        "updatedAt": "2025-06-22T04:42:54.314Z"
+      }
+    },
+    "_images_references_classic_cafe_hongdae_gallery_1_svg": {
+      "id": "_images_references_classic_cafe_hongdae_gallery_1_svg",
+      "originalPath": "/images/references/classic-cafe-hongdae/gallery-1.svg",
+      "targetPath": "/images/references/classic-cafe-hongdae/gallery-1.svg",
+      "displayOrder": 206,
+      "metadata": {
+        "category": "references",
+        "slug": "classic-cafe-hongdae",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.314Z",
+        "updatedAt": "2025-06-22T04:42:54.314Z"
+      }
+    },
+    "_images_references_classic_cafe_hongdae_gallery_2_jpg": {
+      "id": "_images_references_classic_cafe_hongdae_gallery_2_jpg",
+      "originalPath": "/images/references/classic-cafe-hongdae/gallery-2.jpg",
+      "targetPath": "/images/references/classic-cafe-hongdae/gallery-2.jpg",
+      "displayOrder": 207,
+      "metadata": {
+        "category": "references",
+        "slug": "classic-cafe-hongdae",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.314Z",
+        "updatedAt": "2025-06-22T04:42:54.314Z"
+      }
+    },
+    "_images_references_classic_cafe_hongdae_gallery_2_svg": {
+      "id": "_images_references_classic_cafe_hongdae_gallery_2_svg",
+      "originalPath": "/images/references/classic-cafe-hongdae/gallery-2.svg",
+      "targetPath": "/images/references/classic-cafe-hongdae/gallery-2.svg",
+      "displayOrder": 208,
+      "metadata": {
+        "category": "references",
+        "slug": "classic-cafe-hongdae",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.314Z",
+        "updatedAt": "2025-06-22T04:42:54.314Z"
+      }
+    },
+    "_images_references_classic_cafe_hongdae_gallery_3_jpg": {
+      "id": "_images_references_classic_cafe_hongdae_gallery_3_jpg",
+      "originalPath": "/images/references/classic-cafe-hongdae/gallery-3.jpg",
+      "targetPath": "/images/references/classic-cafe-hongdae/gallery-3.jpg",
+      "displayOrder": 209,
+      "metadata": {
+        "category": "references",
+        "slug": "classic-cafe-hongdae",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.314Z",
+        "updatedAt": "2025-06-22T04:42:54.314Z"
+      }
+    },
+    "_images_references_classic_cafe_hongdae_gallery_3_svg": {
+      "id": "_images_references_classic_cafe_hongdae_gallery_3_svg",
+      "originalPath": "/images/references/classic-cafe-hongdae/gallery-3.svg",
+      "targetPath": "/images/references/classic-cafe-hongdae/gallery-3.svg",
+      "displayOrder": 210,
+      "metadata": {
+        "category": "references",
+        "slug": "classic-cafe-hongdae",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.314Z",
+        "updatedAt": "2025-06-22T04:42:54.314Z"
+      }
+    },
+    "_images_references_classic_cafe_main_svg": {
+      "id": "_images_references_classic_cafe_main_svg",
+      "originalPath": "/images/references/classic-cafe-main.svg",
+      "targetPath": "/images/references/classic-cafe-main.svg",
+      "displayOrder": 211,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.315Z",
+        "updatedAt": "2025-06-22T04:42:54.315Z"
+      }
+    },
+    "_images_references_contemporary_house_goyang_gallery_1_jpg": {
+      "id": "_images_references_contemporary_house_goyang_gallery_1_jpg",
+      "originalPath": "/images/references/contemporary-house-goyang/gallery-1.jpg",
+      "targetPath": "/images/references/contemporary-house-goyang/gallery-1.jpg",
+      "displayOrder": 212,
+      "metadata": {
+        "category": "references",
+        "slug": "contemporary-house-goyang",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.315Z",
+        "updatedAt": "2025-06-22T04:42:54.315Z"
+      }
+    },
+    "_images_references_contemporary_house_goyang_gallery_1_svg": {
+      "id": "_images_references_contemporary_house_goyang_gallery_1_svg",
+      "originalPath": "/images/references/contemporary-house-goyang/gallery-1.svg",
+      "targetPath": "/images/references/contemporary-house-goyang/gallery-1.svg",
+      "displayOrder": 213,
+      "metadata": {
+        "category": "references",
+        "slug": "contemporary-house-goyang",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.315Z",
+        "updatedAt": "2025-06-22T04:42:54.315Z"
+      }
+    },
+    "_images_references_contemporary_house_goyang_gallery_2_jpg": {
+      "id": "_images_references_contemporary_house_goyang_gallery_2_jpg",
+      "originalPath": "/images/references/contemporary-house-goyang/gallery-2.jpg",
+      "targetPath": "/images/references/contemporary-house-goyang/gallery-2.jpg",
+      "displayOrder": 214,
+      "metadata": {
+        "category": "references",
+        "slug": "contemporary-house-goyang",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.315Z",
+        "updatedAt": "2025-06-22T04:42:54.315Z"
+      }
+    },
+    "_images_references_contemporary_house_goyang_gallery_2_svg": {
+      "id": "_images_references_contemporary_house_goyang_gallery_2_svg",
+      "originalPath": "/images/references/contemporary-house-goyang/gallery-2.svg",
+      "targetPath": "/images/references/contemporary-house-goyang/gallery-2.svg",
+      "displayOrder": 215,
+      "metadata": {
+        "category": "references",
+        "slug": "contemporary-house-goyang",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.315Z",
+        "updatedAt": "2025-06-22T04:42:54.315Z"
+      }
+    },
+    "_images_references_contemporary_house_goyang_gallery_3_jpg": {
+      "id": "_images_references_contemporary_house_goyang_gallery_3_jpg",
+      "originalPath": "/images/references/contemporary-house-goyang/gallery-3.jpg",
+      "targetPath": "/images/references/contemporary-house-goyang/gallery-3.jpg",
+      "displayOrder": 216,
+      "metadata": {
+        "category": "references",
+        "slug": "contemporary-house-goyang",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.315Z",
+        "updatedAt": "2025-06-22T04:42:54.315Z"
+      }
+    },
+    "_images_references_contemporary_house_goyang_gallery_3_svg": {
+      "id": "_images_references_contemporary_house_goyang_gallery_3_svg",
+      "originalPath": "/images/references/contemporary-house-goyang/gallery-3.svg",
+      "targetPath": "/images/references/contemporary-house-goyang/gallery-3.svg",
+      "displayOrder": 217,
+      "metadata": {
+        "category": "references",
+        "slug": "contemporary-house-goyang",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.315Z",
+        "updatedAt": "2025-06-22T04:42:54.315Z"
+      }
+    },
+    "_images_references_curtain_modern_livingroom_1_jpg": {
+      "id": "_images_references_curtain_modern_livingroom_1_jpg",
+      "originalPath": "/images/references/curtain-modern-livingroom-1.jpg",
+      "targetPath": "/images/references/curtain-modern-livingroom-1.jpg",
+      "displayOrder": 218,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.316Z",
+        "updatedAt": "2025-06-22T04:42:54.316Z"
+      }
+    },
+    "_images_references_curtain_modern_livingroom_2_jpg": {
+      "id": "_images_references_curtain_modern_livingroom_2_jpg",
+      "originalPath": "/images/references/curtain-modern-livingroom-2.jpg",
+      "targetPath": "/images/references/curtain-modern-livingroom-2.jpg",
+      "displayOrder": 219,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.316Z",
+        "updatedAt": "2025-06-22T04:42:54.316Z"
+      }
+    },
+    "_images_references_curtain_modern_livingroom_3_jpg": {
+      "id": "_images_references_curtain_modern_livingroom_3_jpg",
+      "originalPath": "/images/references/curtain-modern-livingroom-3.jpg",
+      "targetPath": "/images/references/curtain-modern-livingroom-3.jpg",
+      "displayOrder": 220,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.316Z",
+        "updatedAt": "2025-06-22T04:42:54.316Z"
+      }
+    },
+    "_images_references_hotel_lobby_seoul_jpg": {
+      "id": "_images_references_hotel_lobby_seoul_jpg",
+      "originalPath": "/images/references/hotel-lobby-seoul.jpg",
+      "targetPath": "/images/references/hotel-lobby-seoul.jpg",
+      "displayOrder": 221,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.316Z",
+        "updatedAt": "2025-06-22T04:42:54.316Z"
+      }
+    },
+    "_images_references_industrial_lobby_yongsan_gallery_1_jpg": {
+      "id": "_images_references_industrial_lobby_yongsan_gallery_1_jpg",
+      "originalPath": "/images/references/industrial-lobby-yongsan/gallery-1.jpg",
+      "targetPath": "/images/references/industrial-lobby-yongsan/gallery-1.jpg",
+      "displayOrder": 222,
+      "metadata": {
+        "category": "references",
+        "slug": "industrial-lobby-yongsan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.316Z",
+        "updatedAt": "2025-06-22T04:42:54.316Z"
+      }
+    },
+    "_images_references_industrial_lobby_yongsan_gallery_1_svg": {
+      "id": "_images_references_industrial_lobby_yongsan_gallery_1_svg",
+      "originalPath": "/images/references/industrial-lobby-yongsan/gallery-1.svg",
+      "targetPath": "/images/references/industrial-lobby-yongsan/gallery-1.svg",
+      "displayOrder": 223,
+      "metadata": {
+        "category": "references",
+        "slug": "industrial-lobby-yongsan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.316Z",
+        "updatedAt": "2025-06-22T04:42:54.316Z"
+      }
+    },
+    "_images_references_industrial_lobby_yongsan_gallery_2_jpg": {
+      "id": "_images_references_industrial_lobby_yongsan_gallery_2_jpg",
+      "originalPath": "/images/references/industrial-lobby-yongsan/gallery-2.jpg",
+      "targetPath": "/images/references/industrial-lobby-yongsan/gallery-2.jpg",
+      "displayOrder": 224,
+      "metadata": {
+        "category": "references",
+        "slug": "industrial-lobby-yongsan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.316Z",
+        "updatedAt": "2025-06-22T04:42:54.316Z"
+      }
+    },
+    "_images_references_industrial_lobby_yongsan_gallery_2_svg": {
+      "id": "_images_references_industrial_lobby_yongsan_gallery_2_svg",
+      "originalPath": "/images/references/industrial-lobby-yongsan/gallery-2.svg",
+      "targetPath": "/images/references/industrial-lobby-yongsan/gallery-2.svg",
+      "displayOrder": 225,
+      "metadata": {
+        "category": "references",
+        "slug": "industrial-lobby-yongsan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.316Z",
+        "updatedAt": "2025-06-22T04:42:54.316Z"
+      }
+    },
+    "_images_references_industrial_lobby_yongsan_gallery_3_jpg": {
+      "id": "_images_references_industrial_lobby_yongsan_gallery_3_jpg",
+      "originalPath": "/images/references/industrial-lobby-yongsan/gallery-3.jpg",
+      "targetPath": "/images/references/industrial-lobby-yongsan/gallery-3.jpg",
+      "displayOrder": 226,
+      "metadata": {
+        "category": "references",
+        "slug": "industrial-lobby-yongsan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.316Z",
+        "updatedAt": "2025-06-22T04:42:54.316Z"
+      }
+    },
+    "_images_references_industrial_lobby_yongsan_gallery_3_svg": {
+      "id": "_images_references_industrial_lobby_yongsan_gallery_3_svg",
+      "originalPath": "/images/references/industrial-lobby-yongsan/gallery-3.svg",
+      "targetPath": "/images/references/industrial-lobby-yongsan/gallery-3.svg",
+      "displayOrder": 227,
+      "metadata": {
+        "category": "references",
+        "slug": "industrial-lobby-yongsan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.316Z",
+        "updatedAt": "2025-06-22T04:42:54.316Z"
+      }
+    },
+    "_images_references_luxury_penthouse_seocho_gallery_1_jpg": {
+      "id": "_images_references_luxury_penthouse_seocho_gallery_1_jpg",
+      "originalPath": "/images/references/luxury-penthouse-seocho/gallery-1.jpg",
+      "targetPath": "/images/references/luxury-penthouse-seocho/gallery-1.jpg",
+      "displayOrder": 228,
+      "metadata": {
+        "category": "references",
+        "slug": "luxury-penthouse-seocho",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.317Z",
+        "updatedAt": "2025-06-22T04:42:54.317Z"
+      }
+    },
+    "_images_references_luxury_penthouse_seocho_gallery_1_svg": {
+      "id": "_images_references_luxury_penthouse_seocho_gallery_1_svg",
+      "originalPath": "/images/references/luxury-penthouse-seocho/gallery-1.svg",
+      "targetPath": "/images/references/luxury-penthouse-seocho/gallery-1.svg",
+      "displayOrder": 229,
+      "metadata": {
+        "category": "references",
+        "slug": "luxury-penthouse-seocho",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.317Z",
+        "updatedAt": "2025-06-22T04:42:54.317Z"
+      }
+    },
+    "_images_references_luxury_penthouse_seocho_gallery_2_jpg": {
+      "id": "_images_references_luxury_penthouse_seocho_gallery_2_jpg",
+      "originalPath": "/images/references/luxury-penthouse-seocho/gallery-2.jpg",
+      "targetPath": "/images/references/luxury-penthouse-seocho/gallery-2.jpg",
+      "displayOrder": 230,
+      "metadata": {
+        "category": "references",
+        "slug": "luxury-penthouse-seocho",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.317Z",
+        "updatedAt": "2025-06-22T04:42:54.317Z"
+      }
+    },
+    "_images_references_luxury_penthouse_seocho_gallery_2_svg": {
+      "id": "_images_references_luxury_penthouse_seocho_gallery_2_svg",
+      "originalPath": "/images/references/luxury-penthouse-seocho/gallery-2.svg",
+      "targetPath": "/images/references/luxury-penthouse-seocho/gallery-2.svg",
+      "displayOrder": 231,
+      "metadata": {
+        "category": "references",
+        "slug": "luxury-penthouse-seocho",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.317Z",
+        "updatedAt": "2025-06-22T04:42:54.317Z"
+      }
+    },
+    "_images_references_luxury_penthouse_seocho_gallery_3_jpg": {
+      "id": "_images_references_luxury_penthouse_seocho_gallery_3_jpg",
+      "originalPath": "/images/references/luxury-penthouse-seocho/gallery-3.jpg",
+      "targetPath": "/images/references/luxury-penthouse-seocho/gallery-3.jpg",
+      "displayOrder": 232,
+      "metadata": {
+        "category": "references",
+        "slug": "luxury-penthouse-seocho",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.317Z",
+        "updatedAt": "2025-06-22T04:42:54.317Z"
+      }
+    },
+    "_images_references_luxury_penthouse_seocho_gallery_3_svg": {
+      "id": "_images_references_luxury_penthouse_seocho_gallery_3_svg",
+      "originalPath": "/images/references/luxury-penthouse-seocho/gallery-3.svg",
+      "targetPath": "/images/references/luxury-penthouse-seocho/gallery-3.svg",
+      "displayOrder": 233,
+      "metadata": {
+        "category": "references",
+        "slug": "luxury-penthouse-seocho",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.317Z",
+        "updatedAt": "2025-06-22T04:42:54.317Z"
+      }
+    },
+    "_images_references_luxury_residence_gangnam_clinic_room_jpg": {
+      "id": "_images_references_luxury_residence_gangnam_clinic_room_jpg",
+      "originalPath": "/images/references/luxury-residence-gangnam/clinic-room.jpg",
+      "targetPath": "/images/references/luxury-residence-gangnam/clinic-room.jpg",
+      "displayOrder": 234,
+      "metadata": {
+        "category": "references",
+        "slug": "luxury-residence-gangnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.317Z",
+        "updatedAt": "2025-06-22T04:42:54.317Z"
+      }
+    },
+    "_images_references_luxury_residence_gangnam_complex_view_jpg": {
+      "id": "_images_references_luxury_residence_gangnam_complex_view_jpg",
+      "originalPath": "/images/references/luxury-residence-gangnam/complex-view.jpg",
+      "targetPath": "/images/references/luxury-residence-gangnam/complex-view.jpg",
+      "displayOrder": 235,
+      "metadata": {
+        "category": "references",
+        "slug": "luxury-residence-gangnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.317Z",
+        "updatedAt": "2025-06-22T04:42:54.317Z"
+      }
+    },
+    "_images_references_luxury_residence_gangnam_reading_room_jpg": {
+      "id": "_images_references_luxury_residence_gangnam_reading_room_jpg",
+      "originalPath": "/images/references/luxury-residence-gangnam/reading-room.jpg",
+      "targetPath": "/images/references/luxury-residence-gangnam/reading-room.jpg",
+      "displayOrder": 236,
+      "metadata": {
+        "category": "references",
+        "slug": "luxury-residence-gangnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.317Z",
+        "updatedAt": "2025-06-22T04:42:54.317Z"
+      }
+    },
+    "_images_references_luxury_residence_gangnam_suite_view_jpg": {
+      "id": "_images_references_luxury_residence_gangnam_suite_view_jpg",
+      "originalPath": "/images/references/luxury-residence-gangnam/suite-view.jpg",
+      "targetPath": "/images/references/luxury-residence-gangnam/suite-view.jpg",
+      "displayOrder": 237,
+      "metadata": {
+        "category": "references",
+        "slug": "luxury-residence-gangnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.317Z",
+        "updatedAt": "2025-06-22T04:42:54.317Z"
+      }
+    },
+    "_images_references_luxury_residence_gangnam_workspace_jpg": {
+      "id": "_images_references_luxury_residence_gangnam_workspace_jpg",
+      "originalPath": "/images/references/luxury-residence-gangnam/workspace.jpg",
+      "targetPath": "/images/references/luxury-residence-gangnam/workspace.jpg",
+      "displayOrder": 238,
+      "metadata": {
+        "category": "references",
+        "slug": "luxury-residence-gangnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.317Z",
+        "updatedAt": "2025-06-22T04:42:54.317Z"
+      }
+    },
+    "_images_references_main_jpg": {
+      "id": "_images_references_main_jpg",
+      "originalPath": "/images/references/main.jpg",
+      "targetPath": "/images/references/main.jpg",
+      "displayOrder": 239,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.318Z",
+        "updatedAt": "2025-06-22T04:42:54.318Z"
+      }
+    },
+    "_images_references_manage_jpg": {
+      "id": "_images_references_manage_jpg",
+      "originalPath": "/images/references/manage.jpg",
+      "targetPath": "/images/references/manage.jpg",
+      "displayOrder": 240,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.318Z",
+        "updatedAt": "2025-06-22T04:42:54.318Z"
+      }
+    },
+    "_images_references_medical_center_ilsan_clinic_room_jpg": {
+      "id": "_images_references_medical_center_ilsan_clinic_room_jpg",
+      "originalPath": "/images/references/medical-center-ilsan/clinic-room.jpg",
+      "targetPath": "/images/references/medical-center-ilsan/clinic-room.jpg",
+      "displayOrder": 241,
+      "metadata": {
+        "category": "references",
+        "slug": "medical-center-ilsan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.318Z",
+        "updatedAt": "2025-06-22T04:42:54.318Z"
+      }
+    },
+    "_images_references_medical_center_ilsan_complex_view_jpg": {
+      "id": "_images_references_medical_center_ilsan_complex_view_jpg",
+      "originalPath": "/images/references/medical-center-ilsan/complex-view.jpg",
+      "targetPath": "/images/references/medical-center-ilsan/complex-view.jpg",
+      "displayOrder": 242,
+      "metadata": {
+        "category": "references",
+        "slug": "medical-center-ilsan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.318Z",
+        "updatedAt": "2025-06-22T04:42:54.318Z"
+      }
+    },
+    "_images_references_medical_center_ilsan_reading_room_jpg": {
+      "id": "_images_references_medical_center_ilsan_reading_room_jpg",
+      "originalPath": "/images/references/medical-center-ilsan/reading-room.jpg",
+      "targetPath": "/images/references/medical-center-ilsan/reading-room.jpg",
+      "displayOrder": 243,
+      "metadata": {
+        "category": "references",
+        "slug": "medical-center-ilsan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.318Z",
+        "updatedAt": "2025-06-22T04:42:54.318Z"
+      }
+    },
+    "_images_references_medical_center_ilsan_suite_view_jpg": {
+      "id": "_images_references_medical_center_ilsan_suite_view_jpg",
+      "originalPath": "/images/references/medical-center-ilsan/suite-view.jpg",
+      "targetPath": "/images/references/medical-center-ilsan/suite-view.jpg",
+      "displayOrder": 244,
+      "metadata": {
+        "category": "references",
+        "slug": "medical-center-ilsan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.318Z",
+        "updatedAt": "2025-06-22T04:42:54.318Z"
+      }
+    },
+    "_images_references_medical_center_ilsan_workspace_jpg": {
+      "id": "_images_references_medical_center_ilsan_workspace_jpg",
+      "originalPath": "/images/references/medical-center-ilsan/workspace.jpg",
+      "targetPath": "/images/references/medical-center-ilsan/workspace.jpg",
+      "displayOrder": 245,
+      "metadata": {
+        "category": "references",
+        "slug": "medical-center-ilsan",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.318Z",
+        "updatedAt": "2025-06-22T04:42:54.318Z"
+      }
+    },
+    "_images_references_minimal_residence_bundang_gallery_1_jpg": {
+      "id": "_images_references_minimal_residence_bundang_gallery_1_jpg",
+      "originalPath": "/images/references/minimal-residence-bundang/gallery-1.jpg",
+      "targetPath": "/images/references/minimal-residence-bundang/gallery-1.jpg",
+      "displayOrder": 246,
+      "metadata": {
+        "category": "references",
+        "slug": "minimal-residence-bundang",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.318Z",
+        "updatedAt": "2025-06-22T04:42:54.318Z"
+      }
+    },
+    "_images_references_minimal_residence_bundang_gallery_1_svg": {
+      "id": "_images_references_minimal_residence_bundang_gallery_1_svg",
+      "originalPath": "/images/references/minimal-residence-bundang/gallery-1.svg",
+      "targetPath": "/images/references/minimal-residence-bundang/gallery-1.svg",
+      "displayOrder": 247,
+      "metadata": {
+        "category": "references",
+        "slug": "minimal-residence-bundang",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.318Z",
+        "updatedAt": "2025-06-22T04:42:54.318Z"
+      }
+    },
+    "_images_references_minimal_residence_bundang_gallery_2_jpg": {
+      "id": "_images_references_minimal_residence_bundang_gallery_2_jpg",
+      "originalPath": "/images/references/minimal-residence-bundang/gallery-2.jpg",
+      "targetPath": "/images/references/minimal-residence-bundang/gallery-2.jpg",
+      "displayOrder": 248,
+      "metadata": {
+        "category": "references",
+        "slug": "minimal-residence-bundang",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.319Z",
+        "updatedAt": "2025-06-22T04:42:54.319Z"
+      }
+    },
+    "_images_references_minimal_residence_bundang_gallery_2_svg": {
+      "id": "_images_references_minimal_residence_bundang_gallery_2_svg",
+      "originalPath": "/images/references/minimal-residence-bundang/gallery-2.svg",
+      "targetPath": "/images/references/minimal-residence-bundang/gallery-2.svg",
+      "displayOrder": 249,
+      "metadata": {
+        "category": "references",
+        "slug": "minimal-residence-bundang",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.319Z",
+        "updatedAt": "2025-06-22T04:42:54.319Z"
+      }
+    },
+    "_images_references_minimal_residence_bundang_gallery_3_jpg": {
+      "id": "_images_references_minimal_residence_bundang_gallery_3_jpg",
+      "originalPath": "/images/references/minimal-residence-bundang/gallery-3.jpg",
+      "targetPath": "/images/references/minimal-residence-bundang/gallery-3.jpg",
+      "displayOrder": 250,
+      "metadata": {
+        "category": "references",
+        "slug": "minimal-residence-bundang",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.319Z",
+        "updatedAt": "2025-06-22T04:42:54.319Z"
+      }
+    },
+    "_images_references_minimal_residence_bundang_gallery_3_svg": {
+      "id": "_images_references_minimal_residence_bundang_gallery_3_svg",
+      "originalPath": "/images/references/minimal-residence-bundang/gallery-3.svg",
+      "targetPath": "/images/references/minimal-residence-bundang/gallery-3.svg",
+      "displayOrder": 251,
+      "metadata": {
+        "category": "references",
+        "slug": "minimal-residence-bundang",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.319Z",
+        "updatedAt": "2025-06-22T04:42:54.319Z"
+      }
+    },
+    "_images_references_minimal_residence_main_svg": {
+      "id": "_images_references_minimal_residence_main_svg",
+      "originalPath": "/images/references/minimal-residence-main.svg",
+      "targetPath": "/images/references/minimal-residence-main.svg",
+      "displayOrder": 252,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.319Z",
+        "updatedAt": "2025-06-22T04:42:54.319Z"
+      }
+    },
+    "_images_references_modern_clinic_seongnam_gallery_1_jpg": {
+      "id": "_images_references_modern_clinic_seongnam_gallery_1_jpg",
+      "originalPath": "/images/references/modern-clinic-seongnam/gallery-1.jpg",
+      "targetPath": "/images/references/modern-clinic-seongnam/gallery-1.jpg",
+      "displayOrder": 253,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-clinic-seongnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.319Z",
+        "updatedAt": "2025-06-22T04:42:54.319Z"
+      }
+    },
+    "_images_references_modern_clinic_seongnam_gallery_1_svg": {
+      "id": "_images_references_modern_clinic_seongnam_gallery_1_svg",
+      "originalPath": "/images/references/modern-clinic-seongnam/gallery-1.svg",
+      "targetPath": "/images/references/modern-clinic-seongnam/gallery-1.svg",
+      "displayOrder": 254,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-clinic-seongnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.319Z",
+        "updatedAt": "2025-06-22T04:42:54.319Z"
+      }
+    },
+    "_images_references_modern_clinic_seongnam_gallery_2_jpg": {
+      "id": "_images_references_modern_clinic_seongnam_gallery_2_jpg",
+      "originalPath": "/images/references/modern-clinic-seongnam/gallery-2.jpg",
+      "targetPath": "/images/references/modern-clinic-seongnam/gallery-2.jpg",
+      "displayOrder": 255,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-clinic-seongnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.319Z",
+        "updatedAt": "2025-06-22T04:42:54.319Z"
+      }
+    },
+    "_images_references_modern_clinic_seongnam_gallery_2_svg": {
+      "id": "_images_references_modern_clinic_seongnam_gallery_2_svg",
+      "originalPath": "/images/references/modern-clinic-seongnam/gallery-2.svg",
+      "targetPath": "/images/references/modern-clinic-seongnam/gallery-2.svg",
+      "displayOrder": 256,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-clinic-seongnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.319Z",
+        "updatedAt": "2025-06-22T04:42:54.319Z"
+      }
+    },
+    "_images_references_modern_clinic_seongnam_gallery_3_jpg": {
+      "id": "_images_references_modern_clinic_seongnam_gallery_3_jpg",
+      "originalPath": "/images/references/modern-clinic-seongnam/gallery-3.jpg",
+      "targetPath": "/images/references/modern-clinic-seongnam/gallery-3.jpg",
+      "displayOrder": 257,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-clinic-seongnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.319Z",
+        "updatedAt": "2025-06-22T04:42:54.319Z"
+      }
+    },
+    "_images_references_modern_clinic_seongnam_gallery_3_svg": {
+      "id": "_images_references_modern_clinic_seongnam_gallery_3_svg",
+      "originalPath": "/images/references/modern-clinic-seongnam/gallery-3.svg",
+      "targetPath": "/images/references/modern-clinic-seongnam/gallery-3.svg",
+      "displayOrder": 258,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-clinic-seongnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.319Z",
+        "updatedAt": "2025-06-22T04:42:54.319Z"
+      }
+    },
+    "_images_references_modern_clinic_seongnam_main_png": {
+      "id": "_images_references_modern_clinic_seongnam_main_png",
+      "originalPath": "/images/references/modern-clinic-seongnam/main.png",
+      "targetPath": "/images/references/modern-clinic-seongnam/main.png",
+      "displayOrder": 259,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-clinic-seongnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.319Z",
+        "updatedAt": "2025-06-22T04:42:54.319Z"
+      }
+    },
+    "_images_references_modern_office_gangnam_gallery_1_svg": {
+      "id": "_images_references_modern_office_gangnam_gallery_1_svg",
+      "originalPath": "/images/references/modern-office-gangnam/gallery-1.svg",
+      "targetPath": "/images/references/modern-office-gangnam/gallery-1.svg",
+      "displayOrder": 260,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-office-gangnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.320Z",
+        "updatedAt": "2025-06-22T04:42:54.320Z"
+      }
+    },
+    "_images_references_modern_office_gangnam_gallery_2_svg": {
+      "id": "_images_references_modern_office_gangnam_gallery_2_svg",
+      "originalPath": "/images/references/modern-office-gangnam/gallery-2.svg",
+      "targetPath": "/images/references/modern-office-gangnam/gallery-2.svg",
+      "displayOrder": 261,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-office-gangnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.320Z",
+        "updatedAt": "2025-06-22T04:42:54.320Z"
+      }
+    },
+    "_images_references_modern_office_gangnam_gallery_3_jpg": {
+      "id": "_images_references_modern_office_gangnam_gallery_3_jpg",
+      "originalPath": "/images/references/modern-office-gangnam/gallery-3.jpg",
+      "targetPath": "/images/references/modern-office-gangnam/gallery-3.jpg",
+      "displayOrder": 262,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-office-gangnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.320Z",
+        "updatedAt": "2025-06-22T04:42:54.320Z"
+      }
+    },
+    "_images_references_modern_office_gangnam_gallery_3_svg": {
+      "id": "_images_references_modern_office_gangnam_gallery_3_svg",
+      "originalPath": "/images/references/modern-office-gangnam/gallery-3.svg",
+      "targetPath": "/images/references/modern-office-gangnam/gallery-3.svg",
+      "displayOrder": 263,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-office-gangnam",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.320Z",
+        "updatedAt": "2025-06-22T04:42:54.320Z"
+      }
+    },
+    "_images_references_modern_office_main_svg": {
+      "id": "_images_references_modern_office_main_svg",
+      "originalPath": "/images/references/modern-office-main.svg",
+      "targetPath": "/images/references/modern-office-main.svg",
+      "displayOrder": 264,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.320Z",
+        "updatedAt": "2025-06-22T04:42:54.320Z"
+      }
+    },
+    "_images_references_modern_office_seoul_clinic_room_jpg": {
+      "id": "_images_references_modern_office_seoul_clinic_room_jpg",
+      "originalPath": "/images/references/modern-office-seoul/clinic-room.jpg",
+      "targetPath": "/images/references/modern-office-seoul/clinic-room.jpg",
+      "displayOrder": 265,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-office-seoul",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.321Z",
+        "updatedAt": "2025-06-22T04:42:54.321Z"
+      }
+    },
+    "_images_references_modern_office_seoul_complex_view_jpg": {
+      "id": "_images_references_modern_office_seoul_complex_view_jpg",
+      "originalPath": "/images/references/modern-office-seoul/complex-view.jpg",
+      "targetPath": "/images/references/modern-office-seoul/complex-view.jpg",
+      "displayOrder": 266,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-office-seoul",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.321Z",
+        "updatedAt": "2025-06-22T04:42:54.321Z"
+      }
+    },
+    "_images_references_modern_office_seoul_reading_room_jpg": {
+      "id": "_images_references_modern_office_seoul_reading_room_jpg",
+      "originalPath": "/images/references/modern-office-seoul/reading-room.jpg",
+      "targetPath": "/images/references/modern-office-seoul/reading-room.jpg",
+      "displayOrder": 267,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-office-seoul",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.321Z",
+        "updatedAt": "2025-06-22T04:42:54.321Z"
+      }
+    },
+    "_images_references_modern_office_seoul_suite_view_jpg": {
+      "id": "_images_references_modern_office_seoul_suite_view_jpg",
+      "originalPath": "/images/references/modern-office-seoul/suite-view.jpg",
+      "targetPath": "/images/references/modern-office-seoul/suite-view.jpg",
+      "displayOrder": 268,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-office-seoul",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.321Z",
+        "updatedAt": "2025-06-22T04:42:54.321Z"
+      }
+    },
+    "_images_references_modern_office_seoul_workspace_jpg": {
+      "id": "_images_references_modern_office_seoul_workspace_jpg",
+      "originalPath": "/images/references/modern-office-seoul/workspace.jpg",
+      "targetPath": "/images/references/modern-office-seoul/workspace.jpg",
+      "displayOrder": 269,
+      "metadata": {
+        "category": "references",
+        "slug": "modern-office-seoul",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.321Z",
+        "updatedAt": "2025-06-22T04:42:54.321Z"
+      }
+    },
+    "_images_references_motorized_smart_livingroom_1_jpg": {
+      "id": "_images_references_motorized_smart_livingroom_1_jpg",
+      "originalPath": "/images/references/motorized-smart-livingroom-1.jpg",
+      "targetPath": "/images/references/motorized-smart-livingroom-1.jpg",
+      "displayOrder": 270,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.323Z",
+        "updatedAt": "2025-06-22T04:42:54.323Z"
+      }
+    },
+    "_images_references_office_tower_incheon_jpg": {
+      "id": "_images_references_office_tower_incheon_jpg",
+      "originalPath": "/images/references/office-tower-incheon.jpg",
+      "targetPath": "/images/references/office-tower-incheon.jpg",
+      "displayOrder": 271,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.323Z",
+        "updatedAt": "2025-06-22T04:42:54.323Z"
+      }
+    },
+    "_images_references_premium_apartment_songdo_clinic_room_jpg": {
+      "id": "_images_references_premium_apartment_songdo_clinic_room_jpg",
+      "originalPath": "/images/references/premium-apartment-songdo/clinic-room.jpg",
+      "targetPath": "/images/references/premium-apartment-songdo/clinic-room.jpg",
+      "displayOrder": 272,
+      "metadata": {
+        "category": "references",
+        "slug": "premium-apartment-songdo",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.323Z",
+        "updatedAt": "2025-06-22T04:42:54.323Z"
+      }
+    },
+    "_images_references_premium_apartment_songdo_complex_view_jpg": {
+      "id": "_images_references_premium_apartment_songdo_complex_view_jpg",
+      "originalPath": "/images/references/premium-apartment-songdo/complex-view.jpg",
+      "targetPath": "/images/references/premium-apartment-songdo/complex-view.jpg",
+      "displayOrder": 273,
+      "metadata": {
+        "category": "references",
+        "slug": "premium-apartment-songdo",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.323Z",
+        "updatedAt": "2025-06-22T04:42:54.323Z"
+      }
+    },
+    "_images_references_premium_apartment_songdo_reading_room_jpg": {
+      "id": "_images_references_premium_apartment_songdo_reading_room_jpg",
+      "originalPath": "/images/references/premium-apartment-songdo/reading-room.jpg",
+      "targetPath": "/images/references/premium-apartment-songdo/reading-room.jpg",
+      "displayOrder": 274,
+      "metadata": {
+        "category": "references",
+        "slug": "premium-apartment-songdo",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.323Z",
+        "updatedAt": "2025-06-22T04:42:54.323Z"
+      }
+    },
+    "_images_references_premium_apartment_songdo_suite_view_jpg": {
+      "id": "_images_references_premium_apartment_songdo_suite_view_jpg",
+      "originalPath": "/images/references/premium-apartment-songdo/suite-view.jpg",
+      "targetPath": "/images/references/premium-apartment-songdo/suite-view.jpg",
+      "displayOrder": 275,
+      "metadata": {
+        "category": "references",
+        "slug": "premium-apartment-songdo",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.323Z",
+        "updatedAt": "2025-06-22T04:42:54.323Z"
+      }
+    },
+    "_images_references_premium_apartment_songdo_workspace_jpg": {
+      "id": "_images_references_premium_apartment_songdo_workspace_jpg",
+      "originalPath": "/images/references/premium-apartment-songdo/workspace.jpg",
+      "targetPath": "/images/references/premium-apartment-songdo/workspace.jpg",
+      "displayOrder": 276,
+      "metadata": {
+        "category": "references",
+        "slug": "premium-apartment-songdo",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.323Z",
+        "updatedAt": "2025-06-22T04:42:54.323Z"
+      }
+    },
+    "_images_references_residential_complex_jpg": {
+      "id": "_images_references_residential_complex_jpg",
+      "originalPath": "/images/references/residential-complex.jpg",
+      "targetPath": "/images/references/residential-complex.jpg",
+      "displayOrder": 277,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.324Z",
+        "updatedAt": "2025-06-22T04:42:54.324Z"
+      }
+    },
+    "_images_references_restaurant_busan_jpg": {
+      "id": "_images_references_restaurant_busan_jpg",
+      "originalPath": "/images/references/restaurant-busan.jpg",
+      "targetPath": "/images/references/restaurant-busan.jpg",
+      "displayOrder": 278,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.324Z",
+        "updatedAt": "2025-06-22T04:42:54.324Z"
+      }
+    },
+    "_images_references_scandinavian_apartment_mapo_gallery_1_jpg": {
+      "id": "_images_references_scandinavian_apartment_mapo_gallery_1_jpg",
+      "originalPath": "/images/references/scandinavian-apartment-mapo/gallery-1.jpg",
+      "targetPath": "/images/references/scandinavian-apartment-mapo/gallery-1.jpg",
+      "displayOrder": 279,
+      "metadata": {
+        "category": "references",
+        "slug": "scandinavian-apartment-mapo",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.324Z",
+        "updatedAt": "2025-06-22T04:42:54.324Z"
+      }
+    },
+    "_images_references_scandinavian_apartment_mapo_gallery_1_svg": {
+      "id": "_images_references_scandinavian_apartment_mapo_gallery_1_svg",
+      "originalPath": "/images/references/scandinavian-apartment-mapo/gallery-1.svg",
+      "targetPath": "/images/references/scandinavian-apartment-mapo/gallery-1.svg",
+      "displayOrder": 280,
+      "metadata": {
+        "category": "references",
+        "slug": "scandinavian-apartment-mapo",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.324Z",
+        "updatedAt": "2025-06-22T04:42:54.324Z"
+      }
+    },
+    "_images_references_scandinavian_apartment_mapo_gallery_2_jpg": {
+      "id": "_images_references_scandinavian_apartment_mapo_gallery_2_jpg",
+      "originalPath": "/images/references/scandinavian-apartment-mapo/gallery-2.jpg",
+      "targetPath": "/images/references/scandinavian-apartment-mapo/gallery-2.jpg",
+      "displayOrder": 281,
+      "metadata": {
+        "category": "references",
+        "slug": "scandinavian-apartment-mapo",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.324Z",
+        "updatedAt": "2025-06-22T04:42:54.324Z"
+      }
+    },
+    "_images_references_scandinavian_apartment_mapo_gallery_2_svg": {
+      "id": "_images_references_scandinavian_apartment_mapo_gallery_2_svg",
+      "originalPath": "/images/references/scandinavian-apartment-mapo/gallery-2.svg",
+      "targetPath": "/images/references/scandinavian-apartment-mapo/gallery-2.svg",
+      "displayOrder": 282,
+      "metadata": {
+        "category": "references",
+        "slug": "scandinavian-apartment-mapo",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.324Z",
+        "updatedAt": "2025-06-22T04:42:54.324Z"
+      }
+    },
+    "_images_references_scandinavian_apartment_mapo_gallery_3_jpg": {
+      "id": "_images_references_scandinavian_apartment_mapo_gallery_3_jpg",
+      "originalPath": "/images/references/scandinavian-apartment-mapo/gallery-3.jpg",
+      "targetPath": "/images/references/scandinavian-apartment-mapo/gallery-3.jpg",
+      "displayOrder": 283,
+      "metadata": {
+        "category": "references",
+        "slug": "scandinavian-apartment-mapo",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.324Z",
+        "updatedAt": "2025-06-22T04:42:54.324Z"
+      }
+    },
+    "_images_references_scandinavian_apartment_mapo_gallery_3_svg": {
+      "id": "_images_references_scandinavian_apartment_mapo_gallery_3_svg",
+      "originalPath": "/images/references/scandinavian-apartment-mapo/gallery-3.svg",
+      "targetPath": "/images/references/scandinavian-apartment-mapo/gallery-3.svg",
+      "displayOrder": 284,
+      "metadata": {
+        "category": "references",
+        "slug": "scandinavian-apartment-mapo",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.324Z",
+        "updatedAt": "2025-06-22T04:42:54.324Z"
+      }
+    },
+    "_images_references_showroom_display_jpg": {
+      "id": "_images_references_showroom_display_jpg",
+      "originalPath": "/images/references/showroom-display.jpg",
+      "targetPath": "/images/references/showroom-display.jpg",
+      "displayOrder": 285,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.325Z",
+        "updatedAt": "2025-06-22T04:42:54.325Z"
+      }
+    },
+    "_images_references_test_5_png": {
+      "id": "_images_references_test_5_png",
+      "originalPath": "/images/references/test/5.png",
+      "targetPath": "/images/references/test/5.png",
+      "displayOrder": 286,
+      "metadata": {
+        "category": "references",
+        "slug": "test",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.325Z",
+        "updatedAt": "2025-06-22T04:42:54.325Z"
+      }
+    },
+    "_images_references_test_8_png": {
+      "id": "_images_references_test_8_png",
+      "originalPath": "/images/references/test/8.png",
+      "targetPath": "/images/references/test/8.png",
+      "displayOrder": 287,
+      "metadata": {
+        "category": "references",
+        "slug": "test",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.325Z",
+        "updatedAt": "2025-06-22T04:42:54.325Z"
+      }
+    },
+    "_images_references_test_9_png": {
+      "id": "_images_references_test_9_png",
+      "originalPath": "/images/references/test/9.png",
+      "targetPath": "/images/references/test/9.png",
+      "displayOrder": 288,
+      "metadata": {
+        "category": "references",
+        "slug": "test",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.325Z",
+        "updatedAt": "2025-06-22T04:42:54.325Z"
+      }
+    },
+    "_images_references_test_98_png": {
+      "id": "_images_references_test_98_png",
+      "originalPath": "/images/references/test/98.png",
+      "targetPath": "/images/references/test/98.png",
+      "displayOrder": 289,
+      "metadata": {
+        "category": "references",
+        "slug": "test",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.326Z",
+        "updatedAt": "2025-06-22T04:42:54.326Z"
+      }
+    },
+    "_images_references_test_9_1_png": {
+      "id": "_images_references_test_9_1_png",
+      "originalPath": "/images/references/test/9_1.png",
+      "targetPath": "/images/references/test/9_1.png",
+      "displayOrder": 290,
+      "metadata": {
+        "category": "references",
+        "slug": "test",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.326Z",
+        "updatedAt": "2025-06-22T04:42:54.326Z"
+      }
+    },
+    "_images_references_university_library_daejeon_clinic_room_jpg": {
+      "id": "_images_references_university_library_daejeon_clinic_room_jpg",
+      "originalPath": "/images/references/university-library-daejeon/clinic-room.jpg",
+      "targetPath": "/images/references/university-library-daejeon/clinic-room.jpg",
+      "displayOrder": 291,
+      "metadata": {
+        "category": "references",
+        "slug": "university-library-daejeon",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.326Z",
+        "updatedAt": "2025-06-22T04:42:54.326Z"
+      }
+    },
+    "_images_references_university_library_daejeon_complex_view_jpg": {
+      "id": "_images_references_university_library_daejeon_complex_view_jpg",
+      "originalPath": "/images/references/university-library-daejeon/complex-view.jpg",
+      "targetPath": "/images/references/university-library-daejeon/complex-view.jpg",
+      "displayOrder": 292,
+      "metadata": {
+        "category": "references",
+        "slug": "university-library-daejeon",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.326Z",
+        "updatedAt": "2025-06-22T04:42:54.326Z"
+      }
+    },
+    "_images_references_university_library_daejeon_reading_room_jpg": {
+      "id": "_images_references_university_library_daejeon_reading_room_jpg",
+      "originalPath": "/images/references/university-library-daejeon/reading-room.jpg",
+      "targetPath": "/images/references/university-library-daejeon/reading-room.jpg",
+      "displayOrder": 293,
+      "metadata": {
+        "category": "references",
+        "slug": "university-library-daejeon",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.326Z",
+        "updatedAt": "2025-06-22T04:42:54.326Z"
+      }
+    },
+    "_images_references_university_library_daejeon_suite_view_jpg": {
+      "id": "_images_references_university_library_daejeon_suite_view_jpg",
+      "originalPath": "/images/references/university-library-daejeon/suite-view.jpg",
+      "targetPath": "/images/references/university-library-daejeon/suite-view.jpg",
+      "displayOrder": 294,
+      "metadata": {
+        "category": "references",
+        "slug": "university-library-daejeon",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.326Z",
+        "updatedAt": "2025-06-22T04:42:54.326Z"
+      }
+    },
+    "_images_references_university_library_daejeon_workspace_jpg": {
+      "id": "_images_references_university_library_daejeon_workspace_jpg",
+      "originalPath": "/images/references/university-library-daejeon/workspace.jpg",
+      "targetPath": "/images/references/university-library-daejeon/workspace.jpg",
+      "displayOrder": 295,
+      "metadata": {
+        "category": "references",
+        "slug": "university-library-daejeon",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.326Z",
+        "updatedAt": "2025-06-22T04:42:54.326Z"
+      }
+    },
+    "_images_projects_consultation_bg_svg": {
+      "id": "_images_projects_consultation_bg_svg",
+      "originalPath": "/images/projects/consultation-bg.svg",
+      "targetPath": "/images/projects/consultation-bg.svg",
+      "displayOrder": 296,
+      "metadata": {
+        "category": "projects",
+        "slug": "projects",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.327Z",
+        "updatedAt": "2025-06-22T04:42:54.327Z"
+      }
+    },
+    "_images_projects_main_jpg": {
+      "id": "_images_projects_main_jpg",
+      "originalPath": "/images/projects/main.jpg",
+      "targetPath": "/images/projects/main.jpg",
+      "displayOrder": 297,
+      "metadata": {
+        "category": "projects",
+        "slug": "projects",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.327Z",
+        "updatedAt": "2025-06-22T04:42:54.327Z"
+      }
+    },
+    "_images_projects_manage_jpg": {
+      "id": "_images_projects_manage_jpg",
+      "originalPath": "/images/projects/manage.jpg",
+      "targetPath": "/images/projects/manage.jpg",
+      "displayOrder": 298,
+      "metadata": {
+        "category": "projects",
+        "slug": "projects",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.327Z",
+        "updatedAt": "2025-06-22T04:42:54.327Z"
+      }
+    },
+    "_images_projects_our_projects_bg_svg": {
+      "id": "_images_projects_our_projects_bg_svg",
+      "originalPath": "/images/projects/our-projects-bg.svg",
+      "targetPath": "/images/projects/our-projects-bg.svg",
+      "displayOrder": 299,
+      "metadata": {
+        "category": "projects",
+        "slug": "projects",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.327Z",
+        "updatedAt": "2025-06-22T04:42:54.327Z"
+      }
+    },
+    "_images_projects_portfolio_header_svg": {
+      "id": "_images_projects_portfolio_header_svg",
+      "originalPath": "/images/projects/portfolio-header.svg",
+      "targetPath": "/images/projects/portfolio-header.svg",
+      "displayOrder": 300,
+      "metadata": {
+        "category": "projects",
+        "slug": "projects",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.327Z",
+        "updatedAt": "2025-06-22T04:42:54.327Z"
+      }
+    },
+    "_images_projects_project_showcase_svg": {
+      "id": "_images_projects_project_showcase_svg",
+      "originalPath": "/images/projects/project-showcase.svg",
+      "targetPath": "/images/projects/project-showcase.svg",
+      "displayOrder": 301,
+      "metadata": {
+        "category": "projects",
+        "slug": "projects",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.328Z",
+        "updatedAt": "2025-06-22T04:42:54.328Z"
+      }
+    },
+    "_images_collections_curtain_11_png": {
+      "id": "_images_collections_curtain_11_png",
+      "originalPath": "/images/collections/curtain/11.png",
+      "targetPath": "/images/collections/curtain/11.png",
+      "displayOrder": 302,
+      "metadata": {
+        "category": "collections",
+        "slug": "curtain",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.330Z",
+        "updatedAt": "2025-06-22T04:42:54.330Z"
+      }
+    },
+    "_images_collections_curtain_premium_venetian_collection_main_png": {
+      "id": "_images_collections_curtain_premium_venetian_collection_main_png",
+      "originalPath": "/images/collections/curtain/premium-venetian-collection_main.png",
+      "targetPath": "/images/collections/curtain/premium-venetian-collection_main.png",
+      "displayOrder": 303,
+      "metadata": {
+        "category": "collections",
+        "slug": "curtain",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.330Z",
+        "updatedAt": "2025-06-22T04:42:54.330Z"
+      }
+    },
+    "_images_collections_designer_hardware_jpg": {
+      "id": "_images_collections_designer_hardware_jpg",
+      "originalPath": "/images/collections/designer-hardware.jpg",
+      "targetPath": "/images/collections/designer-hardware.jpg",
+      "displayOrder": 304,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_designer_hardware_svg": {
+      "id": "_images_collections_designer_hardware_svg",
+      "originalPath": "/images/collections/designer-hardware.svg",
+      "targetPath": "/images/collections/designer-hardware.svg",
+      "displayOrder": 305,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_essential_linen_jpg": {
+      "id": "_images_collections_essential_linen_jpg",
+      "originalPath": "/images/collections/essential-linen.jpg",
+      "targetPath": "/images/collections/essential-linen.jpg",
+      "displayOrder": 306,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_essential_linen_svg": {
+      "id": "_images_collections_essential_linen_svg",
+      "originalPath": "/images/collections/essential-linen.svg",
+      "targetPath": "/images/collections/essential-linen.svg",
+      "displayOrder": 307,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_luxury_tieback_jpg": {
+      "id": "_images_collections_luxury_tieback_jpg",
+      "originalPath": "/images/collections/luxury-tieback.jpg",
+      "targetPath": "/images/collections/luxury-tieback.jpg",
+      "displayOrder": 308,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_luxury_tieback_svg": {
+      "id": "_images_collections_luxury_tieback_svg",
+      "originalPath": "/images/collections/luxury-tieback.svg",
+      "targetPath": "/images/collections/luxury-tieback.svg",
+      "displayOrder": 309,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_main_jpg": {
+      "id": "_images_collections_main_jpg",
+      "originalPath": "/images/collections/main.jpg",
+      "targetPath": "/images/collections/main.jpg",
+      "displayOrder": 310,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_manage_jpg": {
+      "id": "_images_collections_manage_jpg",
+      "originalPath": "/images/collections/manage.jpg",
+      "targetPath": "/images/collections/manage.jpg",
+      "displayOrder": 311,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_modern_sheer_jpg": {
+      "id": "_images_collections_modern_sheer_jpg",
+      "originalPath": "/images/collections/modern-sheer.jpg",
+      "targetPath": "/images/collections/modern-sheer.jpg",
+      "displayOrder": 312,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_modern_sheer_svg": {
+      "id": "_images_collections_modern_sheer_svg",
+      "originalPath": "/images/collections/modern-sheer.svg",
+      "targetPath": "/images/collections/modern-sheer.svg",
+      "displayOrder": 313,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_seasonal_autumn_jpg": {
+      "id": "_images_collections_seasonal_autumn_jpg",
+      "originalPath": "/images/collections/seasonal-autumn.jpg",
+      "targetPath": "/images/collections/seasonal-autumn.jpg",
+      "displayOrder": 314,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_seasonal_spring_jpg": {
+      "id": "_images_collections_seasonal_spring_jpg",
+      "originalPath": "/images/collections/seasonal-spring.jpg",
+      "targetPath": "/images/collections/seasonal-spring.jpg",
+      "displayOrder": 315,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_seasonal_summer_jpg": {
+      "id": "_images_collections_seasonal_summer_jpg",
+      "originalPath": "/images/collections/seasonal-summer.jpg",
+      "targetPath": "/images/collections/seasonal-summer.jpg",
+      "displayOrder": 316,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_seasonal_winter_jpg": {
+      "id": "_images_collections_seasonal_winter_jpg",
+      "originalPath": "/images/collections/seasonal-winter.jpg",
+      "targetPath": "/images/collections/seasonal-winter.jpg",
+      "displayOrder": 317,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_smart_automation_jpg": {
+      "id": "_images_collections_smart_automation_jpg",
+      "originalPath": "/images/collections/smart-automation.jpg",
+      "targetPath": "/images/collections/smart-automation.jpg",
+      "displayOrder": 318,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_smart_automation_svg": {
+      "id": "_images_collections_smart_automation_svg",
+      "originalPath": "/images/collections/smart-automation.svg",
+      "targetPath": "/images/collections/smart-automation.svg",
+      "displayOrder": 319,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_test_test1_jpg": {
+      "id": "_images_collections_test_test1_jpg",
+      "originalPath": "/images/collections/test/test1.jpg",
+      "targetPath": "/images/collections/test/test1.jpg",
+      "displayOrder": 320,
+      "metadata": {
+        "category": "collections",
+        "slug": "test",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_test_test2_png": {
+      "id": "_images_collections_test_test2_png",
+      "originalPath": "/images/collections/test/test2.png",
+      "targetPath": "/images/collections/test/test2.png",
+      "displayOrder": 321,
+      "metadata": {
+        "category": "collections",
+        "slug": "test",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.332Z",
+        "updatedAt": "2025-06-22T04:42:54.332Z"
+      }
+    },
+    "_images_collections_venetian_premium_jpg": {
+      "id": "_images_collections_venetian_premium_jpg",
+      "originalPath": "/images/collections/venetian-premium.jpg",
+      "targetPath": "/images/collections/venetian-premium.jpg",
+      "displayOrder": 322,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.333Z",
+        "updatedAt": "2025-06-22T04:42:54.333Z"
+      }
+    },
+    "_images_collections_venetian_premium_svg": {
+      "id": "_images_collections_venetian_premium_svg",
+      "originalPath": "/images/collections/venetian-premium.svg",
+      "targetPath": "/images/collections/venetian-premium.svg",
+      "displayOrder": 323,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.333Z",
+        "updatedAt": "2025-06-22T04:42:54.333Z"
+      }
+    },
+    "_images_collections_wireless_motor_jpg": {
+      "id": "_images_collections_wireless_motor_jpg",
+      "originalPath": "/images/collections/wireless-motor.jpg",
+      "targetPath": "/images/collections/wireless-motor.jpg",
+      "displayOrder": 324,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.333Z",
+        "updatedAt": "2025-06-22T04:42:54.333Z"
+      }
+    },
+    "_images_collections_wireless_motor_svg": {
+      "id": "_images_collections_wireless_motor_svg",
+      "originalPath": "/images/collections/wireless-motor.svg",
+      "targetPath": "/images/collections/wireless-motor.svg",
+      "displayOrder": 325,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.333Z",
+        "updatedAt": "2025-06-22T04:42:54.333Z"
+      }
+    },
+    "_images_collections_wood_texture_jpg": {
+      "id": "_images_collections_wood_texture_jpg",
+      "originalPath": "/images/collections/wood-texture.jpg",
+      "targetPath": "/images/collections/wood-texture.jpg",
+      "displayOrder": 326,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.333Z",
+        "updatedAt": "2025-06-22T04:42:54.333Z"
+      }
+    },
+    "_images_collections_wood_texture_svg": {
+      "id": "_images_collections_wood_texture_svg",
+      "originalPath": "/images/collections/wood-texture.svg",
+      "targetPath": "/images/collections/wood-texture.svg",
+      "displayOrder": 327,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.333Z",
+        "updatedAt": "2025-06-22T04:42:54.333Z"
+      }
+    },
+    "_images_hero_hero_desktop_alt_jpg": {
+      "id": "_images_hero_hero_desktop_alt_jpg",
+      "originalPath": "/images/hero/hero-desktop-alt.jpg",
+      "targetPath": "/images/hero/hero-desktop-alt.jpg",
+      "displayOrder": 328,
+      "metadata": {
+        "category": "hero",
+        "slug": "hero",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.333Z",
+        "updatedAt": "2025-06-22T04:42:54.333Z"
+      }
+    },
+    "_images_hero_hero_desktop_jpg": {
+      "id": "_images_hero_hero_desktop_jpg",
+      "originalPath": "/images/hero/hero-desktop.jpg",
+      "targetPath": "/images/hero/hero-desktop.jpg",
+      "displayOrder": 329,
+      "metadata": {
+        "category": "hero",
+        "slug": "hero",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.333Z",
+        "updatedAt": "2025-06-22T04:42:54.333Z"
+      }
+    },
+    "_images_hero_hero_desktop_svg": {
+      "id": "_images_hero_hero_desktop_svg",
+      "originalPath": "/images/hero/hero-desktop.svg",
+      "targetPath": "/images/hero/hero-desktop.svg",
+      "displayOrder": 330,
+      "metadata": {
+        "category": "hero",
+        "slug": "hero",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.333Z",
+        "updatedAt": "2025-06-22T04:42:54.333Z"
+      }
+    },
+    "_images_hero_hero_mobile_jpg": {
+      "id": "_images_hero_hero_mobile_jpg",
+      "originalPath": "/images/hero/hero-mobile.jpg",
+      "targetPath": "/images/hero/hero-mobile.jpg",
+      "displayOrder": 331,
+      "metadata": {
+        "category": "hero",
+        "slug": "hero",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.334Z",
+        "updatedAt": "2025-06-22T04:42:54.334Z"
+      }
+    },
+    "_images_hero_hero_mobile_svg": {
+      "id": "_images_hero_hero_mobile_svg",
+      "originalPath": "/images/hero/hero-mobile.svg",
+      "targetPath": "/images/hero/hero-mobile.svg",
+      "displayOrder": 332,
+      "metadata": {
+        "category": "hero",
+        "slug": "hero",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.334Z",
+        "updatedAt": "2025-06-22T04:42:54.334Z"
+      }
+    },
+    "_images_hero_khakishop_hero_jpg": {
+      "id": "_images_hero_khakishop_hero_jpg",
+      "originalPath": "/images/hero/khakishop-hero.jpg",
+      "targetPath": "/images/hero/khakishop-hero.jpg",
+      "displayOrder": 333,
+      "metadata": {
+        "category": "hero",
+        "slug": "hero",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.334Z",
+        "updatedAt": "2025-06-22T04:42:54.334Z"
+      }
+    },
+    "_images_hero_main_jpg": {
+      "id": "_images_hero_main_jpg",
+      "originalPath": "/images/hero/main.jpg",
+      "targetPath": "/images/hero/main.jpg",
+      "displayOrder": 334,
+      "metadata": {
+        "category": "hero",
+        "slug": "hero",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.334Z",
+        "updatedAt": "2025-06-22T04:42:54.334Z"
+      }
+    },
+    "_images_hero_manage_jpg": {
+      "id": "_images_hero_manage_jpg",
+      "originalPath": "/images/hero/manage.jpg",
+      "targetPath": "/images/hero/manage.jpg",
+      "displayOrder": 335,
+      "metadata": {
+        "category": "hero",
+        "slug": "hero",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.334Z",
+        "updatedAt": "2025-06-22T04:42:54.334Z"
+      }
+    },
+    "_images_landing_10_png": {
+      "id": "_images_landing_10_png",
+      "originalPath": "/images/landing/10.png",
+      "targetPath": "/images/landing/10.png",
+      "displayOrder": 336,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.335Z",
+        "updatedAt": "2025-06-22T04:42:54.335Z"
+      }
+    },
+    "_images_landing_8_png": {
+      "id": "_images_landing_8_png",
+      "originalPath": "/images/landing/8.png",
+      "targetPath": "/images/landing/8.png",
+      "displayOrder": 337,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.335Z",
+        "updatedAt": "2025-06-22T04:42:54.335Z"
+      }
+    },
+    "_images_landing_8_1_png": {
+      "id": "_images_landing_8_1_png",
+      "originalPath": "/images/landing/8_1.png",
+      "targetPath": "/images/landing/8_1.png",
+      "displayOrder": 338,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.335Z",
+        "updatedAt": "2025-06-22T04:42:54.335Z"
+      }
+    },
+    "_images_landing_8_2_png": {
+      "id": "_images_landing_8_2_png",
+      "originalPath": "/images/landing/8_2.png",
+      "targetPath": "/images/landing/8_2.png",
+      "displayOrder": 339,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.335Z",
+        "updatedAt": "2025-06-22T04:42:54.335Z"
+      }
+    },
+    "_images_landing_a29e2258_7f99_47ab_bdc4_effe520f79fb_1_105_c_jpeg": {
+      "id": "_images_landing_a29e2258_7f99_47ab_bdc4_effe520f79fb_1_105_c_jpeg",
+      "originalPath": "/images/landing/a29e2258-7f99-47ab-bdc4-effe520f79fb_1_105_c.jpeg",
+      "targetPath": "/images/landing/a29e2258-7f99-47ab-bdc4-effe520f79fb_1_105_c.jpeg",
+      "displayOrder": 340,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.335Z",
+        "updatedAt": "2025-06-22T04:42:54.335Z"
+      }
+    },
+    "_images_landing_a29e2258_7f99_47ab_bdc4_effe520f79fb_1_105_c_1_jpeg": {
+      "id": "_images_landing_a29e2258_7f99_47ab_bdc4_effe520f79fb_1_105_c_1_jpeg",
+      "originalPath": "/images/landing/a29e2258-7f99-47ab-bdc4-effe520f79fb_1_105_c_1.jpeg",
+      "targetPath": "/images/landing/a29e2258-7f99-47ab-bdc4-effe520f79fb_1_105_c_1.jpeg",
+      "displayOrder": 341,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.335Z",
+        "updatedAt": "2025-06-22T04:42:54.335Z"
+      }
+    },
+    "_images_landing_about_section_jpg": {
+      "id": "_images_landing_about_section_jpg",
+      "originalPath": "/images/landing/about-section.jpg",
+      "targetPath": "/images/landing/about-section.jpg",
+      "displayOrder": 342,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.335Z",
+        "updatedAt": "2025-06-22T04:42:54.335Z"
+      }
+    },
+    "_images_landing_brand_lifestyle_jpg": {
+      "id": "_images_landing_brand_lifestyle_jpg",
+      "originalPath": "/images/landing/brand-lifestyle.jpg",
+      "targetPath": "/images/landing/brand-lifestyle.jpg",
+      "displayOrder": 343,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.335Z",
+        "updatedAt": "2025-06-22T04:42:54.335Z"
+      }
+    },
+    "_images_landing_collection_overview_jpg": {
+      "id": "_images_landing_collection_overview_jpg",
+      "originalPath": "/images/landing/collection-overview.jpg",
+      "targetPath": "/images/landing/collection-overview.jpg",
+      "displayOrder": 344,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.335Z",
+        "updatedAt": "2025-06-22T04:42:54.335Z"
+      }
+    },
+    "_images_landing_contact_background_jpg": {
+      "id": "_images_landing_contact_background_jpg",
+      "originalPath": "/images/landing/contact-background.jpg",
+      "targetPath": "/images/landing/contact-background.jpg",
+      "displayOrder": 345,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.335Z",
+        "updatedAt": "2025-06-22T04:42:54.335Z"
+      }
+    },
+    "_images_landing_hero_main_jpg": {
+      "id": "_images_landing_hero_main_jpg",
+      "originalPath": "/images/landing/hero-main.jpg",
+      "targetPath": "/images/landing/hero-main.jpg",
+      "displayOrder": 346,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.335Z",
+        "updatedAt": "2025-06-22T04:42:54.335Z"
+      }
+    },
+    "_images_landing_main_jpg": {
+      "id": "_images_landing_main_jpg",
+      "originalPath": "/images/landing/main.jpg",
+      "targetPath": "/images/landing/main.jpg",
+      "displayOrder": 347,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.336Z",
+        "updatedAt": "2025-06-22T04:42:54.336Z"
+      }
+    },
+    "_images_landing_manage_jpg": {
+      "id": "_images_landing_manage_jpg",
+      "originalPath": "/images/landing/manage.jpg",
+      "targetPath": "/images/landing/manage.jpg",
+      "displayOrder": 348,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-22T04:42:54.336Z",
+        "updatedAt": "2025-06-22T04:42:54.336Z"
+      }
+    },
+    "_images_references_references_1_jpg": {
+      "id": "_images_references_references_1_jpg",
+      "originalPath": "/images/references/references-1.jpg",
+      "targetPath": "/images/references/references-1.jpg",
+      "displayOrder": 349,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-24T01:50:16.232Z",
+        "updatedAt": "2025-06-24T01:50:16.232Z"
+      }
+    },
+    "_images_references_references_2_jpg": {
+      "id": "_images_references_references_2_jpg",
+      "originalPath": "/images/references/references-2.jpg",
+      "targetPath": "/images/references/references-2.jpg",
+      "displayOrder": 350,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-24T01:50:16.232Z",
+        "updatedAt": "2025-06-24T01:50:16.232Z"
+      }
+    },
+    "_images_references_references_3_jpg": {
+      "id": "_images_references_references_3_jpg",
+      "originalPath": "/images/references/references-3.jpg",
+      "targetPath": "/images/references/references-3.jpg",
+      "displayOrder": 351,
+      "metadata": {
+        "category": "references",
+        "slug": "references",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-24T01:50:16.232Z",
+        "updatedAt": "2025-06-24T01:50:16.232Z"
+      }
+    },
+    "_images_projects_projects_1_jpg": {
+      "id": "_images_projects_projects_1_jpg",
+      "originalPath": "/images/projects/projects-1.jpg",
+      "targetPath": "/images/projects/projects-1.jpg",
+      "displayOrder": 352,
+      "metadata": {
+        "category": "projects",
+        "slug": "projects",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-24T01:50:16.233Z",
+        "updatedAt": "2025-06-24T01:50:16.233Z"
+      }
+    },
+    "_images_projects_projects_2_jpg": {
+      "id": "_images_projects_projects_2_jpg",
+      "originalPath": "/images/projects/projects-2.jpg",
+      "targetPath": "/images/projects/projects-2.jpg",
+      "displayOrder": 353,
+      "metadata": {
+        "category": "projects",
+        "slug": "projects",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-24T01:50:16.233Z",
+        "updatedAt": "2025-06-24T01:50:16.233Z"
+      }
+    },
+    "_images_projects_projects_3_jpg": {
+      "id": "_images_projects_projects_3_jpg",
+      "originalPath": "/images/projects/projects-3.jpg",
+      "targetPath": "/images/projects/projects-3.jpg",
+      "displayOrder": 354,
+      "metadata": {
+        "category": "projects",
+        "slug": "projects",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-24T01:50:16.234Z",
+        "updatedAt": "2025-06-24T01:50:16.234Z"
+      }
+    },
+    "_images_collections_collections_1_jpg": {
+      "id": "_images_collections_collections_1_jpg",
+      "originalPath": "/images/collections/collections-1.jpg",
+      "targetPath": "/images/collections/collections-1.jpg",
+      "displayOrder": 355,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-24T01:50:16.234Z",
+        "updatedAt": "2025-06-24T01:50:16.234Z"
+      }
+    },
+    "_images_collections_collections_2_jpg": {
+      "id": "_images_collections_collections_2_jpg",
+      "originalPath": "/images/collections/collections-2.jpg",
+      "targetPath": "/images/collections/collections-2.jpg",
+      "displayOrder": 356,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-24T01:50:16.234Z",
+        "updatedAt": "2025-06-24T01:50:16.234Z"
+      }
+    },
+    "_images_collections_collections_3_jpg": {
+      "id": "_images_collections_collections_3_jpg",
+      "originalPath": "/images/collections/collections-3.jpg",
+      "targetPath": "/images/collections/collections-3.jpg",
+      "displayOrder": 357,
+      "metadata": {
+        "category": "collections",
+        "slug": "collections",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-24T01:50:16.234Z",
+        "updatedAt": "2025-06-24T01:50:16.234Z"
+      }
+    },
+    "_images_hero_hero_1_jpg": {
+      "id": "_images_hero_hero_1_jpg",
+      "originalPath": "/images/hero/hero-1.jpg",
+      "targetPath": "/images/hero/hero-1.jpg",
+      "displayOrder": 358,
+      "metadata": {
+        "category": "hero",
+        "slug": "hero",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-24T01:50:16.236Z",
+        "updatedAt": "2025-06-24T01:50:16.236Z"
+      }
+    },
+    "_images_hero_hero_2_jpg": {
+      "id": "_images_hero_hero_2_jpg",
+      "originalPath": "/images/hero/hero-2.jpg",
+      "targetPath": "/images/hero/hero-2.jpg",
+      "displayOrder": 359,
+      "metadata": {
+        "category": "hero",
+        "slug": "hero",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-24T01:50:16.236Z",
+        "updatedAt": "2025-06-24T01:50:16.236Z"
+      }
+    },
+    "_images_hero_hero_3_jpg": {
+      "id": "_images_hero_hero_3_jpg",
+      "originalPath": "/images/hero/hero-3.jpg",
+      "targetPath": "/images/hero/hero-3.jpg",
+      "displayOrder": 360,
+      "metadata": {
+        "category": "hero",
+        "slug": "hero",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-24T01:50:16.236Z",
+        "updatedAt": "2025-06-24T01:50:16.236Z"
+      }
+    },
+    "_images_landing_landing_1_jpg": {
+      "id": "_images_landing_landing_1_jpg",
+      "originalPath": "/images/landing/landing-1.jpg",
+      "targetPath": "/images/landing/landing-1.jpg",
+      "displayOrder": 361,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-24T01:50:16.237Z",
+        "updatedAt": "2025-06-24T01:50:16.237Z"
+      }
+    },
+    "_images_landing_landing_2_jpg": {
+      "id": "_images_landing_landing_2_jpg",
+      "originalPath": "/images/landing/landing-2.jpg",
+      "targetPath": "/images/landing/landing-2.jpg",
+      "displayOrder": 362,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-24T01:50:16.238Z",
+        "updatedAt": "2025-06-24T01:50:16.238Z"
+      }
+    },
+    "_images_landing_landing_3_jpg": {
+      "id": "_images_landing_landing_3_jpg",
+      "originalPath": "/images/landing/landing-3.jpg",
+      "targetPath": "/images/landing/landing-3.jpg",
+      "displayOrder": 363,
+      "metadata": {
+        "category": "landing",
+        "slug": "landing",
+        "description": "",
+        "isProtected": false,
+        "createdAt": "2025-06-24T01:50:16.238Z",
+        "updatedAt": "2025-06-24T01:50:16.238Z"
+      }
+    },
+    "_images_gallery_7_png": {
+      "id": "_images_gallery_7_png",
+      "originalPath": "/images/gallery/7.png",
+      "targetPath": "/images/gallery/7.png",
+      "displayOrder": 364,
+      "metadata": {
+        "fileName": "7.png",
+        "alt": "gallery - 7",
+        "title": "KHAKI SHOP - gallery - 7",
+        "dataStyle": "gallery-style",
+        "category": "gallery",
+        "description": "gallery 이미지",
+        "priority": 5,
+        "isProtected": true,
+        "uploadedAt": "2025-07-01T04:50:26.282Z",
+        "createdAt": "2025-07-01T04:50:26.287Z",
+        "updatedAt": "2025-07-01T04:50:26.287Z"
+      }
+    },
+    "_images_references_6_png": {
+      "id": "_images_references_6_png",
+      "originalPath": "/images/references/6.png",
+      "targetPath": "/images/references/6.png",
+      "displayOrder": 365,
+      "metadata": {
+        "fileName": "6.png",
+        "alt": "references - 6",
+        "title": "KHAKI SHOP - references - 6",
+        "dataStyle": "references-style",
+        "category": "references",
+        "description": "references 이미지",
+        "priority": 5,
+        "isProtected": true,
+        "uploadedAt": "2025-07-01T04:50:51.542Z",
+        "createdAt": "2025-07-01T04:50:51.544Z",
+        "updatedAt": "2025-07-01T04:50:51.544Z"
+      }
     }
   },
   "categories": [
@@ -2352,7 +5148,7 @@
     "blind"
   ],
   "stats": {
-    "totalImages": 167,
-    "protectedImages": 0
+    "totalImages": 366,
+    "protectedImages": 2
   }
 }

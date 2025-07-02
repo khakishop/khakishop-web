@@ -238,6 +238,17 @@ const nextConfig = {
   // 🔧 기타 최적화 설정
   // ================================================================================
   
+  // 🔄 404 방지를 위한 리디렉션 규칙 (Admin 이미지 경로 수정)
+  async redirects() {
+    return [
+      {
+        source: '/:locale/admin/images/category/:path*',
+        destination: '/:locale/admin/images/manage/category/:path*',
+        permanent: true,
+      },
+    ];
+  },
+  
   // SWC 미니파이어 활성화
   swcMinify: true,
   

@@ -1,0 +1,300 @@
+================================================================================
+🎨 KHAKISHOP WEBSITE - MIDJOURNEY 이미지 생성 가이드
+================================================================================
+📅 생성일: 2024년 12월
+🎯 목적: RIGAS 디자인 모티브 기반 khakishop 웹사이트 이미지 가이드
+🌐 참조: https://www.rigas-furniture.gr/ (디자인 모티브)
+
+================================================================================
+📋 목차
+================================================================================
+1. 브랜드 가이드라인 및 기본 스타일
+2. 이미지 카테고리별 요구사항
+3. 생성 우선순위 (1순위 → 3순위)
+4. 세부 폴더별 이미지 리스트
+5. Midjourney 프롬프트 베이스 템플릿
+
+================================================================================
+🎨 1. 브랜드 가이드라인 및 기본 스타일
+================================================================================
+
+📌 RIGAS 디자인 모티브 핵심 요소:
+- Ultra-photorealistic 8K interior magazine photography
+- 50mm prime lens, f/2.2 shallow depth of field, eye-level shots  
+- Afternoon sunlight filtering through windows and curtains
+- Minimal styling with quiet warm atmosphere
+- Sophisticated neutral color palette (beige, cream, warm gray, soft white)
+- Wide spacious interior layouts
+- High-end furniture including USM modular systems
+- Architectural digest style, soft shadows, natural color grading
+
+📌 khakishop 브랜드 특성:
+- 텍스타일 전문 (커튼, 블라인드, 전동 시스템)
+- "감성과 기능을 담은" 프리미엄 퀄리티
+- 한국 일산 위치 (현대적 주거 환경)
+- RIGAS 가구의 모던 미니멀 감성과 조화
+
+================================================================================
+🚨 2. 이미지 카테고리별 요구사항 분석
+================================================================================
+
+📁 HERO (최우선 - 브랜드 아이덴티티)
+├── 필요 이미지: 2개
+├── hero.jpg (메인 히어로) - 브랜드의 얼굴
+└── hero-mobile.jpg (모바일 최적화) - 세로형 비율
+
+📁 LANDING (브랜드 랜딩 페이지)  
+├── 필요 이미지: 3개
+├── hero-main.jpg (랜딩 메인)
+├── brand-lifestyle.jpg (라이프스타일)
+└── collection-overview.jpg (컬렉션 개요)
+
+📁 REFERENCES (시공 포트폴리오 - 9개 프로젝트)
+├── 필요 이미지: 36개 (프로젝트당 4개)
+├── modern-office-gangnam/ (4개) ✅ 완료
+├── minimal-residence-bundang/ (4개)
+├── classic-cafe-hongdae/ (4개)  
+├── contemporary-house-goyang/ (4개)
+├── scandinavian-apartment-mapo/ (4개)
+├── industrial-lobby-yongsan/ (4개)
+├── luxury-penthouse-seocho/ (4개)
+├── modern-clinic-seongnam/ (4개)
+└── art-gallery-jongno/ (4개)
+
+📁 PRODUCTS (제품 카탈로그)
+├── Curtain (5개 제품 × 5개 이미지) = 25개
+│   ├── classic-curtain/ (5개)
+│   ├── modern-curtain/ (5개)  
+│   ├── sheer-curtain/ (5개) ✅ 2개 완료 (detail, lifestyle)
+│   ├── linen-white/ (5개)
+│   └── pleats-ivory/ (5개)
+├── Blind (3개 제품 × 5개 이미지) = 15개
+│   ├── wood-blind/ (5개)
+│   ├── aluminum-blind/ (5개)
+│   └── fabric-blind/ (5개)
+└── Motorized (3개 제품 × 5개 이미지) = 15개
+    ├── motorized-curtain-system/ (5개)
+    ├── motorized-blind-system/ (5개)
+    └── smart-home-integration/ (5개)
+
+📁 COLLECTIONS (컬렉션 카탈로그)
+├── 필요 이미지: 8개 (컬렉션당 1개)
+├── essential-linen.jpg
+├── modern-sheer.jpg
+├── venetian-premium.jpg
+├── wood-texture.jpg
+├── smart-automation.jpg
+├── wireless-motor.jpg
+├── designer-hardware.jpg
+└── luxury-tieback.jpg
+
+📁 PROJECTS (프로젝트 배경)
+├── 필요 이미지: 2개
+├── our-projects-bg.jpg (프로젝트 섹션 배경)
+└── project-showcase.jpg (프로젝트 쇼케이스)
+
+📁 GALLERY (갤러리 쇼케이스)
+├── 필요 이미지: 12개
+├── gallery-grid-1.jpg ~ gallery-grid-12.jpg
+└── (다양한 시공 사례의 베스트 샷들)
+
+================================================================================
+🎯 3. 생성 우선순위 (총 148개 이미지)
+================================================================================
+
+🔥 1순위 (브랜드 핵심 - 19개)
+────────────────────────────────────────
+✅ hero/hero.jpg (완료)
+◯ hero/hero-mobile.jpg  
+◯ landing/hero-main.jpg
+◯ landing/brand-lifestyle.jpg
+◯ landing/collection-overview.jpg
+◯ projects/our-projects-bg.jpg
+◯ projects/project-showcase.jpg  
+◯ collections/ (8개 컬렉션 이미지)
+
+⭐ 2순위 (시공 포트폴리오 - 32개)
+────────────────────────────────────────
+✅ references/modern-office-gangnam/ (4개 완료)
+◯ references/minimal-residence-bundang/ (4개)
+◯ references/classic-cafe-hongdae/ (4개)
+◯ references/contemporary-house-goyang/ (4개)
+◯ references/scandinavian-apartment-mapo/ (4개)
+◯ references/industrial-lobby-yongsan/ (4개)
+◯ references/luxury-penthouse-seocho/ (4개)
+◯ references/modern-clinic-seongnam/ (4개)
+◯ references/art-gallery-jongno/ (4개)
+
+🌟 3순위 (제품 카탈로그 - 55개)
+────────────────────────────────────────
+◯ products/curtain/ (23개 남음)
+◯ products/blind/ (15개)
+◯ products/motorized/ (15개)
+◯ gallery/ (12개)
+
+================================================================================
+📂 4. 세부 폴더별 이미지 리스트
+================================================================================
+
+📁 /public/images/hero/ (2개)
+────────────────────────────────────────
+✅ hero.jpg (완료) - 메인 히어로 이미지
+◯ hero-mobile.jpg - 모바일용 세로형 히어로
+
+📁 /public/images/landing/ (3개)  
+────────────────────────────────────────
+◯ hero-main.jpg - 랜딩 페이지 메인 배경
+◯ brand-lifestyle.jpg - 브랜드 라이프스타일 
+◯ collection-overview.jpg - 컬렉션 개요 쇼케이스
+
+📁 /public/images/projects/ (2개)
+────────────────────────────────────────
+◯ our-projects-bg.jpg - "OUR PROJECTS" 섹션 배경 
+◯ project-showcase.jpg - 프로젝트 쇼케이스
+
+📁 /public/images/collections/ (8개)
+────────────────────────────────────────
+◯ essential-linen.jpg - 에센셜 리넨 컬렉션
+◯ modern-sheer.jpg - 모던 셰어 시리즈  
+◯ venetian-premium.jpg - 프리미엄 베네치안 블라인드
+◯ wood-texture.jpg - 우드 텍스처 블라인드
+◯ smart-automation.jpg - 스마트 자동화 시스템
+◯ wireless-motor.jpg - 무선 모터 컬렉션
+◯ designer-hardware.jpg - 디자이너 하드웨어
+◯ luxury-tieback.jpg - 럭셔리 타이백
+
+📁 /public/images/references/ (32개)
+────────────────────────────────────────
+✅ modern-office-gangnam/ (4개 완료)
+  ✅ main.jpg, gallery-1.jpg, gallery-2.jpg, gallery-3.jpg
+
+◯ minimal-residence-bundang/ (4개)
+  ◯ main.jpg, gallery-1.jpg, gallery-2.jpg, gallery-3.jpg
+
+◯ classic-cafe-hongdae/ (4개)  
+  ◯ main.jpg, gallery-1.jpg, gallery-2.jpg, gallery-3.jpg
+
+◯ contemporary-house-goyang/ (4개)
+  ◯ main.jpg, gallery-1.jpg, gallery-2.jpg, gallery-3.jpg
+
+◯ scandinavian-apartment-mapo/ (4개)
+  ◯ main.jpg, gallery-1.jpg, gallery-2.jpg, gallery-3.jpg
+
+◯ industrial-lobby-yongsan/ (4개)
+  ◯ main.jpg, gallery-1.jpg, gallery-2.jpg, gallery-3.jpg
+
+◯ luxury-penthouse-seocho/ (4개)  
+  ◯ main.jpg, gallery-1.jpg, gallery-2.jpg, gallery-3.jpg
+
+◯ modern-clinic-seongnam/ (4개)
+  ◯ main.jpg, gallery-1.jpg, gallery-2.jpg, gallery-3.jpg
+
+◯ art-gallery-jongno/ (4개)
+  ◯ main.jpg, gallery-1.jpg, gallery-2.jpg, gallery-3.jpg
+
+📁 /public/images/products/curtain/ (25개)
+────────────────────────────────────────
+◯ classic-curtain/ (5개)
+  ◯ main.jpg, detail.jpg, lifestyle.jpg, gallery-1.jpg, gallery-2.jpg
+
+◯ modern-curtain/ (5개)
+  ◯ main.jpg, detail.jpg, lifestyle.jpg, gallery-1.jpg, gallery-2.jpg
+
+✅ sheer-curtain/ (3개 남음)
+  ◯ main.jpg, gallery-1.jpg, gallery-2.jpg
+  ✅ detail.jpg (완료), lifestyle.jpg (완료)
+
+◯ linen-white/ (5개)  
+  ◯ main.jpg, detail.jpg, lifestyle.jpg, gallery-1.jpg, gallery-2.jpg
+
+◯ pleats-ivory/ (5개)
+  ◯ main.jpg, detail.jpg, lifestyle.jpg, gallery-1.jpg, gallery-2.jpg
+
+📁 /public/images/products/blind/ (15개)
+────────────────────────────────────────
+◯ wood-blind/ (5개)
+  ◯ main.jpg, detail.jpg, lifestyle.jpg, gallery-1.jpg, gallery-2.jpg
+
+◯ aluminum-blind/ (5개)
+  ◯ main.jpg, detail.jpg, lifestyle.jpg, gallery-1.jpg, gallery-2.jpg
+
+◯ fabric-blind/ (5개)
+  ◯ main.jpg, detail.jpg, lifestyle.jpg, gallery-1.jpg, gallery-2.jpg
+
+📁 /public/images/products/motorized/ (15개)
+────────────────────────────────────────
+◯ motorized-curtain-system/ (5개)
+  ◯ main.jpg, detail.jpg, lifestyle.jpg, gallery-1.jpg, gallery-2.jpg
+
+◯ motorized-blind-system/ (5개)  
+  ◯ main.jpg, detail.jpg, lifestyle.jpg, gallery-1.jpg, gallery-2.jpg
+
+◯ smart-home-integration/ (5개)
+  ◯ main.jpg, detail.jpg, lifestyle.jpg, gallery-1.jpg, gallery-2.jpg
+
+📁 /public/images/gallery/ (12개)
+────────────────────────────────────────
+◯ gallery-grid-1.jpg ~ gallery-grid-12.jpg
+  (다양한 베스트 시공 사례들의 큐레이션)
+
+================================================================================
+🎨 5. Midjourney 프롬프트 베이스 템플릿
+================================================================================
+
+🔥 BASE_TECHNICAL:
+"ultra-photorealistic, 8K interior magazine photography, cinematic natural lighting, eye-level shot, 50mm prime lens, shallow depth of field f/2.2, realistic materials and textures"
+
+🔥 BASE_BRAND_MOOD:  
+"afternoon sunlight filtering through windows and curtains, minimal styling with quiet warm atmosphere, sophisticated neutral color palette, wide spacious interior layout, realistic high-end furniture including USM modular systems"
+
+🔥 BASE_QUALITY:
+"professional interior design photography, architectural digest style, soft shadows, natural color grading, premium textile details, --ar 16:9 --style raw --v 6.1"
+
+🎯 카테고리별 추가 요소:
+
+📌 HERO/LANDING:
+"iconic brand identity, premium lifestyle aspiration, emotional connection, sophisticated elegance"
+
+📌 REFERENCES:  
+- Office: "professional corporate atmosphere, ergonomic furniture, productivity lighting"
+- Residential: "homey comfort, personal touches, family-friendly, relaxed elegance"  
+- Cafe: "social gathering, artisanal details, warm hospitality, community atmosphere"
+- Gallery: "cultural sophistication, artistic ambiance, contemplative space"
+- Clinic: "healing environment, calming presence, wellness focus, clean aesthetics"
+- Lobby: "welcoming grandeur, impressive scale, architectural drama"
+
+📌 PRODUCTS:
+- Curtain: "textile focus, fabric texture detail, natural light diffusion, window treatment showcase"
+- Blind: "light management precision, slat details, functional elegance, architectural lines"  
+- Motorized: "smart home integration, technology showcase, automation elegance, modern convenience"
+
+📌 COLLECTIONS:
+"curated display, premium product presentation, material emphasis, sophisticated styling"
+
+📌 GALLERY:
+"portfolio showcase, diverse style compilation, creative excellence, inspiring spaces"
+
+================================================================================
+✅ 완료 현황 (2024.12)  
+================================================================================
+✅ 완료: 7개
+- hero/hero.jpg (1개)
+- references/modern-office-gangnam/ (3개: main, gallery-1, gallery-2)  
+- products/curtain/sheer-curtain/ (2개: detail, lifestyle)
+- 자동화 시스템 구축 완료
+
+🎯 다음 작업 권장:
+1. 1순위: landing/ 폴더 (3개)
+2. 1순위: collections/ 폴더 (8개) 
+3. 1순위: projects/ 폴더 (2개)
+4. 2순위: references/ 나머지 8개 프로젝트 (32개)
+
+================================================================================
+📞 문의 및 지원
+================================================================================
+🔧 자동화 스크립트: npm run process-images
+📋 프롬프트 생성: npm run generate-prompts  
+📍 위치: /Users/kiholee/Projects/khakishop-web
+🎨 참조: https://www.rigas-furniture.gr/
+
+================================================================================ 

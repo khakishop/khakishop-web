@@ -1,0 +1,5 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#F7F5F3"/>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="32" fill="#8B7A6B" text-anchor="middle" dy=".35em">KHAKI SHOP</text>
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="16" fill="#8B7A6B" text-anchor="middle" dy=".35em">이미지 로딩 중...</text>
+</svg> 

@@ -2,21 +2,20 @@
   "metadata": {
     "title": "KHAKISHOP 이미지 상태 추적",
     "version": "2.0",
-    "lastScan": "2024-12-XX",
+    "lastScan": "2025-06-30T08:51:23.137Z",
     "totalSlots": 148,
     "assignedSlots": 148,
     "pendingSlots": 0,
     "errorSlots": 0
   },
-  
   "status": {
     "1": {
       "sourceFile": "1.png",
       "targetPath": "hero/hero-mobile.jpg",
       "status": "active",
-      "lastProcessed": "2024-12-XX 15:30:00",
-      "fileSize": "2.4MB",
-      "md5Hash": "abc123...",
+      "lastProcessed": "2025-06-30T08:51:22.630Z",
+      "fileSize": "5.5MB",
+      "md5Hash": "446e670a3b2edbebb21438207a951216",
       "category": "hero",
       "priority": 1,
       "usage": "HomeClient.tsx - 모바일 히어로",
@@ -26,16 +25,15 @@
       "sourceFile": "2.png",
       "targetPath": "landing/hero-main.jpg",
       "status": "active",
-      "lastProcessed": "2024-12-XX 15:30:01",
-      "fileSize": "3.1MB",
-      "md5Hash": "def456...",
+      "lastProcessed": "2025-06-30T08:51:23.136Z",
+      "fileSize": "3.8MB",
+      "md5Hash": "733f0989b74d566d71849f572989f6f7",
       "category": "landing",
       "priority": 1,
       "usage": "LandingSection - 메인 배경",
       "webPath": "/images/landing/hero-main.jpg"
     }
   },
-  
   "pending": {
     "149": {
       "sourceFile": "149.png",
@@ -47,7 +45,6 @@
       "requiresManualReview": true
     }
   },
-  
   "errors": {
     "45": {
       "sourceFile": "45.png",
@@ -58,8 +55,17 @@
       "requiresAttention": true
     }
   },
-  
   "changelog": [
+    {
+      "timestamp": "2025-06-30T08:51:23.136Z",
+      "action": "image_replaced",
+      "details": "2.png 교체 완료 → landing/hero-main.jpg"
+    },
+    {
+      "timestamp": "2025-06-30T08:51:22.631Z",
+      "action": "image_replaced",
+      "details": "1.png 교체 완료 → hero/hero-mobile.jpg"
+    },
     {
       "timestamp": "2024-12-XX 15:30:00",
       "action": "bulk_process",
@@ -68,10 +74,10 @@
       "failed": 0
     },
     {
-      "timestamp": "2024-12-XX 16:00:00", 
+      "timestamp": "2024-12-XX 16:00:00",
       "action": "new_image_detected",
       "details": "149.png 신규 이미지 감지",
       "status": "pending_assignment"
     }
   ]
-} 
+}

@@ -1,0 +1,281 @@
+// 🎯 KHAKISHOP 카테고리 정의 (홈페이지 구조에 맞춤)
+// 업데이트: activateCategories.map 에러 해결
+
+export interface CategoryInfo {
+  key: string;
+  name: string;
+  icon: string;
+  description: string;
+  isActive: boolean;
+  hasSubcategories?: boolean;
+  subcategories?: string[];
+  displayOrder: number;
+}
+
+// 🏗️ 마스터 카테고리 목록 (홈페이지 메뉴 구조 기반)
+export const MASTER_CATEGORIES = [
+  'hero', // 메인 히어로 이미지
+  'landing', // 랜딩 페이지 이미지
+  'projects', // OUR PROJECTS 페이지용
+  'references', // REFERENCES 페이지용
+  'curtain', // 개별 커튼 페이지용
+  'blind', // 개별 블라인드 페이지용
+  'motorized', // 개별 전동시스템 페이지용
+  'collection', // 단일 컬렉션 페이지용 (하위분류 제거)
+  'about', // 회사 소개 페이지용
+  'contact', // 연락처 페이지용
+  'gallery', // 갤러리 페이지용
+];
+
+// 🎨 카테고리 상세 정보
+export const categories: Record<string, CategoryInfo> = {
+  hero: {
+    key: 'hero',
+    name: '메인 히어로',
+    icon: '🌟',
+    description: '홈페이지 메인 배너 이미지',
+    isActive: true,
+    hasSubcategories: false,
+    displayOrder: 1,
+  },
+  landing: {
+    key: 'landing',
+    name: '랜딩 페이지',
+    icon: '🏠',
+    description: '랜딩 페이지 섹션 이미지',
+    isActive: true,
+    hasSubcategories: false,
+    displayOrder: 2,
+  },
+  projects: {
+    key: 'projects',
+    name: 'OUR PROJECTS',
+    icon: '🏗️',
+    description: '시공 사례 프로젝트 이미지',
+    isActive: true,
+    hasSubcategories: false,
+    displayOrder: 3,
+  },
+  references: {
+    key: 'references',
+    name: 'REFERENCES',
+    icon: '🏢',
+    description: '레퍼런스 포트폴리오 이미지',
+    isActive: true,
+    hasSubcategories: false,
+    displayOrder: 4,
+  },
+  curtain: {
+    key: 'curtain',
+    name: 'CURTAIN',
+    icon: '🪟',
+    description: '커튼 제품 이미지',
+    isActive: true,
+    hasSubcategories: false,
+    displayOrder: 5,
+  },
+  blind: {
+    key: 'blind',
+    name: 'BLIND',
+    icon: '🎚️',
+    description: '블라인드 제품 이미지',
+    isActive: true,
+    hasSubcategories: false,
+    displayOrder: 6,
+  },
+  motorized: {
+    key: 'motorized',
+    name: 'MOTORIZED',
+    icon: '⚙️',
+    description: '전동시스템 제품 이미지',
+    isActive: true,
+    hasSubcategories: false,
+    displayOrder: 7,
+  },
+  collection: {
+    key: 'collection',
+    name: 'COLLECTION',
+    icon: '🎨',
+    description: '컬렉션 이미지',
+    isActive: true,
+    hasSubcategories: false, // ✅ 하위분류 제거로 이미지 표시 활성화
+    displayOrder: 8,
+  },
+  about: {
+    key: 'about',
+    name: 'ABOUT',
+    icon: '👥',
+    description: '회사 소개 이미지',
+    isActive: true,
+    hasSubcategories: false,
+    displayOrder: 9,
+  },
+  contact: {
+    key: 'contact',
+    name: 'CONTACT',
+    icon: '📞',
+    description: '연락처 페이지 이미지',
+    isActive: true,
+    hasSubcategories: false,
+    displayOrder: 10,
+  },
+  gallery: {
+    key: 'gallery',
+    name: 'GALLERY',
+    icon: '🖼️',
+    description: '갤러리 이미지',
+    isActive: true,
+    hasSubcategories: false,
+    displayOrder: 11,
+  },
+};
+
+// 🔄 하위 카테고리 제거 (이미지 표시 문제 해결)
+const subcategories: Record<string, string[]> = {
+  // ❌ 제거된 하위분류들 (이미지 렌더링 차단 원인)
+  // collections: ['modern', 'classic', 'premium']
+  // products: ['curtain', 'blind', 'motorized']
+};
+
+// 📄 페이지별 카테고리 매핑 (홈페이지 라우팅 구조 기반)
+export const PAGE_CATEGORY_MAPPING = {
+  '/ko/': 'hero',
+  '/ko/projects': 'projects',
+  '/ko/references': 'references',
+  '/ko/curtain': 'curtain',
+  '/ko/blind': 'blind',
+  '/ko/motorized': 'motorized',
+  '/ko/collection': 'collection',
+  '/ko/about': 'about',
+  '/ko/contact': 'contact',
+  '/ko/gallery': 'gallery',
+};
+
+// 🔧 유틸리티 함수들 (타입 안전성 보장)
+
+export function getCategoryIcon(categoryKey: string): string {
+  if (!categoryKey || typeof categoryKey !== 'string') return '📁';
+  return categories[categoryKey]?.icon || '📁';
+}
+
+export function getCategoryByKey(key: string): CategoryInfo | undefined {
+  if (!key || typeof key !== 'string') return undefined;
+  return categories[key];
+}
+
+export function getActiveCategoriesOnly(): Record<string, CategoryInfo> {
+  return Object.fromEntries(
+    Object.entries(categories).filter(([_, info]) => info.isActive)
+  );
+}
+
+export function isCategoryActive(categoryKey: string): boolean {
+  if (!categoryKey || typeof categoryKey !== 'string') return false;
+  return categories[categoryKey]?.isActive || false;
+}
+
+export function getCategoryDisplayOrder(categoryKey: string): number {
+  if (!categoryKey || typeof categoryKey !== 'string') return 999;
+  return categories[categoryKey]?.displayOrder || 999;
+}
+
+export function getCategoriesByDisplayOrder(): CategoryInfo[] {
+  return Object.values(categories)
+    .filter((category) => category.isActive)
+    .sort((a, b) => a.displayOrder - b.displayOrder);
+}
+
+export function getCategoryName(categoryKey: string): string {
+  if (!categoryKey || typeof categoryKey !== 'string') return 'Unknown';
+  return categories[categoryKey]?.name || categoryKey;
+}
+
+export function getCategoryDescription(categoryKey: string): string {
+  if (!categoryKey || typeof categoryKey !== 'string') return '';
+  return categories[categoryKey]?.description || '';
+}
+
+export function getCategoryDisplayName(categoryKey: string): string {
+  if (!categoryKey || typeof categoryKey !== 'string') {
+    return 'UNKNOWN';
+  }
+  return categories[categoryKey]?.name || categoryKey.toUpperCase();
+}
+
+// ✅ 핵심 수정: getAllActiveCategories 함수 (배열 반환 보장)
+export function getAllActiveCategories(): string[] {
+  try {
+    // MASTER_CATEGORIES가 배열인지 확인
+    if (!Array.isArray(MASTER_CATEGORIES)) {
+      console.error('MASTER_CATEGORIES is not an array');
+      return [];
+    }
+
+    // 필터링 결과가 배열인지 확인
+    const result = MASTER_CATEGORIES.filter((key) => {
+      if (typeof key !== 'string') return false;
+      return isCategoryActive(key);
+    });
+
+    // 결과가 배열인지 최종 확인
+    if (!Array.isArray(result)) {
+      console.error('Filter result is not an array');
+      return [];
+    }
+
+    return result;
+  } catch (error) {
+    console.error('Error in getAllActiveCategories:', error);
+    return [];
+  }
+}
+
+// ✅ 추가: 활성 카테고리 정보 객체 배열 반환 (컴포넌트에서 사용)
+export function getActiveCategoriesInfo(): CategoryInfo[] {
+  try {
+    const activeKeys = getAllActiveCategories();
+    const result = activeKeys
+      .map((key) => categories[key])
+      .filter((category) => category !== undefined);
+
+    if (!Array.isArray(result)) {
+      console.error('getActiveCategoriesInfo result is not an array');
+      return [];
+    }
+
+    return result;
+  } catch (error) {
+    console.error('Error in getActiveCategoriesInfo:', error);
+    return [];
+  }
+}
+
+export function getSubcategories(parentCategory: string): string[] {
+  if (!parentCategory || typeof parentCategory !== 'string') return [];
+  return subcategories[parentCategory] || [];
+}
+
+export function hasSubcategories(categoryKey: string): boolean {
+  if (!categoryKey || typeof categoryKey !== 'string') return false;
+  return categories[categoryKey]?.hasSubcategories || false;
+}
+
+// 📊 카테고리 통계
+export function getCategoryStats() {
+  const totalCategories = Object.keys(categories).length;
+  const activeCategories = Object.values(categories).filter(
+    (cat) => cat.isActive
+  ).length;
+  const categoriesWithSubs = Object.values(categories).filter(
+    (cat) => cat.hasSubcategories
+  ).length;
+
+  return {
+    total: totalCategories,
+    active: activeCategories,
+    withSubcategories: categoriesWithSubs,
+    inactive: totalCategories - activeCategories,
+  };
+}
+
+export default categories;
